@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Answering Line — CV_Highline</title>
+<style>
+  :root { --ink:#f2efe9; --mut:#9b978d; --acc:#c0673f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { height:100%; background:#0a0c10; overflow:hidden;
+    font-family:"IBM Plex Mono","Consolas",ui-monospace,monospace; color:var(--ink); }
+  #app { position:fixed; inset:0; }
+  canvas { display:block; }
+
+  .panel { position:fixed; z-index:10; pointer-events:none; }
+  #title { top:22px; left:26px; }
+  #title h1 { font-size:19px; letter-spacing:0.04em; font-weight:700; }
+  #title p  { font-size:11px; color:var(--mut); margin-top:5px; max-width:430px; line-height:1.5; }
+
+  #stats { top:22px; right:26px; text-align:right; font-size:11px; color:var(--mut); line-height:1.7; }
+  #stats b { color:var(--ink); font-weight:700; }
+  #stats .big { color:var(--acc); font-size:15px; }
+
+  #legend { bottom:22px; left:26px; font-size:10px; color:var(--mut); }
+  #legend .bar { width:230px; height:9px; border-radius:5px; margin:6px 0 4px;
+    background:linear-gradient(90deg,#2b3a5c,#7a5138,#c0673f,#ffce86); }
+  #legend .lab { display:flex; justify-content:space-between; width:230px; }
+
+  #controls { bottom:22px; right:26px; text-align:right; pointer-events:auto; }
+  #controls .row { margin-top:8px; }
+  button { pointer-events:auto; font-family:inherit; font-size:10.5px; color:var(--ink);
+    background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14);
+    padding:5px 10px; margin-left:6px; border-radius:5px; cursor:pointer; transition:.15s; }
+  button:hover { background:rgba(255,255,255,0.12); }
+  button.on { background:var(--acc); border-color:var(--acc); color:#141414; font-weight:700; }
+  #controls .lbl { font-size:9.5px; color:var(--mut); margin-right:2px; }
+  #hint { bottom:24px; left:50%; transform:translateX(-50%); font-size:9.5px; color:#6a675f; }
+
+  #walkbar { position:fixed; bottom:22px; left:50%; transform:translateX(-50%); z-index:11;
+    display:none; align-items:center; gap:12px; pointer-events:auto;
+    background:rgba(12,14,18,0.72); border:1px solid rgba(255,255,255,0.12);
+    padding:9px 14px; border-radius:9px; backdrop-filter:blur(6px); }
+  #walkbar.show { display:flex; }
+  #walkbar #play { width:30px; }
+  #walkbar input[type=range] { width:340px; accent-color:var(--acc); cursor:pointer; }
+  #walkbar #wpos { font-size:10px; color:var(--mut); min-width:78px; text-align:right; }
+
+  #loading { position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+    background:#0a0c10; z-index:50; font-size:12px; color:var(--mut); transition:opacity .6s; }
+  #loading.hide { opacity:0; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="loading">loading the enclosure field…</div>
+
+<div id="title" class="panel">
+  <h1>THE ANSWERING LINE</h1>
+  <p>A light-recapturing canopy generated from the measured enclosure field. Rib height
+     tracks the stolen-sky deficit (r&nbsp;=&nbsp;+0.99); each rib reaches toward the surviving
+     sky aperture. Massing is the real NYC context that took the light.</p>
+</div>
+
+<div id="stats" class="panel">
+  <div><span class="big" id="s-recap">37%</span> winter sun recovered</div>
+  <div>at enclosed reach tips</div>
+  <div style="margin-top:8px">height vs deficit&nbsp; <b>r = +0.99</b></div>
+  <div><b id="s-n">232</b> deck stations</div>
+</div>
+
+<div id="legend" class="panel">
+  SVF deficit answered &nbsp;(stolen sky, prepark − now)
+  <div class="bar"></div>
+  <div class="lab"><span>0.0 · open</span><span>enclosed · 0.9</span></div>
+</div>
+
+<div id="controls" class="panel">
+  <div class="row"><span class="lbl">sun</span>
+    <button data-season="winter" class="on">winter</button>
+    <button data-season="equinox">equinox</button>
+    <button data-season="summer">summer</button>
+  </div>
+  <div class="row"><span class="lbl">view</span>
+    <button id="btn-frame">frame enclosure</button>
+    <button id="btn-walk">deck walk</button>
+    <button id="btn-canopy" class="on">canopy on</button>
+  </div>
+</div>
+<div id="hint" class="panel">drag to orbit · scroll to zoom</div>
+
+<div id="walkbar">
+  <button id="play">❚❚</button>
+  <input id="scrub" type="range" min="0" max="1000" value="0">
+  <span id="wpos">s 0 m</span>
+  <button id="exitwalk">exit</button>
+</div>
+
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const DECK_H = 9.0;
+const PARK_YEAR = 2009;
+
+// ---------- renderer / scene ----------
+const app = document.getElementById('app');
+const renderer = new THREE.WebGLRenderer({ antialias:true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+app.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0a0c10');
+scene.fog = new THREE.Fog('#0a0c10', 900, 2600);
+
+const camera = new THREE.PerspectiveCamera(46, innerWidth/innerHeight, 1, 6000);
+camera.position.set(360, 300, 380);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.06;
+controls.maxPolarAngle = Math.PI * 0.495;   // stay above ground
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.03).texture;
+
+// ---------- lights ----------
+const hemi = new THREE.HemisphereLight('#aebfd8', '#1c1712', 0.7);
+scene.add(hemi);
+const sun = new THREE.DirectionalLight('#ffe7bf', 2.6);
+sun.castShadow = true;
+sun.shadow.mapSize.set(4096, 4096);
+sun.shadow.bias = -0.0004;
+sun.shadow.normalBias = 1.2;
+const sc = sun.shadow.camera;
+sc.near = 100; sc.far = 3000; sc.left = -1100; sc.right = 1100; sc.top = 1100; sc.bottom = -1100;
+scene.add(sun);
+scene.add(sun.target);
+
+function setSun(altDeg, azDeg) {
+  const alt = altDeg*Math.PI/180, az = azDeg*Math.PI/180;
+  // az from north (+z), clockwise toward east (+x); y up
+  const dir = new THREE.Vector3(Math.cos(alt)*Math.sin(az), Math.sin(alt), Math.cos(alt)*Math.cos(az));
+  sun.position.copy(dir.multiplyScalar(1500));
+}
+const SEASONS = { winter:[26,180], equinox:[49,180], summer:[73,180] }; // NYC noon altitudes
+setSun(...SEASONS.winter);
+
+// ---------- ground ----------
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(6000, 6000),
+  new THREE.MeshStandardMaterial({ color:'#12151b', roughness:1, metalness:0 }));
+ground.rotation.x = -Math.PI/2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// ---------- deficit color ramp (cool-dim -> terracotta -> warm-bright) ----------
+const RAMP = [
+  [0.00, new THREE.Color('#2b3a5c')],
+  [0.32, new THREE.Color('#7a5138')],
+  [0.60, new THREE.Color('#c0673f')],
+  [1.00, new THREE.Color('#ffce86')],
+];
+function ramp(t) {
+  t = Math.max(0, Math.min(1, t));
+  for (let i=0;i<RAMP.length-1;i++){
+    const [a,ca]=RAMP[i], [b,cb]=RAMP[i+1];
+    if (t<=b){ const f=(t-a)/(b-a||1); return ca.clone().lerp(cb, f); }
+  }
+  return RAMP[RAMP.length-1][1].clone();
+}
+
+// ---------- helpers ----------
+function extrudeFootprint(poly, height) {
+  const shape = new THREE.Shape();
+  poly.forEach(([x,z],i)=> i ? shape.lineTo(x,-z) : shape.moveTo(x,-z));
+  const geo = new THREE.ExtrudeGeometry(shape, { depth:height, bevelEnabled:false });
+  geo.rotateX(-Math.PI/2);   // footprint into XZ ground plane, extrude up in +Y
+  return geo;
+}
+
+async function loadJSON(p){ const r = await fetch(p); if(!r.ok) throw new Error(p+' '+r.status); return r.json(); }
+
+// ---------- build ----------
+let canopyMesh = null;
+let deckCurve = null, deckLen = 1856;
+
+(async function build(){
+  const [foot, env] = await Promise.all([
+    loadJSON('data/highline_footprints.json'),
+    loadJSON('data/envelope.json'),
+  ]);
+
+  // --- context massing ---
+  // pre-park massing: cool neutral. post-park (the enclosure culprits): a warmer,
+  // slightly lighter stone — legible as "newer" without a garish glow.
+  const preMat  = new THREE.MeshStandardMaterial({ color:'#282c34', roughness:0.9, metalness:0.04 });
+  const postMat = new THREE.MeshStandardMaterial({ color:'#453d34', roughness:0.82, metalness:0.05 });
+  const edgeMat = new THREE.LineBasicMaterial({ color:'#0a0c10', transparent:true, opacity:0.5 });
+  for (const f of foot.features) {
+    const h = f.properties.height; if(!h) continue;
+    const yr = parseInt((f.properties.construction_year||'').toString().slice(0,4)) || null;
+    const post = yr && yr > PARK_YEAR;
+    const polys = f.geometry.type==='MultiPolygon' ? f.geometry.coordinates : [f.geometry.coordinates];
+    for (const poly of polys) {
+      const ring = poly[0]; if(!ring || ring.length<3) continue;
+      const geo = extrudeFootprint(ring, h);
+      const m = new THREE.Mesh(geo, post ? postMat : preMat);
+      m.castShadow = true; m.receiveShadow = true;
+      scene.add(m);
+      const eg = new THREE.EdgesGeometry(geo, 30);
+      scene.add(new THREE.LineSegments(eg, edgeMat));
+    }
+  }
+
+  // --- deck ribbon (smooth centerline at deck height) ---
+  const cl = foot.high_line.centerline.map(([x,z])=> new THREE.Vector3(x, DECK_H, z));
+  const curve = new THREE.CatmullRomCurve3(cl, false, 'catmullrom', 0.25);
+  deckCurve = curve;                        // module-level, for the deck walk
+  deckLen = foot.high_line.length_m || curve.getLength();
+  const deck = new THREE.Mesh(
+    new THREE.TubeGeometry(curve, 500, 1.2, 8, false),   // slim, so an eye-level camera clears it
+    new THREE.MeshStandardMaterial({ color:'#4a4844', roughness:0.7, metalness:0.1 }));
+  deck.castShadow = true; deck.receiveShadow = true;
+  scene.add(deck);
+
+  // --- the canopy: loft consecutive ribs, vertex-colored by deficit ---
+  const pts = env.points;
+  const defs = pts.map(p=>p.deficit_svf);
+  const dmax = Math.max(...defs);
+  const pos = [], col = [];
+  const c = new THREE.Color();
+  const focus = new THREE.Vector3(); let fw = 0;
+  for (let i=0;i<pts.length-1;i++){
+    const A = pts[i], B = pts[i+1];
+    const ra = A.rib, rb = B.rib;                 // each 5 pts [x,y,z]
+    const ca = ramp(A.deficit_svf/dmax), cb = ramp(B.deficit_svf/dmax);
+    for (let k=0;k<ra.length-1;k++){
+      const a0=ra[k], a1=ra[k+1], b0=rb[k], b1=rb[k+1];
+      // two triangles a0,a1,b1  and a0,b1,b0
+      const tri = [[a0,ca],[a1,ca],[b1,cb],[a0,ca],[b1,cb],[b0,cb]];
+      for (const [v,cc] of tri){ pos.push(v[0],v[1],v[2]); c.copy(cc); col.push(c.r,c.g,c.b); }
+    }
+    // weighted focus toward the enclosed zone
+    const w = Math.pow(A.deficit_svf/dmax, 2);
+    focus.add(new THREE.Vector3(A.x, DECK_H+A.rib_height_m*0.5, A.z).multiplyScalar(w)); fw += w;
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+  g.computeVertexNormals();
+  // emissive lifted so the canopy underside glows warm from the shadowed deck —
+  // the element that gives light back reads luminous even in the canyon
+  const canopyMat = new THREE.MeshStandardMaterial({
+    vertexColors:true, roughness:0.3, metalness:0.15, side:THREE.DoubleSide,
+    emissive:'#3a1e0a', emissiveIntensity:0.85, envMapIntensity:1.5 });
+  canopyMesh = new THREE.Mesh(g, canopyMat);
+  canopyMesh.castShadow = true; canopyMesh.receiveShadow = true;
+  scene.add(canopyMesh);
+
+  // rib edge lines for tectonic read
+  const ribPos = [];
+  for (let i=0;i<pts.length;i+=2){ const r=pts[i].rib; for(let k=0;k<r.length-1;k++){ ribPos.push(...r[k],...r[k+1]); } }
+  scene.add(new THREE.LineSegments(
+    new THREE.BufferGeometry().setAttribute('position', new THREE.Float32BufferAttribute(ribPos,3)),
+    new THREE.LineBasicMaterial({ color:'#7a2f18', transparent:true, opacity:0.45 })));
+
+  // --- framing ---
+  focus.divideScalar(fw || 1);
+  ENCLOSURE_TARGET.copy(focus);
+  frameEnclosure();
+  sun.target.position.copy(focus);
+
+  // stats from meta
+  const rb = env._meta?.readback;
+  if (rb){
+    document.getElementById('s-recap').textContent =
+      Math.round((rb.mean_recaptured_winter_sun_frac_enclosed||0.37)*100)+'%';
+  }
+  document.getElementById('s-n').textContent = env._meta?.n_stations ?? pts.length;
+
+  document.getElementById('loading').classList.add('hide');
+})().catch(e=>{
+  document.getElementById('loading').textContent = 'error: '+e.message+
+    '  —  serve over http (python -m http.server) so data/*.json can load';
+  console.error(e);
+});
+
+// ---------- interactions ----------
+const ENCLOSURE_TARGET = new THREE.Vector3(120, 30, 300);
+function frameEnclosure(){
+  controls.target.copy(ENCLOSURE_TARGET);
+  camera.position.set(ENCLOSURE_TARGET.x + 330, ENCLOSURE_TARGET.y + 260, ENCLOSURE_TARGET.z + 340);
+  controls.update();
+}
+document.getElementById('btn-frame').onclick = frameEnclosure;
+
+document.querySelectorAll('[data-season]').forEach(b=>{
+  b.onclick = ()=>{
+    document.querySelectorAll('[data-season]').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    setSun(...SEASONS[b.dataset.season]);
+    if (canopyMesh) sun.target.position.copy(ENCLOSURE_TARGET);
+  };
+});
+const btnCanopy = document.getElementById('btn-canopy');
+btnCanopy.onclick = ()=>{
+  if(!canopyMesh) return;
+  canopyMesh.visible = !canopyMesh.visible;
+  btnCanopy.classList.toggle('on', canopyMesh.visible);
+  btnCanopy.textContent = canopyMesh.visible ? 'canopy on' : 'canopy off';
+};
+
+// ---------- deck walk (first person, eye level, under the canopy) ----------
+const WALK_EYE = 2.0;          // eye height above the deck surface (m)
+const WALK_SPEED = 0.012;      // fraction of the deck per second
+const _pA = new THREE.Vector3(), _pB = new THREE.Vector3(), _tan = new THREE.Vector3();
+let walkMode = false, walkU = 0, walkPlaying = true, savedFov = 46;
+const walkbar = document.getElementById('walkbar');
+const btnWalk = document.getElementById('btn-walk');
+const scrub = document.getElementById('scrub');
+const playBtn = document.getElementById('play');
+const wpos = document.getElementById('wpos');
+
+function enterWalk(){
+  if(!deckCurve) return;
+  walkMode = true; walkPlaying = true;
+  controls.enabled = false;
+  savedFov = camera.fov; camera.fov = 60; camera.updateProjectionMatrix();
+  btnWalk.classList.add('on'); walkbar.classList.add('show');
+  document.getElementById('hint').style.display = 'none';
+  playBtn.textContent = '❚❚';
+}
+function exitWalk(){
+  walkMode = false;
+  controls.enabled = true;
+  camera.fov = savedFov; camera.updateProjectionMatrix();
+  btnWalk.classList.remove('on'); walkbar.classList.remove('show');
+  document.getElementById('hint').style.display = '';
+  frameEnclosure();
+}
+btnWalk.onclick = ()=> walkMode ? exitWalk() : enterWalk();
+document.getElementById('exitwalk').onclick = exitWalk;
+playBtn.onclick = ()=>{ walkPlaying = !walkPlaying; playBtn.textContent = walkPlaying ? '❚❚' : '▶'; };
+scrub.addEventListener('input', ()=>{ walkU = scrub.value/1000; walkPlaying = false; playBtn.textContent = '▶'; });
+
+function updateWalk(dt){
+  if(walkPlaying){ walkU += WALK_SPEED * dt; if(walkU > 1) walkU = 0; scrub.value = Math.round(walkU*1000); }
+  const u = Math.min(walkU, 0.999);
+  deckCurve.getPointAt(u, _pA);
+  deckCurve.getTangentAt(u, _tan);
+  camera.position.set(_pA.x, _pA.y + WALK_EYE, _pA.z);
+  // look down the deck, only gently up — the canopy arches overhead while the
+  // corridor stays legible ahead (buried-in-facets if you tilt up much more)
+  _pB.copy(_pA).addScaledVector(_tan, 34); _pB.y += WALK_EYE + 1.4;
+  camera.lookAt(_pB);
+  wpos.textContent = 's ' + Math.round(u*deckLen) + ' m';
+}
+
+addEventListener('resize', ()=>{
+  camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+// ---------- loop ----------
+let _last = performance.now();
+renderer.setAnimationLoop(()=>{
+  const now = performance.now(), dt = Math.min((now - _last)/1000, 0.1); _last = now;
+  if (walkMode) updateWalk(dt);
+  else controls.update();
+  renderer.render(scene, camera);
+});
+</script>
+</body>
+</html>

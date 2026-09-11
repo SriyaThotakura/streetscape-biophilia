@@ -1,0 +1,42 @@
+{
+  "site_context": "Urban Block with Central Courtyard",
+  "units": "meters",
+  "buildings": [
+    { 
+      "id": "corner_commercial", 
+      "x": -35, "z": -35, "width": 30, "depth": 30, 
+      "height": 20, 
+      "type": "commercial" 
+    },
+    { 
+      "id": "rowhouse_01", 
+      "x": 0, "z": -40, "width": 15, "depth": 20, 
+      "height": 12, 
+      "type": "residential" 
+    },
+    { 
+      "id": "rowhouse_02", 
+      "x": 15, "z": -40, "width": 15, "depth": 20, 
+      "height": 12, 
+      "type": "residential" 
+    },
+    { 
+      "id": "rowhouse_03", 
+      "x": 30, "z": -40, "width": 15, "depth": 20, 
+      "height": 12, 
+      "type": "residential" 
+    },
+    { 
+      "id": "apartment_midrise", 
+      "x": 25, "z": 25, "width": 40, "depth": 25, 
+      "height": 35, 
+      "type": "residential" 
+    },
+    { 
+      "id": "industrial_warehouse", 
+      "x": -25, "z": 30, "width": 40, "depth": 35, 
+      "height": 15, 
+      "type": "industrial" 
+    }
+  ]
+}

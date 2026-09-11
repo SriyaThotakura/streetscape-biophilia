@@ -1,0 +1,25 @@
+{
+  "name": "BOARD 1 / COUNTERFACTUAL MATRIX",
+  "size": [5100, 3300],
+  "bg": "#0a0b0f", "panel_bg": "#0d0e14", "edge": "#1a1d2a",
+  "ink": "#cdd5c6", "dim": "#5b6b78", "accent": "#c0673f", "teal": "#00ddaa", "hot": "#e6ecf0",
+  "title": { "rect": [60, 40, 5040, 250] },
+  "panels": [
+    { "type": "image", "src": "boards/captures/3d/b1_hero.png", "rect": [60, 300, 1500, 2410],
+      "label": "HERO AXON  ·  towers by attribution rank", "fit": "contain" },
+    { "type": "grid_image", "src": "boards/captures/_grid16.png", "rect": [1548, 300, 3560, 2410],
+      "label": "SCENARIO MATRIX  ·  baseline + pre-2009 + forward + 12 single removals" },
+    { "type": "table_attribution", "rect": [3608, 300, 5040, 1500],
+      "label": "ATTRIBUTION LEADERBOARD  (data/attribution.json)" },
+    { "type": "card_lbt", "rect": [3608, 1548, 5040, 2410],
+      "label": "LADYBUG VALIDATION  (data/lbt_validation.json)" },
+    { "type": "detail", "src": "boards/captures/3d/b1_detail_worst.png", "rect": [60, 2470, 1680, 3110],
+      "label": "WORST SKY-VIEW", "sublabel": "s=104 m · 848 Washington canyon", "callout": [1548, 2410, 3560, 2410] },
+    { "type": "detail", "src": "boards/captures/3d/b1_detail_congestion.png", "rect": [1720, 2470, 3340, 3110],
+      "label": "PEAK CONGESTION", "sublabel": "s=561 m · seeded footfall" },
+    { "type": "detail", "src": "boards/captures/3d/b1_detail_best.png", "rect": [3380, 2470, 5040, 3110],
+      "label": "BEST SKY-VIEW", "sublabel": "s=1817 m · open northern end" }
+  ],
+  "detail_caption": "detail views: algorithmically selected extremes (worst/best calibrated SVF, peak seeded congestion)",
+  "footer": { "rect": [60, 3140, 5040, 3285] }
+}

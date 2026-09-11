@@ -1,0 +1,306 @@
+{
+ "_meta": {
+  "script": "scripts/diagnose_heights.py",
+  "git_commit": null,
+  "generated": "2026-08-12T16:34:27",
+  "purpose": "Quantify the effect of The 606's defaulted building heights on the published corridor comparison. DIAGNOSTIC ONLY \u2014 every scenario is a hypothetical, not a correction.",
+  "source": [
+   "data/the606_footprints.json",
+   "data/highline_footprints.json",
+   "data/comparison.json"
+  ],
+  "writes": "data/height_sensitivity.json only. compare_corridors.py, hl_core.py and data/comparison.json are NOT modified.",
+  "reused_unchanged": [
+   "compare_corridors.point_metrics",
+   "compare_corridors.N_AZ",
+   "compare_corridors.MAX_R",
+   "compare_corridors.SPACING",
+   "hl_core.edges_for (its existing `heights` override)",
+   "hl_core.ray_uv",
+   "hl_core.sun_path",
+   "hl_core.load_site"
+  ],
+  "deterministic": true,
+  "seed_note": "no stochastic step; the break-even is a bisection to 0.05 m",
+  "params": {
+   "N_AZ": 180,
+   "MAX_R": 350.0,
+   "SPACING": 8.0,
+   "default_height_m": 6.4,
+   "osm_level_height_m": 3.2,
+   "scenario_heights_m": [
+    7.5,
+    9.0,
+    10.6,
+    12.0,
+    12.8,
+    15.0,
+    16.0,
+    20.0
+   ]
+  },
+  "scenario_set_definition": "A scenario raises EVERY building stored at exactly 6.40 m. That is 2998 buildings. The file's own height_note implies only ~2007 are true fallbacks (3621 - 1614 tagged), so ~991 of them may be genuine two-storey buildings already correctly at 6.40 m. Raising all of them therefore OVERSTATES the correction \u2014 which is the conservative direction for a survival test: if the gap holds here, it holds.",
+  "limitations": [
+   "These are hypotheticals. None is a corrected 606 SVF, and none may be quoted as one.",
+   "A uniform replacement height is itself unrealistic \u2014 real building stock varies. The scenarios bracket the effect; they do not model the fabric.",
+   "The bbox-coverage bias measured in data/coverage_diagnostic.json runs the OPPOSITE way (it understates the gap). The two are not netted here; each is reported on its own terms.",
+   "Only heights are varied. Footprint completeness, which differs between an OSM extract and NYC Open Data, is not tested."
+  ]
+ },
+ "height_distribution": {
+  "high_line": {
+   "label": "High Line (NYC)",
+   "source_file": "data/highline_footprints.json",
+   "n_buildings": 176,
+   "n_missing_height": 0,
+   "n_unique_heights": 161,
+   "modal_height_m": 13.81,
+   "modal_count": 4,
+   "modal_share_pct": 2.3,
+   "mean_m": 18.06,
+   "median_m": 16.38,
+   "p90_m": 25.86,
+   "max_m": 83.21,
+   "share_above_20m_pct": 23.3,
+   "n_at_level_multiples": 0,
+   "share_at_level_multiples_pct": 0.0,
+   "top5": [
+    [
+     13.81,
+     4
+    ],
+    [
+     14.47,
+     3
+    ],
+    [
+     14.81,
+     2
+    ],
+    [
+     17.31,
+     2
+    ],
+    [
+     16.91,
+     2
+    ]
+   ],
+   "has_default_cluster": false
+  },
+  "the606": {
+   "label": "The 606 (Chicago)",
+   "source_file": "data/the606_footprints.json",
+   "n_buildings": 3621,
+   "n_missing_height": 0,
+   "n_unique_heights": 13,
+   "modal_height_m": 6.4,
+   "modal_count": 2998,
+   "modal_share_pct": 82.8,
+   "mean_m": 6.48,
+   "median_m": 6.4,
+   "p90_m": 6.4,
+   "max_m": 35.2,
+   "share_above_20m_pct": 0.0,
+   "n_at_level_multiples": 3615,
+   "share_at_level_multiples_pct": 99.8,
+   "top5": [
+    [
+     6.4,
+     2998
+    ],
+    [
+     3.2,
+     304
+    ],
+    [
+     9.6,
+     257
+    ],
+    [
+     12.8,
+     43
+    ],
+    [
+     16.0,
+     6
+    ]
+   ],
+   "has_default_cluster": true
+  }
+ },
+ "baseline": {
+  "note": "the same machinery, re-run, to confirm this harness reproduces the published figures before any scenario is trusted",
+  "highline_computed_svf": 0.8079,
+  "highline_published_svf": 0.808,
+  "the606_computed_svf": 0.9779,
+  "the606_published_svf": 0.978,
+  "published_gap": 0.17,
+  "computed_gap": 0.17,
+  "reproduces": true
+ },
+ "scenarios_hypothetical": [
+  {
+   "hypothetical_default_height_m": 7.5,
+   "storeys_implied_at_3p2m": 2.3,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.9779,
+   "delta_vs_baseline_svf": 0.0,
+   "gap_vs_highline_svf": 0.17,
+   "gap_direction": "606 still more open"
+  },
+  {
+   "hypothetical_default_height_m": 9.0,
+   "storeys_implied_at_3p2m": 2.8,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.9779,
+   "delta_vs_baseline_svf": 0.0,
+   "gap_vs_highline_svf": 0.17,
+   "gap_direction": "606 still more open"
+  },
+  {
+   "hypothetical_default_height_m": 10.6,
+   "storeys_implied_at_3p2m": 3.3,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.9779,
+   "delta_vs_baseline_svf": 0.0,
+   "gap_vs_highline_svf": 0.17,
+   "gap_direction": "606 still more open"
+  },
+  {
+   "hypothetical_default_height_m": 12.0,
+   "storeys_implied_at_3p2m": 3.8,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.9129,
+   "delta_vs_baseline_svf": -0.065,
+   "gap_vs_highline_svf": 0.105,
+   "gap_direction": "606 still more open"
+  },
+  {
+   "hypothetical_default_height_m": 12.8,
+   "storeys_implied_at_3p2m": 4.0,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.883,
+   "delta_vs_baseline_svf": -0.0949,
+   "gap_vs_highline_svf": 0.0751,
+   "gap_direction": "606 still more open"
+  },
+  {
+   "hypothetical_default_height_m": 15.0,
+   "storeys_implied_at_3p2m": 4.7,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.8133,
+   "delta_vs_baseline_svf": -0.1646,
+   "gap_vs_highline_svf": 0.0054,
+   "gap_direction": "606 still more open"
+  },
+  {
+   "hypothetical_default_height_m": 16.0,
+   "storeys_implied_at_3p2m": 5.0,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.7861,
+   "delta_vs_baseline_svf": -0.1919,
+   "gap_vs_highline_svf": -0.0219,
+   "gap_direction": "GAP CLOSED OR REVERSED"
+  },
+  {
+   "hypothetical_default_height_m": 20.0,
+   "storeys_implied_at_3p2m": 6.2,
+   "n_buildings_raised": 2998,
+   "the606_mean_svf": 0.6964,
+   "delta_vs_baseline_svf": -0.2815,
+   "gap_vs_highline_svf": -0.1115,
+   "gap_direction": "GAP CLOSED OR REVERSED"
+  }
+ ],
+ "break_even": {
+  "question": "At what uniform height for the defaulted buildings does The 606's mean SVF fall to the High Line's, closing the gap entirely?",
+  "break_even_height_m": 15.22,
+  "storeys_implied_at_3p2m": 4.8,
+  "no_break_even_note": null,
+  "plausibility_evidence": {
+   "the606_max_building_m": 35.2,
+   "the606_share_above_20m_pct": 0.0,
+   "the606_non_default_subset": {
+    "n": 623,
+    "mean_m": 6.88,
+    "median_m": 9.6,
+    "max_m": 35.2
+   },
+   "the606_true_height_tag_subset": {
+    "note": "buildings whose height is NOT a multiple of the 3.2 m level height \u2014 these carry a real OSM `height` tag rather than a levels estimate",
+    "n": 6,
+    "values_m": [
+     6.49,
+     7.62,
+     7.91,
+     8.23,
+     8.31,
+     9.18
+    ],
+    "mean_m": 7.96,
+    "max_m": 9.18
+   },
+   "highline_comparison": {
+    "mean_m": 18.06,
+    "share_above_20m_pct": 23.3,
+    "max_m": 83.21
+   }
+  }
+ },
+ "verdict": {
+  "gap_holds_at_every_scenario": false,
+  "robustness": "survives, not robust",
+  "statement": "SURVIVES, but NOT robustly. The gap closes at a uniform 15.22 m (4.8 storeys) for all 2998 defaulted buildings. That is 2.2x the mean height of the 623 buildings in the SAME corridor that do carry height information (6.88 m), and OSM tagging bias runs the other way \u2014 taller buildings are more likely to be tagged, not less. A uniform 4.8-storey defaulted stock through Logan Square, Humboldt Park and Wicker Park is not credible, so the gap stands. But the margin is thinner than the coverage analysis implied: the comparison is insensitive to the defaults only while they stay below the 10.6 m deck eye, and it degrades quickly above it.",
+  "break_even_vs_informative_stock": {
+   "break_even_m": 15.22,
+   "mean_of_height_bearing_buildings_m": 6.88,
+   "ratio": 2.21,
+   "n_height_bearing": 623
+  },
+  "direction_reminder": "Defaulted heights inflate The 606's SVF and therefore WIDEN the published gap. This bias runs AGAINST the claim, unlike the bbox-coverage bias, which runs for it."
+ },
+ "scenarios_fractional_hypothetical": [
+  {
+   "fraction_raised": 0.1,
+   "n_raised": 300,
+   "hypothetical_height_m": 12.8,
+   "storeys_implied_at_3p2m": 4.0,
+   "the606_mean_svf": 0.9702,
+   "gap_vs_highline_svf": 0.1623,
+   "selection": "first k of the defaulted set ordered by md5(building id) \u2014 nested across fractions, spatially uniform, deterministic, no RNG"
+  },
+  {
+   "fraction_raised": 0.25,
+   "n_raised": 750,
+   "hypothetical_height_m": 12.8,
+   "storeys_implied_at_3p2m": 4.0,
+   "the606_mean_svf": 0.9594,
+   "gap_vs_highline_svf": 0.1515,
+   "selection": "first k of the defaulted set ordered by md5(building id) \u2014 nested across fractions, spatially uniform, deterministic, no RNG"
+  },
+  {
+   "fraction_raised": 0.5,
+   "n_raised": 1499,
+   "hypothetical_height_m": 12.8,
+   "storeys_implied_at_3p2m": 4.0,
+   "the606_mean_svf": 0.9398,
+   "gap_vs_highline_svf": 0.1319,
+   "selection": "first k of the defaulted set ordered by md5(building id) \u2014 nested across fractions, spatially uniform, deterministic, no RNG"
+  },
+  {
+   "fraction_raised": 0.25,
+   "n_raised": 750,
+   "hypothetical_height_m": 16.0,
+   "storeys_implied_at_3p2m": 5.0,
+   "the606_mean_svf": 0.9326,
+   "gap_vs_highline_svf": 0.1247,
+   "selection": "first k of the defaulted set ordered by md5(building id) \u2014 nested across fractions, spatially uniform, deterministic, no RNG"
+  }
+ ],
+ "mechanism": {
+  "deck_eye_height_m": 10.6,
+  "why_low_scenarios_change_nothing": "compare_corridors computes beta = arctan2(H - EYE_DECK, t) and clamps it at 0, so a building shorter than the 10.6 m deck eye occludes NO sky and cannot move the SVF at all. Raising the defaults from 6.40 m to 7.5 or 9.0 m changes the result by exactly zero. The comparison is completely insensitive to the default height until it crosses 10.6 m \u2014 which is the real question this diagnostic answers: not 'are the defaults low', but 'how many buildings above 10.6 m are recorded at 6.40 m'.",
+  "first_scenario_that_closes_the_gap_m": 16.0
+ }
+}

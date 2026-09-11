@@ -1,0 +1,2106 @@
+{
+ "metadata": {
+  "method": "Ladybug Sunpath + ladybug-geometry ray/Face3D intersection (the LB Direct Sun Hours method); buildings-only; no Radiance binaries",
+  "site_latlon": [
+   40.7475,
+   -74.005
+  ],
+  "tz": -5,
+  "sun_step_min": 10,
+  "sky_dirs": 168,
+  "max_radius_m": 350.0,
+  "n_points": 232,
+  "park_year": 2009,
+  "epw": "not used (geometric sun hours)"
+ },
+ "points": [
+  {
+   "s_m": 0.0,
+   "sun_winter_solstice": 2.33,
+   "sun_winter_solstice_prepark": 2.33,
+   "sun_equinox": 6.83,
+   "sun_equinox_prepark": 11.5,
+   "sun_summer_solstice": 7.33,
+   "sun_summer_solstice_prepark": 13.83
+  },
+  {
+   "s_m": 8.0,
+   "sun_winter_solstice": 2.67,
+   "sun_winter_solstice_prepark": 2.67,
+   "sun_equinox": 6.17,
+   "sun_equinox_prepark": 11.33,
+   "sun_summer_solstice": 7.0,
+   "sun_summer_solstice_prepark": 13.83
+  },
+  {
+   "s_m": 16.1,
+   "sun_winter_solstice": 4.33,
+   "sun_winter_solstice_prepark": 4.33,
+   "sun_equinox": 5.67,
+   "sun_equinox_prepark": 10.67,
+   "sun_summer_solstice": 10.5,
+   "sun_summer_solstice_prepark": 13.83
+  },
+  {
+   "s_m": 24.1,
+   "sun_winter_solstice": 4.5,
+   "sun_winter_solstice_prepark": 5.83,
+   "sun_equinox": 6.17,
+   "sun_equinox_prepark": 10.17,
+   "sun_summer_solstice": 12.33,
+   "sun_summer_solstice_prepark": 12.5
+  },
+  {
+   "s_m": 32.2,
+   "sun_winter_solstice": 4.5,
+   "sun_winter_solstice_prepark": 6.0,
+   "sun_equinox": 6.67,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 13.0,
+   "sun_summer_solstice_prepark": 13.0
+  },
+  {
+   "s_m": 40.2,
+   "sun_winter_solstice": 4.5,
+   "sun_winter_solstice_prepark": 6.33,
+   "sun_equinox": 7.33,
+   "sun_equinox_prepark": 10.0,
+   "sun_summer_solstice": 13.0,
+   "sun_summer_solstice_prepark": 13.0
+  },
+  {
+   "s_m": 48.2,
+   "sun_winter_solstice": 4.5,
+   "sun_winter_solstice_prepark": 6.83,
+   "sun_equinox": 10.33,
+   "sun_equinox_prepark": 10.33,
+   "sun_summer_solstice": 13.17,
+   "sun_summer_solstice_prepark": 13.17
+  },
+  {
+   "s_m": 56.3,
+   "sun_winter_solstice": 4.67,
+   "sun_winter_solstice_prepark": 7.33,
+   "sun_equinox": 10.5,
+   "sun_equinox_prepark": 10.5,
+   "sun_summer_solstice": 13.17,
+   "sun_summer_solstice_prepark": 13.17
+  },
+  {
+   "s_m": 64.3,
+   "sun_winter_solstice": 4.83,
+   "sun_winter_solstice_prepark": 7.33,
+   "sun_equinox": 10.67,
+   "sun_equinox_prepark": 10.67,
+   "sun_summer_solstice": 13.83,
+   "sun_summer_solstice_prepark": 13.83
+  },
+  {
+   "s_m": 72.3,
+   "sun_winter_solstice": 5.17,
+   "sun_winter_solstice_prepark": 7.33,
+   "sun_equinox": 10.67,
+   "sun_equinox_prepark": 10.67,
+   "sun_summer_solstice": 13.67,
+   "sun_summer_solstice_prepark": 13.67
+  },
+  {
+   "s_m": 80.4,
+   "sun_winter_solstice": 5.33,
+   "sun_winter_solstice_prepark": 7.5,
+   "sun_equinox": 11.0,
+   "sun_equinox_prepark": 11.0,
+   "sun_summer_solstice": 13.67,
+   "sun_summer_solstice_prepark": 13.67
+  },
+  {
+   "s_m": 88.4,
+   "sun_winter_solstice": 6.67,
+   "sun_winter_solstice_prepark": 8.33,
+   "sun_equinox": 11.33,
+   "sun_equinox_prepark": 11.33,
+   "sun_summer_solstice": 12.0,
+   "sun_summer_solstice_prepark": 12.0
+  },
+  {
+   "s_m": 96.5,
+   "sun_winter_solstice": 6.17,
+   "sun_winter_solstice_prepark": 7.67,
+   "sun_equinox": 8.17,
+   "sun_equinox_prepark": 8.17,
+   "sun_summer_solstice": 6.0,
+   "sun_summer_solstice_prepark": 6.0
+  },
+  {
+   "s_m": 104.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 112.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 120.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 128.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 136.6,
+   "sun_winter_solstice": 0.83,
+   "sun_winter_solstice_prepark": 0.83,
+   "sun_equinox": 2.83,
+   "sun_equinox_prepark": 2.83,
+   "sun_summer_solstice": 5.17,
+   "sun_summer_solstice_prepark": 5.17
+  },
+  {
+   "s_m": 144.7,
+   "sun_winter_solstice": 2.0,
+   "sun_winter_solstice_prepark": 2.0,
+   "sun_equinox": 3.5,
+   "sun_equinox_prepark": 3.5,
+   "sun_summer_solstice": 5.5,
+   "sun_summer_solstice_prepark": 5.83
+  },
+  {
+   "s_m": 152.7,
+   "sun_winter_solstice": 2.33,
+   "sun_winter_solstice_prepark": 2.33,
+   "sun_equinox": 3.83,
+   "sun_equinox_prepark": 3.83,
+   "sun_summer_solstice": 5.0,
+   "sun_summer_solstice_prepark": 7.0
+  },
+  {
+   "s_m": 160.8,
+   "sun_winter_solstice": 2.83,
+   "sun_winter_solstice_prepark": 2.83,
+   "sun_equinox": 4.17,
+   "sun_equinox_prepark": 4.17,
+   "sun_summer_solstice": 5.33,
+   "sun_summer_solstice_prepark": 9.0
+  },
+  {
+   "s_m": 168.8,
+   "sun_winter_solstice": 3.0,
+   "sun_winter_solstice_prepark": 3.0,
+   "sun_equinox": 3.17,
+   "sun_equinox_prepark": 4.5,
+   "sun_summer_solstice": 6.0,
+   "sun_summer_solstice_prepark": 10.5
+  },
+  {
+   "s_m": 176.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.0,
+   "sun_equinox": 1.0,
+   "sun_equinox_prepark": 5.67,
+   "sun_summer_solstice": 3.33,
+   "sun_summer_solstice_prepark": 11.17
+  },
+  {
+   "s_m": 184.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.17,
+   "sun_equinox": 0.67,
+   "sun_equinox_prepark": 7.0,
+   "sun_summer_solstice": 1.83,
+   "sun_summer_solstice_prepark": 11.67
+  },
+  {
+   "s_m": 192.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.33,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 7.67,
+   "sun_summer_solstice": 1.67,
+   "sun_summer_solstice_prepark": 11.67
+  },
+  {
+   "s_m": 200.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.67,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 7.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.0
+  },
+  {
+   "s_m": 209.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.83,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 4.17,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 7.83
+  },
+  {
+   "s_m": 217.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 1.17,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 5.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 9.83
+  },
+  {
+   "s_m": 225.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 2.17,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 7.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 233.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.17,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 13.33
+  },
+  {
+   "s_m": 241.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.67,
+   "sun_equinox": 3.5,
+   "sun_equinox_prepark": 11.0,
+   "sun_summer_solstice": 4.67,
+   "sun_summer_solstice_prepark": 12.17
+  },
+  {
+   "s_m": 249.2,
+   "sun_winter_solstice": 0.33,
+   "sun_winter_solstice_prepark": 4.0,
+   "sun_equinox": 4.33,
+   "sun_equinox_prepark": 10.83,
+   "sun_summer_solstice": 6.0,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 257.2,
+   "sun_winter_solstice": 2.67,
+   "sun_winter_solstice_prepark": 6.17,
+   "sun_equinox": 4.17,
+   "sun_equinox_prepark": 10.33,
+   "sun_summer_solstice": 7.83,
+   "sun_summer_solstice_prepark": 10.5
+  },
+  {
+   "s_m": 265.2,
+   "sun_winter_solstice": 3.17,
+   "sun_winter_solstice_prepark": 6.67,
+   "sun_equinox": 4.33,
+   "sun_equinox_prepark": 9.33,
+   "sun_summer_solstice": 9.17,
+   "sun_summer_solstice_prepark": 9.33
+  },
+  {
+   "s_m": 273.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 281.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 289.4,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 297.4,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 305.4,
+   "sun_winter_solstice": 0.83,
+   "sun_winter_solstice_prepark": 2.5,
+   "sun_equinox": 4.83,
+   "sun_equinox_prepark": 4.83,
+   "sun_summer_solstice": 6.67,
+   "sun_summer_solstice_prepark": 6.67
+  },
+  {
+   "s_m": 313.5,
+   "sun_winter_solstice": 0.83,
+   "sun_winter_solstice_prepark": 2.5,
+   "sun_equinox": 5.0,
+   "sun_equinox_prepark": 5.0,
+   "sun_summer_solstice": 7.0,
+   "sun_summer_solstice_prepark": 7.0
+  },
+  {
+   "s_m": 321.5,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 2.33,
+   "sun_equinox": 5.17,
+   "sun_equinox_prepark": 5.17,
+   "sun_summer_solstice": 7.17,
+   "sun_summer_solstice_prepark": 7.17
+  },
+  {
+   "s_m": 329.6,
+   "sun_winter_solstice": 1.17,
+   "sun_winter_solstice_prepark": 2.33,
+   "sun_equinox": 6.67,
+   "sun_equinox_prepark": 6.67,
+   "sun_summer_solstice": 9.67,
+   "sun_summer_solstice_prepark": 9.67
+  },
+  {
+   "s_m": 337.6,
+   "sun_winter_solstice": 1.33,
+   "sun_winter_solstice_prepark": 2.67,
+   "sun_equinox": 7.5,
+   "sun_equinox_prepark": 7.5,
+   "sun_summer_solstice": 10.5,
+   "sun_summer_solstice_prepark": 10.5
+  },
+  {
+   "s_m": 345.6,
+   "sun_winter_solstice": 1.67,
+   "sun_winter_solstice_prepark": 3.17,
+   "sun_equinox": 8.67,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 9.5,
+   "sun_summer_solstice_prepark": 9.5
+  },
+  {
+   "s_m": 353.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 361.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 369.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 377.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 385.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 393.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 401.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 409.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 418.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.17,
+   "sun_equinox_prepark": 1.17,
+   "sun_summer_solstice": 2.33,
+   "sun_summer_solstice_prepark": 2.33
+  },
+  {
+   "s_m": 426.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 2.17,
+   "sun_equinox_prepark": 2.17,
+   "sun_summer_solstice": 6.67,
+   "sun_summer_solstice_prepark": 6.67
+  },
+  {
+   "s_m": 434.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 442.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 450.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 458.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 466.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 474.2,
+   "sun_winter_solstice": 1.17,
+   "sun_winter_solstice_prepark": 1.17,
+   "sun_equinox": 1.83,
+   "sun_equinox_prepark": 1.83,
+   "sun_summer_solstice": 2.83,
+   "sun_summer_solstice_prepark": 2.83
+  },
+  {
+   "s_m": 482.3,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 1.0,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 2.0,
+   "sun_summer_solstice": 2.67,
+   "sun_summer_solstice_prepark": 2.67
+  },
+  {
+   "s_m": 490.3,
+   "sun_winter_solstice": 1.17,
+   "sun_winter_solstice_prepark": 1.17,
+   "sun_equinox": 3.33,
+   "sun_equinox_prepark": 3.33,
+   "sun_summer_solstice": 7.33,
+   "sun_summer_solstice_prepark": 7.33
+  },
+  {
+   "s_m": 498.3,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 1.0,
+   "sun_equinox": 3.5,
+   "sun_equinox_prepark": 3.5,
+   "sun_summer_solstice": 7.33,
+   "sun_summer_solstice_prepark": 7.33
+  },
+  {
+   "s_m": 506.4,
+   "sun_winter_solstice": 1.17,
+   "sun_winter_solstice_prepark": 1.17,
+   "sun_equinox": 2.67,
+   "sun_equinox_prepark": 2.67,
+   "sun_summer_solstice": 7.5,
+   "sun_summer_solstice_prepark": 7.5
+  },
+  {
+   "s_m": 514.4,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 1.0,
+   "sun_equinox": 4.5,
+   "sun_equinox_prepark": 4.5,
+   "sun_summer_solstice": 12.0,
+   "sun_summer_solstice_prepark": 13.0
+  },
+  {
+   "s_m": 522.5,
+   "sun_winter_solstice": 1.33,
+   "sun_winter_solstice_prepark": 1.33,
+   "sun_equinox": 5.33,
+   "sun_equinox_prepark": 5.33,
+   "sun_summer_solstice": 10.83,
+   "sun_summer_solstice_prepark": 12.83
+  },
+  {
+   "s_m": 530.5,
+   "sun_winter_solstice": 1.5,
+   "sun_winter_solstice_prepark": 1.5,
+   "sun_equinox": 5.83,
+   "sun_equinox_prepark": 5.83,
+   "sun_summer_solstice": 9.5,
+   "sun_summer_solstice_prepark": 12.67
+  },
+  {
+   "s_m": 538.5,
+   "sun_winter_solstice": 1.67,
+   "sun_winter_solstice_prepark": 1.67,
+   "sun_equinox": 7.33,
+   "sun_equinox_prepark": 7.33,
+   "sun_summer_solstice": 8.5,
+   "sun_summer_solstice_prepark": 12.33
+  },
+  {
+   "s_m": 546.6,
+   "sun_winter_solstice": 1.83,
+   "sun_winter_solstice_prepark": 1.83,
+   "sun_equinox": 8.5,
+   "sun_equinox_prepark": 8.5,
+   "sun_summer_solstice": 7.5,
+   "sun_summer_solstice_prepark": 12.0
+  },
+  {
+   "s_m": 554.6,
+   "sun_winter_solstice": 2.33,
+   "sun_winter_solstice_prepark": 2.33,
+   "sun_equinox": 8.33,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 7.33,
+   "sun_summer_solstice_prepark": 12.0
+  },
+  {
+   "s_m": 562.7,
+   "sun_winter_solstice": 2.83,
+   "sun_winter_solstice_prepark": 2.83,
+   "sun_equinox": 7.83,
+   "sun_equinox_prepark": 9.0,
+   "sun_summer_solstice": 8.17,
+   "sun_summer_solstice_prepark": 12.83
+  },
+  {
+   "s_m": 570.7,
+   "sun_winter_solstice": 2.83,
+   "sun_winter_solstice_prepark": 2.83,
+   "sun_equinox": 7.17,
+   "sun_equinox_prepark": 9.17,
+   "sun_summer_solstice": 8.5,
+   "sun_summer_solstice_prepark": 12.67
+  },
+  {
+   "s_m": 578.7,
+   "sun_winter_solstice": 3.0,
+   "sun_winter_solstice_prepark": 3.0,
+   "sun_equinox": 6.33,
+   "sun_equinox_prepark": 9.17,
+   "sun_summer_solstice": 8.33,
+   "sun_summer_solstice_prepark": 12.17
+  },
+  {
+   "s_m": 586.8,
+   "sun_winter_solstice": 2.5,
+   "sun_winter_solstice_prepark": 2.5,
+   "sun_equinox": 5.67,
+   "sun_equinox_prepark": 9.0,
+   "sun_summer_solstice": 7.33,
+   "sun_summer_solstice_prepark": 11.67
+  },
+  {
+   "s_m": 594.8,
+   "sun_winter_solstice": 2.5,
+   "sun_winter_solstice_prepark": 2.5,
+   "sun_equinox": 6.33,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 6.5,
+   "sun_summer_solstice_prepark": 10.83
+  },
+  {
+   "s_m": 602.8,
+   "sun_winter_solstice": 2.67,
+   "sun_winter_solstice_prepark": 2.67,
+   "sun_equinox": 6.0,
+   "sun_equinox_prepark": 9.67,
+   "sun_summer_solstice": 5.17,
+   "sun_summer_solstice_prepark": 9.83
+  },
+  {
+   "s_m": 610.9,
+   "sun_winter_solstice": 2.67,
+   "sun_winter_solstice_prepark": 2.67,
+   "sun_equinox": 5.67,
+   "sun_equinox_prepark": 9.5,
+   "sun_summer_solstice": 4.33,
+   "sun_summer_solstice_prepark": 9.0
+  },
+  {
+   "s_m": 618.9,
+   "sun_winter_solstice": 2.83,
+   "sun_winter_solstice_prepark": 3.0,
+   "sun_equinox": 4.67,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 5.33,
+   "sun_summer_solstice_prepark": 10.0
+  },
+  {
+   "s_m": 627.0,
+   "sun_winter_solstice": 2.5,
+   "sun_winter_solstice_prepark": 3.17,
+   "sun_equinox": 3.5,
+   "sun_equinox_prepark": 7.67,
+   "sun_summer_solstice": 7.0,
+   "sun_summer_solstice_prepark": 11.67
+  },
+  {
+   "s_m": 635.0,
+   "sun_winter_solstice": 3.0,
+   "sun_winter_solstice_prepark": 4.0,
+   "sun_equinox": 4.0,
+   "sun_equinox_prepark": 8.33,
+   "sun_summer_solstice": 6.5,
+   "sun_summer_solstice_prepark": 10.83
+  },
+  {
+   "s_m": 643.0,
+   "sun_winter_solstice": 3.0,
+   "sun_winter_solstice_prepark": 4.17,
+   "sun_equinox": 5.67,
+   "sun_equinox_prepark": 10.0,
+   "sun_summer_solstice": 6.5,
+   "sun_summer_solstice_prepark": 10.83
+  },
+  {
+   "s_m": 651.1,
+   "sun_winter_solstice": 2.67,
+   "sun_winter_solstice_prepark": 4.17,
+   "sun_equinox": 6.17,
+   "sun_equinox_prepark": 10.17,
+   "sun_summer_solstice": 6.33,
+   "sun_summer_solstice_prepark": 10.83
+  },
+  {
+   "s_m": 659.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 10.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.0
+  },
+  {
+   "s_m": 667.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.17
+  },
+  {
+   "s_m": 675.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.67,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.17,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.67
+  },
+  {
+   "s_m": 683.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 5.5,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 7.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.5
+  },
+  {
+   "s_m": 691.3,
+   "sun_winter_solstice": 4.17,
+   "sun_winter_solstice_prepark": 6.17,
+   "sun_equinox": 4.67,
+   "sun_equinox_prepark": 7.83,
+   "sun_summer_solstice": 12.17,
+   "sun_summer_solstice_prepark": 12.17
+  },
+  {
+   "s_m": 699.3,
+   "sun_winter_solstice": 3.83,
+   "sun_winter_solstice_prepark": 6.33,
+   "sun_equinox": 5.17,
+   "sun_equinox_prepark": 8.33,
+   "sun_summer_solstice": 12.0,
+   "sun_summer_solstice_prepark": 12.0
+  },
+  {
+   "s_m": 707.3,
+   "sun_winter_solstice": 3.33,
+   "sun_winter_solstice_prepark": 5.67,
+   "sun_equinox": 6.67,
+   "sun_equinox_prepark": 9.17,
+   "sun_summer_solstice": 11.33,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 715.4,
+   "sun_winter_solstice": 3.17,
+   "sun_winter_solstice_prepark": 5.5,
+   "sun_equinox": 7.83,
+   "sun_equinox_prepark": 9.33,
+   "sun_summer_solstice": 11.17,
+   "sun_summer_solstice_prepark": 11.17
+  },
+  {
+   "s_m": 723.4,
+   "sun_winter_solstice": 3.33,
+   "sun_winter_solstice_prepark": 5.67,
+   "sun_equinox": 8.83,
+   "sun_equinox_prepark": 9.33,
+   "sun_summer_solstice": 9.67,
+   "sun_summer_solstice_prepark": 11.5
+  },
+  {
+   "s_m": 731.4,
+   "sun_winter_solstice": 4.5,
+   "sun_winter_solstice_prepark": 6.83,
+   "sun_equinox": 8.17,
+   "sun_equinox_prepark": 9.5,
+   "sun_summer_solstice": 7.83,
+   "sun_summer_solstice_prepark": 12.5
+  },
+  {
+   "s_m": 739.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.17,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.67
+  },
+  {
+   "s_m": 747.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.0
+  },
+  {
+   "s_m": 755.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.5,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.0
+  },
+  {
+   "s_m": 763.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.67,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.83
+  },
+  {
+   "s_m": 771.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.5,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.5,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.17
+  },
+  {
+   "s_m": 779.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.5,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.0
+  },
+  {
+   "s_m": 787.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.17,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.5,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 10.5
+  },
+  {
+   "s_m": 795.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.33,
+   "sun_equinox": 4.33,
+   "sun_equinox_prepark": 9.33,
+   "sun_summer_solstice": 10.5,
+   "sun_summer_solstice_prepark": 10.5
+  },
+  {
+   "s_m": 803.8,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 6.33,
+   "sun_equinox": 7.33,
+   "sun_equinox_prepark": 8.0,
+   "sun_summer_solstice": 11.0,
+   "sun_summer_solstice_prepark": 11.0
+  },
+  {
+   "s_m": 811.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 819.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 827.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 835.9,
+   "sun_winter_solstice": 0.33,
+   "sun_winter_solstice_prepark": 1.17,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 3.5,
+   "sun_summer_solstice": 2.0,
+   "sun_summer_solstice_prepark": 6.17
+  },
+  {
+   "s_m": 844.0,
+   "sun_winter_solstice": 0.83,
+   "sun_winter_solstice_prepark": 1.33,
+   "sun_equinox": 2.17,
+   "sun_equinox_prepark": 4.67,
+   "sun_summer_solstice": 2.83,
+   "sun_summer_solstice_prepark": 7.0
+  },
+  {
+   "s_m": 852.0,
+   "sun_winter_solstice": 1.5,
+   "sun_winter_solstice_prepark": 1.83,
+   "sun_equinox": 4.0,
+   "sun_equinox_prepark": 8.83,
+   "sun_summer_solstice": 4.0,
+   "sun_summer_solstice_prepark": 12.5
+  },
+  {
+   "s_m": 860.1,
+   "sun_winter_solstice": 2.33,
+   "sun_winter_solstice_prepark": 3.67,
+   "sun_equinox": 3.33,
+   "sun_equinox_prepark": 10.5,
+   "sun_summer_solstice": 3.5,
+   "sun_summer_solstice_prepark": 12.33
+  },
+  {
+   "s_m": 868.1,
+   "sun_winter_solstice": 2.5,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 4.33,
+   "sun_equinox_prepark": 10.33,
+   "sun_summer_solstice": 7.83,
+   "sun_summer_solstice_prepark": 12.33
+  },
+  {
+   "s_m": 876.1,
+   "sun_winter_solstice": 3.17,
+   "sun_winter_solstice_prepark": 7.17,
+   "sun_equinox": 5.5,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 7.5,
+   "sun_summer_solstice_prepark": 11.5
+  },
+  {
+   "s_m": 884.2,
+   "sun_winter_solstice": 3.33,
+   "sun_winter_solstice_prepark": 7.33,
+   "sun_equinox": 5.67,
+   "sun_equinox_prepark": 8.83,
+   "sun_summer_solstice": 7.67,
+   "sun_summer_solstice_prepark": 10.0
+  },
+  {
+   "s_m": 892.2,
+   "sun_winter_solstice": 1.83,
+   "sun_winter_solstice_prepark": 5.17,
+   "sun_equinox": 3.17,
+   "sun_equinox_prepark": 6.17,
+   "sun_summer_solstice": 5.83,
+   "sun_summer_solstice_prepark": 6.0
+  },
+  {
+   "s_m": 900.2,
+   "sun_winter_solstice": 1.83,
+   "sun_winter_solstice_prepark": 3.83,
+   "sun_equinox": 3.67,
+   "sun_equinox_prepark": 5.83,
+   "sun_summer_solstice": 4.17,
+   "sun_summer_solstice_prepark": 7.0
+  },
+  {
+   "s_m": 908.3,
+   "sun_winter_solstice": 2.17,
+   "sun_winter_solstice_prepark": 3.0,
+   "sun_equinox": 4.17,
+   "sun_equinox_prepark": 6.83,
+   "sun_summer_solstice": 2.67,
+   "sun_summer_solstice_prepark": 6.5
+  },
+  {
+   "s_m": 916.3,
+   "sun_winter_solstice": 2.5,
+   "sun_winter_solstice_prepark": 5.17,
+   "sun_equinox": 2.67,
+   "sun_equinox_prepark": 6.67,
+   "sun_summer_solstice": 2.17,
+   "sun_summer_solstice_prepark": 6.17
+  },
+  {
+   "s_m": 924.4,
+   "sun_winter_solstice": 2.67,
+   "sun_winter_solstice_prepark": 6.33,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 6.33,
+   "sun_summer_solstice": 6.0,
+   "sun_summer_solstice_prepark": 9.67
+  },
+  {
+   "s_m": 932.4,
+   "sun_winter_solstice": 2.0,
+   "sun_winter_solstice_prepark": 5.83,
+   "sun_equinox": 1.67,
+   "sun_equinox_prepark": 6.33,
+   "sun_summer_solstice": 2.5,
+   "sun_summer_solstice_prepark": 6.0
+  },
+  {
+   "s_m": 940.4,
+   "sun_winter_solstice": 1.67,
+   "sun_winter_solstice_prepark": 5.5,
+   "sun_equinox": 1.5,
+   "sun_equinox_prepark": 6.0,
+   "sun_summer_solstice": 4.17,
+   "sun_summer_solstice_prepark": 6.0
+  },
+  {
+   "s_m": 948.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.67,
+   "sun_equinox": 1.5,
+   "sun_equinox_prepark": 4.5,
+   "sun_summer_solstice": 5.5,
+   "sun_summer_solstice_prepark": 5.67
+  },
+  {
+   "s_m": 956.5,
+   "sun_winter_solstice": 0.83,
+   "sun_winter_solstice_prepark": 5.0,
+   "sun_equinox": 2.83,
+   "sun_equinox_prepark": 5.0,
+   "sun_summer_solstice": 6.33,
+   "sun_summer_solstice_prepark": 6.83
+  },
+  {
+   "s_m": 964.5,
+   "sun_winter_solstice": 1.5,
+   "sun_winter_solstice_prepark": 5.17,
+   "sun_equinox": 3.17,
+   "sun_equinox_prepark": 4.67,
+   "sun_summer_solstice": 8.33,
+   "sun_summer_solstice_prepark": 9.17
+  },
+  {
+   "s_m": 972.6,
+   "sun_winter_solstice": 2.33,
+   "sun_winter_solstice_prepark": 5.33,
+   "sun_equinox": 4.0,
+   "sun_equinox_prepark": 4.33,
+   "sun_summer_solstice": 8.33,
+   "sun_summer_solstice_prepark": 9.5
+  },
+  {
+   "s_m": 980.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 988.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 996.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1004.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1012.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 1.83,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 2.5,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 4.17
+  },
+  {
+   "s_m": 1020.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 2.33,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 2.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 6.17
+  },
+  {
+   "s_m": 1028.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 2.33,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 3.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 7.67
+  },
+  {
+   "s_m": 1036.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 2.17,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 4.17,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 7.5
+  },
+  {
+   "s_m": 1044.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 1.67,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 5.83,
+   "sun_summer_solstice": 3.67,
+   "sun_summer_solstice_prepark": 7.33
+  },
+  {
+   "s_m": 1053.0,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 1.5,
+   "sun_equinox": 2.67,
+   "sun_equinox_prepark": 6.17,
+   "sun_summer_solstice": 7.33,
+   "sun_summer_solstice_prepark": 7.5
+  },
+  {
+   "s_m": 1061.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1069.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1077.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1085.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.17,
+   "sun_equinox_prepark": 0.17,
+   "sun_summer_solstice": 2.5,
+   "sun_summer_solstice_prepark": 2.5
+  },
+  {
+   "s_m": 1093.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1101.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1109.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1117.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.33,
+   "sun_equinox_prepark": 1.83,
+   "sun_summer_solstice": 2.17,
+   "sun_summer_solstice_prepark": 2.17
+  },
+  {
+   "s_m": 1125.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.33,
+   "sun_equinox": 3.67,
+   "sun_equinox_prepark": 3.67,
+   "sun_summer_solstice": 5.5,
+   "sun_summer_solstice_prepark": 5.5
+  },
+  {
+   "s_m": 1133.3,
+   "sun_winter_solstice": 1.83,
+   "sun_winter_solstice_prepark": 2.67,
+   "sun_equinox": 4.5,
+   "sun_equinox_prepark": 4.5,
+   "sun_summer_solstice": 7.67,
+   "sun_summer_solstice_prepark": 8.67
+  },
+  {
+   "s_m": 1141.4,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1149.4,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1157.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1165.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1173.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1181.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1189.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1197.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 2.0,
+   "sun_summer_solstice": 4.67,
+   "sun_summer_solstice_prepark": 4.67
+  },
+  {
+   "s_m": 1205.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 3.0,
+   "sun_equinox_prepark": 3.0,
+   "sun_summer_solstice": 3.67,
+   "sun_summer_solstice_prepark": 4.0
+  },
+  {
+   "s_m": 1213.7,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 0.17,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 2.0,
+   "sun_summer_solstice": 5.83,
+   "sun_summer_solstice_prepark": 6.5
+  },
+  {
+   "s_m": 1221.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1229.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1237.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1245.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.0,
+   "sun_equinox_prepark": 1.0,
+   "sun_summer_solstice": 3.0,
+   "sun_summer_solstice_prepark": 3.0
+  },
+  {
+   "s_m": 1253.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 1.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 4.67
+  },
+  {
+   "s_m": 1261.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 3.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 5.83
+  },
+  {
+   "s_m": 1270.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1278.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.67,
+   "sun_equinox": 3.17,
+   "sun_equinox_prepark": 5.83,
+   "sun_summer_solstice": 4.83,
+   "sun_summer_solstice_prepark": 6.83
+  },
+  {
+   "s_m": 1286.1,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 1.33,
+   "sun_equinox": 4.0,
+   "sun_equinox_prepark": 6.0,
+   "sun_summer_solstice": 6.33,
+   "sun_summer_solstice_prepark": 7.67
+  },
+  {
+   "s_m": 1294.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 2.67,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 5.17,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.0
+  },
+  {
+   "s_m": 1302.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.33,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 5.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 1310.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.67,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 7.5,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 1318.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.83,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.5,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.17
+  },
+  {
+   "s_m": 1326.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 5.17,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 10.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 1334.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 5.67,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 10.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.17
+  },
+  {
+   "s_m": 1342.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 5.67,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 10.17,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 12.17
+  },
+  {
+   "s_m": 1350.4,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 5.83,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 1358.4,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 6.17,
+   "sun_equinox": 1.5,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 2.33,
+   "sun_summer_solstice_prepark": 11.33
+  },
+  {
+   "s_m": 1366.4,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 6.67,
+   "sun_equinox": 1.83,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 4.67,
+   "sun_summer_solstice_prepark": 13.0
+  },
+  {
+   "s_m": 1374.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 9.33,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 14.33
+  },
+  {
+   "s_m": 1382.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.83,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 14.67
+  },
+  {
+   "s_m": 1390.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.33,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 14.17
+  },
+  {
+   "s_m": 1398.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.17,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 13.83
+  },
+  {
+   "s_m": 1406.6,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.17,
+   "sun_summer_solstice": 0.83,
+   "sun_summer_solstice_prepark": 13.67
+  },
+  {
+   "s_m": 1414.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.83,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 13.0
+  },
+  {
+   "s_m": 1422.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.17,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 13.33
+  },
+  {
+   "s_m": 1430.7,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 14.0
+  },
+  {
+   "s_m": 1438.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.83,
+   "sun_equinox": 1.33,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 2.83,
+   "sun_summer_solstice_prepark": 14.83
+  },
+  {
+   "s_m": 1446.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 6.83,
+   "sun_equinox": 1.33,
+   "sun_equinox_prepark": 8.67,
+   "sun_summer_solstice": 5.0,
+   "sun_summer_solstice_prepark": 13.67
+  },
+  {
+   "s_m": 1454.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1462.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1470.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 1.5,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 4.33,
+   "sun_summer_solstice": 4.5,
+   "sun_summer_solstice_prepark": 5.67
+  },
+  {
+   "s_m": 1479.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 2.83,
+   "sun_equinox": 1.5,
+   "sun_equinox_prepark": 6.67,
+   "sun_summer_solstice": 6.17,
+   "sun_summer_solstice_prepark": 9.17
+  },
+  {
+   "s_m": 1487.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.17,
+   "sun_equinox": 2.67,
+   "sun_equinox_prepark": 9.0,
+   "sun_summer_solstice": 6.17,
+   "sun_summer_solstice_prepark": 10.0
+  },
+  {
+   "s_m": 1495.0,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 5.33,
+   "sun_equinox": 3.17,
+   "sun_equinox_prepark": 9.5,
+   "sun_summer_solstice": 6.0,
+   "sun_summer_solstice_prepark": 9.33
+  },
+  {
+   "s_m": 1503.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1511.1,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1519.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1527.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1535.2,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1543.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1551.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 0.0,
+   "sun_equinox_prepark": 0.0,
+   "sun_summer_solstice": 0.0,
+   "sun_summer_solstice_prepark": 0.0
+  },
+  {
+   "s_m": 1559.3,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.0,
+   "sun_equinox_prepark": 3.0,
+   "sun_summer_solstice": 1.67,
+   "sun_summer_solstice_prepark": 6.17
+  },
+  {
+   "s_m": 1567.4,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.33,
+   "sun_equinox_prepark": 3.33,
+   "sun_summer_solstice": 2.0,
+   "sun_summer_solstice_prepark": 7.33
+  },
+  {
+   "s_m": 1575.4,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.67,
+   "sun_equinox_prepark": 3.5,
+   "sun_summer_solstice": 2.33,
+   "sun_summer_solstice_prepark": 9.0
+  },
+  {
+   "s_m": 1583.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.83,
+   "sun_equinox_prepark": 4.33,
+   "sun_summer_solstice": 2.67,
+   "sun_summer_solstice_prepark": 10.83
+  },
+  {
+   "s_m": 1591.5,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 0.0,
+   "sun_equinox": 1.83,
+   "sun_equinox_prepark": 6.17,
+   "sun_summer_solstice": 2.83,
+   "sun_summer_solstice_prepark": 12.17
+  },
+  {
+   "s_m": 1599.5,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 0.17,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 7.5,
+   "sun_summer_solstice": 3.5,
+   "sun_summer_solstice_prepark": 13.33
+  },
+  {
+   "s_m": 1607.6,
+   "sun_winter_solstice": 0.33,
+   "sun_winter_solstice_prepark": 0.67,
+   "sun_equinox": 2.33,
+   "sun_equinox_prepark": 8.5,
+   "sun_summer_solstice": 4.5,
+   "sun_summer_solstice_prepark": 14.33
+  },
+  {
+   "s_m": 1615.6,
+   "sun_winter_solstice": 0.67,
+   "sun_winter_solstice_prepark": 1.17,
+   "sun_equinox": 2.5,
+   "sun_equinox_prepark": 9.0,
+   "sun_summer_solstice": 5.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1623.6,
+   "sun_winter_solstice": 0.83,
+   "sun_winter_solstice_prepark": 1.83,
+   "sun_equinox": 2.17,
+   "sun_equinox_prepark": 9.5,
+   "sun_summer_solstice": 6.0,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1631.7,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 2.67,
+   "sun_equinox": 1.67,
+   "sun_equinox_prepark": 9.83,
+   "sun_summer_solstice": 5.5,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1639.7,
+   "sun_winter_solstice": 0.83,
+   "sun_winter_solstice_prepark": 3.17,
+   "sun_equinox": 1.33,
+   "sun_equinox_prepark": 10.17,
+   "sun_summer_solstice": 5.5,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1647.8,
+   "sun_winter_solstice": 0.33,
+   "sun_winter_solstice_prepark": 3.33,
+   "sun_equinox": 1.83,
+   "sun_equinox_prepark": 10.5,
+   "sun_summer_solstice": 5.67,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1655.8,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 3.67,
+   "sun_equinox": 2.0,
+   "sun_equinox_prepark": 10.83,
+   "sun_summer_solstice": 5.67,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1663.8,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 4.0,
+   "sun_equinox": 2.5,
+   "sun_equinox_prepark": 11.33,
+   "sun_summer_solstice": 6.5,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1671.9,
+   "sun_winter_solstice": 0.0,
+   "sun_winter_solstice_prepark": 4.5,
+   "sun_equinox": 3.33,
+   "sun_equinox_prepark": 12.0,
+   "sun_summer_solstice": 7.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1679.9,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 4.67,
+   "sun_equinox": 3.67,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 8.33,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1688.0,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 4.83,
+   "sun_equinox": 3.83,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 8.33,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1696.0,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 5.33,
+   "sun_equinox": 3.83,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 8.33,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1704.0,
+   "sun_winter_solstice": 0.33,
+   "sun_winter_solstice_prepark": 5.5,
+   "sun_equinox": 4.0,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 8.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1712.1,
+   "sun_winter_solstice": 0.17,
+   "sun_winter_solstice_prepark": 5.67,
+   "sun_equinox": 4.17,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 8.33,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1720.1,
+   "sun_winter_solstice": 0.33,
+   "sun_winter_solstice_prepark": 6.17,
+   "sun_equinox": 4.33,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 8.83,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1728.1,
+   "sun_winter_solstice": 0.33,
+   "sun_winter_solstice_prepark": 6.33,
+   "sun_equinox": 4.5,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 9.0,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1736.2,
+   "sun_winter_solstice": 0.67,
+   "sun_winter_solstice_prepark": 6.5,
+   "sun_equinox": 4.67,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 9.83,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1744.2,
+   "sun_winter_solstice": 1.0,
+   "sun_winter_solstice_prepark": 7.0,
+   "sun_equinox": 4.83,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 10.5,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1752.3,
+   "sun_winter_solstice": 1.33,
+   "sun_winter_solstice_prepark": 7.33,
+   "sun_equinox": 4.83,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 11.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1760.3,
+   "sun_winter_solstice": 1.67,
+   "sun_winter_solstice_prepark": 7.5,
+   "sun_equinox": 5.0,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 11.67,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1768.3,
+   "sun_winter_solstice": 2.17,
+   "sun_winter_solstice_prepark": 7.83,
+   "sun_equinox": 5.33,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 12.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1776.4,
+   "sun_winter_solstice": 2.67,
+   "sun_winter_solstice_prepark": 8.0,
+   "sun_equinox": 5.83,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 12.33,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1784.4,
+   "sun_winter_solstice": 2.83,
+   "sun_winter_solstice_prepark": 8.0,
+   "sun_equinox": 6.17,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 12.83,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1792.4,
+   "sun_winter_solstice": 2.83,
+   "sun_winter_solstice_prepark": 8.17,
+   "sun_equinox": 6.67,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 13.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1800.5,
+   "sun_winter_solstice": 3.0,
+   "sun_winter_solstice_prepark": 8.17,
+   "sun_equinox": 7.17,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 13.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1808.5,
+   "sun_winter_solstice": 3.33,
+   "sun_winter_solstice_prepark": 8.33,
+   "sun_equinox": 7.33,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 13.33,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1816.6,
+   "sun_winter_solstice": 3.33,
+   "sun_winter_solstice_prepark": 8.33,
+   "sun_equinox": 7.5,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 13.33,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1824.6,
+   "sun_winter_solstice": 3.67,
+   "sun_winter_solstice_prepark": 8.5,
+   "sun_equinox": 7.5,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 13.67,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1832.6,
+   "sun_winter_solstice": 3.83,
+   "sun_winter_solstice_prepark": 8.83,
+   "sun_equinox": 7.67,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 13.83,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1840.7,
+   "sun_winter_solstice": 4.5,
+   "sun_winter_solstice_prepark": 9.33,
+   "sun_equinox": 7.83,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 13.83,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1848.7,
+   "sun_winter_solstice": 4.5,
+   "sun_winter_solstice_prepark": 9.33,
+   "sun_equinox": 8.0,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 14.17,
+   "sun_summer_solstice_prepark": 15.0
+  },
+  {
+   "s_m": 1856.7,
+   "sun_winter_solstice": 4.67,
+   "sun_winter_solstice_prepark": 9.33,
+   "sun_equinox": 8.0,
+   "sun_equinox_prepark": 12.17,
+   "sun_summer_solstice": 14.17,
+   "sun_summer_solstice_prepark": 15.0
+  }
+ ]
+}

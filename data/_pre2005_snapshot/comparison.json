@@ -1,0 +1,31 @@
+{
+ "metric": "hl_core viewshed/solar",
+ "n_azimuth": 180,
+ "enclosed_below_svf": 0.7,
+ "corridors": [
+  {
+   "name": "High Line (NYC)",
+   "n_buildings": 2083,
+   "length_m": 1856.7,
+   "lat": 40.7409,
+   "mean_svf": 0.424,
+   "mean_enclosure_deg": 49.9,
+   "pct_enclosed": 85.0,
+   "winter_daylight_h": 8.8,
+   "mean_winter_sun_h": 1.16,
+   "mean_tallest_neighbour_m": 212.8
+  },
+  {
+   "name": "The 606 (Chicago)",
+   "n_buildings": 3621,
+   "length_m": 1930.3,
+   "lat": 41.9138,
+   "mean_svf": 0.978,
+   "mean_enclosure_deg": 3.1,
+   "pct_enclosed": 1.0,
+   "winter_daylight_h": 8.8,
+   "mean_winter_sun_h": 7.21,
+   "mean_tallest_neighbour_m": 22.6
+  }
+ ]
+}

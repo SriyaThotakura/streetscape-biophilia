@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b59b12ceef0220cd256116ad16b45edb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b59b12ceef0220cd256116ad16b45edb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b59b12ceef0220cd256116ad16b45edb = L.map(
+                "map_b59b12ceef0220cd256116ad16b45edb",
+                {
+                    center: [40.744, -74.007],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0f28e74e7bb44541b8d4b41a235bfefe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0f28e74e7bb44541b8d4b41a235bfefe.addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+            var circle_marker_280a04eabcbe7c785c9f890625eee139 = L.circleMarker(
+                [40.7413, -74.0081],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_faf25ae6e9b06bedceb61d3684dcb0e0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_43c1105afbda81e032ce0f3288c3d414 = $(`<div id="html_43c1105afbda81e032ce0f3288c3d414" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 10</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.5%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.7%</span>     </div>     </div>`)[0];
+                popup_faf25ae6e9b06bedceb61d3684dcb0e0.setContent(html_43c1105afbda81e032ce0f3288c3d414);
+            
+        
+
+        circle_marker_280a04eabcbe7c785c9f890625eee139.bindPopup(popup_faf25ae6e9b06bedceb61d3684dcb0e0)
+        ;
+
+        
+    
+    
+            var circle_marker_f2ce260db757edc129704474a255eb7b = L.circleMarker(
+                [40.7415, -74.008],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_349f81fc42ef1de88e421ab220ba6176 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b877d8be78a80efb7cc915e220b1865c = $(`<div id="html_b877d8be78a80efb7cc915e220b1865c" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 11</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.5%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.7%</span>     </div>     </div>`)[0];
+                popup_349f81fc42ef1de88e421ab220ba6176.setContent(html_b877d8be78a80efb7cc915e220b1865c);
+            
+        
+
+        circle_marker_f2ce260db757edc129704474a255eb7b.bindPopup(popup_349f81fc42ef1de88e421ab220ba6176)
+        ;
+
+        
+    
+    
+            var circle_marker_1096acf2b6fa68c844bdc26479241b28 = L.circleMarker(
+                [40.7417, -74.0079],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_52f18a2b353cc21bae82f205e307b75d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a977406aca4d1036d5911787a23bf0c7 = $(`<div id="html_a977406aca4d1036d5911787a23bf0c7" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 12</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 8.9%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 8.9%</span>     </div>     </div>`)[0];
+                popup_52f18a2b353cc21bae82f205e307b75d.setContent(html_a977406aca4d1036d5911787a23bf0c7);
+            
+        
+
+        circle_marker_1096acf2b6fa68c844bdc26479241b28.bindPopup(popup_52f18a2b353cc21bae82f205e307b75d)
+        ;
+
+        
+    
+    
+            var circle_marker_b1920bf17187250100cd6b955b1864c9 = L.circleMarker(
+                [40.7419, -74.0078],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_69df7632dfe29f514b5f3f93bb2f40d7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e89a2cf76102c1eb2800fbb30c87be6c = $(`<div id="html_e89a2cf76102c1eb2800fbb30c87be6c" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 13</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 5.7%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 5.8%</span>     </div>     </div>`)[0];
+                popup_69df7632dfe29f514b5f3f93bb2f40d7.setContent(html_e89a2cf76102c1eb2800fbb30c87be6c);
+            
+        
+
+        circle_marker_b1920bf17187250100cd6b955b1864c9.bindPopup(popup_69df7632dfe29f514b5f3f93bb2f40d7)
+        ;
+
+        
+    
+    
+            var circle_marker_32425f2c6539e61eadc5381f6a7acdb8 = L.circleMarker(
+                [40.7421, -74.0077],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_8f49670ac542babb714ab496d595d4f1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d27403e79de407707154766649f46676 = $(`<div id="html_d27403e79de407707154766649f46676" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 14</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 2.0%</span>     </div>     </div>`)[0];
+                popup_8f49670ac542babb714ab496d595d4f1.setContent(html_d27403e79de407707154766649f46676);
+            
+        
+
+        circle_marker_32425f2c6539e61eadc5381f6a7acdb8.bindPopup(popup_8f49670ac542babb714ab496d595d4f1)
+        ;
+
+        
+    
+    
+            var circle_marker_cd6aea77fc70a862d56c75d61e58a2b9 = L.circleMarker(
+                [40.7423, -74.0076],
+                {"bubblingMouseEvents": true, "color": "#F1C40F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1C40F", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_0990ba4fb549b2a417ceb1f953df013e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_de0d7a01738e2eaaba64302ebc6db334 = $(`<div id="html_de0d7a01738e2eaaba64302ebc6db334" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 15</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 15.3%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 15.3%</span>     </div>     </div>`)[0];
+                popup_0990ba4fb549b2a417ceb1f953df013e.setContent(html_de0d7a01738e2eaaba64302ebc6db334);
+            
+        
+
+        circle_marker_cd6aea77fc70a862d56c75d61e58a2b9.bindPopup(popup_0990ba4fb549b2a417ceb1f953df013e)
+        ;
+
+        
+    
+    
+            var circle_marker_722ba6f942d51b16b5ea7f26b4b1b9d0 = L.circleMarker(
+                [40.7425, -74.0075],
+                {"bubblingMouseEvents": true, "color": "#F1C40F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1C40F", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_ce31a5224fcf21290eb592010269b7d1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_41e8be4e58a384a99757c7da060cf301 = $(`<div id="html_41e8be4e58a384a99757c7da060cf301" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 16</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 22.9%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 23.4%</span>     </div>     </div>`)[0];
+                popup_ce31a5224fcf21290eb592010269b7d1.setContent(html_41e8be4e58a384a99757c7da060cf301);
+            
+        
+
+        circle_marker_722ba6f942d51b16b5ea7f26b4b1b9d0.bindPopup(popup_ce31a5224fcf21290eb592010269b7d1)
+        ;
+
+        
+    
+    
+            var circle_marker_63f508585f5b8f9d69fbc57494e23846 = L.circleMarker(
+                [40.7427, -74.0074],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_9e064a86aa490b7f9d0e7f19171a5dd4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b270be940533c3570ee4ebc520b90612 = $(`<div id="html_b270be940533c3570ee4ebc520b90612" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 17</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.0%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 11.4%</span>     </div>     </div>`)[0];
+                popup_9e064a86aa490b7f9d0e7f19171a5dd4.setContent(html_b270be940533c3570ee4ebc520b90612);
+            
+        
+
+        circle_marker_63f508585f5b8f9d69fbc57494e23846.bindPopup(popup_9e064a86aa490b7f9d0e7f19171a5dd4)
+        ;
+
+        
+    
+    
+            var circle_marker_311952a06adbaa07b11466b7dc9363a4 = L.circleMarker(
+                [40.7429, -74.0073],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_2e53ecf283cd93d03139cd3be89e51ab = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4bb5d47548292c6163a8597cdf2f8d80 = $(`<div id="html_4bb5d47548292c6163a8597cdf2f8d80" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 18</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.0%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.1%</span>     </div>     </div>`)[0];
+                popup_2e53ecf283cd93d03139cd3be89e51ab.setContent(html_4bb5d47548292c6163a8597cdf2f8d80);
+            
+        
+
+        circle_marker_311952a06adbaa07b11466b7dc9363a4.bindPopup(popup_2e53ecf283cd93d03139cd3be89e51ab)
+        ;
+
+        
+    
+    
+            var circle_marker_381f1a3c9f78dffed9165ba4c895f259 = L.circleMarker(
+                [40.7431, -74.0072],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_9dddd6fe5366bd20298311f1eccc8be1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_407a38fc4c2f02c79014c7bfb8982ca5 = $(`<div id="html_407a38fc4c2f02c79014c7bfb8982ca5" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 19</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.0%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.1%</span>     </div>     </div>`)[0];
+                popup_9dddd6fe5366bd20298311f1eccc8be1.setContent(html_407a38fc4c2f02c79014c7bfb8982ca5);
+            
+        
+
+        circle_marker_381f1a3c9f78dffed9165ba4c895f259.bindPopup(popup_9dddd6fe5366bd20298311f1eccc8be1)
+        ;
+
+        
+    
+    
+            var circle_marker_9f995052404006c27da02da487566a50 = L.circleMarker(
+                [40.7433, -74.0071],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_d652c0c897fbd46be37630d9976243e9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_de9f96c2193be332248999ab8767afd6 = $(`<div id="html_de9f96c2193be332248999ab8767afd6" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 20</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 13.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 13.1%</span>     </div>     </div>`)[0];
+                popup_d652c0c897fbd46be37630d9976243e9.setContent(html_de9f96c2193be332248999ab8767afd6);
+            
+        
+
+        circle_marker_9f995052404006c27da02da487566a50.bindPopup(popup_d652c0c897fbd46be37630d9976243e9)
+        ;
+
+        
+    
+    
+            var circle_marker_028adb45e4a27ed17bca3a8cdf5b5b3c = L.circleMarker(
+                [40.7435, -74.007],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_9408a6a8d1c8d4796c188950cb50044a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fda04d85ef265c3e4b112d64de1eb204 = $(`<div id="html_fda04d85ef265c3e4b112d64de1eb204" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 21</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 13.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 13.1%</span>     </div>     </div>`)[0];
+                popup_9408a6a8d1c8d4796c188950cb50044a.setContent(html_fda04d85ef265c3e4b112d64de1eb204);
+            
+        
+
+        circle_marker_028adb45e4a27ed17bca3a8cdf5b5b3c.bindPopup(popup_9408a6a8d1c8d4796c188950cb50044a)
+        ;
+
+        
+    
+    
+            var circle_marker_f92c93c6587306434ca21d72b83882f4 = L.circleMarker(
+                [40.7437, -74.0069],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_ce9373c12f9255430c85b3775d798e18 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b410d5d4753818b9f216d4b1f507d0f2 = $(`<div id="html_b410d5d4753818b9f216d4b1f507d0f2" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 22</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 3.8%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 4.4%</span>     </div>     </div>`)[0];
+                popup_ce9373c12f9255430c85b3775d798e18.setContent(html_b410d5d4753818b9f216d4b1f507d0f2);
+            
+        
+
+        circle_marker_f92c93c6587306434ca21d72b83882f4.bindPopup(popup_ce9373c12f9255430c85b3775d798e18)
+        ;
+
+        
+    
+    
+            var circle_marker_659512e72bc19c9a3b5606b956443480 = L.circleMarker(
+                [40.7439, -74.0068],
+                {"bubblingMouseEvents": true, "color": "#27AE60", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27AE60", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_dd2593afd15781dbd8481b2cadfa8cd9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_afc0a00eda026071ef14a01d2b5bbf31 = $(`<div id="html_afc0a00eda026071ef14a01d2b5bbf31" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 23</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 49.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 83.1%</span>     </div>     </div>`)[0];
+                popup_dd2593afd15781dbd8481b2cadfa8cd9.setContent(html_afc0a00eda026071ef14a01d2b5bbf31);
+            
+        
+
+        circle_marker_659512e72bc19c9a3b5606b956443480.bindPopup(popup_dd2593afd15781dbd8481b2cadfa8cd9)
+        ;
+
+        
+    
+    
+            var circle_marker_9e28186eb8053d030b21a3ff80ea77e6 = L.circleMarker(
+                [40.7441, -74.0067],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_fdddbe2b961613453d460b8798854a5d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d283ca1d49e274b862096ea889c45bdc = $(`<div id="html_d283ca1d49e274b862096ea889c45bdc" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 24</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 7.5%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 7.8%</span>     </div>     </div>`)[0];
+                popup_fdddbe2b961613453d460b8798854a5d.setContent(html_d283ca1d49e274b862096ea889c45bdc);
+            
+        
+
+        circle_marker_9e28186eb8053d030b21a3ff80ea77e6.bindPopup(popup_fdddbe2b961613453d460b8798854a5d)
+        ;
+
+        
+    
+    
+            var circle_marker_9ed37dfe147e846a1b22a341be252134 = L.circleMarker(
+                [40.7443, -74.0066],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_729dd88a8636b9b6711973c7a0980dc8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3bea67d71e272b7b44509d05c1895e54 = $(`<div id="html_3bea67d71e272b7b44509d05c1895e54" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 25</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.5%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.6%</span>     </div>     </div>`)[0];
+                popup_729dd88a8636b9b6711973c7a0980dc8.setContent(html_3bea67d71e272b7b44509d05c1895e54);
+            
+        
+
+        circle_marker_9ed37dfe147e846a1b22a341be252134.bindPopup(popup_729dd88a8636b9b6711973c7a0980dc8)
+        ;
+
+        
+    
+    
+            var circle_marker_735850e765d3e21e8de366c1a5318fd9 = L.circleMarker(
+                [40.7445, -74.0065],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_0b18625a6b895d349a6c3846cc154ff9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_839ae7f195a04e042cb03879b9713e05 = $(`<div id="html_839ae7f195a04e042cb03879b9713e05" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 26</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 4.9%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 5.8%</span>     </div>     </div>`)[0];
+                popup_0b18625a6b895d349a6c3846cc154ff9.setContent(html_839ae7f195a04e042cb03879b9713e05);
+            
+        
+
+        circle_marker_735850e765d3e21e8de366c1a5318fd9.bindPopup(popup_0b18625a6b895d349a6c3846cc154ff9)
+        ;
+
+        
+    
+    
+            var circle_marker_90cbbe965cc9222848b586d305956398 = L.circleMarker(
+                [40.7447, -74.0064],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_b258df9666b314e5f96b205d69dd0a52 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ecdb072ca332247e91bb3caf96e803b6 = $(`<div id="html_ecdb072ca332247e91bb3caf96e803b6" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 27</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 2.4%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 2.4%</span>     </div>     </div>`)[0];
+                popup_b258df9666b314e5f96b205d69dd0a52.setContent(html_ecdb072ca332247e91bb3caf96e803b6);
+            
+        
+
+        circle_marker_90cbbe965cc9222848b586d305956398.bindPopup(popup_b258df9666b314e5f96b205d69dd0a52)
+        ;
+
+        
+    
+    
+            var circle_marker_e1af6bbdf1efcd04447400c8c176ddfd = L.circleMarker(
+                [40.7449, -74.0063],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_9ea21cc5d3d577425bedeb1f3e864b93 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7c7f0946a9836b345a75f230297ff9aa = $(`<div id="html_7c7f0946a9836b345a75f230297ff9aa" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 28</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 1.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.2%</span>     </div>     </div>`)[0];
+                popup_9ea21cc5d3d577425bedeb1f3e864b93.setContent(html_7c7f0946a9836b345a75f230297ff9aa);
+            
+        
+
+        circle_marker_e1af6bbdf1efcd04447400c8c176ddfd.bindPopup(popup_9ea21cc5d3d577425bedeb1f3e864b93)
+        ;
+
+        
+    
+    
+            var circle_marker_92bec97d70e6cb31fc69bce702660a8e = L.circleMarker(
+                [40.7451, -74.0062],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_43fd04f2debf5ea9f7bd96869e0d0247 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e63e1edce6315e78263e84435bb7bc0b = $(`<div id="html_e63e1edce6315e78263e84435bb7bc0b" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 29</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 1.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.2%</span>     </div>     </div>`)[0];
+                popup_43fd04f2debf5ea9f7bd96869e0d0247.setContent(html_e63e1edce6315e78263e84435bb7bc0b);
+            
+        
+
+        circle_marker_92bec97d70e6cb31fc69bce702660a8e.bindPopup(popup_43fd04f2debf5ea9f7bd96869e0d0247)
+        ;
+
+        
+    
+    
+            var circle_marker_40554e0526ef244337da1062a959e952 = L.circleMarker(
+                [40.7453, -74.0061],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_0c1eae77a6eb9f35af845e288d332a32 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bf4c8c543c6dc7e68efd3a58e6b5afb8 = $(`<div id="html_bf4c8c543c6dc7e68efd3a58e6b5afb8" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 30</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 2.6%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 2.7%</span>     </div>     </div>`)[0];
+                popup_0c1eae77a6eb9f35af845e288d332a32.setContent(html_bf4c8c543c6dc7e68efd3a58e6b5afb8);
+            
+        
+
+        circle_marker_40554e0526ef244337da1062a959e952.bindPopup(popup_0c1eae77a6eb9f35af845e288d332a32)
+        ;
+
+        
+    
+    
+            var circle_marker_ff5a2bb85d5902e401973c23ef75c71a = L.circleMarker(
+                [40.7455, -74.006],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_13ac36b83d94e6db8019e2ba0ae14798 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_19ad95d25da477b40259b0e338bdaa44 = $(`<div id="html_19ad95d25da477b40259b0e338bdaa44" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 31</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 2.6%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 2.7%</span>     </div>     </div>`)[0];
+                popup_13ac36b83d94e6db8019e2ba0ae14798.setContent(html_19ad95d25da477b40259b0e338bdaa44);
+            
+        
+
+        circle_marker_ff5a2bb85d5902e401973c23ef75c71a.bindPopup(popup_13ac36b83d94e6db8019e2ba0ae14798)
+        ;
+
+        
+    
+    
+            var circle_marker_568ac47f89f89319090c48488af1ff88 = L.circleMarker(
+                [40.7457, -74.0059],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_56f7597e658a6bbb3066c8fe8e496c6a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_41aa4330a717842f9a0a05527a414b72 = $(`<div id="html_41aa4330a717842f9a0a05527a414b72" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 32</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 0.9%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 0.9%</span>     </div>     </div>`)[0];
+                popup_56f7597e658a6bbb3066c8fe8e496c6a.setContent(html_41aa4330a717842f9a0a05527a414b72);
+            
+        
+
+        circle_marker_568ac47f89f89319090c48488af1ff88.bindPopup(popup_56f7597e658a6bbb3066c8fe8e496c6a)
+        ;
+
+        
+    
+    
+            var circle_marker_f3f34ef0ea3c6a50b56a3a6fe39dfc7d = L.circleMarker(
+                [40.7459, -74.0058],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_fb08f6bdd6447f8095a3a9682296a9b1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dba6b5cdf626ea90bdcc6b2a67ae2dae = $(`<div id="html_dba6b5cdf626ea90bdcc6b2a67ae2dae" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 33</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 1.2%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 1.2%</span>     </div>     </div>`)[0];
+                popup_fb08f6bdd6447f8095a3a9682296a9b1.setContent(html_dba6b5cdf626ea90bdcc6b2a67ae2dae);
+            
+        
+
+        circle_marker_f3f34ef0ea3c6a50b56a3a6fe39dfc7d.bindPopup(popup_fb08f6bdd6447f8095a3a9682296a9b1)
+        ;
+
+        
+    
+    
+            var circle_marker_24c4fc65aab6d5a66a8fbfedb6c72d89 = L.circleMarker(
+                [40.7463, -74.0056],
+                {"bubblingMouseEvents": true, "color": "#27AE60", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27AE60", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_a29e2d7d099b5d39a0f602fca62501d6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_253edbd6e3c43535766d67f0dc7bc458 = $(`<div id="html_253edbd6e3c43535766d67f0dc7bc458" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 35</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 56.5%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 56.5%</span>     </div>     </div>`)[0];
+                popup_a29e2d7d099b5d39a0f602fca62501d6.setContent(html_253edbd6e3c43535766d67f0dc7bc458);
+            
+        
+
+        circle_marker_24c4fc65aab6d5a66a8fbfedb6c72d89.bindPopup(popup_a29e2d7d099b5d39a0f602fca62501d6)
+        ;
+
+        
+    
+    
+            var circle_marker_d10ee2a34488ad718d68f32df7934cd1 = L.circleMarker(
+                [40.7465, -74.0055],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_8ba2575772c7803ce229624ecf91d1dc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d4abae0f65ac7a56a8c695daae06703e = $(`<div id="html_d4abae0f65ac7a56a8c695daae06703e" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 36</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 12.9%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 12.9%</span>     </div>     </div>`)[0];
+                popup_8ba2575772c7803ce229624ecf91d1dc.setContent(html_d4abae0f65ac7a56a8c695daae06703e);
+            
+        
+
+        circle_marker_d10ee2a34488ad718d68f32df7934cd1.bindPopup(popup_8ba2575772c7803ce229624ecf91d1dc)
+        ;
+
+        
+    
+    
+            var circle_marker_c70150ee09f12c55ed2eaef901102c4b = L.circleMarker(
+                [40.7467, -74.0054],
+                {"bubblingMouseEvents": true, "color": "#F1C40F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1C40F", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_31acd3d57121489d03194c987057d3ee = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2693c5517aa53b7ce40186240d6d8e99 = $(`<div id="html_2693c5517aa53b7ce40186240d6d8e99" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 37</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 21.5%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 22.4%</span>     </div>     </div>`)[0];
+                popup_31acd3d57121489d03194c987057d3ee.setContent(html_2693c5517aa53b7ce40186240d6d8e99);
+            
+        
+
+        circle_marker_c70150ee09f12c55ed2eaef901102c4b.bindPopup(popup_31acd3d57121489d03194c987057d3ee)
+        ;
+
+        
+    
+    
+            var circle_marker_fb56024d4b05eac653ae65db715ba447 = L.circleMarker(
+                [40.7469, -74.0053],
+                {"bubblingMouseEvents": true, "color": "#27AE60", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27AE60", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_ee6cd9af80ed2cfb6854996f11891c25 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6e5369b171abc49ed552f0725ce164ba = $(`<div id="html_6e5369b171abc49ed552f0725ce164ba" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 38</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 81.6%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 81.6%</span>     </div>     </div>`)[0];
+                popup_ee6cd9af80ed2cfb6854996f11891c25.setContent(html_6e5369b171abc49ed552f0725ce164ba);
+            
+        
+
+        circle_marker_fb56024d4b05eac653ae65db715ba447.bindPopup(popup_ee6cd9af80ed2cfb6854996f11891c25)
+        ;
+
+        
+    
+    
+            var circle_marker_e07624157835e4f2ae6e954d88b5cebf = L.circleMarker(
+                [40.7471, -74.0052],
+                {"bubblingMouseEvents": true, "color": "#27AE60", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27AE60", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_c8cea3cb8a268866b3f8b7d3d3228f4b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_31e454488553915a50d67a2d5d9ee2db = $(`<div id="html_31e454488553915a50d67a2d5d9ee2db" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 39</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 43.3%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 44.2%</span>     </div>     </div>`)[0];
+                popup_c8cea3cb8a268866b3f8b7d3d3228f4b.setContent(html_31e454488553915a50d67a2d5d9ee2db);
+            
+        
+
+        circle_marker_e07624157835e4f2ae6e954d88b5cebf.bindPopup(popup_c8cea3cb8a268866b3f8b7d3d3228f4b)
+        ;
+
+        
+    
+    
+            var circle_marker_1bba9bb7e82d5c789aa4a591f95a9f6c = L.circleMarker(
+                [40.7473, -74.0051],
+                {"bubblingMouseEvents": true, "color": "#27AE60", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#27AE60", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_0133b0a625c404acd6bc4b0ec8f9781a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_85c84b836aa4489e55b420684b73d1f5 = $(`<div id="html_85c84b836aa4489e55b420684b73d1f5" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 40</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 47.8%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 47.9%</span>     </div>     </div>`)[0];
+                popup_0133b0a625c404acd6bc4b0ec8f9781a.setContent(html_85c84b836aa4489e55b420684b73d1f5);
+            
+        
+
+        circle_marker_1bba9bb7e82d5c789aa4a591f95a9f6c.bindPopup(popup_0133b0a625c404acd6bc4b0ec8f9781a)
+        ;
+
+        
+    
+    
+            var circle_marker_6f34b232b3de867affa2b4b6134a1f13 = L.circleMarker(
+                [40.7475, -74.005],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_cbdff5d3ced93b858a234831af38aec3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e9494efcff4c4ea71286075109153f08 = $(`<div id="html_e9494efcff4c4ea71286075109153f08" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 41</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 6.7%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 7.2%</span>     </div>     </div>`)[0];
+                popup_cbdff5d3ced93b858a234831af38aec3.setContent(html_e9494efcff4c4ea71286075109153f08);
+            
+        
+
+        circle_marker_6f34b232b3de867affa2b4b6134a1f13.bindPopup(popup_cbdff5d3ced93b858a234831af38aec3)
+        ;
+
+        
+    
+    
+            var circle_marker_07096f3c907a682b1e0c70776f90804a = L.circleMarker(
+                [40.7477, -74.0049],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_4946338c66f1a572b02163f573ab5b9f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d939e09686a42c7143209ea17df35316 = $(`<div id="html_d939e09686a42c7143209ea17df35316" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 42</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 4.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 4.2%</span>     </div>     </div>`)[0];
+                popup_4946338c66f1a572b02163f573ab5b9f.setContent(html_d939e09686a42c7143209ea17df35316);
+            
+        
+
+        circle_marker_07096f3c907a682b1e0c70776f90804a.bindPopup(popup_4946338c66f1a572b02163f573ab5b9f)
+        ;
+
+        
+    
+    
+            var circle_marker_151adcb9497ea7dc28ebd7411833bf7e = L.circleMarker(
+                [40.7479, -74.0048],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_d82c9016623c4194ea1c6a7b18c3c873 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4ecf17dcde61620c49d603b59d3a8418 = $(`<div id="html_4ecf17dcde61620c49d603b59d3a8418" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 43</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 12.7%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 12.7%</span>     </div>     </div>`)[0];
+                popup_d82c9016623c4194ea1c6a7b18c3c873.setContent(html_4ecf17dcde61620c49d603b59d3a8418);
+            
+        
+
+        circle_marker_151adcb9497ea7dc28ebd7411833bf7e.bindPopup(popup_d82c9016623c4194ea1c6a7b18c3c873)
+        ;
+
+        
+    
+    
+            var circle_marker_700c2922f540a86e7932b212ab3a7da3 = L.circleMarker(
+                [40.7481, -74.0047],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_aa9bf0a0566d85e307982fc9dae4ee13 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f2fb3ccef745572f23943919861aa9a0 = $(`<div id="html_f2fb3ccef745572f23943919861aa9a0" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 44</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 4.8%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 5.3%</span>     </div>     </div>`)[0];
+                popup_aa9bf0a0566d85e307982fc9dae4ee13.setContent(html_f2fb3ccef745572f23943919861aa9a0);
+            
+        
+
+        circle_marker_700c2922f540a86e7932b212ab3a7da3.bindPopup(popup_aa9bf0a0566d85e307982fc9dae4ee13)
+        ;
+
+        
+    
+    
+            var circle_marker_98ea5990927e9fa45e4aa23a4d80bb11 = L.circleMarker(
+                [40.7483, -74.0046],
+                {"bubblingMouseEvents": true, "color": "#F1C40F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1C40F", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_35a78929307dbfa73e08f4091c942edf = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b9a4f27c45e46a68ce945eb9aede05c8 = $(`<div id="html_b9a4f27c45e46a68ce945eb9aede05c8" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 45</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 24.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 24.1%</span>     </div>     </div>`)[0];
+                popup_35a78929307dbfa73e08f4091c942edf.setContent(html_b9a4f27c45e46a68ce945eb9aede05c8);
+            
+        
+
+        circle_marker_98ea5990927e9fa45e4aa23a4d80bb11.bindPopup(popup_35a78929307dbfa73e08f4091c942edf)
+        ;
+
+        
+    
+    
+            var circle_marker_cf68cafe7a4cbaa501838568e0912913 = L.circleMarker(
+                [40.7485, -74.0045],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_10e7f8bfa57ba02e8e30f60151fb0f64 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_97c309ec057db242d95ac3357dc9d2cd = $(`<div id="html_97c309ec057db242d95ac3357dc9d2cd" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 46</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 6.4%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 14.7%</span>     </div>     </div>`)[0];
+                popup_10e7f8bfa57ba02e8e30f60151fb0f64.setContent(html_97c309ec057db242d95ac3357dc9d2cd);
+            
+        
+
+        circle_marker_cf68cafe7a4cbaa501838568e0912913.bindPopup(popup_10e7f8bfa57ba02e8e30f60151fb0f64)
+        ;
+
+        
+    
+    
+            var circle_marker_261c06d3d0200aba0612febced78f312 = L.circleMarker(
+                [40.7487, -74.0044],
+                {"bubblingMouseEvents": true, "color": "#F1C40F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F1C40F", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_2c39b4c2cc72db5a9fe35397b5aad4fb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ac46857c42e082cab2f629d8c41b1448 = $(`<div id="html_ac46857c42e082cab2f629d8c41b1448" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 47</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 25.6%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 25.6%</span>     </div>     </div>`)[0];
+                popup_2c39b4c2cc72db5a9fe35397b5aad4fb.setContent(html_ac46857c42e082cab2f629d8c41b1448);
+            
+        
+
+        circle_marker_261c06d3d0200aba0612febced78f312.bindPopup(popup_2c39b4c2cc72db5a9fe35397b5aad4fb)
+        ;
+
+        
+    
+    
+            var circle_marker_c6431e6d3e710a4a447c03e8b9cd7a75 = L.circleMarker(
+                [40.7409, -74.0083],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_06405b7409e61ac3751ee8b73d92c4f0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_edb899cd5f422e811694d1d1e4bf1969 = $(`<div id="html_edb899cd5f422e811694d1d1e4bf1969" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 8</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 6.1%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 6.1%</span>     </div>     </div>`)[0];
+                popup_06405b7409e61ac3751ee8b73d92c4f0.setContent(html_edb899cd5f422e811694d1d1e4bf1969);
+            
+        
+
+        circle_marker_c6431e6d3e710a4a447c03e8b9cd7a75.bindPopup(popup_06405b7409e61ac3751ee8b73d92c4f0)
+        ;
+
+        
+    
+    
+            var circle_marker_b13f06b5095e99046275f64c8699fb23 = L.circleMarker(
+                [40.7411, -74.0082],
+                {"bubblingMouseEvents": true, "color": "#E74C3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E74C3C", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_b59b12ceef0220cd256116ad16b45edb);
+        
+    
+        var popup_2c2133d6dafb5ce03a5a346c2f5199f3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0a41d4c6666fe0b34ecf3b48e7e5ee11 = $(`<div id="html_0a41d4c6666fe0b34ecf3b48e7e5ee11" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; width: 150px;'>         <b>Point 9</b><br>         <hr style='margin: 5px 0;'>         <span style='color:#27AE60;'><b>GVI:</b> 3.9%</span><br>         <span style='color:#2980B9;'><b>Public Realm:</b> 4.0%</span>     </div>     </div>`)[0];
+                popup_2c2133d6dafb5ce03a5a346c2f5199f3.setContent(html_0a41d4c6666fe0b34ecf3b48e7e5ee11);
+            
+        
+
+        circle_marker_b13f06b5095e99046275f64c8699fb23.bindPopup(popup_2c2133d6dafb5ce03a5a346c2f5199f3)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,55 @@
+{
+ "_meta": {
+  "purpose": "the three capture-and-overlay pairs for the hero plate strip, per refrences/pintest_layouts/visual-language.html :: P id 5 :: plate",
+  "selection_rule": "minimum, median and maximum measured `sky` over the points that carry one \u2014 the instrument's own range, not an eye pick",
+  "model_named_by_the_metrics": "nvidia/segformer-b5-finetuned-cityscapes-1024-1024",
+  "model_actually_used": "nvidia/segformer-b5-finetuned-cityscapes-1024-1024",
+  "model_matches_the_published_metrics": true,
+  "overlaid_class": "Cityscapes `sky` \u2014 the class the `sky` metric counts, so the overlay and the number are the same measurement",
+  "accent": "#4fb0a8",
+  "caveat": "street-level context exposure, not on-deck view",
+  "coverage_note": "Southern-corridor pilot: imagery exists for transect points 8-47 only. Bins 0-2 and 28-47 have no CV data and are coverage:'none' with null metrics; null means unmeasured, 0.0 is a real measured value.",
+  "numbers_are_not_stored_twice": "sky_measured is copied from data/highline_exposure.json for the caption; sky_recomputed_here is this run's own mask fraction, kept separate so the two can be compared rather than conflated"
+ },
+ "pairs": [
+  {
+   "id": 17,
+   "role": "minimum",
+   "image": "17.jpg",
+   "s_m": 339.9,
+   "capture": "exports/cv_overlays/17_capture.png",
+   "overlay": "exports/cv_overlays/17_overlay.png",
+   "sky_measured": 0.0,
+   "sky_recomputed_here": 0.0,
+   "gvi": 0.0,
+   "typology": "canyon",
+   "source": "data/highline_exposure.json :: points[].metrics"
+  },
+  {
+   "id": 46,
+   "role": "median",
+   "image": "46.jpg",
+   "s_m": 1026.39,
+   "capture": "exports/cv_overlays/46_capture.png",
+   "overlay": "exports/cv_overlays/46_overlay.png",
+   "sky_measured": 0.20605611836080587,
+   "sky_recomputed_here": 0.2061,
+   "gvi": 0.06405463026556776,
+   "typology": null,
+   "source": "data/highline_exposure.json :: points[].metrics"
+  },
+  {
+   "id": 9,
+   "role": "maximum",
+   "image": "9.jpg",
+   "s_m": 152.7,
+   "capture": "exports/cv_overlays/9_capture.png",
+   "overlay": "exports/cv_overlays/9_overlay.png",
+   "sky_measured": 0.36753590901692706,
+   "sky_recomputed_here": 0.3675,
+   "gvi": 0.039188385009765625,
+   "typology": null,
+   "source": "data/highline_exposure.json :: points[].metrics"
+  }
+ ]
+}

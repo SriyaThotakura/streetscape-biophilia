@@ -1,0 +1,8 @@
+image,s_m,lat,lng,note
+# One row per photo. Give s_m (metres from Gansevoort along the deck) OR lat,lng.
+# If both are blank the script reads EXIF GPS from the photo. Delete these # lines.
+# Access-point arc-lengths (s_m): Gansevoort 0 | 14th 261 | 16th 424 | 18th 576 |
+# 20th 729 | 23rd 952 | 26th 1145 | 28th 1300 | 30th 1463 | 34th-Hudson Yards 1857.
+frame_001.jpg,120,,,near Gansevoort entrance
+frame_002.jpg,340,,,14th St stretch
+frame_003.jpg,,40.7440,-74.0069,used GPS instead of s_m

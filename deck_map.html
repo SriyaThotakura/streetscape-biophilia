@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Self-Enclosing Line — georeferenced deck instrument</title>
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+<script src="mapbox_token.js" onerror="void 0"></script>
+<script src="data/map_data.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080a09; --panel:rgba(12,16,13,.80); --edge:#26332a; --edge2:#33463a;
+    --ink:#cdd5c6; --dim:#8a9585; --green:#82c165; --green-d:#5c8a48;
+    --terra:#d1794f; --terra-d:#b0512c; --sky:#74b3cc; --amber:#e8c25a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);overflow:hidden;
+    font-family:"Spline Sans Mono",ui-monospace,monospace;color:var(--ink)}
+  #map{position:absolute;inset:0}
+  .mapboxgl-ctrl-logo,.mapboxgl-ctrl-attrib{opacity:.35}
+  canvas{outline:none}
+
+  /* ── instrument frame ── */
+  .frame{position:absolute;inset:0;pointer-events:none;z-index:5}
+  .corner{position:absolute;width:22px;height:22px;border:1px solid var(--edge2);opacity:.6}
+  .corner.tl{top:14px;left:14px;border-right:0;border-bottom:0}
+  .corner.tr{top:14px;right:14px;border-left:0;border-bottom:0}
+  .corner.bl{bottom:14px;left:14px;border-right:0;border-top:0}
+  .corner.br{bottom:14px;right:14px;border-left:0;border-top:0}
+
+  .panel{position:absolute;z-index:10;background:var(--panel);border:1px solid var(--edge);
+    backdrop-filter:blur(10px) saturate(1.1);box-shadow:0 10px 40px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.03)}
+  /* header */
+  #head{top:26px;left:26px;max-width:390px;padding:16px 18px 15px}
+  .kick{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--terra);
+    display:flex;align-items:center;gap:8px}
+  .live{width:6px;height:6px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  h1{font-family:"Fraunces",serif;font-weight:600;font-size:29px;line-height:1;margin:11px 0 3px;
+    letter-spacing:-.01em;color:#eef0e6}
+  h1 em{font-style:italic;font-weight:400;color:var(--green)}
+  .tag{font-size:11px;color:var(--dim);line-height:1.5}
+  .coords{margin-top:10px;padding-top:9px;border-top:1px solid var(--edge);
+    font-size:10.5px;color:var(--dim);display:flex;justify-content:space-between;gap:12px}
+  .coords b{color:var(--ink);font-weight:500}
+
+  /* metric selector */
+  #ctrl{top:26px;right:26px;width:212px;padding:13px 14px}
+  .lbl{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+  .seg{display:flex;flex-direction:column;gap:5px}
+  .seg button{all:unset;cursor:pointer;font-family:inherit;font-size:11.5px;color:var(--dim);
+    padding:7px 10px;border:1px solid transparent;display:flex;justify-content:space-between;
+    align-items:center;transition:.15s;letter-spacing:.02em}
+  .seg button:hover{color:var(--ink);background:rgba(130,193,101,.06)}
+  .seg button.on{color:#eef0e6;border-color:var(--edge2);background:rgba(130,193,101,.09)}
+  .seg button .dot{width:8px;height:8px;border-radius:2px}
+  .legend{margin-top:13px;padding-top:11px;border-top:1px solid var(--edge)}
+  .ramp{height:9px;border-radius:2px;margin:7px 0 5px}
+  .ends{display:flex;justify-content:space-between;font-size:9.5px;color:var(--dim)}
+  .era{margin-top:12px;padding-top:11px;border-top:1px solid var(--edge);font-size:10.5px;line-height:1.9}
+  .era i{width:11px;height:11px;display:inline-block;vertical-align:-1px;margin-right:6px;border-radius:2px}
+
+  /* bottom scrubber */
+  #walk{bottom:26px;left:50%;transform:translateX(-50%);width:min(880px,92vw);padding:13px 18px 15px}
+  .wtop{display:flex;align-items:center;gap:16px;margin-bottom:11px}
+  .play{all:unset;cursor:pointer;width:34px;height:34px;border:1px solid var(--edge2);
+    display:grid;place-items:center;color:var(--green);font-size:13px;transition:.15s;flex:0 0 auto}
+  .play:hover{background:rgba(130,193,101,.1);box-shadow:0 0 14px rgba(130,193,101,.2)}
+  .read{flex:1;display:flex;gap:18px;flex-wrap:wrap;font-size:11px}
+  .read .r{display:flex;flex-direction:column;gap:1px}
+  .read .r span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .read .r b{font-family:"Fraunces",serif;font-size:19px;font-weight:600;color:#eef0e6;line-height:1}
+  .read .r b small{font-size:11px;color:var(--dim);font-weight:500}
+  .read .r.warn b{color:var(--terra)}
+  .slider{position:relative}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;
+    background:linear-gradient(90deg,var(--edge2),var(--edge));outline:none;cursor:ew-resize;margin:0}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;
+    background:#eef0e6;border:2px solid var(--green);box-shadow:0 0 10px rgba(130,193,101,.5);cursor:ew-resize}
+  .ticks{display:flex;justify-content:space-between;margin-top:7px;font-size:9px;color:var(--dim)}
+  .ticks span{position:relative}
+  .choke-tick{color:var(--terra)!important;font-weight:600}
+
+  #gate{position:absolute;inset:0;z-index:30;display:none;place-items:center;background:var(--bg);
+    text-align:center;padding:30px}
+  #gate.on{display:grid}
+  #gate .g{max-width:440px}
+  #gate h2{font-family:"Fraunces",serif;font-weight:600;font-size:26px;color:#eef0e6;margin:0 0 12px}
+  #gate p{font-size:12.5px;color:var(--dim);line-height:1.7}
+  #gate code{color:var(--green);background:rgba(130,193,101,.08);padding:2px 6px}
+  @media(max-width:640px){#ctrl{display:none}#head{max-width:76vw}}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="frame"><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div></div>
+
+<div class="panel" id="head">
+  <div class="kick"><span class="live"></span>Georeferenced Deck Instrument</div>
+  <h1>The Self-<em>Enclosing</em> Line</h1>
+  <div class="tag" id="tag"></div>
+  <div class="coords"><span>LAT <b id="clat">—</b></span><span>LON <b id="clon">—</b></span><span>Z <b id="czoom">—</b></span></div>
+</div>
+
+<div class="panel" id="ctrl">
+  <div class="lbl">Deck metric</div>
+  <div class="seg" id="seg"></div>
+  <div class="legend"><div class="ramp" id="ramp"></div><div class="ends"><span id="e0"></span><span id="e1"></span></div></div>
+  <div class="era">
+    <div><i style="background:#3f4a54"></i>buildings pre-2009</div>
+    <div><i style="background:#d1794f"></i>towers post-2009 <span style="color:var(--dim)">(the walls)</span></div>
+  </div>
+</div>
+
+<div class="panel" id="walk">
+  <div class="wtop">
+    <button class="play" id="play">▶</button>
+    <div class="read" id="read"></div>
+  </div>
+  <div class="slider"><input type="range" id="scrub" min="0" max="0" value="0" step="1"></div>
+  <div class="ticks" id="ticks"></div>
+</div>
+
+<div id="gate"><div class="g"><h2>Mapbox token needed</h2>
+  <p>This georeferenced view needs a Mapbox token. Copy <code>mapbox_token.example.js</code> to
+  <code>mapbox_token.js</code> and paste your public token, then reload. The rest of the project
+  runs without it.</p></div></div>
+
+<script>
+(function(){
+  const M = window.MAP_DATA;
+  if (!window.MAPBOX_TOKEN || typeof mapboxgl === 'undefined' || !M){ document.getElementById('gate').classList.add('on'); return; }
+  const S = M.stats, PATH = M.path, DECK_F = M.deck.features, DECKH = S.deck_h;
+  mapboxgl.accessToken = window.MAPBOX_TOKEN;
+
+  const map = new mapboxgl.Map({
+    container:'map', style:'mapbox://styles/mapbox/dark-v11',
+    center:S.center, zoom:14.4, pitch:64, bearing:28, antialias:true, attributionControl:false
+  });
+  map.addControl(new mapboxgl.AttributionControl({compact:true}));
+
+  // ── metric definitions: color ramp expressions + legend ──
+  const METRICS = {
+    svf:{label:'Sky-view factor', unit:'', dot:'#82c165',
+      stops:[[0.15,'#b0512c'],[0.45,'#c9a24a'],[0.7,'#8fbf6b'],[0.92,'#bfe6a0']], lo:'enclosed',hi:'open sky',
+      val:p=>p.svf.toFixed(2), warn:p=>p.svf<0.45},
+    sky_lost:{label:'Sky lost to towers', unit:'%', dot:'#d1794f',
+      stops:[[0,'#40503f'],[0.05,'#c9884a'],[0.25,'#c0673f'],[0.6,'#8f2f18']], lo:'none',hi:'≥60%',
+      val:p=>(p.sky_lost*100).toFixed(0)+'%', warn:p=>p.sky_lost>0.1},
+    sun_w:{label:'Winter sunlit hours', unit:'h', dot:'#e8c25a',
+      stops:[[0,'#3a3a5c'],[3,'#8a6fb0'],[6,'#d19a52'],[8.8,'#f0d874']], lo:'shadow',hi:'8.8 h',
+      val:p=>p.sun_w.toFixed(1)+'h', warn:p=>p.sun_w<4},
+    enc:{label:'Enclosure angle', unit:'°', dot:'#c0673f',
+      stops:[[0,'#8fbf6b'],[25,'#c9a24a'],[50,'#c0673f'],[75,'#8f2f18']], lo:'0°',hi:'75°',
+      val:p=>p.enc.toFixed(0)+'°', warn:p=>p.enc>40}
+  };
+  let metric='svf';
+  const rampExpr = m => ['interpolate',['linear'],['get', m], ...METRICS[m].stops.flat()];
+  const cssRamp = m => `linear-gradient(90deg,${METRICS[m].stops.map(s=>s[1]).join(',')})`;
+
+  function buildSeg(){
+    const seg=document.getElementById('seg');
+    seg.innerHTML=Object.entries(METRICS).map(([k,v])=>
+      `<button data-m="${k}" class="${k===metric?'on':''}">${v.label}<span class="dot" style="background:${v.dot}"></span></button>`).join('');
+    seg.querySelectorAll('button').forEach(b=>b.onclick=()=>setMetric(b.dataset.m));
+  }
+  function setMetric(m){
+    metric=m;
+    document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
+    if(map.getLayer('deck')) map.setPaintProperty('deck','fill-extrusion-color', rampExpr(m));
+    document.getElementById('ramp').style.background=cssRamp(m);
+    document.getElementById('e0').textContent=METRICS[m].lo;
+    document.getElementById('e1').textContent=METRICS[m].hi;
+    updateRead(+scrub.value);
+  }
+
+  map.on('style.load', ()=>{
+    map.setFog({range:[1,12],color:'#0b1410','high-color':'#16241c','horizon-blend':0.15,
+      'space-color':'#05080a','star-intensity':0.15});
+    // atmospheric light
+    map.setLight?.({anchor:'viewport', color:'#cfe0c8', intensity:0.35, position:[1.2,120,40]});
+    // strip touristy clutter → instrument look: drop POI/transit, fade distant labels
+    try{ map.getStyle().layers.forEach(l=>{
+      if(l.type==='symbol' && /poi|transit|natural|water-point|airport/.test(l.id))
+        map.setLayoutProperty(l.id,'visibility','none');
+      else if(l.type==='symbol' && /label/.test(l.id))
+        map.setPaintProperty(l.id,'text-opacity',/road|street/.test(l.id)?0.35:0.55);
+      if(l.id.includes('road') && l.type==='line')
+        try{ map.setPaintProperty(l.id,'line-opacity',0.5); }catch(e){}
+    }); }catch(e){}
+
+    map.addSource('buildings',{type:'geojson',data:M.buildings});
+    map.addLayer({id:'buildings',type:'fill-extrusion',source:'buildings',paint:{
+      'fill-extrusion-height':['get','h'],'fill-extrusion-base':0,
+      'fill-extrusion-color':['case',['==',['get','era'],'post'],
+        ['interpolate',['linear'],['get','h'],0,'#a5502f',60,'#d1794f',90,'#e79267'],
+        ['interpolate',['linear'],['get','h'],0,'#2a333b',40,'#3b4650',90,'#4d5a64']],
+      'fill-extrusion-opacity':0.94,'fill-extrusion-vertical-gradient':true}});
+
+    map.addSource('deck',{type:'geojson',data:M.deck});
+    map.addLayer({id:'deck',type:'fill-extrusion',source:'deck',paint:{
+      'fill-extrusion-base':DECKH,'fill-extrusion-height':DECKH+0.7,
+      'fill-extrusion-color':rampExpr('svf'),'fill-extrusion-opacity':0.98}});
+
+    // access points
+    map.addSource('access',{type:'geojson',data:{type:'FeatureCollection',
+      features:M.access.map(a=>({type:'Feature',geometry:{type:'Point',coordinates:[a.lng,a.lat]},properties:{name:a.name}}))}});
+    map.addLayer({id:'access-dot',type:'circle',source:'access',paint:{
+      'circle-radius':4,'circle-color':'#0a0c0b','circle-stroke-width':1.5,'circle-stroke-color':'#82c165'}});
+    map.addLayer({id:'access-lbl',type:'symbol',source:'access',layout:{
+      'text-field':['get','name'],'text-size':10.5,'text-offset':[0,-1.1],'text-anchor':'bottom',
+      'text-font':['DIN Pro Medium','Arial Unicode MS Regular']},
+      paint:{'text-color':'#aeb8a4','text-halo-color':'#05080a','text-halo-width':1.4}});
+
+    // moving position marker (data source updated on scrub)
+    map.addSource('pos',{type:'geojson',data:posFeature(0)});
+    map.addLayer({id:'pos-glow',type:'circle',source:'pos',paint:{
+      'circle-radius':13,'circle-color':'#82c165','circle-opacity':0.16,'circle-blur':0.8}});
+    map.addLayer({id:'pos-dot',type:'circle',source:'pos',paint:{
+      'circle-radius':5,'circle-color':'#eef0e6','circle-stroke-width':2,'circle-stroke-color':'#82c165'}});
+
+    // chokepoint marker
+    const ci = idxOfS(S.choke_s), cp=PATH[ci];
+    const el=document.createElement('div');
+    el.style.cssText='width:0;height:0;';
+    el.innerHTML=`<div style="font:600 10px/1 'Spline Sans Mono';color:#d1794f;white-space:nowrap;
+      transform:translate(-50%,-26px);text-shadow:0 0 6px #000">▼ worst enclosure</div>
+      <div style="width:10px;height:10px;border-radius:50%;background:#d1794f;transform:translate(-50%,-50%);
+      box-shadow:0 0 14px #d1794f"></div>`;
+    new mapboxgl.Marker(el).setLngLat([cp.lng,cp.lat]).addTo(map);
+
+    buildSeg(); setMetric('svf'); buildTicks();
+    document.getElementById('tag').innerHTML=
+      `${S.length_m} m elevated deck · ${S.n_points} samples · <b style="color:#d1794f">${S.n_post}</b> post-2009 towers · `+
+      `mean sky-view <b style="color:#82c165">${S.svf_deck_mean}</b> · <b style="color:#d1794f">${S.sky_lost_mean}%</b> sky lost`;
+    scrub.max=PATH.length-1; updateRead(0);
+    // gentle intro
+    setTimeout(()=>map.easeTo({zoom:15.4,pitch:66,bearing:22,duration:2600}),600);
+  });
+
+  map.on('move',()=>{const c=map.getCenter();
+    document.getElementById('clat').textContent=c.lat.toFixed(5);
+    document.getElementById('clon').textContent=c.lng.toFixed(5);
+    document.getElementById('czoom').textContent=map.getZoom().toFixed(1);});
+
+  function posFeature(i){const p=PATH[i];return{type:'FeatureCollection',
+    features:[{type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{}}]};}
+  function idxOfS(s){let bi=0,bd=1e9;PATH.forEach((p,i)=>{const d=Math.abs(p.s-s);if(d<bd){bd=d;bi=i;}});return bi;}
+  function propsAt(i){return DECK_F[Math.min(i,DECK_F.length-1)].properties;}
+
+  const scrub=document.getElementById('scrub'), read=document.getElementById('read');
+  function updateRead(i){
+    const p=propsAt(i), pt=PATH[i], m=METRICS[metric];
+    const rows=[
+      ['position',`${pt.s.toFixed(0)} m`,false],
+      [m.label, m.val(p), m.warn(p)],
+      ['walls W·E',`${p.wh|0}·${p.eh|0} m`,false],
+      ['opening', p.char.replace('open_','').replace('_',' '), false],
+    ];
+    read.innerHTML=rows.map(r=>`<div class="r${r[2]?' warn':''}"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('');
+  }
+  function goTo(i,dur){
+    const p=PATH[i];
+    if(map.getSource('pos')) map.getSource('pos').setData(posFeature(i));
+    map.easeTo({center:[p.lng,p.lat],bearing:p.bearing,pitch:66,zoom:17,duration:dur});
+    updateRead(i);
+  }
+  scrub.addEventListener('input',()=>{stop();goTo(+scrub.value,140);});
+
+  function buildTicks(){
+    const t=document.getElementById('ticks');
+    const marks=M.access.filter((_,k)=>k%2===0||k===M.access.length-1);
+    t.innerHTML=marks.map(a=>`<span>${a.name.replace(' St','').replace('-Hudson Yards','·HY')}</span>`).join('')
+      +`<span class="choke-tick">▼${S.choke_s.toFixed(0)}m</span>`;
+  }
+
+  // auto-walk
+  let timer=null;
+  const play=document.getElementById('play');
+  function stop(){if(timer){clearInterval(timer);timer=null;play.textContent='▶';}}
+  play.onclick=()=>{
+    if(timer){stop();return;}
+    play.textContent='❙❙';
+    timer=setInterval(()=>{
+      let i=+scrub.value+1; if(i>=PATH.length){i=0;}
+      scrub.value=i; goTo(i,360);
+    },380);
+  };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+ "comparison": "hl_core (from-scratch) vs Ladybug",
+ "metrics": {
+  "svf_deck": {
+   "r": 0.871,
+   "r2": 0.758,
+   "rmse": 0.2013,
+   "mean_mine": 0.424,
+   "mean_lbt": 0.269,
+   "n": 232
+  },
+  "sun_winter": {
+   "r": 0.927,
+   "r2": 0.859,
+   "rmse": 0.5837,
+   "mean_mine": 1.151,
+   "mean_lbt": 1.054,
+   "n": 232
+  },
+  "sun_summer": {
+   "r": 0.847,
+   "r2": 0.717,
+   "rmse": 2.722,
+   "mean_mine": 5.734,
+   "mean_lbt": 4.46,
+   "n": 232
+  }
+ }
+}

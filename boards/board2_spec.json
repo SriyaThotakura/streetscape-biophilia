@@ -1,0 +1,18 @@
+{
+  "name": "BOARD 2 / BEHAVIORAL CONSEQUENCE",
+  "size": [5100, 3300],
+  "bg": "#0a0b0f", "panel_bg": "#0d0e14", "edge": "#1a1d2a",
+  "ink": "#cdd5c6", "dim": "#5b6b78", "accent": "#c0673f", "teal": "#00ddaa", "hot": "#e6ecf0",
+  "title": { "rect": [60, 40, 5040, 250] },
+  "panels": [
+    { "type": "image", "src": "boards/captures/panels/comfort_states.png", "rect": [60, 300, 1010, 2400],
+      "label": "COMFORT FIELD STATES" },
+    { "type": "image_crop", "src": "boards/captures/3d/_b2_hero_composite.png", "rect": [1050, 300, 5040, 2360],
+      "label": "DECK PERSPECTIVE  ·  ghost buildings + comfort heatmap + agent trails + access rings" },
+    { "type": "image", "src": "boards/captures/panels/proc_centerline.png", "rect": [60, 2470, 1275, 3110] },
+    { "type": "image", "src": "boards/captures/panels/proc_raycast.png", "rect": [1295, 2470, 2510, 3110] },
+    { "type": "image", "src": "boards/captures/panels/proc_calibration.png", "rect": [2530, 2470, 3745, 3110] },
+    { "type": "image", "src": "boards/captures/panels/proc_dwell.png", "rect": [3765, 2470, 5040, 3110] }
+  ],
+  "footer": { "rect": [60, 3140, 5040, 3285] }
+}

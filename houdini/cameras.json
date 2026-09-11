@@ -1,0 +1,658 @@
+{
+ "_meta": {
+  "script": "houdini/pick_cameras.py",
+  "git_commit": null,
+  "generated": "2026-08-20T19:35:19",
+  "source": [
+   "data/envelope.json",
+   "data/highline_viewshed.json",
+   "data/sun_vectors.json"
+  ],
+  "purpose": "IMPLEMENTATION_PLAN.md W1 — the committed camera rig. Stations are chosen from the data by stated rules so a finished render can be checked against its caption, instead of being picked by eye at render time.",
+  "deterministic": true,
+  "seed_note": "no stochastic step in this script; selection is argmax over stored values and is fully reproducible",
+  "reads_only": "this script writes only houdini/cameras.json. Nothing under data/ and nothing in hl_ingest.py is touched.",
+  "units": "metres throughout, world frame: +x east, +y up, +z north — the frame envelope.json, highline_footprints.json and Houdini all already share. No swizzle, no rescale.",
+  "no_exaggeration": "THE_ANSWERING_LINE.md: no vertical exaggeration anywhere. The camera constants position the viewer; none of them scale geometry. The canopy is small because the towers are the problem — if it reads slight, that is the finding rendering itself correctly.",
+  "deck_plane_y_m": 9.0,
+  "eye_height_m": 1.65,
+  "n_stations_available": 232,
+  "selection_rules": {
+   "A_hero_eye_level": "max deficit_svf subject to recaptured_winter_sun_frac > 0",
+   "B_open_contrast": "max svf_deck subject to svf_deck >= 0.75 AND river_view",
+   "C_section_worst_core": "max deficit_svf over all stations"
+  },
+  "number_rule": "Each station carries the numbers that image is allowed to print, each with its source path. A figure absent from a station's `numbers` block is not board-ready for that plate. Recapture is explicitly nulled with a reason where deficit_svf == 0 — null, never 0, and never 100%."
+ },
+ "key_light": {
+  "day_of_year": 355,
+  "label": "winter solstice peak — the exact condition the recapture figure counts",
+  "elev_deg": 25.8191,
+  "azim_deg": 180.0,
+  "to_sun_unit": [
+   0.0,
+   0.435531,
+   -0.900174
+  ],
+  "light_travel_unit": [
+   -0.0,
+   -0.435531,
+   0.900174
+  ],
+  "frame": "+x east, +y up, +z north; unit vector site -> sun",
+  "source": "data/sun_vectors.json :: days.winter.peak",
+  "usage": "to_sun_unit points FROM the site TO the sun. A Houdini distant light aims down its own -z, so orient it along light_travel_unit. Place the sun from this vector, never by eye — the caption has to be able to name the day.",
+  "n_daylight_timesteps": 53
+ },
+ "stations": [
+  {
+   "id": "A_hero_eye_level",
+   "image": "Stage 3 — Image A, the eye-level hero",
+   "selection_rule": "max deficit_svf subject to recaptured_winter_sun_frac > 0",
+   "why_this_station": "the worst enclosure on the line at which the canopy still demonstrably works AND the camera can stand in open air — 15.1% of winter sun recovered under a 6.83 m rib. Stations with a higher deficit exist; the ones that recover nothing are the section's subject rather than the hero's, and the ones whose camera falls inside a building are listed in `clearance.rejected_ahead_of_it`.",
+   "station_index": 22,
+   "s_m": 176.83,
+   "station_xz": [
+    -238.32,
+    -690.23
+   ],
+   "deck_y": 9.0,
+   "camera": {
+    "type": "perspective",
+    "eye_height_above_deck_m": 1.65,
+    "position": [
+     -243.98,
+     10.65,
+     -714.58
+    ],
+    "target": [
+     -234.92,
+     10.65,
+     -675.62
+    ],
+    "framing": "stands 25 m back along the deck and looks 40 m down it, so the hero rib sits in the middle distance with the canyon closing behind it",
+    "deck_tangent_xz": [
+     0.226404,
+     0.974034
+    ]
+   },
+   "must_carry": [
+    "human figures at correct scale",
+    "real materiality on deck and steel",
+    "the towers in frame — the antagonist has to be visible"
+   ],
+   "clearance": {
+    "rule": "max deficit_svf subject to recaptured_winter_sun_frac > 0",
+    "test": "whole camera->target sight line",
+    "test_reason": "a perspective plate has nothing cutting geometry away, so a buried target is a wall in frame",
+    "samples_along_sightline": 6,
+    "chosen_rank_in_pool": 3,
+    "rejected_ahead_of_it": [
+     {
+      "rank_in_pool": 0,
+      "s_m": 1358.4,
+      "blocked_at": [
+       {
+        "where": "camera",
+        "t": 0.0,
+        "bin": "1089968",
+        "height_m": 41.15
+       },
+       {
+        "where": "sight line",
+        "t": 0.2,
+        "bin": "1089968",
+        "height_m": 41.15
+       },
+       {
+        "where": "sight line",
+        "t": 0.4,
+        "bin": "1089968",
+        "height_m": 41.15
+       },
+       {
+        "where": "target",
+        "t": 1.0,
+        "bin": "1089395",
+        "height_m": 100.28
+       }
+      ]
+     },
+     {
+      "rank_in_pool": 1,
+      "s_m": 1366.44,
+      "blocked_at": [
+       {
+        "where": "camera",
+        "t": 0.0,
+        "bin": "1089968",
+        "height_m": 41.15
+       },
+       {
+        "where": "sight line",
+        "t": 0.2,
+        "bin": "1089968",
+        "height_m": 41.15
+       },
+       {
+        "where": "sight line",
+        "t": 0.8,
+        "bin": "1089395",
+        "height_m": 100.28
+       },
+       {
+        "where": "target",
+        "t": 1.0,
+        "bin": "1089395",
+        "height_m": 100.28
+       }
+      ]
+     },
+     {
+      "rank_in_pool": 2,
+      "s_m": 184.87,
+      "blocked_at": [
+       {
+        "where": "target",
+        "t": 1.0,
+        "bin": "1089295",
+        "height_m": 53.04
+       }
+      ]
+     }
+    ],
+    "note": "The unconstrained argmax is rank 0. Ranks skipped here were skipped because the camera could not be placed in open air, not because the selection rule changed."
+   },
+   "numbers": {
+    "deficit_svf": {
+     "value": 0.6272,
+     "source": "data/envelope.json :: points[].deficit_svf",
+     "gloss": "stolen sky — svf_prepark minus svf_deck"
+    },
+    "svf_deck": {
+     "value": 0.1587,
+     "source": "data/envelope.json :: points[].svf_deck",
+     "gloss": "sky view factor at the deck today (2.5-D isovist; reads systematically more open than Ladybug — never present raw and calibrated as interchangeable)"
+    },
+    "recaptured_winter_sun_frac": {
+     "value": 0.151,
+     "quotable": true,
+     "null_reason": null,
+     "source": "data/envelope.json :: points[].recaptured_winter_sun_frac",
+     "instrument": "hand-rolled hl_core ray cast",
+     "caveats_that_must_travel_with_it": [
+      "Name the instrument. The independent Ladybug re-measure puts the field-driven enclosed-station mean at 17.39% against the hand-rolled 18.56% (data/envelope_validation.json).",
+      "Both recapture comparisons ARE significant at n = 159 and they point OPPOSITE ways: field-vs-(b) +1.18 pts [+0.26, +2.30] — the shaping beats the same steel spread flat — and field-vs-(a) -1.56 pts [-3.08, -0.03] — the uniform 7 m canopy recovers more, on 2.27x the steel. NEITHER SENTENCE MAY TRAVEL WITHOUT THE OTHER. The significance arrived with the sample (n 56 -> 159 after the re-fetch), not with a better design, and does not survive a 2005 pre-park baseline.",
+      "The recapture sensor is the rib apex, 1.20-7.23 m above the deck — sun reaching the structure, not sun reaching a person. Deck-level recapture is unmeasured."
+     ],
+     "caveats_source": "houdini/sources.json :: caveats[recapture_instrument, recapture_nonsignificance, sensor_apex]"
+    },
+    "rib_height_m": {
+     "value": 6.83,
+     "source": "data/envelope.json :: points[].rib_height_m"
+    },
+    "reach_m": {
+     "value": 4.17,
+     "source": "data/envelope.json :: points[].reach_m"
+    },
+    "enclosure_deg": {
+     "value": 70.4,
+     "source": "data/highline_viewshed.json :: points[].enclosure_deg"
+    },
+    "nearest_wall_m": {
+     "value": 1.4,
+     "source": "data/highline_viewshed.json :: points[].nearest_wall_m",
+     "gloss": "how much built context is actually within frame at this station"
+    },
+    "dom_occ_year": {
+     "value": 2015,
+     "source": "data/highline_viewshed.json :: points[].dom_occ_year",
+     "gloss": "construction year of the dominant occluder — post-2009 means the enclosure in frame is tower-boom, not pre-existing fabric"
+    }
+   },
+   "caption": {
+    "title": "IMAGE A · Stage 3 — the eye-level hero",
+    "lines": [
+     {
+      "label": "station",
+      "key": "s_m",
+      "format": "s = {:.2f} m"
+     },
+     {
+      "label": "stolen sky (deficit_svf)",
+      "key": "numbers.deficit_svf.value",
+      "format": "{:.4f}"
+     },
+     {
+      "label": "sky view today (svf_deck)",
+      "key": "numbers.svf_deck.value",
+      "format": "{:.4f}"
+     },
+     {
+      "label": "winter sun recaptured",
+      "key": "numbers.recaptured_winter_sun_frac.value",
+      "format": "{:.1%}"
+     },
+     {
+      "label": "rib height",
+      "key": "numbers.rib_height_m.value",
+      "format": "{:.2f} m"
+     },
+     {
+      "label": "reach",
+      "key": "numbers.reach_m.value",
+      "format": "{:.2f} m"
+     },
+     {
+      "label": "enclosure angle",
+      "key": "numbers.enclosure_deg.value",
+      "format": "{:.1f}°"
+     },
+     {
+      "label": "nearest wall",
+      "key": "numbers.nearest_wall_m.value",
+      "format": "{:.1f} m"
+     },
+     {
+      "label": "dominant occluder built",
+      "key": "numbers.dom_occ_year.value",
+      "format": "{:d}"
+     }
+    ],
+    "caveats_key": "numbers.recaptured_winter_sun_frac.caveats_that_must_travel_with_it",
+    "caveats_trigger": "include the caveats iff the plate prints recaptured_winter_sun_frac",
+    "note": "The dominant occluder here post-dates the park, so the enclosure in frame is the tower boom itself — that is the argument, and it is worth a clause in the caption.",
+    "omitted_lines": [],
+    "contract": "Values are NOT stored here. Each line names a key path into this station object; `python houdini/pick_cameras.py --captions` resolves them. Never transcribe a number into the render plan — reference the key and regenerate."
+   }
+  },
+  {
+   "id": "B_open_contrast",
+   "image": "Stage 3b — Image B, the open contrast (river)",
+   "selection_rule": "max svf_deck subject to svf_deck >= 0.75 AND river_view (data/highline_viewshed.json) AND nearest_wall_m <= 40.0 (built context in frame)",
+   "why_this_station": "the deck open to its sky WITH the city still around it — the generator holds the rib near its minimum because svf_deck is already high, which is the design rule 'river-view segments aren't shaded' shown rather than asserted. The context gate is a hard constraint on the pool, not a post-hoc override; see `passed_over`.",
+   "station_index": 6,
+   "s_m": 48.23,
+   "station_xz": [
+    -267.4,
+    -815.5
+   ],
+   "deck_y": 9.0,
+   "camera": {
+    "type": "perspective",
+    "eye_height_above_deck_m": 1.65,
+    "position": [
+     -271.92,
+     10.65,
+     -834.98
+    ],
+    "target": [
+     -260.63,
+     10.65,
+     -786.27
+    ],
+    "framing": "along the deck, so the open sky above the flat rib is the subject",
+    "deck_tangent_xz": [
+     0.225813,
+     0.974171
+    ],
+    "aperture_heading_xz": [
+     0.183951,
+     -0.982935
+    ],
+    "aperture_note": "aperture_az_deg 169.4 — swing toward this heading if the river itself must be in shot rather than the corridor."
+   },
+   "passed_over": {
+    "s_m": 1856.75,
+    "svf_deck": 0.8826,
+    "deficit_svf": 0.1132,
+    "rib_height_m": 2.22,
+    "nearest_wall_m": 45.2,
+    "recaptured_winter_sun_frac_stored": 0.491,
+    "reason": "This is the maximum-openness station on the line and it was PASSED OVER. Its nearest wall is 45.2 m away — the north rail-yard end, with effectively no built context in frame. An open contrast image has to show the deck open WITHIN the city; a station with no city in sight illustrates nothing about a corridor. It also has deficit_svf = 0.0, so its stored recapture of 1.000 is 100% of nothing and could not have been printed at all.",
+    "not_a_data_problem": "both facts are true properties of that station, correctly measured. It is the wrong station for this image, not a wrong number."
+   },
+   "alternates": [
+    {
+     "s_m": 40.19,
+     "svf_deck": 0.8558,
+     "deficit_svf": 0.0631,
+     "rib_height_m": 1.77,
+     "nearest_wall_m": 6.4
+    },
+    {
+     "s_m": 56.27,
+     "svf_deck": 0.8547,
+     "deficit_svf": 0.0324,
+     "rib_height_m": 1.49,
+     "nearest_wall_m": 8.9
+    },
+    {
+     "s_m": 699.29,
+     "svf_deck": 0.845,
+     "deficit_svf": 0.08,
+     "rib_height_m": 1.92,
+     "nearest_wall_m": 14.6
+    }
+   ],
+   "alternates_rule": "runners-up from the same context-gated pool, ordered by openness. Substituting one stays a sourced choice — re-run with the station changed rather than retyping numbers.",
+   "clearance": {
+    "rule": "max svf_deck subject to svf_deck >= 0.75, river_view, and nearest_wall_m <= 40.0",
+    "test": "whole camera->target sight line",
+    "test_reason": "a perspective plate has nothing cutting geometry away, so a buried target is a wall in frame",
+    "samples_along_sightline": 6,
+    "chosen_rank_in_pool": 0,
+    "rejected_ahead_of_it": [],
+    "note": "The unconstrained argmax is rank 0. Ranks skipped here were skipped because the camera could not be placed in open air, not because the selection rule changed."
+   },
+   "numbers": {
+    "deficit_svf": {
+     "value": 0.0453,
+     "source": "data/envelope.json :: points[].deficit_svf",
+     "gloss": "stolen sky — svf_prepark minus svf_deck"
+    },
+    "svf_deck": {
+     "value": 0.8607,
+     "source": "data/envelope.json :: points[].svf_deck",
+     "gloss": "sky view factor at the deck today (2.5-D isovist; reads systematically more open than Ladybug — never present raw and calibrated as interchangeable)"
+    },
+    "recaptured_winter_sun_frac": {
+     "value": 0.509,
+     "quotable": true,
+     "null_reason": null,
+     "source": "data/envelope.json :: points[].recaptured_winter_sun_frac",
+     "instrument": "hand-rolled hl_core ray cast",
+     "caveats_that_must_travel_with_it": [
+      "Name the instrument. The independent Ladybug re-measure puts the field-driven enclosed-station mean at 17.39% against the hand-rolled 18.56% (data/envelope_validation.json).",
+      "Both recapture comparisons ARE significant at n = 159 and they point OPPOSITE ways: field-vs-(b) +1.18 pts [+0.26, +2.30] — the shaping beats the same steel spread flat — and field-vs-(a) -1.56 pts [-3.08, -0.03] — the uniform 7 m canopy recovers more, on 2.27x the steel. NEITHER SENTENCE MAY TRAVEL WITHOUT THE OTHER. The significance arrived with the sample (n 56 -> 159 after the re-fetch), not with a better design, and does not survive a 2005 pre-park baseline.",
+      "The recapture sensor is the rib apex, 1.20-7.23 m above the deck — sun reaching the structure, not sun reaching a person. Deck-level recapture is unmeasured."
+     ],
+     "caveats_source": "houdini/sources.json :: caveats[recapture_instrument, recapture_nonsignificance, sensor_apex]"
+    },
+    "rib_height_m": {
+     "value": 1.61,
+     "source": "data/envelope.json :: points[].rib_height_m"
+    },
+    "reach_m": {
+     "value": 0.2,
+     "source": "data/envelope.json :: points[].reach_m"
+    },
+    "enclosure_deg": {
+     "value": 15.2,
+     "source": "data/highline_viewshed.json :: points[].enclosure_deg"
+    },
+    "nearest_wall_m": {
+     "value": 7.6,
+     "source": "data/highline_viewshed.json :: points[].nearest_wall_m",
+     "gloss": "how much built context is actually within frame at this station"
+    },
+    "dom_occ_year": {
+     "value": 2006,
+     "source": "data/highline_viewshed.json :: points[].dom_occ_year",
+     "gloss": "construction year of the dominant occluder — post-2009 means the enclosure in frame is tower-boom, not pre-existing fabric"
+    }
+   },
+   "caption": {
+    "title": "IMAGE B · Stage 3b — the open contrast (river)",
+    "lines": [
+     {
+      "label": "station",
+      "key": "s_m",
+      "format": "s = {:.2f} m"
+     },
+     {
+      "label": "sky view today (svf_deck)",
+      "key": "numbers.svf_deck.value",
+      "format": "{:.4f}"
+     },
+     {
+      "label": "stolen sky (deficit_svf)",
+      "key": "numbers.deficit_svf.value",
+      "format": "{:.4f}"
+     },
+     {
+      "label": "rib height",
+      "key": "numbers.rib_height_m.value",
+      "format": "{:.2f} m"
+     },
+     {
+      "label": "reach",
+      "key": "numbers.reach_m.value",
+      "format": "{:.2f} m"
+     },
+     {
+      "label": "enclosure angle",
+      "key": "numbers.enclosure_deg.value",
+      "format": "{:.1f}°"
+     },
+     {
+      "label": "nearest wall",
+      "key": "numbers.nearest_wall_m.value",
+      "format": "{:.1f} m"
+     }
+    ],
+    "caveats_key": "numbers.recaptured_winter_sun_frac.caveats_that_must_travel_with_it",
+    "caveats_trigger": "include the caveats iff the plate prints recaptured_winter_sun_frac",
+    "note": "The subject of this plate is the FLAT rib over an open sky — the generator standing down where the deck can still see out. It is a plate about restraint, not about performance.",
+    "omitted_lines": [
+     {
+      "line": "winter sun recaptured",
+      "key": "numbers.recaptured_winter_sun_frac.value",
+      "status": "OMITTED FROM THIS PLATE BY EDITORIAL CHOICE — the value is present and quotable in `numbers`, and is NOT suppressed.",
+      "reason": "This station's deficit_svf is ~0.01: it lost about one percent of its sky. The recapture fraction over that loss is real and passes the suppression rule, but on a plate a large-looking percentage sitting beside a near-zero deficit reads as the canopy performing, when what it actually describes is recovering a trivial loss. The number is not wrong; it is misleading at this station, and the honest fix is to leave it off rather than to print it with a disclaimer.",
+      "not_a_threshold_change": "The suppression rule is unchanged and stays `deficit_svf > 0 strictly`. Suppression is a property of the DATA (no loss means no recovery to measure); this omission is a property of THIS PLATE. Moving the threshold to catch this case would mean inventing a tuned cutoff, which is exactly what the project refuses to do elsewhere.",
+      "if_you_want_it_back": "add the line to B's caption template in pick_cameras.py and re-run; the value resolves from `numbers` and brings its three caveats with it."
+     }
+    ],
+    "contract": "Values are NOT stored here. Each line names a key path into this station object; `python houdini/pick_cameras.py --captions` resolves them. Never transcribe a number into the render plan — reference the key and regenerate."
+   }
+  },
+  {
+   "id": "C_section_worst_core",
+   "image": "Stage 5b — Image C, the section through the worst core",
+   "selection_rule": "max deficit_svf over all 232 stations, subject to a camera position in open air",
+   "why_this_station": "the deepest core the tower boom created at which the section camera can stand in open air: 81.1% of the sky gone, a 7.03 m rib, and 0.0% winter sun recovered. The canopy at its most ambitious, failing — which THE_ANSWERING_LINE.md already states as the honest limit. Deeper cores exist; their cameras land inside the towers that make them deep, and they are listed in `clearance.rejected_ahead_of_it`.",
+   "selection_trap_avoided": "NOT selected on minimum svf_deck. s = 1004.7 m, s = 1503.1 m, s = 1511.1 m are the three lowest-svf_deck stations and every one of them has deficit_svf == 0.0 — always enclosed, nothing taken by the towers, ribs held at the generator minimum. A section drawn there would show enclosure this project does not claim to have measured the cause of.",
+   "station_index": 174,
+   "s_m": 1398.59,
+   "station_xz": [
+    173.99,
+    458.58
+   ],
+   "deck_y": 9.0,
+   "camera": {
+    "type": "orthographic",
+    "position": [
+     216.77,
+     12.515,
+     444.61
+    ],
+    "target": [
+     173.99,
+     12.515,
+     458.58
+    ],
+    "target_deck_level": [
+     173.99,
+     9.0,
+     458.58
+    ],
+    "framing": "true cross-section — 45 m perpendicular to the deck tangent, level at mid-rib height so the view is horizontal and the canyon walls stay parallel. Orthographic: a section that converges is a perspective, and the caption calls it a section.",
+    "deck_tangent_xz": [
+     0.310436,
+     0.950594
+    ],
+    "section_normal_xz": [
+     0.950594,
+     -0.310436
+    ],
+    "side_choice": "the side the rib reaches away from, so the cantilever reads broadside rather than foreshortened"
+   },
+   "must_carry": [
+    "the canyon walls at true height",
+    "a human figure on the deck for scale",
+    "the rib reaching and still not clearing the wall"
+   ],
+   "clearance": {
+    "rule": "max deficit_svf over all stations",
+    "test": "camera position only",
+    "test_reason": "the section plane cuts everything nearer than the deck, and the worst core is inside a building because it IS the worst core",
+    "samples_along_sightline": 1,
+    "chosen_rank_in_pool": 4,
+    "rejected_ahead_of_it": [
+     {
+      "rank_in_pool": 0,
+      "s_m": 1406.63,
+      "blocked_at": [
+       {
+        "where": "camera",
+        "t": 0.0,
+        "bin": "1089395",
+        "height_m": 100.28
+       }
+      ]
+     },
+     {
+      "rank_in_pool": 1,
+      "s_m": 1374.47,
+      "blocked_at": [
+       {
+        "where": "camera",
+        "t": 0.0,
+        "bin": "1090201",
+        "height_m": 44.81
+       }
+      ]
+     },
+     {
+      "rank_in_pool": 2,
+      "s_m": 1382.51,
+      "blocked_at": [
+       {
+        "where": "camera",
+        "t": 0.0,
+        "bin": "1090201",
+        "height_m": 44.81
+       }
+      ]
+     },
+     {
+      "rank_in_pool": 3,
+      "s_m": 1390.55,
+      "blocked_at": [
+       {
+        "where": "camera",
+        "t": 0.0,
+        "bin": "1090201",
+        "height_m": 44.81
+       }
+      ]
+     }
+    ],
+    "note": "The unconstrained argmax is rank 0. Ranks skipped here were skipped because the camera could not be placed in open air, not because the selection rule changed."
+   },
+   "numbers": {
+    "deficit_svf": {
+     "value": 0.811,
+     "source": "data/envelope.json :: points[].deficit_svf",
+     "gloss": "stolen sky — svf_prepark minus svf_deck"
+    },
+    "svf_deck": {
+     "value": 0.1122,
+     "source": "data/envelope.json :: points[].svf_deck",
+     "gloss": "sky view factor at the deck today (2.5-D isovist; reads systematically more open than Ladybug — never present raw and calibrated as interchangeable)"
+    },
+    "recaptured_winter_sun_frac": {
+     "value": 0.0,
+     "quotable": true,
+     "null_reason": null,
+     "source": "data/envelope.json :: points[].recaptured_winter_sun_frac",
+     "instrument": "hand-rolled hl_core ray cast",
+     "caveats_that_must_travel_with_it": [
+      "Name the instrument. The independent Ladybug re-measure puts the field-driven enclosed-station mean at 17.39% against the hand-rolled 18.56% (data/envelope_validation.json).",
+      "Both recapture comparisons ARE significant at n = 159 and they point OPPOSITE ways: field-vs-(b) +1.18 pts [+0.26, +2.30] — the shaping beats the same steel spread flat — and field-vs-(a) -1.56 pts [-3.08, -0.03] — the uniform 7 m canopy recovers more, on 2.27x the steel. NEITHER SENTENCE MAY TRAVEL WITHOUT THE OTHER. The significance arrived with the sample (n 56 -> 159 after the re-fetch), not with a better design, and does not survive a 2005 pre-park baseline.",
+      "The recapture sensor is the rib apex, 1.20-7.23 m above the deck — sun reaching the structure, not sun reaching a person. Deck-level recapture is unmeasured."
+     ],
+     "caveats_source": "houdini/sources.json :: caveats[recapture_instrument, recapture_nonsignificance, sensor_apex]"
+    },
+    "rib_height_m": {
+     "value": 7.03,
+     "source": "data/envelope.json :: points[].rib_height_m"
+    },
+    "reach_m": {
+     "value": 3.59,
+     "source": "data/envelope.json :: points[].reach_m"
+    },
+    "enclosure_deg": {
+     "value": 74.3,
+     "source": "data/highline_viewshed.json :: points[].enclosure_deg"
+    },
+    "nearest_wall_m": {
+     "value": 3.4,
+     "source": "data/highline_viewshed.json :: points[].nearest_wall_m",
+     "gloss": "how much built context is actually within frame at this station"
+    },
+    "dom_occ_year": {
+     "value": 2013,
+     "source": "data/highline_viewshed.json :: points[].dom_occ_year",
+     "gloss": "construction year of the dominant occluder — post-2009 means the enclosure in frame is tower-boom, not pre-existing fabric"
+    }
+   },
+   "caption": {
+    "title": "IMAGE C · Stage 5b — the section through the worst core",
+    "lines": [
+     {
+      "label": "station",
+      "key": "s_m",
+      "format": "s = {:.2f} m"
+     },
+     {
+      "label": "stolen sky (deficit_svf)",
+      "key": "numbers.deficit_svf.value",
+      "format": "{:.4f}"
+     },
+     {
+      "label": "sky view today (svf_deck)",
+      "key": "numbers.svf_deck.value",
+      "format": "{:.4f}"
+     },
+     {
+      "label": "winter sun recaptured",
+      "key": "numbers.recaptured_winter_sun_frac.value",
+      "format": "{:.1%}"
+     },
+     {
+      "label": "rib height",
+      "key": "numbers.rib_height_m.value",
+      "format": "{:.2f} m"
+     },
+     {
+      "label": "reach",
+      "key": "numbers.reach_m.value",
+      "format": "{:.2f} m"
+     },
+     {
+      "label": "enclosure angle",
+      "key": "numbers.enclosure_deg.value",
+      "format": "{:.1f}°"
+     },
+     {
+      "label": "nearest wall",
+      "key": "numbers.nearest_wall_m.value",
+      "format": "{:.1f} m"
+     },
+     {
+      "label": "dominant occluder built",
+      "key": "numbers.dom_occ_year.value",
+      "format": "{:d}"
+     }
+    ],
+    "caveats_key": "numbers.recaptured_winter_sun_frac.caveats_that_must_travel_with_it",
+    "caveats_trigger": "include the caveats iff the plate prints recaptured_winter_sun_frac",
+    "note": "Print the 0.0% rather than omitting it. This is the tallest rib in the family reaching as far as the generator allows and recovering nothing — THE_ANSWERING_LINE.md's stated limit, made visible: the worst cores are a massing problem a canopy cannot fix.",
+    "omitted_lines": [],
+    "contract": "Values are NOT stored here. Each line names a key path into this station object; `python houdini/pick_cameras.py --captions` resolves them. Never transcribe a number into the render plan — reference the key and regenerate."
+   }
+  }
+ ]
+}

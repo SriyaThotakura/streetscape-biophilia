@@ -1,0 +1,7 @@
+{
+  "_note": "Camera presets for index.html capture mode. type=orbit|top|deck. Distances are multiples of the corridor span (world units); deck presets fly to arc-length s (passed per-capture via ?s=, else the preset default).",
+  "hero":      { "type": "orbit", "dist": 1.42, "elevDeg": 33, "azimDeg": 50 },
+  "plan":      { "type": "top",   "dist": 1.15 },
+  "deck-hero": { "type": "orbit", "dist": 1.28, "elevDeg": 24, "azimDeg": 48 },
+  "detail":    { "type": "deck",  "back": 5, "up": 3.4, "ahead": 3 }
+}

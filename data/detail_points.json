@@ -1,0 +1,14 @@
+{
+ "worst_svf": {
+  "s": 104.5,
+  "svf_cal": 0.0
+ },
+ "peak_congestion": {
+  "s": 560.9,
+  "density": 39
+ },
+ "best_svf": {
+  "s": 1816.6,
+  "svf_cal": 0.9563
+ }
+}

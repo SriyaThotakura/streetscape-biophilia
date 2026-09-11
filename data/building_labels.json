@@ -1,0 +1,113 @@
+{
+ "note": "auto-geocoded via Nominatim; edit 'display' to hand-correct. BIN + lat/lng kept for verification.",
+ "labels": {
+  "1088120": {
+   "bin": "1088120",
+   "year": 2008,
+   "height_m": 108.5,
+   "lat": 40.752783,
+   "lng": -74.003357,
+   "osm_address": "312 11th Avenue",
+   "display": "312 11TH AVE \u00b7 2008"
+  },
+  "1080359": {
+   "bin": "1080359",
+   "year": 2006,
+   "height_m": 83.2,
+   "lat": 40.743661,
+   "lng": -74.006541,
+   "osm_address": "458 West 17th Street",
+   "display": "458 W 17TH ST \u00b7 2006"
+  },
+  "1012203": {
+   "bin": "1012203",
+   "year": 2006,
+   "height_m": 79.8,
+   "lat": 40.740812,
+   "lng": -74.008183,
+   "osm_address": "848 Washington Street",
+   "display": "848 WASHINGTON ST \u00b7 2006"
+  },
+  "1089395": {
+   "bin": "1089395",
+   "year": 2013,
+   "height_m": 100.3,
+   "lat": 40.751875,
+   "lng": -74.003501,
+   "osm_address": "282 11th Avenue",
+   "display": "282 11TH AVE \u00b7 2013"
+  },
+  "1089411": {
+   "bin": "1089411",
+   "year": 2016,
+   "height_m": 275.5,
+   "lat": 40.753386,
+   "lng": -74.002841,
+   "osm_address": "545 West 30th Street",
+   "display": "545 W 30TH ST \u00b7 2016"
+  },
+  "1012541": {
+   "bin": "1012541",
+   "year": 1934,
+   "height_m": 37.7,
+   "lat": 40.742688,
+   "lng": -74.006434,
+   "osm_address": "West 15th Street",
+   "display": "W 15TH ST \u00b7 1934"
+  },
+  "1080355": {
+   "bin": "1080355",
+   "year": 1936,
+   "height_m": 34.9,
+   "lat": 40.742258,
+   "lng": -74.007243,
+   "osm_address": "460 West 15th Street",
+   "display": "460 W 15TH ST \u00b7 1936"
+  },
+  "1012223": {
+   "bin": "1012223",
+   "year": null,
+   "height_m": 62.4,
+   "lat": 40.741649,
+   "lng": -74.007817,
+   "osm_address": "High Line",
+   "display": "HIGH LINE"
+  },
+  "1091605": {
+   "bin": "1091605",
+   "year": 2020,
+   "height_m": 76.2,
+   "lat": 40.745131,
+   "lng": -74.006734,
+   "osm_address": "High Line",
+   "display": "HIGH LINE \u00b7 2020"
+  },
+  "1012385": {
+   "bin": "1012385",
+   "year": 1927,
+   "height_m": 54.9,
+   "lat": 40.749741,
+   "lng": -74.003781,
+   "osm_address": "508 West 26th Street",
+   "display": "508 W 26TH ST \u00b7 1927"
+  },
+  "1091671": {
+   "bin": "1091671",
+   "year": 2021,
+   "height_m": 194.2,
+   "lat": 40.753263,
+   "lng": -74.004676,
+   "osm_address": "601 West 29th Street",
+   "display": "601 W 29TH ST \u00b7 2021"
+  },
+  "1090199": {
+   "bin": "1090199",
+   "year": 2016,
+   "height_m": 24.4,
+   "lat": 40.74622,
+   "lng": -74.005698,
+   "osm_address": "500 West 21st Street",
+   "display": "500 W 21ST ST \u00b7 2016"
+  }
+ }
+}

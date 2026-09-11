@@ -1,0 +1,184 @@
+==============================================================================
+CAPTION BLOCKS — generated from houdini/cameras.json. Do not retype these.
+  generated 2026-08-20T19:35:19   ·   source houdini/pick_cameras.py
+==============================================================================
+
+KEY LIGHT (all plates): winter day 355 · 25.8191° elevation at 180.0° azimuth
+  to_sun [0.0, 0.435531, -0.900174]   ·   light travel [-0.0, -0.435531, 0.900174]
+
+──────────────────────────────────────────────────────────────────────────────
+IMAGE A · Stage 3 — the eye-level hero
+──────────────────────────────────────────────────────────────────────────────
+  station                            s = 176.83 m
+  stolen sky (deficit_svf)           0.6272
+  sky view today (svf_deck)          0.1587
+  winter sun recaptured              15.1%
+  rib height                         6.83 m
+  reach                              4.17 m
+  enclosure angle                    70.4°
+  nearest wall                       1.4 m
+  dominant occluder built            2015
+
+  The dominant occluder here post-dates the park, so the enclosure in frame
+  is the tower boom itself — that is the argument, and it is worth a clause
+  in the caption.
+
+  CAVEATS — these travel with the recapture number, on the plate:
+    1. Name the instrument. The independent Ladybug re-measure puts the
+       field-driven enclosed-station mean at 17.39% against the hand-rolled
+       18.56% (data/envelope_validation.json).
+    2. Both recapture comparisons ARE significant at n = 159 and they point
+       OPPOSITE ways: field-vs-(b) +1.18 pts [+0.26, +2.30] — the shaping
+       beats the same steel spread flat — and field-vs-(a) -1.56 pts [-3.08,
+       -0.03] — the uniform 7 m canopy recovers more, on 2.27x the steel.
+       NEITHER SENTENCE MAY TRAVEL WITHOUT THE OTHER. The significance
+       arrived with the sample (n 56 -> 159 after the re-fetch), not with a
+       better design, and does not survive a 2005 pre-park baseline.
+    3. The recapture sensor is the rib apex, 1.20-7.23 m above the deck — sun
+       reaching the structure, not sun reaching a person. Deck-level
+       recapture is unmeasured.
+
+──────────────────────────────────────────────────────────────────────────────
+IMAGE B · Stage 3b — the open contrast (river)
+──────────────────────────────────────────────────────────────────────────────
+  station                            s = 48.23 m
+  sky view today (svf_deck)          0.8607
+  stolen sky (deficit_svf)           0.0453
+  rib height                         1.61 m
+  reach                              0.20 m
+  enclosure angle                    15.2°
+  nearest wall                       7.6 m
+
+  The subject of this plate is the FLAT rib over an open sky — the generator
+  standing down where the deck can still see out. It is a plate about
+  restraint, not about performance.
+
+  OMITTED — "winter sun recaptured" is deliberately not on this plate:
+    This station's deficit_svf is ~0.01: it lost about one percent of its
+    sky. The recapture fraction over that loss is real and passes the
+    suppression rule, but on a plate a large-looking percentage sitting
+    beside a near-zero deficit reads as the canopy performing, when what
+    it actually describes is recovering a trivial loss. The number is not
+    wrong; it is misleading at this station, and the honest fix is to
+    leave it off rather than to print it with a disclaimer.
+    The suppression rule is unchanged and stays `deficit_svf > 0
+    strictly`. Suppression is a property of the DATA (no loss means no
+    recovery to measure); this omission is a property of THIS PLATE.
+    Moving the threshold to catch this case would mean inventing a tuned
+    cutoff, which is exactly what the project refuses to do elsewhere.
+
+──────────────────────────────────────────────────────────────────────────────
+IMAGE C · Stage 5b — the section through the worst core
+──────────────────────────────────────────────────────────────────────────────
+  station                            s = 1398.59 m
+  stolen sky (deficit_svf)           0.8110
+  sky view today (svf_deck)          0.1122
+  winter sun recaptured              0.0%
+  rib height                         7.03 m
+  reach                              3.59 m
+  enclosure angle                    74.3°
+  nearest wall                       3.4 m
+  dominant occluder built            2013
+
+  Print the 0.0% rather than omitting it. This is the tallest rib in the
+  family reaching as far as the generator allows and recovering nothing —
+  THE_ANSWERING_LINE.md's stated limit, made visible: the worst cores are a
+  massing problem a canopy cannot fix.
+
+  CAVEATS — these travel with the recapture number, on the plate:
+    1. Name the instrument. The independent Ladybug re-measure puts the
+       field-driven enclosed-station mean at 17.39% against the hand-rolled
+       18.56% (data/envelope_validation.json).
+    2. Both recapture comparisons ARE significant at n = 159 and they point
+       OPPOSITE ways: field-vs-(b) +1.18 pts [+0.26, +2.30] — the shaping
+       beats the same steel spread flat — and field-vs-(a) -1.56 pts [-3.08,
+       -0.03] — the uniform 7 m canopy recovers more, on 2.27x the steel.
+       NEITHER SENTENCE MAY TRAVEL WITHOUT THE OTHER. The significance
+       arrived with the sample (n 56 -> 159 after the re-fetch), not with a
+       better design, and does not survive a 2005 pre-park baseline.
+    3. The recapture sensor is the rib apex, 1.20-7.23 m above the deck — sun
+       reaching the structure, not sun reaching a person. Deck-level
+       recapture is unmeasured.
+
+
+==============================================================================
+POPULATION PLATES — resolved through houdini/sources.json
+==============================================================================
+
+──────────────────────────────────────────────────────────────────────────────
+IMAGE E · Stage 4 — the specimen array (population plate)
+──────────────────────────────────────────────────────────────────────────────
+  ribs in the population             232   [ribsched_n_ribs]
+  standard types                     10   [ribsched_n_types]
+  standardized ribs                  118   [ribsched_n_standardized]
+  bespoke ribs                       114   [ribsched_n_bespoke]
+  standardization coverage           50.9%   [ribsched_coverage_pct]
+  T01 count (the flat type)          73   [ribsched_t01_count]
+  T01 share of the family            31.5%   [ribsched_t01_share_pct]
+  T01 height                         1.27 m   [ribsched_t01_height_m]
+  T10 height (family maximum)        6.87 m   [ribsched_t10_height_m]
+  T10 reach (family maximum)         4.40 m   [ribsched_t10_reach_m]
+  total member length                2,869.1 m   [ribsched_member_length_m]
+  sized steel, field-driven canopy   83.2 t   [steel_sized_field_t]
+  sized steel, uniform 7 m canopy    188.6 t   [steel_sized_uniform_a_t]
+  steel ratio, uniform 7 m vs field-driven 2.27x   [steel_ratio_sized]
+  field-driven ribs needing CHS 219x8 40   [steel_heavy_section_field]
+  uniform 7 m ribs needing CHS 219x8 199   [steel_heavy_section_uniform_a]
+  mean install deviation             425.7 mm   [ribsched_tol_mean_mm]
+  max standardized deviation         199.3 mm   [ribsched_tol_max_mm]
+
+  The fabrication plate. It carries the material headline:
+  indistinguishable-to-better recapture on 44% of the steel. It also carries
+  the standardization limit — 114 bespoke ribs — which is the honest half of
+  the same story.
+
+  CAVEATS — these travel with the numbers above, on the plate:
+    1. [n_types_chosen] n_types = 10 is a CHOSEN parameter (KMeans on [height, reach], seed
+       42), not an optimum. The standardization curve is the honest
+       defence: nearly flat past ten.
+    2. [t01_dominance] The dominant type covers only 31.5% of the family and 114 of 232
+       ribs are bespoke. Draw the array at true counts. This is a finding
+       about the SITE, not a failure of the kit: a canyon of 2,083
+       buildings spanning 3.5-386 m cannot be answered with ten parts. Mean
+       install deviation is 425.7 mm against a 200 mm threshold.
+    3. [tonnage_is_sized_not_assumed] Both tonnages come from the same direct-stiffness pass, section
+       ladder and load combinations (data/structure.json,
+       data/structure_counterfactual.json), which is what makes the ratio
+       like-for-like. Retired and dead: the assumed-24.0 kg/m pair
+       (57.8/115.3 -> 2.00x) AND the pre-re-fetch sizing (63.8/188.6 ->
+       2.96x). The current figures are 83.2 t / 188.6 t / 2.27x.
+    4. [recapture_nonsignificance] Both recapture comparisons ARE significant at n = 159 and they point
+       OPPOSITE ways: field-vs-(b) +1.18 pts [+0.26, +2.30] — the shaping
+       beats the same steel spread flat — and field-vs-(a) -1.56 pts
+       [-3.08, -0.03] — the uniform 7 m canopy recovers more, on 2.27x the
+       steel. NEITHER SENTENCE MAY TRAVEL WITHOUT THE OTHER. The
+       significance arrived with the sample (n 56 -> 159 after the
+       re-fetch), not with a better design, and does not survive a 2005
+       pre-park baseline.
+    5. [tolerance_is_geometric] 'Tolerance' here is the max nodal snap displacement when a bespoke
+       rib is replaced by its standard type — a geometric deviation, not a
+       fabrication tolerance in the engineering sense. Wrong word, wrong
+       room, at a structures firm.
+
+──────────────────────────────────────────────────────────────────────────────
+IMAGE D · Stage 5 — the corridor (population plate)
+──────────────────────────────────────────────────────────────────────────────
+  deck stations                      232   [envelope_stations]
+  rib height vs stolen-sky deficit   r = +0.949   [envelope_corr_r]
+  rib height, realised minimum       1.20 m   [envelope_rib_min_m]
+  T10 height (family maximum)        6.87 m   [ribsched_t10_height_m]
+  openness gate (rib held flat above this) 0.75   [envelope_open_svf]
+  median utilization, field-driven   0.36   [struct_median_util_field]
+  median utilization, uniform 7 m    0.53   [struct_median_util_uniform_a]
+
+  The argument image. It shows material variation along the line — ribs at
+  the generator floor where the deck still sees sky, rising to the family
+  maximum in the canyon. The correlation (r 0.949) is the self-check that
+  the variation tracks the measured field.
+
+  CAVEATS — these travel with the numbers above, on the plate:
+    1. [r_is_self_check] The deficit-vs-rib-height correlation is the generator's own
+       self-check that the form answers the measured field rather than the
+       eye. It is not a performance result and must not be presented as
+       one.
+

@@ -1,0 +1,1646 @@
+{
+ "metadata": {
+  "scenario": "as-of-right buildout of corridor soft sites",
+  "knobs": {
+   "corridor_m": 55.0,
+   "soft_max_h": 18.0,
+   "soft_max_year": 2000,
+   "envelope_h": 35.0
+  },
+  "n_soft_sites": 59,
+  "n_deck_points": 232,
+  "length_m": 1856.7,
+  "svf_now_mean": 0.424,
+  "svf_future_mean": 0.378,
+  "further_sky_lost_pct": 4.6,
+  "further_winter_sun_stolen_h": 0.31,
+  "worst_new_loss_s": 1671.9,
+  "disclaimer": "MODEL scenario, not a permit forecast \u2014 soft sites & envelope are heuristic knobs"
+ },
+ "points": [
+  {
+   "s": 0.0,
+   "svf_now": 0.5386,
+   "svf_future": 0.468,
+   "sun_now": 2.5,
+   "sun_future": 2.5
+  },
+  {
+   "s": 8.0,
+   "svf_now": 0.6114,
+   "svf_future": 0.4805,
+   "sun_now": 2.67,
+   "sun_future": 2.5
+  },
+  {
+   "s": 16.1,
+   "svf_now": 0.7692,
+   "svf_future": 0.5502,
+   "sun_now": 4.33,
+   "sun_future": 3.5
+  },
+  {
+   "s": 24.1,
+   "svf_now": 0.8088,
+   "svf_future": 0.4899,
+   "sun_now": 4.5,
+   "sun_future": 3.17
+  },
+  {
+   "s": 32.2,
+   "svf_now": 0.8384,
+   "svf_future": 0.4608,
+   "sun_now": 4.5,
+   "sun_future": 2.83
+  },
+  {
+   "s": 40.2,
+   "svf_now": 0.8572,
+   "svf_future": 0.4718,
+   "sun_now": 4.33,
+   "sun_future": 2.33
+  },
+  {
+   "s": 48.2,
+   "svf_now": 0.8614,
+   "svf_future": 0.484,
+   "sun_now": 4.33,
+   "sun_future": 2.33
+  },
+  {
+   "s": 56.3,
+   "svf_now": 0.8528,
+   "svf_future": 0.5158,
+   "sun_now": 4.5,
+   "sun_future": 2.33
+  },
+  {
+   "s": 64.3,
+   "svf_now": 0.8377,
+   "svf_future": 0.5807,
+   "sun_now": 4.83,
+   "sun_future": 2.17
+  },
+  {
+   "s": 72.3,
+   "svf_now": 0.8011,
+   "svf_future": 0.5932,
+   "sun_now": 5.17,
+   "sun_future": 2.17
+  },
+  {
+   "s": 80.4,
+   "svf_now": 0.7479,
+   "svf_future": 0.5806,
+   "sun_now": 5.67,
+   "sun_future": 2.17
+  },
+  {
+   "s": 88.4,
+   "svf_now": 0.6409,
+   "svf_future": 0.5078,
+   "sun_now": 6.33,
+   "sun_future": 2.67
+  },
+  {
+   "s": 96.5,
+   "svf_now": 0.4031,
+   "svf_future": 0.3182,
+   "sun_now": 6.33,
+   "sun_future": 2.5
+  },
+  {
+   "s": 104.5,
+   "svf_now": 0.089,
+   "svf_future": 0.089,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 112.5,
+   "svf_now": 0.1006,
+   "svf_future": 0.1006,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 120.6,
+   "svf_now": 0.1098,
+   "svf_future": 0.1098,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 128.6,
+   "svf_now": 0.107,
+   "svf_future": 0.107,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 136.6,
+   "svf_now": 0.3337,
+   "svf_future": 0.3337,
+   "sun_now": 1.0,
+   "sun_future": 1.0
+  },
+  {
+   "s": 144.7,
+   "svf_now": 0.37,
+   "svf_future": 0.3657,
+   "sun_now": 2.0,
+   "sun_future": 1.33
+  },
+  {
+   "s": 152.7,
+   "svf_now": 0.3898,
+   "svf_future": 0.3856,
+   "sun_now": 2.5,
+   "sun_future": 1.83
+  },
+  {
+   "s": 160.8,
+   "svf_now": 0.3705,
+   "svf_future": 0.3666,
+   "sun_now": 2.67,
+   "sun_future": 2.67
+  },
+  {
+   "s": 168.8,
+   "svf_now": 0.3357,
+   "svf_future": 0.3324,
+   "sun_now": 3.0,
+   "sun_future": 3.0
+  },
+  {
+   "s": 176.8,
+   "svf_now": 0.1569,
+   "svf_future": 0.1569,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 184.9,
+   "svf_now": 0.1181,
+   "svf_future": 0.1181,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 192.9,
+   "svf_now": 0.0937,
+   "svf_future": 0.0937,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 200.9,
+   "svf_now": 0.0962,
+   "svf_future": 0.0962,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 209.0,
+   "svf_now": 0.0844,
+   "svf_future": 0.0844,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 217.0,
+   "svf_now": 0.0917,
+   "svf_future": 0.0917,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 225.1,
+   "svf_now": 0.0927,
+   "svf_future": 0.0927,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 233.1,
+   "svf_now": 0.087,
+   "svf_future": 0.087,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 241.1,
+   "svf_now": 0.4958,
+   "svf_future": 0.4703,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 249.2,
+   "svf_now": 0.5397,
+   "svf_future": 0.5174,
+   "sun_now": 0.33,
+   "sun_future": 0.0
+  },
+  {
+   "s": 257.2,
+   "svf_now": 0.5186,
+   "svf_future": 0.5064,
+   "sun_now": 2.33,
+   "sun_future": 1.67
+  },
+  {
+   "s": 265.2,
+   "svf_now": 0.3847,
+   "svf_future": 0.379,
+   "sun_now": 2.83,
+   "sun_future": 2.5
+  },
+  {
+   "s": 273.3,
+   "svf_now": 0.3234,
+   "svf_future": 0.3234,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 281.3,
+   "svf_now": 0.3706,
+   "svf_future": 0.3706,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 289.4,
+   "svf_now": 0.3811,
+   "svf_future": 0.3811,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 297.4,
+   "svf_now": 0.3651,
+   "svf_future": 0.3651,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 305.4,
+   "svf_now": 0.4624,
+   "svf_future": 0.4624,
+   "sun_now": 0.5,
+   "sun_future": 0.5
+  },
+  {
+   "s": 313.5,
+   "svf_now": 0.4853,
+   "svf_future": 0.4853,
+   "sun_now": 0.83,
+   "sun_future": 0.83
+  },
+  {
+   "s": 321.5,
+   "svf_now": 0.5057,
+   "svf_future": 0.5057,
+   "sun_now": 1.0,
+   "sun_future": 1.0
+  },
+  {
+   "s": 329.6,
+   "svf_now": 0.5843,
+   "svf_future": 0.5843,
+   "sun_now": 1.17,
+   "sun_future": 1.17
+  },
+  {
+   "s": 337.6,
+   "svf_now": 0.551,
+   "svf_future": 0.551,
+   "sun_now": 1.33,
+   "sun_future": 1.33
+  },
+  {
+   "s": 345.6,
+   "svf_now": 0.4639,
+   "svf_future": 0.4639,
+   "sun_now": 1.5,
+   "sun_future": 1.5
+  },
+  {
+   "s": 353.7,
+   "svf_now": 0.3885,
+   "svf_future": 0.3885,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 361.7,
+   "svf_now": 0.4723,
+   "svf_future": 0.4723,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 369.7,
+   "svf_now": 0.5152,
+   "svf_future": 0.5152,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 377.8,
+   "svf_now": 0.5253,
+   "svf_future": 0.5253,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 385.8,
+   "svf_now": 0.5132,
+   "svf_future": 0.5132,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 393.9,
+   "svf_now": 0.4826,
+   "svf_future": 0.4826,
+   "sun_now": 1.17,
+   "sun_future": 1.17
+  },
+  {
+   "s": 401.9,
+   "svf_now": 0.4343,
+   "svf_future": 0.4343,
+   "sun_now": 2.67,
+   "sun_future": 2.67
+  },
+  {
+   "s": 409.9,
+   "svf_now": 0.3332,
+   "svf_future": 0.3332,
+   "sun_now": 3.5,
+   "sun_future": 3.5
+  },
+  {
+   "s": 418.0,
+   "svf_now": 0.2758,
+   "svf_future": 0.2758,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 426.0,
+   "svf_now": 0.3299,
+   "svf_future": 0.3299,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 434.0,
+   "svf_now": 0.1412,
+   "svf_future": 0.1412,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 442.1,
+   "svf_now": 0.1491,
+   "svf_future": 0.1491,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 450.1,
+   "svf_now": 0.1524,
+   "svf_future": 0.1524,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 458.2,
+   "svf_now": 0.1508,
+   "svf_future": 0.1508,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 466.2,
+   "svf_now": 0.1446,
+   "svf_future": 0.1446,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 474.2,
+   "svf_now": 0.3454,
+   "svf_future": 0.3352,
+   "sun_now": 1.17,
+   "sun_future": 1.17
+  },
+  {
+   "s": 482.3,
+   "svf_now": 0.415,
+   "svf_future": 0.3617,
+   "sun_now": 1.17,
+   "sun_future": 1.17
+  },
+  {
+   "s": 490.3,
+   "svf_now": 0.585,
+   "svf_future": 0.5027,
+   "sun_now": 1.0,
+   "sun_future": 1.0
+  },
+  {
+   "s": 498.3,
+   "svf_now": 0.6033,
+   "svf_future": 0.5142,
+   "sun_now": 1.0,
+   "sun_future": 1.0
+  },
+  {
+   "s": 506.4,
+   "svf_now": 0.6087,
+   "svf_future": 0.5345,
+   "sun_now": 1.0,
+   "sun_future": 1.0
+  },
+  {
+   "s": 514.4,
+   "svf_now": 0.6527,
+   "svf_future": 0.5713,
+   "sun_now": 1.0,
+   "sun_future": 1.0
+  },
+  {
+   "s": 522.5,
+   "svf_now": 0.6654,
+   "svf_future": 0.6013,
+   "sun_now": 1.17,
+   "sun_future": 1.0
+  },
+  {
+   "s": 530.5,
+   "svf_now": 0.6703,
+   "svf_future": 0.6076,
+   "sun_now": 1.33,
+   "sun_future": 1.0
+  },
+  {
+   "s": 538.5,
+   "svf_now": 0.6694,
+   "svf_future": 0.5977,
+   "sun_now": 1.5,
+   "sun_future": 1.0
+  },
+  {
+   "s": 546.6,
+   "svf_now": 0.6682,
+   "svf_future": 0.5867,
+   "sun_now": 1.5,
+   "sun_future": 0.83
+  },
+  {
+   "s": 554.6,
+   "svf_now": 0.6628,
+   "svf_future": 0.5793,
+   "sun_now": 2.5,
+   "sun_future": 1.0
+  },
+  {
+   "s": 562.7,
+   "svf_now": 0.6601,
+   "svf_future": 0.5859,
+   "sun_now": 3.0,
+   "sun_future": 1.17
+  },
+  {
+   "s": 570.7,
+   "svf_now": 0.6474,
+   "svf_future": 0.5697,
+   "sun_now": 2.83,
+   "sun_future": 1.0
+  },
+  {
+   "s": 578.7,
+   "svf_now": 0.6265,
+   "svf_future": 0.552,
+   "sun_now": 3.17,
+   "sun_future": 1.33
+  },
+  {
+   "s": 586.8,
+   "svf_now": 0.574,
+   "svf_future": 0.4977,
+   "sun_now": 2.83,
+   "sun_future": 1.17
+  },
+  {
+   "s": 594.8,
+   "svf_now": 0.5369,
+   "svf_future": 0.4682,
+   "sun_now": 2.5,
+   "sun_future": 1.0
+  },
+  {
+   "s": 602.8,
+   "svf_now": 0.5106,
+   "svf_future": 0.4624,
+   "sun_now": 2.67,
+   "sun_future": 1.17
+  },
+  {
+   "s": 610.9,
+   "svf_now": 0.4885,
+   "svf_future": 0.4527,
+   "sun_now": 2.5,
+   "sun_future": 1.33
+  },
+  {
+   "s": 618.9,
+   "svf_now": 0.477,
+   "svf_future": 0.447,
+   "sun_now": 2.5,
+   "sun_future": 1.33
+  },
+  {
+   "s": 627.0,
+   "svf_now": 0.4851,
+   "svf_future": 0.4575,
+   "sun_now": 2.67,
+   "sun_future": 1.33
+  },
+  {
+   "s": 635.0,
+   "svf_now": 0.5581,
+   "svf_future": 0.5311,
+   "sun_now": 3.17,
+   "sun_future": 2.0
+  },
+  {
+   "s": 643.0,
+   "svf_now": 0.6909,
+   "svf_future": 0.6625,
+   "sun_now": 3.33,
+   "sun_future": 2.17
+  },
+  {
+   "s": 651.1,
+   "svf_now": 0.7218,
+   "svf_future": 0.6919,
+   "sun_now": 2.83,
+   "sun_future": 2.83
+  },
+  {
+   "s": 659.1,
+   "svf_now": 0.7516,
+   "svf_future": 0.718,
+   "sun_now": 2.17,
+   "sun_future": 2.17
+  },
+  {
+   "s": 667.1,
+   "svf_now": 0.7776,
+   "svf_future": 0.7436,
+   "sun_now": 2.33,
+   "sun_future": 2.33
+  },
+  {
+   "s": 675.2,
+   "svf_now": 0.8024,
+   "svf_future": 0.7708,
+   "sun_now": 2.5,
+   "sun_future": 2.0
+  },
+  {
+   "s": 683.2,
+   "svf_now": 0.8185,
+   "svf_future": 0.7906,
+   "sun_now": 3.33,
+   "sun_future": 2.33
+  },
+  {
+   "s": 691.3,
+   "svf_now": 0.8337,
+   "svf_future": 0.8098,
+   "sun_now": 4.17,
+   "sun_future": 2.67
+  },
+  {
+   "s": 699.3,
+   "svf_now": 0.844,
+   "svf_future": 0.8208,
+   "sun_now": 3.83,
+   "sun_future": 2.33
+  },
+  {
+   "s": 707.3,
+   "svf_now": 0.8439,
+   "svf_future": 0.8163,
+   "sun_now": 3.33,
+   "sun_future": 2.5
+  },
+  {
+   "s": 715.4,
+   "svf_now": 0.8126,
+   "svf_future": 0.7847,
+   "sun_now": 3.17,
+   "sun_future": 2.5
+  },
+  {
+   "s": 723.4,
+   "svf_now": 0.703,
+   "svf_future": 0.6784,
+   "sun_now": 3.5,
+   "sun_future": 3.5
+  },
+  {
+   "s": 731.4,
+   "svf_now": 0.4545,
+   "svf_future": 0.4489,
+   "sun_now": 4.17,
+   "sun_future": 4.17
+  },
+  {
+   "s": 739.5,
+   "svf_now": 0.5556,
+   "svf_future": 0.4815,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 747.5,
+   "svf_now": 0.6534,
+   "svf_future": 0.5635,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 755.6,
+   "svf_now": 0.6786,
+   "svf_future": 0.5831,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 763.6,
+   "svf_now": 0.665,
+   "svf_future": 0.5718,
+   "sun_now": 1.17,
+   "sun_future": 1.17
+  },
+  {
+   "s": 771.6,
+   "svf_now": 0.6225,
+   "svf_future": 0.5374,
+   "sun_now": 2.0,
+   "sun_future": 2.0
+  },
+  {
+   "s": 779.7,
+   "svf_now": 0.5226,
+   "svf_future": 0.4526,
+   "sun_now": 2.17,
+   "sun_future": 2.17
+  },
+  {
+   "s": 787.7,
+   "svf_now": 0.3276,
+   "svf_future": 0.2843,
+   "sun_now": 2.33,
+   "sun_future": 2.33
+  },
+  {
+   "s": 795.7,
+   "svf_now": 0.6588,
+   "svf_future": 0.4479,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 803.8,
+   "svf_now": 0.651,
+   "svf_future": 0.4358,
+   "sun_now": 1.0,
+   "sun_future": 1.0
+  },
+  {
+   "s": 811.8,
+   "svf_now": 0.5895,
+   "svf_future": 0.1276,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 819.9,
+   "svf_now": 0.3958,
+   "svf_future": 0.1144,
+   "sun_now": 3.33,
+   "sun_future": 0.0
+  },
+  {
+   "s": 827.9,
+   "svf_now": 0.4132,
+   "svf_future": 0.0777,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 835.9,
+   "svf_now": 0.2831,
+   "svf_future": 0.2286,
+   "sun_now": 0.5,
+   "sun_future": 0.0
+  },
+  {
+   "s": 844.0,
+   "svf_now": 0.3976,
+   "svf_future": 0.2894,
+   "sun_now": 0.83,
+   "sun_future": 0.0
+  },
+  {
+   "s": 852.0,
+   "svf_now": 0.4869,
+   "svf_future": 0.3423,
+   "sun_now": 1.33,
+   "sun_future": 0.0
+  },
+  {
+   "s": 860.1,
+   "svf_now": 0.4843,
+   "svf_future": 0.4077,
+   "sun_now": 2.33,
+   "sun_future": 0.33
+  },
+  {
+   "s": 868.1,
+   "svf_now": 0.6036,
+   "svf_future": 0.5408,
+   "sun_now": 2.5,
+   "sun_future": 0.67
+  },
+  {
+   "s": 876.1,
+   "svf_now": 0.6244,
+   "svf_future": 0.5671,
+   "sun_now": 3.0,
+   "sun_future": 1.33
+  },
+  {
+   "s": 884.2,
+   "svf_now": 0.585,
+   "svf_future": 0.5462,
+   "sun_now": 3.5,
+   "sun_future": 2.33
+  },
+  {
+   "s": 892.2,
+   "svf_now": 0.4447,
+   "svf_future": 0.4143,
+   "sun_now": 1.83,
+   "sun_future": 1.0
+  },
+  {
+   "s": 900.2,
+   "svf_now": 0.4072,
+   "svf_future": 0.3672,
+   "sun_now": 1.83,
+   "sun_future": 1.0
+  },
+  {
+   "s": 908.3,
+   "svf_now": 0.3686,
+   "svf_future": 0.3301,
+   "sun_now": 2.17,
+   "sun_future": 2.17
+  },
+  {
+   "s": 916.3,
+   "svf_now": 0.4016,
+   "svf_future": 0.3737,
+   "sun_now": 2.5,
+   "sun_future": 2.5
+  },
+  {
+   "s": 924.4,
+   "svf_now": 0.4077,
+   "svf_future": 0.3726,
+   "sun_now": 2.83,
+   "sun_future": 2.17
+  },
+  {
+   "s": 932.4,
+   "svf_now": 0.2947,
+   "svf_future": 0.2498,
+   "sun_now": 2.17,
+   "sun_future": 1.83
+  },
+  {
+   "s": 940.4,
+   "svf_now": 0.2934,
+   "svf_future": 0.2582,
+   "sun_now": 1.67,
+   "sun_future": 1.67
+  },
+  {
+   "s": 948.5,
+   "svf_now": 0.4218,
+   "svf_future": 0.4093,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 956.5,
+   "svf_now": 0.4928,
+   "svf_future": 0.478,
+   "sun_now": 0.83,
+   "sun_future": 0.83
+  },
+  {
+   "s": 964.5,
+   "svf_now": 0.4972,
+   "svf_future": 0.4782,
+   "sun_now": 1.67,
+   "sun_future": 1.67
+  },
+  {
+   "s": 972.6,
+   "svf_now": 0.4283,
+   "svf_future": 0.4111,
+   "sun_now": 2.0,
+   "sun_future": 2.0
+  },
+  {
+   "s": 980.6,
+   "svf_now": 0.0564,
+   "svf_future": 0.0564,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 988.7,
+   "svf_now": 0.0609,
+   "svf_future": 0.0609,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 996.7,
+   "svf_now": 0.0562,
+   "svf_future": 0.0562,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1004.7,
+   "svf_now": 0.0477,
+   "svf_future": 0.0477,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1012.8,
+   "svf_now": 0.173,
+   "svf_future": 0.173,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1020.8,
+   "svf_now": 0.1955,
+   "svf_future": 0.1955,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1028.8,
+   "svf_now": 0.1869,
+   "svf_future": 0.1869,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1036.9,
+   "svf_now": 0.1509,
+   "svf_future": 0.1509,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1044.9,
+   "svf_now": 0.5385,
+   "svf_future": 0.426,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1053.0,
+   "svf_now": 0.5536,
+   "svf_future": 0.4391,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1061.0,
+   "svf_now": 0.3557,
+   "svf_future": 0.3073,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1069.0,
+   "svf_now": 0.3799,
+   "svf_future": 0.2324,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1077.1,
+   "svf_now": 0.4026,
+   "svf_future": 0.2223,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1085.1,
+   "svf_now": 0.3147,
+   "svf_future": 0.1529,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1093.1,
+   "svf_now": 0.3093,
+   "svf_future": 0.2953,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1101.2,
+   "svf_now": 0.3865,
+   "svf_future": 0.3575,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1109.2,
+   "svf_now": 0.3685,
+   "svf_future": 0.3304,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1117.3,
+   "svf_now": 0.3316,
+   "svf_future": 0.29,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1125.3,
+   "svf_now": 0.4595,
+   "svf_future": 0.3741,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1133.3,
+   "svf_now": 0.4035,
+   "svf_future": 0.356,
+   "sun_now": 1.67,
+   "sun_future": 0.33
+  },
+  {
+   "s": 1141.4,
+   "svf_now": 0.1957,
+   "svf_future": 0.1957,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1149.4,
+   "svf_now": 0.2208,
+   "svf_future": 0.2208,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1157.5,
+   "svf_now": 0.2138,
+   "svf_future": 0.2138,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1165.5,
+   "svf_now": 0.187,
+   "svf_future": 0.187,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1173.5,
+   "svf_now": 0.1299,
+   "svf_future": 0.1299,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1181.6,
+   "svf_now": 0.1349,
+   "svf_future": 0.1349,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1189.6,
+   "svf_now": 0.1268,
+   "svf_future": 0.1268,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1197.6,
+   "svf_now": 0.3866,
+   "svf_future": 0.3635,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1205.7,
+   "svf_now": 0.3616,
+   "svf_future": 0.3451,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1213.7,
+   "svf_now": 0.2356,
+   "svf_future": 0.2356,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1221.8,
+   "svf_now": 0.2538,
+   "svf_future": 0.2144,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1229.8,
+   "svf_now": 0.1221,
+   "svf_future": 0.1221,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1237.8,
+   "svf_now": 0.1106,
+   "svf_future": 0.1106,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1245.9,
+   "svf_now": 0.1397,
+   "svf_future": 0.1352,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1253.9,
+   "svf_now": 0.1058,
+   "svf_future": 0.1058,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1261.9,
+   "svf_now": 0.1225,
+   "svf_future": 0.1225,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1270.0,
+   "svf_now": 0.1282,
+   "svf_future": 0.1282,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1278.0,
+   "svf_now": 0.3974,
+   "svf_future": 0.3489,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1286.1,
+   "svf_now": 0.4446,
+   "svf_future": 0.3501,
+   "sun_now": 0.17,
+   "sun_future": 0.17
+  },
+  {
+   "s": 1294.1,
+   "svf_now": 0.0917,
+   "svf_future": 0.0917,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1302.1,
+   "svf_now": 0.125,
+   "svf_future": 0.125,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1310.2,
+   "svf_now": 0.1548,
+   "svf_future": 0.1548,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1318.2,
+   "svf_now": 0.2027,
+   "svf_future": 0.2027,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1326.2,
+   "svf_now": 0.2671,
+   "svf_future": 0.2671,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1334.3,
+   "svf_now": 0.2772,
+   "svf_future": 0.2772,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1342.3,
+   "svf_now": 0.2638,
+   "svf_future": 0.2638,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1350.4,
+   "svf_now": 0.2197,
+   "svf_future": 0.2197,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1358.4,
+   "svf_now": 0.167,
+   "svf_future": 0.1665,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1366.4,
+   "svf_now": 0.2296,
+   "svf_future": 0.229,
+   "sun_now": 0.5,
+   "sun_future": 0.5
+  },
+  {
+   "s": 1374.5,
+   "svf_now": 0.1093,
+   "svf_future": 0.1093,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1382.5,
+   "svf_now": 0.113,
+   "svf_future": 0.113,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1390.6,
+   "svf_now": 0.114,
+   "svf_future": 0.114,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1398.6,
+   "svf_now": 0.1124,
+   "svf_future": 0.1124,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1406.6,
+   "svf_now": 0.0646,
+   "svf_future": 0.0646,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1414.7,
+   "svf_now": 0.158,
+   "svf_future": 0.158,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1422.7,
+   "svf_now": 0.1508,
+   "svf_future": 0.1508,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1430.7,
+   "svf_now": 0.1065,
+   "svf_future": 0.1065,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1438.8,
+   "svf_now": 0.26,
+   "svf_future": 0.2594,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1446.8,
+   "svf_now": 0.3058,
+   "svf_future": 0.2916,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1454.9,
+   "svf_now": 0.1714,
+   "svf_future": 0.1385,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1462.9,
+   "svf_now": 0.2123,
+   "svf_future": 0.1449,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1470.9,
+   "svf_now": 0.2597,
+   "svf_future": 0.2597,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1479.0,
+   "svf_now": 0.3384,
+   "svf_future": 0.3139,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1487.0,
+   "svf_now": 0.3301,
+   "svf_future": 0.322,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1495.0,
+   "svf_now": 0.3061,
+   "svf_future": 0.3035,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1503.1,
+   "svf_now": 0.0483,
+   "svf_future": 0.0483,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1511.1,
+   "svf_now": 0.0551,
+   "svf_future": 0.0551,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1519.2,
+   "svf_now": 0.0609,
+   "svf_future": 0.0609,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1527.2,
+   "svf_now": 0.0643,
+   "svf_future": 0.0643,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1535.2,
+   "svf_now": 0.0665,
+   "svf_future": 0.0665,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1543.3,
+   "svf_now": 0.0676,
+   "svf_future": 0.0676,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1551.3,
+   "svf_now": 0.0679,
+   "svf_future": 0.0679,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1559.3,
+   "svf_now": 0.1782,
+   "svf_future": 0.1765,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1567.4,
+   "svf_now": 0.2006,
+   "svf_future": 0.1985,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1575.4,
+   "svf_now": 0.2214,
+   "svf_future": 0.2186,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1583.5,
+   "svf_now": 0.2426,
+   "svf_future": 0.2392,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1591.5,
+   "svf_now": 0.2713,
+   "svf_future": 0.2661,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1599.5,
+   "svf_now": 0.3258,
+   "svf_future": 0.3192,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1607.6,
+   "svf_now": 0.4441,
+   "svf_future": 0.434,
+   "sun_now": 0.33,
+   "sun_future": 0.33
+  },
+  {
+   "s": 1615.6,
+   "svf_now": 0.4775,
+   "svf_future": 0.4621,
+   "sun_now": 0.67,
+   "sun_future": 0.67
+  },
+  {
+   "s": 1623.6,
+   "svf_now": 0.4834,
+   "svf_future": 0.4595,
+   "sun_now": 0.83,
+   "sun_future": 0.83
+  },
+  {
+   "s": 1631.7,
+   "svf_now": 0.4846,
+   "svf_future": 0.4451,
+   "sun_now": 0.83,
+   "sun_future": 0.83
+  },
+  {
+   "s": 1639.7,
+   "svf_now": 0.5066,
+   "svf_future": 0.4373,
+   "sun_now": 0.83,
+   "sun_future": 0.83
+  },
+  {
+   "s": 1647.8,
+   "svf_now": 0.5194,
+   "svf_future": 0.3793,
+   "sun_now": 0.5,
+   "sun_future": 0.5
+  },
+  {
+   "s": 1655.8,
+   "svf_now": 0.5311,
+   "svf_future": 0.2307,
+   "sun_now": 0.17,
+   "sun_future": 0.17
+  },
+  {
+   "s": 1663.8,
+   "svf_now": 0.5518,
+   "svf_future": 0.0815,
+   "sun_now": 0.0,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1671.9,
+   "svf_now": 0.5631,
+   "svf_future": 0.0655,
+   "sun_now": 0.17,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1679.9,
+   "svf_now": 0.5784,
+   "svf_future": 0.5219,
+   "sun_now": 0.17,
+   "sun_future": 0.0
+  },
+  {
+   "s": 1688.0,
+   "svf_now": 0.5988,
+   "svf_future": 0.5815,
+   "sun_now": 0.17,
+   "sun_future": 0.17
+  },
+  {
+   "s": 1696.0,
+   "svf_now": 0.6151,
+   "svf_future": 0.61,
+   "sun_now": 0.17,
+   "sun_future": 0.17
+  },
+  {
+   "s": 1704.0,
+   "svf_now": 0.6323,
+   "svf_future": 0.6309,
+   "sun_now": 0.17,
+   "sun_future": 0.17
+  },
+  {
+   "s": 1712.1,
+   "svf_now": 0.6462,
+   "svf_future": 0.646,
+   "sun_now": 0.33,
+   "sun_future": 0.33
+  },
+  {
+   "s": 1720.1,
+   "svf_now": 0.6657,
+   "svf_future": 0.6657,
+   "sun_now": 0.17,
+   "sun_future": 0.17
+  },
+  {
+   "s": 1728.1,
+   "svf_now": 0.6872,
+   "svf_future": 0.6872,
+   "sun_now": 0.5,
+   "sun_future": 0.5
+  },
+  {
+   "s": 1736.2,
+   "svf_now": 0.7023,
+   "svf_future": 0.7023,
+   "sun_now": 0.67,
+   "sun_future": 0.67
+  },
+  {
+   "s": 1744.2,
+   "svf_now": 0.7177,
+   "svf_future": 0.7177,
+   "sun_now": 0.67,
+   "sun_future": 0.67
+  },
+  {
+   "s": 1752.3,
+   "svf_now": 0.7339,
+   "svf_future": 0.7339,
+   "sun_now": 1.17,
+   "sun_future": 1.17
+  },
+  {
+   "s": 1760.3,
+   "svf_now": 0.7474,
+   "svf_future": 0.7474,
+   "sun_now": 1.67,
+   "sun_future": 1.67
+  },
+  {
+   "s": 1768.3,
+   "svf_now": 0.7586,
+   "svf_future": 0.7586,
+   "sun_now": 2.0,
+   "sun_future": 2.0
+  },
+  {
+   "s": 1776.4,
+   "svf_now": 0.7692,
+   "svf_future": 0.7692,
+   "sun_now": 2.17,
+   "sun_future": 2.17
+  },
+  {
+   "s": 1784.4,
+   "svf_now": 0.7845,
+   "svf_future": 0.7845,
+   "sun_now": 2.33,
+   "sun_future": 2.33
+  },
+  {
+   "s": 1792.4,
+   "svf_now": 0.7936,
+   "svf_future": 0.7936,
+   "sun_now": 2.67,
+   "sun_future": 2.67
+  },
+  {
+   "s": 1800.5,
+   "svf_now": 0.8104,
+   "svf_future": 0.8104,
+   "sun_now": 2.83,
+   "sun_future": 2.83
+  },
+  {
+   "s": 1808.5,
+   "svf_now": 0.8196,
+   "svf_future": 0.8196,
+   "sun_now": 2.83,
+   "sun_future": 2.83
+  },
+  {
+   "s": 1816.6,
+   "svf_now": 0.8296,
+   "svf_future": 0.8296,
+   "sun_now": 3.17,
+   "sun_future": 3.17
+  },
+  {
+   "s": 1824.6,
+   "svf_now": 0.8424,
+   "svf_future": 0.8424,
+   "sun_now": 3.33,
+   "sun_future": 3.33
+  },
+  {
+   "s": 1832.6,
+   "svf_now": 0.8468,
+   "svf_future": 0.8468,
+   "sun_now": 3.83,
+   "sun_future": 3.83
+  },
+  {
+   "s": 1840.7,
+   "svf_now": 0.8588,
+   "svf_future": 0.8588,
+   "sun_now": 4.17,
+   "sun_future": 4.17
+  },
+  {
+   "s": 1848.7,
+   "svf_now": 0.8658,
+   "svf_future": 0.8658,
+   "sun_now": 4.33,
+   "sun_future": 4.33
+  },
+  {
+   "s": 1856.7,
+   "svf_now": 0.8757,
+   "svf_future": 0.8757,
+   "sun_now": 4.17,
+   "sun_future": 4.17
+  }
+ ]
+}

@@ -1,0 +1,11168 @@
+{
+ "_meta": {
+  "script": "build_envelope.py",
+  "git_commit": null,
+  "generated": "2026-08-16T12:56:46",
+  "model": "aperture-driven canopy: rib height ~ stolen-sky deficit, reach ~ sun-weighted surviving sky aperture (hl_core ray-cast)",
+  "params": {
+   "N_AZ": 180,
+   "MAX_R": 350.0,
+   "SPACING": 8.0,
+   "DECK_HALF_W": 4.5,
+   "RIB_BASE_H": 1.2,
+   "RIB_MAX_H": 7.5,
+   "REACH_MAX": 6.0,
+   "OPEN_SVF": 0.75,
+   "sun_days": {
+    "winter": 355,
+    "equinox": 80,
+    "summer": 172
+   }
+  },
+  "n_stations": 232,
+  "readback": {
+   "mean_recaptured_winter_sun_frac_enclosed": 0.186,
+   "mean_recaptured_all": 0.157,
+   "deficit_vs_ribheight_r": 0.949,
+   "note": "recaptured fraction = winter-sun timesteps with clear line to the rib reach tip, recast with the same primitive that drove the form. deficit_vs_ribheight_r is the honest check that the canopy is tallest exactly where the sky loss is worst."
+  }
+ },
+ "points": [
+  {
+   "s_m": 0.0,
+   "x": -278.31,
+   "z": -862.48,
+   "deficit_svf": 0.3816,
+   "svf_deck": 0.5415,
+   "svf_prepark": 0.9231,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 2.5,
+   "aperture_az_deg": 113.7,
+   "aperture_alt_deg": 80.6,
+   "directionality": 0.62,
+   "rib_height_m": 5.23,
+   "reach_m": 2.96,
+   "recaptured_winter_sun_frac": 0.302,
+   "rib": [
+    [
+     -273.93,
+     9.0,
+     -863.5
+    ],
+    [
+     -275.69,
+     12.76,
+     -863.31
+    ],
+    [
+     -275.6,
+     14.23,
+     -863.67
+    ],
+    [
+     -278.76,
+     12.76,
+     -862.6
+    ],
+    [
+     -282.69,
+     9.0,
+     -861.46
+    ]
+   ],
+   "apex": [
+    -275.6,
+    14.23,
+    -863.67
+   ]
+  },
+  {
+   "s_m": 8.04,
+   "x": -276.49,
+   "z": -854.65,
+   "deficit_svf": 0.318,
+   "svf_deck": 0.614,
+   "svf_prepark": 0.932,
+   "winter_sun_now": 2.67,
+   "winter_sun_prepark": 2.67,
+   "aperture_az_deg": 106.8,
+   "aperture_alt_deg": 82.2,
+   "directionality": 0.522,
+   "rib_height_m": 4.58,
+   "reach_m": 2.3,
+   "recaptured_winter_sun_frac": 0.547,
+   "rib": [
+    [
+     -272.11,
+     9.0,
+     -855.67
+    ],
+    [
+     -274.08,
+     12.3,
+     -855.27
+    ],
+    [
+     -274.29,
+     13.58,
+     -855.31
+    ],
+    [
+     -277.15,
+     12.3,
+     -854.56
+    ],
+    [
+     -280.88,
+     9.0,
+     -853.63
+    ]
+   ],
+   "apex": [
+    -274.29,
+    13.58,
+    -855.31
+   ]
+  },
+  {
+   "s_m": 16.08,
+   "x": -274.67,
+   "z": -846.82,
+   "deficit_svf": 0.166,
+   "svf_deck": 0.7686,
+   "svf_prepark": 0.9346,
+   "winter_sun_now": 4.33,
+   "winter_sun_prepark": 4.33,
+   "aperture_az_deg": 115.4,
+   "aperture_alt_deg": 82.0,
+   "directionality": 0.221,
+   "rib_height_m": 2.69,
+   "reach_m": 0.76,
+   "recaptured_winter_sun_frac": 0.547,
+   "rib": [
+    [
+     -270.29,
+     9.0,
+     -847.84
+    ],
+    [
+     -272.87,
+     10.94,
+     -847.31
+    ],
+    [
+     -273.99,
+     11.69,
+     -847.15
+    ],
+    [
+     -275.94,
+     10.94,
+     -846.59
+    ],
+    [
+     -279.06,
+     9.0,
+     -845.8
+    ]
+   ],
+   "apex": [
+    -273.99,
+    11.69,
+    -847.15
+   ]
+  },
+  {
+   "s_m": 24.11,
+   "x": -272.86,
+   "z": -838.99,
+   "deficit_svf": 0.1229,
+   "svf_deck": 0.8098,
+   "svf_prepark": 0.9327,
+   "winter_sun_now": 4.5,
+   "winter_sun_prepark": 5.5,
+   "aperture_az_deg": 131.1,
+   "aperture_alt_deg": 80.4,
+   "directionality": 0.213,
+   "rib_height_m": 2.31,
+   "reach_m": 0.56,
+   "recaptured_winter_sun_frac": 0.528,
+   "rib": [
+    [
+     -268.47,
+     9.0,
+     -840.01
+    ],
+    [
+     -271.16,
+     10.66,
+     -839.49
+    ],
+    [
+     -272.44,
+     11.31,
+     -839.36
+    ],
+    [
+     -274.22,
+     10.66,
+     -838.78
+    ],
+    [
+     -277.24,
+     9.0,
+     -837.97
+    ]
+   ],
+   "apex": [
+    -272.44,
+    11.31,
+    -839.36
+   ]
+  },
+  {
+   "s_m": 32.15,
+   "x": -271.04,
+   "z": -831.16,
+   "deficit_svf": 0.0873,
+   "svf_deck": 0.8406,
+   "svf_prepark": 0.9279,
+   "winter_sun_now": 4.5,
+   "winter_sun_prepark": 6.0,
+   "aperture_az_deg": 142.6,
+   "aperture_alt_deg": 78.7,
+   "directionality": 0.195,
+   "rib_height_m": 1.99,
+   "reach_m": 0.39,
+   "recaptured_winter_sun_frac": 0.528,
+   "rib": [
+    [
+     -266.66,
+     9.0,
+     -832.18
+    ],
+    [
+     -269.41,
+     10.43,
+     -831.64
+    ],
+    [
+     -270.8,
+     10.99,
+     -831.47
+    ],
+    [
+     -272.48,
+     10.43,
+     -830.93
+    ],
+    [
+     -275.42,
+     9.0,
+     -830.14
+    ]
+   ],
+   "apex": [
+    -270.8,
+    10.99,
+    -831.47
+   ]
+  },
+  {
+   "s_m": 40.19,
+   "x": -269.22,
+   "z": -823.33,
+   "deficit_svf": 0.0631,
+   "svf_deck": 0.8558,
+   "svf_prepark": 0.9189,
+   "winter_sun_now": 4.33,
+   "winter_sun_prepark": 6.33,
+   "aperture_az_deg": 157.7,
+   "aperture_alt_deg": 76.4,
+   "directionality": 0.192,
+   "rib_height_m": 1.77,
+   "reach_m": 0.28,
+   "recaptured_winter_sun_frac": 0.509,
+   "rib": [
+    [
+     -264.84,
+     9.0,
+     -824.35
+    ],
+    [
+     -267.65,
+     10.27,
+     -823.79
+    ],
+    [
+     -269.12,
+     10.77,
+     -823.59
+    ],
+    [
+     -270.71,
+     10.27,
+     -823.08
+    ],
+    [
+     -273.61,
+     9.0,
+     -822.31
+    ]
+   ],
+   "apex": [
+    -269.12,
+    10.77,
+    -823.59
+   ]
+  },
+  {
+   "s_m": 48.23,
+   "x": -267.4,
+   "z": -815.5,
+   "deficit_svf": 0.0453,
+   "svf_deck": 0.8607,
+   "svf_prepark": 0.906,
+   "winter_sun_now": 4.33,
+   "winter_sun_prepark": 6.67,
+   "aperture_az_deg": 169.4,
+   "aperture_alt_deg": 75.0,
+   "directionality": 0.207,
+   "rib_height_m": 1.61,
+   "reach_m": 0.2,
+   "recaptured_winter_sun_frac": 0.509,
+   "rib": [
+    [
+     -263.02,
+     9.0,
+     -816.52
+    ],
+    [
+     -265.86,
+     10.16,
+     -815.94
+    ],
+    [
+     -267.37,
+     10.61,
+     -815.7
+    ],
+    [
+     -268.92,
+     10.16,
+     -815.23
+    ],
+    [
+     -271.79,
+     9.0,
+     -814.48
+    ]
+   ],
+   "apex": [
+    -267.37,
+    10.61,
+    -815.7
+   ]
+  },
+  {
+   "s_m": 56.27,
+   "x": -265.59,
+   "z": -807.67,
+   "deficit_svf": 0.0324,
+   "svf_deck": 0.8547,
+   "svf_prepark": 0.8871,
+   "winter_sun_now": 4.5,
+   "winter_sun_prepark": 7.0,
+   "aperture_az_deg": 176.7,
+   "aperture_alt_deg": 75.7,
+   "directionality": 0.23,
+   "rib_height_m": 1.49,
+   "reach_m": 0.15,
+   "recaptured_winter_sun_frac": 0.566,
+   "rib": [
+    [
+     -261.2,
+     9.0,
+     -808.69
+    ],
+    [
+     -264.05,
+     10.07,
+     -808.09
+    ],
+    [
+     -265.58,
+     10.49,
+     -807.82
+    ],
+    [
+     -267.12,
+     10.07,
+     -807.38
+    ],
+    [
+     -269.97,
+     9.0,
+     -806.65
+    ]
+   ],
+   "apex": [
+    -265.58,
+    10.49,
+    -807.82
+   ]
+  },
+  {
+   "s_m": 64.3,
+   "x": -263.77,
+   "z": -799.84,
+   "deficit_svf": 0.0247,
+   "svf_deck": 0.8356,
+   "svf_prepark": 0.8603,
+   "winter_sun_now": 4.83,
+   "winter_sun_prepark": 7.33,
+   "aperture_az_deg": 183.3,
+   "aperture_alt_deg": 77.8,
+   "directionality": 0.248,
+   "rib_height_m": 1.42,
+   "reach_m": 0.12,
+   "recaptured_winter_sun_frac": 0.585,
+   "rib": [
+    [
+     -259.39,
+     9.0,
+     -800.86
+    ],
+    [
+     -262.24,
+     10.02,
+     -800.25
+    ],
+    [
+     -263.78,
+     10.42,
+     -799.96
+    ],
+    [
+     -265.31,
+     10.02,
+     -799.53
+    ],
+    [
+     -268.15,
+     9.0,
+     -798.83
+    ]
+   ],
+   "apex": [
+    -263.78,
+    10.42,
+    -799.96
+   ]
+  },
+  {
+   "s_m": 72.34,
+   "x": -261.95,
+   "z": -792.01,
+   "deficit_svf": 0.0182,
+   "svf_deck": 0.8035,
+   "svf_prepark": 0.8217,
+   "winter_sun_now": 5.17,
+   "winter_sun_prepark": 7.33,
+   "aperture_az_deg": 185.3,
+   "aperture_alt_deg": 79.2,
+   "directionality": 0.283,
+   "rib_height_m": 1.36,
+   "reach_m": 0.09,
+   "recaptured_winter_sun_frac": 0.623,
+   "rib": [
+    [
+     -257.57,
+     9.0,
+     -793.03
+    ],
+    [
+     -260.42,
+     9.98,
+     -792.4
+    ],
+    [
+     -261.96,
+     10.36,
+     -792.1
+    ],
+    [
+     -263.49,
+     9.98,
+     -791.69
+    ],
+    [
+     -266.33,
+     9.0,
+     -791.0
+    ]
+   ],
+   "apex": [
+    -261.96,
+    10.36,
+    -792.1
+   ]
+  },
+  {
+   "s_m": 80.38,
+   "x": -260.13,
+   "z": -784.18,
+   "deficit_svf": 0.0146,
+   "svf_deck": 0.7458,
+   "svf_prepark": 0.7604,
+   "winter_sun_now": 5.67,
+   "winter_sun_prepark": 7.67,
+   "aperture_az_deg": 184.5,
+   "aperture_alt_deg": 80.3,
+   "directionality": 0.328,
+   "rib_height_m": 1.33,
+   "reach_m": 0.08,
+   "recaptured_winter_sun_frac": 0.679,
+   "rib": [
+    [
+     -255.75,
+     9.0,
+     -785.2
+    ],
+    [
+     -258.6,
+     9.96,
+     -784.57
+    ],
+    [
+     -260.14,
+     10.33,
+     -784.26
+    ],
+    [
+     -261.67,
+     9.96,
+     -783.86
+    ],
+    [
+     -264.52,
+     9.0,
+     -783.17
+    ]
+   ],
+   "apex": [
+    -260.14,
+    10.33,
+    -784.26
+   ]
+  },
+  {
+   "s_m": 88.42,
+   "x": -258.32,
+   "z": -776.35,
+   "deficit_svf": 0.01,
+   "svf_deck": 0.6415,
+   "svf_prepark": 0.6515,
+   "winter_sun_now": 6.33,
+   "winter_sun_prepark": 8.17,
+   "aperture_az_deg": 177.6,
+   "aperture_alt_deg": 80.9,
+   "directionality": 0.433,
+   "rib_height_m": 1.3,
+   "reach_m": 0.06,
+   "recaptured_winter_sun_frac": 0.755,
+   "rib": [
+    [
+     -253.93,
+     9.0,
+     -777.37
+    ],
+    [
+     -256.78,
+     9.94,
+     -776.74
+    ],
+    [
+     -258.31,
+     10.3,
+     -776.42
+    ],
+    [
+     -259.85,
+     9.94,
+     -776.02
+    ],
+    [
+     -262.7,
+     9.0,
+     -775.34
+    ]
+   ],
+   "apex": [
+    -258.31,
+    10.3,
+    -776.42
+   ]
+  },
+  {
+   "s_m": 96.45,
+   "x": -256.5,
+   "z": -768.52,
+   "deficit_svf": 0.0076,
+   "svf_deck": 0.4007,
+   "svf_prepark": 0.4083,
+   "winter_sun_now": 6.33,
+   "winter_sun_prepark": 7.83,
+   "aperture_az_deg": 159.1,
+   "aperture_alt_deg": 79.8,
+   "directionality": 0.713,
+   "rib_height_m": 1.3,
+   "reach_m": 0.08,
+   "recaptured_winter_sun_frac": 0.736,
+   "rib": [
+    [
+     -252.11,
+     9.0,
+     -769.54
+    ],
+    [
+     -254.95,
+     9.94,
+     -768.91
+    ],
+    [
+     -256.47,
+     10.3,
+     -768.6
+    ],
+    [
+     -258.02,
+     9.94,
+     -768.2
+    ],
+    [
+     -260.88,
+     9.0,
+     -767.51
+    ]
+   ],
+   "apex": [
+    -256.47,
+    10.3,
+    -768.6
+   ]
+  },
+  {
+   "s_m": 104.49,
+   "x": -254.68,
+   "z": -760.69,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.0884,
+   "svf_prepark": 0.0884,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 343.0,
+   "aperture_alt_deg": 27.1,
+   "directionality": 0.372,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -250.3,
+     9.0,
+     -761.71
+    ],
+    [
+     -253.15,
+     9.86,
+     -761.05
+    ],
+    [
+     -254.68,
+     10.2,
+     -760.69
+    ],
+    [
+     -256.21,
+     9.86,
+     -760.34
+    ],
+    [
+     -259.06,
+     9.0,
+     -759.68
+    ]
+   ],
+   "apex": [
+    -254.68,
+    10.2,
+    -760.69
+   ]
+  },
+  {
+   "s_m": 112.53,
+   "x": -252.86,
+   "z": -752.86,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1003,
+   "svf_prepark": 0.1003,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 318.7,
+   "aperture_alt_deg": 26.8,
+   "directionality": 0.221,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -248.48,
+     9.0,
+     -753.88
+    ],
+    [
+     -251.33,
+     9.86,
+     -753.22
+    ],
+    [
+     -252.86,
+     10.2,
+     -752.86
+    ],
+    [
+     -254.4,
+     9.86,
+     -752.51
+    ],
+    [
+     -257.25,
+     9.0,
+     -751.85
+    ]
+   ],
+   "apex": [
+    -252.86,
+    10.2,
+    -752.86
+   ]
+  },
+  {
+   "s_m": 120.57,
+   "x": -251.05,
+   "z": -745.04,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1097,
+   "svf_prepark": 0.1097,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 245.2,
+   "aperture_alt_deg": 22.5,
+   "directionality": 0.298,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -246.66,
+     9.0,
+     -746.05
+    ],
+    [
+     -249.51,
+     9.86,
+     -745.39
+    ],
+    [
+     -251.05,
+     10.2,
+     -745.04
+    ],
+    [
+     -252.58,
+     9.86,
+     -744.68
+    ],
+    [
+     -255.43,
+     9.0,
+     -744.02
+    ]
+   ],
+   "apex": [
+    -251.05,
+    10.2,
+    -745.04
+   ]
+  },
+  {
+   "s_m": 128.61,
+   "x": -249.23,
+   "z": -737.21,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1073,
+   "svf_prepark": 0.1073,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 224.1,
+   "aperture_alt_deg": 23.8,
+   "directionality": 0.472,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -244.84,
+     9.0,
+     -738.22
+    ],
+    [
+     -247.69,
+     9.86,
+     -737.56
+    ],
+    [
+     -249.23,
+     10.2,
+     -737.21
+    ],
+    [
+     -250.76,
+     9.86,
+     -736.85
+    ],
+    [
+     -253.61,
+     9.0,
+     -736.19
+    ]
+   ],
+   "apex": [
+    -249.23,
+    10.2,
+    -737.21
+   ]
+  },
+  {
+   "s_m": 136.64,
+   "x": -247.41,
+   "z": -729.38,
+   "deficit_svf": 0.1243,
+   "svf_deck": 0.3325,
+   "svf_prepark": 0.4568,
+   "winter_sun_now": 1.0,
+   "winter_sun_prepark": 1.0,
+   "aperture_az_deg": 87.0,
+   "aperture_alt_deg": 71.4,
+   "directionality": 0.684,
+   "rib_height_m": 2.94,
+   "reach_m": 1.34,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     -243.03,
+     9.0,
+     -730.39
+    ],
+    [
+     -245.34,
+     11.12,
+     -729.7
+    ],
+    [
+     -246.07,
+     11.94,
+     -729.31
+    ],
+    [
+     -248.41,
+     11.12,
+     -728.99
+    ],
+    [
+     -251.79,
+     9.0,
+     -728.36
+    ]
+   ],
+   "apex": [
+    -246.07,
+    11.94,
+    -729.31
+   ]
+  },
+  {
+   "s_m": 144.68,
+   "x": -245.59,
+   "z": -721.55,
+   "deficit_svf": 0.179,
+   "svf_deck": 0.368,
+   "svf_prepark": 0.547,
+   "winter_sun_now": 2.0,
+   "winter_sun_prepark": 2.0,
+   "aperture_az_deg": 102.6,
+   "aperture_alt_deg": 73.2,
+   "directionality": 0.573,
+   "rib_height_m": 3.63,
+   "reach_m": 1.72,
+   "recaptured_winter_sun_frac": 0.264,
+   "rib": [
+    [
+     -241.21,
+     9.0,
+     -722.56
+    ],
+    [
+     -243.39,
+     11.61,
+     -722.05
+    ],
+    [
+     -243.91,
+     12.63,
+     -721.92
+    ],
+    [
+     -246.45,
+     11.61,
+     -721.34
+    ],
+    [
+     -249.98,
+     9.0,
+     -720.53
+    ]
+   ],
+   "apex": [
+    -243.91,
+    12.63,
+    -721.92
+   ]
+  },
+  {
+   "s_m": 152.72,
+   "x": -243.77,
+   "z": -713.72,
+   "deficit_svf": 0.2436,
+   "svf_deck": 0.3904,
+   "svf_prepark": 0.634,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 2.5,
+   "aperture_az_deg": 117.5,
+   "aperture_alt_deg": 72.7,
+   "directionality": 0.432,
+   "rib_height_m": 4.44,
+   "reach_m": 2.04,
+   "recaptured_winter_sun_frac": 0.302,
+   "rib": [
+    [
+     -239.39,
+     9.0,
+     -714.73
+    ],
+    [
+     -241.52,
+     12.2,
+     -714.45
+    ],
+    [
+     -241.97,
+     13.44,
+     -714.66
+    ],
+    [
+     -244.59,
+     12.2,
+     -713.74
+    ],
+    [
+     -248.16,
+     9.0,
+     -712.7
+    ]
+   ],
+   "apex": [
+    -241.97,
+    13.44,
+    -714.66
+   ]
+  },
+  {
+   "s_m": 160.76,
+   "x": -241.96,
+   "z": -705.89,
+   "deficit_svf": 0.3211,
+   "svf_deck": 0.3732,
+   "svf_prepark": 0.6943,
+   "winter_sun_now": 2.67,
+   "winter_sun_prepark": 2.67,
+   "aperture_az_deg": 143.4,
+   "aperture_alt_deg": 71.4,
+   "directionality": 0.33,
+   "rib_height_m": 5.54,
+   "reach_m": 2.47,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -237.57,
+     9.0,
+     -706.9
+    ],
+    [
+     -239.83,
+     12.99,
+     -707.04
+    ],
+    [
+     -240.48,
+     14.54,
+     -707.87
+    ],
+    [
+     -242.9,
+     12.99,
+     -706.33
+    ],
+    [
+     -246.34,
+     9.0,
+     -704.87
+    ]
+   ],
+   "apex": [
+    -240.48,
+    14.54,
+    -707.87
+   ]
+  },
+  {
+   "s_m": 168.8,
+   "x": -240.14,
+   "z": -698.06,
+   "deficit_svf": 0.4045,
+   "svf_deck": 0.3393,
+   "svf_prepark": 0.7438,
+   "winter_sun_now": 3.0,
+   "winter_sun_prepark": 3.0,
+   "aperture_az_deg": 182.7,
+   "aperture_alt_deg": 66.4,
+   "directionality": 0.32,
+   "rib_height_m": 6.07,
+   "reach_m": 2.75,
+   "recaptured_winter_sun_frac": 0.358,
+   "rib": [
+    [
+     -235.76,
+     9.0,
+     -699.07
+    ],
+    [
+     -238.66,
+     13.37,
+     -699.51
+    ],
+    [
+     -240.27,
+     15.07,
+     -700.8
+    ],
+    [
+     -241.73,
+     13.37,
+     -698.8
+    ],
+    [
+     -244.52,
+     9.0,
+     -697.04
+    ]
+   ],
+   "apex": [
+    -240.27,
+    15.07,
+    -700.8
+   ]
+  },
+  {
+   "s_m": 176.83,
+   "x": -238.32,
+   "z": -690.23,
+   "deficit_svf": 0.6272,
+   "svf_deck": 0.1587,
+   "svf_prepark": 0.7859,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 3.17,
+   "aperture_az_deg": 270.5,
+   "aperture_alt_deg": 50.5,
+   "directionality": 0.63,
+   "rib_height_m": 6.83,
+   "reach_m": 4.17,
+   "recaptured_winter_sun_frac": 0.151,
+   "rib": [
+    [
+     -233.94,
+     9.0,
+     -691.25
+    ],
+    [
+     -238.46,
+     13.92,
+     -690.57
+    ],
+    [
+     -242.5,
+     15.83,
+     -690.19
+    ],
+    [
+     -241.53,
+     13.92,
+     -689.86
+    ],
+    [
+     -242.71,
+     9.0,
+     -689.21
+    ]
+   ],
+   "apex": [
+    -242.5,
+    15.83,
+    -690.19
+   ]
+  },
+  {
+   "s_m": 184.87,
+   "x": -236.5,
+   "z": -682.4,
+   "deficit_svf": 0.6942,
+   "svf_deck": 0.1205,
+   "svf_prepark": 0.8147,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 3.33,
+   "aperture_az_deg": 261.2,
+   "aperture_alt_deg": 35.9,
+   "directionality": 0.603,
+   "rib_height_m": 6.99,
+   "reach_m": 4.2,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     -232.12,
+     9.0,
+     -683.42
+    ],
+    [
+     -236.63,
+     14.04,
+     -683.01
+    ],
+    [
+     -240.66,
+     15.99,
+     -683.04
+    ],
+    [
+     -239.7,
+     14.04,
+     -682.3
+    ],
+    [
+     -240.89,
+     9.0,
+     -681.38
+    ]
+   ],
+   "apex": [
+    -240.66,
+    15.99,
+    -683.04
+   ]
+  },
+  {
+   "s_m": 192.91,
+   "x": -234.69,
+   "z": -674.57,
+   "deficit_svf": 0.7347,
+   "svf_deck": 0.0943,
+   "svf_prepark": 0.829,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 3.17,
+   "aperture_az_deg": 249.1,
+   "aperture_alt_deg": 28.9,
+   "directionality": 0.651,
+   "rib_height_m": 7.1,
+   "reach_m": 4.45,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -230.3,
+     9.0,
+     -675.59
+    ],
+    [
+     -234.81,
+     14.11,
+     -675.56
+    ],
+    [
+     -238.84,
+     16.1,
+     -676.16
+    ],
+    [
+     -237.88,
+     14.11,
+     -674.85
+    ],
+    [
+     -239.07,
+     9.0,
+     -673.55
+    ]
+   ],
+   "apex": [
+    -238.84,
+    16.1,
+    -676.16
+   ]
+  },
+  {
+   "s_m": 200.95,
+   "x": -232.87,
+   "z": -666.74,
+   "deficit_svf": 0.6266,
+   "svf_deck": 0.0964,
+   "svf_prepark": 0.723,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 3.5,
+   "aperture_az_deg": 149.5,
+   "aperture_alt_deg": 38.8,
+   "directionality": 0.867,
+   "rib_height_m": 7.1,
+   "reach_m": 5.17,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -228.49,
+     9.0,
+     -667.76
+    ],
+    [
+     -230.29,
+     14.11,
+     -668.88
+    ],
+    [
+     -230.25,
+     16.1,
+     -671.19
+    ],
+    [
+     -233.36,
+     14.11,
+     -668.16
+    ],
+    [
+     -237.25,
+     9.0,
+     -665.72
+    ]
+   ],
+   "apex": [
+    -230.25,
+    16.1,
+    -671.19
+   ]
+  },
+  {
+   "s_m": 208.98,
+   "x": -231.05,
+   "z": -658.91,
+   "deficit_svf": 0.5285,
+   "svf_deck": 0.0843,
+   "svf_prepark": 0.6128,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.67,
+   "aperture_az_deg": 326.8,
+   "aperture_alt_deg": 28.6,
+   "directionality": 0.618,
+   "rib_height_m": 7.15,
+   "reach_m": 4.37,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -226.67,
+     9.0,
+     -659.93
+    ],
+    [
+     -230.47,
+     14.15,
+     -657.8
+    ],
+    [
+     -233.44,
+     16.15,
+     -655.26
+    ],
+    [
+     -233.54,
+     14.15,
+     -657.09
+    ],
+    [
+     -235.43,
+     9.0,
+     -657.89
+    ]
+   ],
+   "apex": [
+    -233.44,
+    16.15,
+    -655.26
+   ]
+  },
+  {
+   "s_m": 217.02,
+   "x": -229.23,
+   "z": -651.08,
+   "deficit_svf": 0.694,
+   "svf_deck": 0.0917,
+   "svf_prepark": 0.7857,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 1.0,
+   "aperture_az_deg": 306.2,
+   "aperture_alt_deg": 25.9,
+   "directionality": 0.414,
+   "rib_height_m": 7.11,
+   "reach_m": 3.65,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -224.85,
+     9.0,
+     -652.1
+    ],
+    [
+     -228.88,
+     14.12,
+     -650.57
+    ],
+    [
+     -232.18,
+     16.11,
+     -648.92
+    ],
+    [
+     -231.95,
+     14.12,
+     -649.86
+    ],
+    [
+     -233.62,
+     9.0,
+     -650.06
+    ]
+   ],
+   "apex": [
+    -232.18,
+    16.11,
+    -648.92
+   ]
+  },
+  {
+   "s_m": 225.06,
+   "x": -227.42,
+   "z": -643.25,
+   "deficit_svf": 0.7533,
+   "svf_deck": 0.0927,
+   "svf_prepark": 0.846,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 1.83,
+   "aperture_az_deg": 254.1,
+   "aperture_alt_deg": 25.4,
+   "directionality": 0.369,
+   "rib_height_m": 7.11,
+   "reach_m": 3.5,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -223.03,
+     9.0,
+     -644.27
+    ],
+    [
+     -227.23,
+     14.12,
+     -643.99
+    ],
+    [
+     -230.78,
+     16.11,
+     -644.21
+    ],
+    [
+     -230.3,
+     14.12,
+     -643.28
+    ],
+    [
+     -231.8,
+     9.0,
+     -642.23
+    ]
+   ],
+   "apex": [
+    -230.78,
+    16.11,
+    -644.21
+   ]
+  },
+  {
+   "s_m": 233.1,
+   "x": -225.6,
+   "z": -635.42,
+   "deficit_svf": 0.7704,
+   "svf_deck": 0.087,
+   "svf_prepark": 0.8574,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 2.83,
+   "aperture_az_deg": 229.1,
+   "aperture_alt_deg": 27.6,
+   "directionality": 0.633,
+   "rib_height_m": 7.13,
+   "reach_m": 4.41,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -221.21,
+     9.0,
+     -636.44
+    ],
+    [
+     -225.4,
+     14.14,
+     -636.93
+    ],
+    [
+     -228.93,
+     16.13,
+     -638.31
+    ],
+    [
+     -228.46,
+     14.14,
+     -636.22
+    ],
+    [
+     -229.98,
+     9.0,
+     -634.4
+    ]
+   ],
+   "apex": [
+    -228.93,
+    16.13,
+    -638.31
+   ]
+  },
+  {
+   "s_m": 241.14,
+   "x": -223.78,
+   "z": -627.59,
+   "deficit_svf": 0.3493,
+   "svf_deck": 0.4945,
+   "svf_prepark": 0.8438,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 3.5,
+   "aperture_az_deg": 64.3,
+   "aperture_alt_deg": 61.1,
+   "directionality": 0.313,
+   "rib_height_m": 5.41,
+   "reach_m": 2.36,
+   "recaptured_winter_sun_frac": 0.113,
+   "rib": [
+    [
+     -219.4,
+     9.0,
+     -628.61
+    ],
+    [
+     -221.4,
+     12.9,
+     -627.54
+    ],
+    [
+     -221.66,
+     14.41,
+     -626.57
+    ],
+    [
+     -224.47,
+     12.9,
+     -626.82
+    ],
+    [
+     -228.16,
+     9.0,
+     -626.57
+    ]
+   ],
+   "apex": [
+    -221.66,
+    14.41,
+    -626.57
+   ]
+  },
+  {
+   "s_m": 249.17,
+   "x": -221.96,
+   "z": -619.76,
+   "deficit_svf": 0.2586,
+   "svf_deck": 0.5401,
+   "svf_prepark": 0.7987,
+   "winter_sun_now": 0.33,
+   "winter_sun_prepark": 3.83,
+   "aperture_az_deg": 91.3,
+   "aperture_alt_deg": 64.2,
+   "directionality": 0.153,
+   "rib_height_m": 4.18,
+   "reach_m": 1.39,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     -217.58,
+     9.0,
+     -620.78
+    ],
+    [
+     -219.87,
+     12.01,
+     -620.13
+    ],
+    [
+     -220.57,
+     13.18,
+     -619.79
+    ],
+    [
+     -222.94,
+     12.01,
+     -619.42
+    ],
+    [
+     -226.35,
+     9.0,
+     -618.74
+    ]
+   ],
+   "apex": [
+    -220.57,
+    13.18,
+    -619.79
+   ]
+  },
+  {
+   "s_m": 257.21,
+   "x": -220.15,
+   "z": -611.93,
+   "deficit_svf": 0.1932,
+   "svf_deck": 0.5178,
+   "svf_prepark": 0.711,
+   "winter_sun_now": 2.33,
+   "winter_sun_prepark": 5.67,
+   "aperture_az_deg": 170.6,
+   "aperture_alt_deg": 64.7,
+   "directionality": 0.149,
+   "rib_height_m": 3.48,
+   "reach_m": 1.06,
+   "recaptured_winter_sun_frac": 0.283,
+   "rib": [
+    [
+     -215.79,
+     9.0,
+     -613.05
+    ],
+    [
+     -218.55,
+     11.5,
+     -612.74
+    ],
+    [
+     -219.97,
+     12.48,
+     -612.98
+    ],
+    [
+     -221.6,
+     11.5,
+     -611.96
+    ],
+    [
+     -224.5,
+     9.0,
+     -610.81
+    ]
+   ],
+   "apex": [
+    -219.97,
+    12.48,
+    -612.98
+   ]
+  },
+  {
+   "s_m": 265.25,
+   "x": -217.98,
+   "z": -604.2,
+   "deficit_svf": 0.1459,
+   "svf_deck": 0.3854,
+   "svf_prepark": 0.5313,
+   "winter_sun_now": 2.83,
+   "winter_sun_prepark": 6.17,
+   "aperture_az_deg": 203.8,
+   "aperture_alt_deg": 52.4,
+   "directionality": 0.383,
+   "rib_height_m": 3.15,
+   "reach_m": 1.17,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -213.67,
+     9.0,
+     -605.51
+    ],
+    [
+     -216.66,
+     11.27,
+     -605.09
+    ],
+    [
+     -218.45,
+     12.15,
+     -605.27
+    ],
+    [
+     -219.67,
+     11.27,
+     -604.17
+    ],
+    [
+     -222.28,
+     9.0,
+     -602.89
+    ]
+   ],
+   "apex": [
+    -218.45,
+    12.15,
+    -605.27
+   ]
+  },
+  {
+   "s_m": 273.29,
+   "x": -215.48,
+   "z": -596.56,
+   "deficit_svf": 0.0017,
+   "svf_deck": 0.3234,
+   "svf_prepark": 0.3251,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 89.3,
+   "aperture_alt_deg": 60.2,
+   "directionality": 0.551,
+   "rib_height_m": 1.22,
+   "reach_m": 0.02,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -211.2,
+     9.0,
+     -597.96
+    ],
+    [
+     -213.97,
+     9.88,
+     -597.05
+    ],
+    [
+     -215.46,
+     10.22,
+     -596.56
+    ],
+    [
+     -216.97,
+     9.88,
+     -596.07
+    ],
+    [
+     -219.76,
+     9.0,
+     -595.16
+    ]
+   ],
+   "apex": [
+    -215.46,
+    10.22,
+    -596.56
+   ]
+  },
+  {
+   "s_m": 281.33,
+   "x": -212.98,
+   "z": -588.92,
+   "deficit_svf": 0.0021,
+   "svf_deck": 0.3706,
+   "svf_prepark": 0.3727,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 111.4,
+   "aperture_alt_deg": 58.1,
+   "directionality": 0.559,
+   "rib_height_m": 1.23,
+   "reach_m": 0.02,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -208.7,
+     9.0,
+     -590.32
+    ],
+    [
+     -211.48,
+     9.88,
+     -589.41
+    ],
+    [
+     -212.96,
+     10.23,
+     -588.93
+    ],
+    [
+     -214.47,
+     9.88,
+     -588.43
+    ],
+    [
+     -217.26,
+     9.0,
+     -587.52
+    ]
+   ],
+   "apex": [
+    -212.96,
+    10.23,
+    -588.93
+   ]
+  },
+  {
+   "s_m": 289.36,
+   "x": -210.48,
+   "z": -581.28,
+   "deficit_svf": 0.0024,
+   "svf_deck": 0.3812,
+   "svf_prepark": 0.3836,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 122.2,
+   "aperture_alt_deg": 58.5,
+   "directionality": 0.623,
+   "rib_height_m": 1.23,
+   "reach_m": 0.02,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -206.21,
+     9.0,
+     -582.68
+    ],
+    [
+     -208.98,
+     9.89,
+     -581.77
+    ],
+    [
+     -210.46,
+     10.23,
+     -581.29
+    ],
+    [
+     -211.97,
+     9.89,
+     -580.8
+    ],
+    [
+     -214.76,
+     9.0,
+     -579.88
+    ]
+   ],
+   "apex": [
+    -210.46,
+    10.23,
+    -581.29
+   ]
+  },
+  {
+   "s_m": 297.4,
+   "x": -207.99,
+   "z": -573.64,
+   "deficit_svf": 0.0041,
+   "svf_deck": 0.3646,
+   "svf_prepark": 0.3687,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 129.3,
+   "aperture_alt_deg": 59.8,
+   "directionality": 0.702,
+   "rib_height_m": 1.26,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -203.71,
+     9.0,
+     -575.04
+    ],
+    [
+     -206.48,
+     9.9,
+     -574.14
+    ],
+    [
+     -207.95,
+     10.26,
+     -573.67
+    ],
+    [
+     -209.47,
+     9.9,
+     -573.16
+    ],
+    [
+     -212.26,
+     9.0,
+     -572.24
+    ]
+   ],
+   "apex": [
+    -207.95,
+    10.26,
+    -573.67
+   ]
+  },
+  {
+   "s_m": 305.44,
+   "x": -205.49,
+   "z": -566.0,
+   "deficit_svf": 0.0212,
+   "svf_deck": 0.4627,
+   "svf_prepark": 0.4839,
+   "winter_sun_now": 0.5,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 275.8,
+   "aperture_alt_deg": 82.9,
+   "directionality": 0.666,
+   "rib_height_m": 1.46,
+   "reach_m": 0.2,
+   "recaptured_winter_sun_frac": 0.057,
+   "rib": [
+    [
+     -201.21,
+     9.0,
+     -567.4
+    ],
+    [
+     -204.07,
+     10.05,
+     -566.48
+    ],
+    [
+     -205.69,
+     10.46,
+     -565.98
+    ],
+    [
+     -207.07,
+     10.05,
+     -565.5
+    ],
+    [
+     -209.77,
+     9.0,
+     -564.6
+    ]
+   ],
+   "apex": [
+    -205.69,
+    10.46,
+    -565.98
+   ]
+  },
+  {
+   "s_m": 313.48,
+   "x": -202.99,
+   "z": -558.36,
+   "deficit_svf": 0.0166,
+   "svf_deck": 0.4854,
+   "svf_prepark": 0.502,
+   "winter_sun_now": 0.83,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 271.9,
+   "aperture_alt_deg": 82.6,
+   "directionality": 0.615,
+   "rib_height_m": 1.4,
+   "reach_m": 0.15,
+   "recaptured_winter_sun_frac": 0.094,
+   "rib": [
+    [
+     -198.72,
+     9.0,
+     -559.76
+    ],
+    [
+     -201.55,
+     10.01,
+     -558.85
+    ],
+    [
+     -203.14,
+     10.4,
+     -558.35
+    ],
+    [
+     -204.55,
+     10.01,
+     -557.87
+    ],
+    [
+     -207.27,
+     9.0,
+     -556.96
+    ]
+   ],
+   "apex": [
+    -203.14,
+    10.4,
+    -558.35
+   ]
+  },
+  {
+   "s_m": 321.51,
+   "x": -200.5,
+   "z": -550.72,
+   "deficit_svf": 0.0139,
+   "svf_deck": 0.5067,
+   "svf_prepark": 0.5206,
+   "winter_sun_now": 1.0,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 267.9,
+   "aperture_alt_deg": 82.5,
+   "directionality": 0.572,
+   "rib_height_m": 1.37,
+   "reach_m": 0.12,
+   "recaptured_winter_sun_frac": 0.113,
+   "rib": [
+    [
+     -196.22,
+     9.0,
+     -552.12
+    ],
+    [
+     -199.05,
+     9.98,
+     -551.21
+    ],
+    [
+     -200.61,
+     10.37,
+     -550.72
+    ],
+    [
+     -202.04,
+     9.98,
+     -550.23
+    ],
+    [
+     -204.77,
+     9.0,
+     -549.32
+    ]
+   ],
+   "apex": [
+    -200.61,
+    10.37,
+    -550.72
+   ]
+  },
+  {
+   "s_m": 329.55,
+   "x": -198.0,
+   "z": -543.08,
+   "deficit_svf": 0.0108,
+   "svf_deck": 0.5829,
+   "svf_prepark": 0.5937,
+   "winter_sun_now": 1.17,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 253.9,
+   "aperture_alt_deg": 82.6,
+   "directionality": 0.371,
+   "rib_height_m": 1.32,
+   "reach_m": 0.07,
+   "recaptured_winter_sun_frac": 0.151,
+   "rib": [
+    [
+     -193.72,
+     9.0,
+     -544.48
+    ],
+    [
+     -196.53,
+     9.95,
+     -543.58
+    ],
+    [
+     -198.07,
+     10.32,
+     -543.1
+    ],
+    [
+     -199.52,
+     9.95,
+     -542.6
+    ],
+    [
+     -202.28,
+     9.0,
+     -541.68
+    ]
+   ],
+   "apex": [
+    -198.07,
+    10.32,
+    -543.1
+   ]
+  },
+  {
+   "s_m": 337.59,
+   "x": -195.5,
+   "z": -535.44,
+   "deficit_svf": 0.013,
+   "svf_deck": 0.551,
+   "svf_prepark": 0.564,
+   "winter_sun_now": 1.33,
+   "winter_sun_prepark": 2.83,
+   "aperture_az_deg": 238.8,
+   "aperture_alt_deg": 80.8,
+   "directionality": 0.406,
+   "rib_height_m": 1.35,
+   "reach_m": 0.09,
+   "recaptured_winter_sun_frac": 0.151,
+   "rib": [
+    [
+     -191.22,
+     9.0,
+     -536.84
+    ],
+    [
+     -194.03,
+     9.97,
+     -535.95
+    ],
+    [
+     -195.58,
+     10.35,
+     -535.49
+    ],
+    [
+     -197.03,
+     9.97,
+     -534.97
+    ],
+    [
+     -199.78,
+     9.0,
+     -534.04
+    ]
+   ],
+   "apex": [
+    -195.58,
+    10.35,
+    -535.49
+   ]
+  },
+  {
+   "s_m": 345.63,
+   "x": -193.0,
+   "z": -527.8,
+   "deficit_svf": 0.0149,
+   "svf_deck": 0.4642,
+   "svf_prepark": 0.4791,
+   "winter_sun_now": 1.5,
+   "winter_sun_prepark": 3.0,
+   "aperture_az_deg": 229.9,
+   "aperture_alt_deg": 78.6,
+   "directionality": 0.539,
+   "rib_height_m": 1.39,
+   "reach_m": 0.13,
+   "recaptured_winter_sun_frac": 0.17,
+   "rib": [
+    [
+     -188.73,
+     9.0,
+     -529.2
+    ],
+    [
+     -191.55,
+     10.0,
+     -528.32
+    ],
+    [
+     -193.1,
+     10.39,
+     -527.88
+    ],
+    [
+     -194.54,
+     10.0,
+     -527.34
+    ],
+    [
+     -197.28,
+     9.0,
+     -526.4
+    ]
+   ],
+   "apex": [
+    -193.1,
+    10.39,
+    -527.88
+   ]
+  },
+  {
+   "s_m": 353.67,
+   "x": -190.51,
+   "z": -520.16,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.389,
+   "svf_prepark": 0.389,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 75.3,
+   "aperture_alt_deg": 62.6,
+   "directionality": 0.473,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -186.23,
+     9.0,
+     -521.56
+    ],
+    [
+     -189.01,
+     9.86,
+     -520.65
+    ],
+    [
+     -190.51,
+     10.2,
+     -520.16
+    ],
+    [
+     -192.0,
+     9.86,
+     -519.67
+    ],
+    [
+     -194.78,
+     9.0,
+     -518.76
+    ]
+   ],
+   "apex": [
+    -190.51,
+    10.2,
+    -520.16
+   ]
+  },
+  {
+   "s_m": 361.7,
+   "x": -188.01,
+   "z": -512.52,
+   "deficit_svf": 0.0002,
+   "svf_deck": 0.4723,
+   "svf_prepark": 0.4725,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 98.5,
+   "aperture_alt_deg": 63.2,
+   "directionality": 0.367,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -183.73,
+     9.0,
+     -513.92
+    ],
+    [
+     -186.51,
+     9.87,
+     -513.01
+    ],
+    [
+     -188.01,
+     10.2,
+     -512.52
+    ],
+    [
+     -189.51,
+     9.87,
+     -512.03
+    ],
+    [
+     -192.29,
+     9.0,
+     -511.12
+    ]
+   ],
+   "apex": [
+    -188.01,
+    10.2,
+    -512.52
+   ]
+  },
+  {
+   "s_m": 369.74,
+   "x": -185.51,
+   "z": -504.88,
+   "deficit_svf": 0.0015,
+   "svf_deck": 0.5151,
+   "svf_prepark": 0.5166,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 119.7,
+   "aperture_alt_deg": 63.7,
+   "directionality": 0.335,
+   "rib_height_m": 1.22,
+   "reach_m": 0.01,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -181.23,
+     9.0,
+     -506.28
+    ],
+    [
+     -184.01,
+     9.88,
+     -505.37
+    ],
+    [
+     -185.5,
+     10.22,
+     -504.88
+    ],
+    [
+     -187.01,
+     9.88,
+     -504.39
+    ],
+    [
+     -189.79,
+     9.0,
+     -503.48
+    ]
+   ],
+   "apex": [
+    -185.5,
+    10.22,
+    -504.88
+   ]
+  },
+  {
+   "s_m": 377.78,
+   "x": -183.01,
+   "z": -497.24,
+   "deficit_svf": 0.0028,
+   "svf_deck": 0.5261,
+   "svf_prepark": 0.5289,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 134.9,
+   "aperture_alt_deg": 64.8,
+   "directionality": 0.356,
+   "rib_height_m": 1.23,
+   "reach_m": 0.02,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -178.74,
+     9.0,
+     -498.64
+    ],
+    [
+     -181.51,
+     9.89,
+     -497.73
+    ],
+    [
+     -183.0,
+     10.23,
+     -497.25
+    ],
+    [
+     -184.51,
+     9.89,
+     -496.75
+    ],
+    [
+     -187.29,
+     9.0,
+     -495.84
+    ]
+   ],
+   "apex": [
+    -183.0,
+    10.23,
+    -497.25
+   ]
+  },
+  {
+   "s_m": 385.82,
+   "x": -180.52,
+   "z": -489.6,
+   "deficit_svf": 0.0038,
+   "svf_deck": 0.5129,
+   "svf_prepark": 0.5167,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 146.7,
+   "aperture_alt_deg": 65.9,
+   "directionality": 0.406,
+   "rib_height_m": 1.25,
+   "reach_m": 0.03,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -176.24,
+     9.0,
+     -491.0
+    ],
+    [
+     -179.01,
+     9.9,
+     -490.1
+    ],
+    [
+     -180.5,
+     10.25,
+     -489.62
+    ],
+    [
+     -182.01,
+     9.9,
+     -489.12
+    ],
+    [
+     -184.8,
+     9.0,
+     -488.2
+    ]
+   ],
+   "apex": [
+    -180.5,
+    10.25,
+    -489.62
+   ]
+  },
+  {
+   "s_m": 393.86,
+   "x": -178.02,
+   "z": -481.96,
+   "deficit_svf": 0.0038,
+   "svf_deck": 0.4829,
+   "svf_prepark": 0.4867,
+   "winter_sun_now": 1.17,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 152.3,
+   "aperture_alt_deg": 67.0,
+   "directionality": 0.434,
+   "rib_height_m": 1.25,
+   "reach_m": 0.03,
+   "recaptured_winter_sun_frac": 0.189,
+   "rib": [
+    [
+     -173.74,
+     9.0,
+     -483.36
+    ],
+    [
+     -176.52,
+     9.9,
+     -482.46
+    ],
+    [
+     -178.01,
+     10.25,
+     -481.98
+    ],
+    [
+     -179.51,
+     9.9,
+     -481.48
+    ],
+    [
+     -182.3,
+     9.0,
+     -480.56
+    ]
+   ],
+   "apex": [
+    -178.01,
+    10.25,
+    -481.98
+   ]
+  },
+  {
+   "s_m": 401.89,
+   "x": -175.52,
+   "z": -474.32,
+   "deficit_svf": 0.004,
+   "svf_deck": 0.4342,
+   "svf_prepark": 0.4382,
+   "winter_sun_now": 2.67,
+   "winter_sun_prepark": 3.67,
+   "aperture_az_deg": 158.8,
+   "aperture_alt_deg": 67.8,
+   "directionality": 0.508,
+   "rib_height_m": 1.25,
+   "reach_m": 0.03,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -171.25,
+     9.0,
+     -475.72
+    ],
+    [
+     -174.02,
+     9.9,
+     -474.82
+    ],
+    [
+     -175.51,
+     10.25,
+     -474.35
+    ],
+    [
+     -177.02,
+     9.9,
+     -473.84
+    ],
+    [
+     -179.8,
+     9.0,
+     -472.92
+    ]
+   ],
+   "apex": [
+    -175.51,
+    10.25,
+    -474.35
+   ]
+  },
+  {
+   "s_m": 409.93,
+   "x": -173.03,
+   "z": -466.68,
+   "deficit_svf": 0.004,
+   "svf_deck": 0.333,
+   "svf_prepark": 0.337,
+   "winter_sun_now": 3.5,
+   "winter_sun_prepark": 4.5,
+   "aperture_az_deg": 170.9,
+   "aperture_alt_deg": 68.1,
+   "directionality": 0.664,
+   "rib_height_m": 1.26,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.415,
+   "rib": [
+    [
+     -168.75,
+     9.0,
+     -468.08
+    ],
+    [
+     -171.53,
+     9.9,
+     -467.18
+    ],
+    [
+     -173.02,
+     10.26,
+     -466.72
+    ],
+    [
+     -174.52,
+     9.9,
+     -466.21
+    ],
+    [
+     -177.3,
+     9.0,
+     -465.28
+    ]
+   ],
+   "apex": [
+    -173.02,
+    10.26,
+    -466.72
+   ]
+  },
+  {
+   "s_m": 417.97,
+   "x": -170.53,
+   "z": -459.04,
+   "deficit_svf": 0.0056,
+   "svf_deck": 0.2761,
+   "svf_prepark": 0.2817,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 45.8,
+   "aperture_alt_deg": 27.7,
+   "directionality": 0.06,
+   "rib_height_m": 1.28,
+   "reach_m": 0.03,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -166.26,
+     9.0,
+     -460.45
+    ],
+    [
+     -169.02,
+     9.92,
+     -459.52
+    ],
+    [
+     -170.5,
+     10.28,
+     -459.01
+    ],
+    [
+     -172.01,
+     9.92,
+     -458.53
+    ],
+    [
+     -174.8,
+     9.0,
+     -457.63
+    ]
+   ],
+   "apex": [
+    -170.5,
+    10.28,
+    -459.01
+   ]
+  },
+  {
+   "s_m": 426.01,
+   "x": -167.99,
+   "z": -451.41,
+   "deficit_svf": 0.0006,
+   "svf_deck": 0.3295,
+   "svf_prepark": 0.3301,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.17,
+   "aperture_az_deg": 212.7,
+   "aperture_alt_deg": 39.0,
+   "directionality": 0.299,
+   "rib_height_m": 1.21,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -163.73,
+     9.0,
+     -452.87
+    ],
+    [
+     -166.5,
+     9.87,
+     -451.92
+    ],
+    [
+     -167.99,
+     10.21,
+     -451.42
+    ],
+    [
+     -169.48,
+     9.87,
+     -450.9
+    ],
+    [
+     -172.25,
+     9.0,
+     -449.95
+    ]
+   ],
+   "apex": [
+    -167.99,
+    10.21,
+    -451.42
+   ]
+  },
+  {
+   "s_m": 434.04,
+   "x": -165.32,
+   "z": -443.83,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1413,
+   "svf_prepark": 0.1413,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 85.1,
+   "aperture_alt_deg": 42.7,
+   "directionality": 0.744,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -161.07,
+     9.0,
+     -445.32
+    ],
+    [
+     -163.83,
+     9.86,
+     -444.35
+    ],
+    [
+     -165.32,
+     10.2,
+     -443.83
+    ],
+    [
+     -166.8,
+     9.86,
+     -443.31
+    ],
+    [
+     -169.56,
+     9.0,
+     -442.34
+    ]
+   ],
+   "apex": [
+    -165.32,
+    10.2,
+    -443.83
+   ]
+  },
+  {
+   "s_m": 442.08,
+   "x": -162.65,
+   "z": -436.25,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.149,
+   "svf_prepark": 0.149,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 99.8,
+   "aperture_alt_deg": 41.2,
+   "directionality": 0.692,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -158.41,
+     9.0,
+     -437.74
+    ],
+    [
+     -161.16,
+     9.86,
+     -436.77
+    ],
+    [
+     -162.65,
+     10.2,
+     -436.25
+    ],
+    [
+     -164.14,
+     9.86,
+     -435.73
+    ],
+    [
+     -166.89,
+     9.0,
+     -434.75
+    ]
+   ],
+   "apex": [
+    -162.65,
+    10.2,
+    -436.25
+   ]
+  },
+  {
+   "s_m": 450.12,
+   "x": -159.98,
+   "z": -428.67,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1524,
+   "svf_prepark": 0.1524,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 111.8,
+   "aperture_alt_deg": 40.7,
+   "directionality": 0.703,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -155.74,
+     9.0,
+     -430.16
+    ],
+    [
+     -158.5,
+     9.86,
+     -429.19
+    ],
+    [
+     -159.98,
+     10.2,
+     -428.67
+    ],
+    [
+     -161.47,
+     9.86,
+     -428.14
+    ],
+    [
+     -164.23,
+     9.0,
+     -427.17
+    ]
+   ],
+   "apex": [
+    -159.98,
+    10.2,
+    -428.67
+   ]
+  },
+  {
+   "s_m": 458.16,
+   "x": -157.31,
+   "z": -421.09,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1508,
+   "svf_prepark": 0.1508,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 123.9,
+   "aperture_alt_deg": 40.7,
+   "directionality": 0.726,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -153.07,
+     9.0,
+     -422.58
+    ],
+    [
+     -155.83,
+     9.86,
+     -421.61
+    ],
+    [
+     -157.31,
+     10.2,
+     -421.09
+    ],
+    [
+     -158.8,
+     9.86,
+     -420.56
+    ],
+    [
+     -161.56,
+     9.0,
+     -419.59
+    ]
+   ],
+   "apex": [
+    -157.31,
+    10.2,
+    -421.09
+   ]
+  },
+  {
+   "s_m": 466.2,
+   "x": -154.64,
+   "z": -413.5,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1443,
+   "svf_prepark": 0.1443,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 133.0,
+   "aperture_alt_deg": 41.2,
+   "directionality": 0.784,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -150.4,
+     9.0,
+     -415.0
+    ],
+    [
+     -153.16,
+     9.86,
+     -414.03
+    ],
+    [
+     -154.64,
+     10.2,
+     -413.5
+    ],
+    [
+     -156.13,
+     9.86,
+     -412.98
+    ],
+    [
+     -158.89,
+     9.0,
+     -412.01
+    ]
+   ],
+   "apex": [
+    -154.64,
+    10.2,
+    -413.5
+   ]
+  },
+  {
+   "s_m": 474.23,
+   "x": -151.97,
+   "z": -405.92,
+   "deficit_svf": 0.051,
+   "svf_deck": 0.3443,
+   "svf_prepark": 0.3953,
+   "winter_sun_now": 1.17,
+   "winter_sun_prepark": 1.17,
+   "aperture_az_deg": 273.0,
+   "aperture_alt_deg": 53.1,
+   "directionality": 0.486,
+   "rib_height_m": 1.91,
+   "reach_m": 0.47,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     -147.73,
+     9.0,
+     -407.42
+    ],
+    [
+     -150.67,
+     10.37,
+     -406.43
+    ],
+    [
+     -152.44,
+     10.91,
+     -405.9
+    ],
+    [
+     -153.65,
+     10.37,
+     -405.39
+    ],
+    [
+     -156.22,
+     9.0,
+     -404.43
+    ]
+   ],
+   "apex": [
+    -152.44,
+    10.91,
+    -405.9
+   ]
+  },
+  {
+   "s_m": 482.27,
+   "x": -149.31,
+   "z": -398.34,
+   "deficit_svf": 0.0723,
+   "svf_deck": 0.4151,
+   "svf_prepark": 0.4874,
+   "winter_sun_now": 1.17,
+   "winter_sun_prepark": 1.17,
+   "aperture_az_deg": 282.9,
+   "aperture_alt_deg": 46.6,
+   "directionality": 0.286,
+   "rib_height_m": 2.14,
+   "reach_m": 0.51,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     -145.06,
+     9.0,
+     -399.83
+    ],
+    [
+     -148.02,
+     10.54,
+     -398.82
+    ],
+    [
+     -149.8,
+     11.14,
+     -398.23
+    ],
+    [
+     -150.99,
+     10.54,
+     -397.77
+    ],
+    [
+     -153.55,
+     9.0,
+     -396.85
+    ]
+   ],
+   "apex": [
+    -149.8,
+    11.14,
+    -398.23
+   ]
+  },
+  {
+   "s_m": 490.31,
+   "x": -146.64,
+   "z": -390.76,
+   "deficit_svf": 0.0874,
+   "svf_deck": 0.5845,
+   "svf_prepark": 0.6719,
+   "winter_sun_now": 1.0,
+   "winter_sun_prepark": 1.0,
+   "aperture_az_deg": 95.2,
+   "aperture_alt_deg": 69.3,
+   "directionality": 0.113,
+   "rib_height_m": 2.16,
+   "reach_m": 0.43,
+   "recaptured_winter_sun_frac": 0.113,
+   "rib": [
+    [
+     -142.39,
+     9.0,
+     -392.25
+    ],
+    [
+     -144.98,
+     10.56,
+     -391.3
+    ],
+    [
+     -146.21,
+     11.16,
+     -390.8
+    ],
+    [
+     -147.95,
+     10.56,
+     -390.25
+    ],
+    [
+     -150.88,
+     9.0,
+     -389.26
+    ]
+   ],
+   "apex": [
+    -146.21,
+    11.16,
+    -390.8
+   ]
+  },
+  {
+   "s_m": 498.35,
+   "x": -143.97,
+   "z": -383.18,
+   "deficit_svf": 0.0965,
+   "svf_deck": 0.6046,
+   "svf_prepark": 0.7011,
+   "winter_sun_now": 1.0,
+   "winter_sun_prepark": 1.0,
+   "aperture_az_deg": 127.0,
+   "aperture_alt_deg": 59.5,
+   "directionality": 0.085,
+   "rib_height_m": 2.24,
+   "reach_m": 0.45,
+   "recaptured_winter_sun_frac": 0.113,
+   "rib": [
+    [
+     -139.72,
+     9.0,
+     -384.67
+    ],
+    [
+     -142.34,
+     10.61,
+     -383.81
+    ],
+    [
+     -143.61,
+     11.24,
+     -383.44
+    ],
+    [
+     -145.31,
+     10.61,
+     -382.76
+    ],
+    [
+     -148.21,
+     9.0,
+     -381.68
+    ]
+   ],
+   "apex": [
+    -143.61,
+    11.24,
+    -383.44
+   ]
+  },
+  {
+   "s_m": 506.39,
+   "x": -141.3,
+   "z": -375.59,
+   "deficit_svf": 0.1072,
+   "svf_deck": 0.6092,
+   "svf_prepark": 0.7164,
+   "winter_sun_now": 1.0,
+   "winter_sun_prepark": 1.0,
+   "aperture_az_deg": 188.3,
+   "aperture_alt_deg": 52.6,
+   "directionality": 0.05,
+   "rib_height_m": 2.35,
+   "reach_m": 0.47,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     -137.05,
+     9.0,
+     -377.09
+    ],
+    [
+     -139.84,
+     10.69,
+     -376.3
+    ],
+    [
+     -141.37,
+     11.35,
+     -376.06
+    ],
+    [
+     -142.81,
+     10.69,
+     -375.26
+    ],
+    [
+     -145.54,
+     9.0,
+     -374.1
+    ]
+   ],
+   "apex": [
+    -141.37,
+    11.35,
+    -376.06
+   ]
+  },
+  {
+   "s_m": 514.42,
+   "x": -138.63,
+   "z": -368.01,
+   "deficit_svf": 0.1287,
+   "svf_deck": 0.6539,
+   "svf_prepark": 0.7826,
+   "winter_sun_now": 1.0,
+   "winter_sun_prepark": 1.0,
+   "aperture_az_deg": 131.8,
+   "aperture_alt_deg": 63.0,
+   "directionality": 0.134,
+   "rib_height_m": 2.51,
+   "reach_m": 0.6,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     -134.38,
+     9.0,
+     -369.51
+    ],
+    [
+     -136.97,
+     10.8,
+     -368.7
+    ],
+    [
+     -138.18,
+     11.51,
+     -368.41
+    ],
+    [
+     -139.94,
+     10.8,
+     -367.65
+    ],
+    [
+     -142.87,
+     9.0,
+     -366.52
+    ]
+   ],
+   "apex": [
+    -138.18,
+    11.51,
+    -368.41
+   ]
+  },
+  {
+   "s_m": 522.46,
+   "x": -135.96,
+   "z": -360.43,
+   "deficit_svf": 0.1498,
+   "svf_deck": 0.6663,
+   "svf_prepark": 0.8161,
+   "winter_sun_now": 1.17,
+   "winter_sun_prepark": 1.17,
+   "aperture_az_deg": 133.9,
+   "aperture_alt_deg": 66.0,
+   "directionality": 0.197,
+   "rib_height_m": 2.7,
+   "reach_m": 0.74,
+   "recaptured_winter_sun_frac": 0.151,
+   "rib": [
+    [
+     -131.72,
+     9.0,
+     -361.93
+    ],
+    [
+     -134.26,
+     10.94,
+     -361.16
+    ],
+    [
+     -135.43,
+     11.7,
+     -360.94
+    ],
+    [
+     -137.23,
+     10.94,
+     -360.11
+    ],
+    [
+     -140.2,
+     9.0,
+     -358.94
+    ]
+   ],
+   "apex": [
+    -135.43,
+    11.7,
+    -360.94
+   ]
+  },
+  {
+   "s_m": 530.5,
+   "x": -133.29,
+   "z": -352.85,
+   "deficit_svf": 0.169,
+   "svf_deck": 0.6701,
+   "svf_prepark": 0.8391,
+   "winter_sun_now": 1.33,
+   "winter_sun_prepark": 1.33,
+   "aperture_az_deg": 136.5,
+   "aperture_alt_deg": 66.2,
+   "directionality": 0.237,
+   "rib_height_m": 2.88,
+   "reach_m": 0.87,
+   "recaptured_winter_sun_frac": 0.17,
+   "rib": [
+    [
+     -129.05,
+     9.0,
+     -354.34
+    ],
+    [
+     -131.57,
+     11.08,
+     -353.62
+    ],
+    [
+     -132.69,
+     11.88,
+     -353.48
+    ],
+    [
+     -134.54,
+     11.08,
+     -352.58
+    ],
+    [
+     -137.54,
+     9.0,
+     -351.35
+    ]
+   ],
+   "apex": [
+    -132.69,
+    11.88,
+    -353.48
+   ]
+  },
+  {
+   "s_m": 538.54,
+   "x": -130.62,
+   "z": -345.27,
+   "deficit_svf": 0.1866,
+   "svf_deck": 0.6702,
+   "svf_prepark": 0.8568,
+   "winter_sun_now": 1.5,
+   "winter_sun_prepark": 1.5,
+   "aperture_az_deg": 141.7,
+   "aperture_alt_deg": 66.0,
+   "directionality": 0.267,
+   "rib_height_m": 3.06,
+   "reach_m": 0.99,
+   "recaptured_winter_sun_frac": 0.189,
+   "rib": [
+    [
+     -126.38,
+     9.0,
+     -346.76
+    ],
+    [
+     -128.89,
+     11.2,
+     -346.1
+    ],
+    [
+     -130.01,
+     12.06,
+     -346.04
+    ],
+    [
+     -131.86,
+     11.2,
+     -345.06
+    ],
+    [
+     -134.87,
+     9.0,
+     -343.77
+    ]
+   ],
+   "apex": [
+    -130.01,
+    12.06,
+    -346.04
+   ]
+  },
+  {
+   "s_m": 546.57,
+   "x": -127.95,
+   "z": -337.69,
+   "deficit_svf": 0.2035,
+   "svf_deck": 0.6671,
+   "svf_prepark": 0.8706,
+   "winter_sun_now": 1.5,
+   "winter_sun_prepark": 1.5,
+   "aperture_az_deg": 145.0,
+   "aperture_alt_deg": 67.3,
+   "directionality": 0.293,
+   "rib_height_m": 3.23,
+   "reach_m": 1.11,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     -123.71,
+     9.0,
+     -339.18
+    ],
+    [
+     -126.21,
+     11.33,
+     -338.57
+    ],
+    [
+     -127.31,
+     12.23,
+     -338.6
+    ],
+    [
+     -129.18,
+     11.33,
+     -337.53
+    ],
+    [
+     -132.2,
+     9.0,
+     -336.19
+    ]
+   ],
+   "apex": [
+    -127.31,
+    12.23,
+    -338.6
+   ]
+  },
+  {
+   "s_m": 554.61,
+   "x": -125.28,
+   "z": -330.1,
+   "deficit_svf": 0.2174,
+   "svf_deck": 0.6629,
+   "svf_prepark": 0.8803,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 2.5,
+   "aperture_az_deg": 147.2,
+   "aperture_alt_deg": 67.5,
+   "directionality": 0.307,
+   "rib_height_m": 3.38,
+   "reach_m": 1.21,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -121.04,
+     9.0,
+     -331.6
+    ],
+    [
+     -123.54,
+     11.44,
+     -331.04
+    ],
+    [
+     -124.63,
+     12.38,
+     -331.12
+    ],
+    [
+     -126.51,
+     11.44,
+     -329.99
+    ],
+    [
+     -129.53,
+     9.0,
+     -328.61
+    ]
+   ],
+   "apex": [
+    -124.63,
+    12.38,
+    -331.12
+   ]
+  },
+  {
+   "s_m": 562.65,
+   "x": -122.62,
+   "z": -322.52,
+   "deficit_svf": 0.2277,
+   "svf_deck": 0.66,
+   "svf_prepark": 0.8877,
+   "winter_sun_now": 3.0,
+   "winter_sun_prepark": 3.0,
+   "aperture_az_deg": 145.9,
+   "aperture_alt_deg": 67.2,
+   "directionality": 0.326,
+   "rib_height_m": 3.5,
+   "reach_m": 1.3,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -118.37,
+     9.0,
+     -324.02
+    ],
+    [
+     -120.84,
+     11.52,
+     -323.48
+    ],
+    [
+     -121.89,
+     12.5,
+     -323.6
+    ],
+    [
+     -123.81,
+     11.52,
+     -322.43
+    ],
+    [
+     -126.86,
+     9.0,
+     -321.03
+    ]
+   ],
+   "apex": [
+    -121.89,
+    12.5,
+    -323.6
+   ]
+  },
+  {
+   "s_m": 570.69,
+   "x": -119.95,
+   "z": -314.94,
+   "deficit_svf": 0.2469,
+   "svf_deck": 0.6458,
+   "svf_prepark": 0.8927,
+   "winter_sun_now": 2.83,
+   "winter_sun_prepark": 2.83,
+   "aperture_az_deg": 148.0,
+   "aperture_alt_deg": 69.1,
+   "directionality": 0.345,
+   "rib_height_m": 3.73,
+   "reach_m": 1.46,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -115.7,
+     9.0,
+     -316.43
+    ],
+    [
+     -118.15,
+     11.69,
+     -315.96
+    ],
+    [
+     -119.17,
+     12.73,
+     -316.18
+    ],
+    [
+     -121.12,
+     11.69,
+     -314.91
+    ],
+    [
+     -124.19,
+     9.0,
+     -313.45
+    ]
+   ],
+   "apex": [
+    -119.17,
+    12.73,
+    -316.18
+   ]
+  },
+  {
+   "s_m": 578.73,
+   "x": -117.28,
+   "z": -307.36,
+   "deficit_svf": 0.2677,
+   "svf_deck": 0.6268,
+   "svf_prepark": 0.8945,
+   "winter_sun_now": 3.17,
+   "winter_sun_prepark": 3.17,
+   "aperture_az_deg": 150.8,
+   "aperture_alt_deg": 70.4,
+   "directionality": 0.361,
+   "rib_height_m": 4.01,
+   "reach_m": 1.65,
+   "recaptured_winter_sun_frac": 0.358,
+   "rib": [
+    [
+     -113.03,
+     9.0,
+     -308.85
+    ],
+    [
+     -115.47,
+     11.88,
+     -308.46
+    ],
+    [
+     -116.47,
+     13.01,
+     -308.8
+    ],
+    [
+     -118.44,
+     11.88,
+     -307.41
+    ],
+    [
+     -121.52,
+     9.0,
+     -305.86
+    ]
+   ],
+   "apex": [
+    -116.47,
+    13.01,
+    -308.8
+   ]
+  },
+  {
+   "s_m": 586.76,
+   "x": -114.61,
+   "z": -299.78,
+   "deficit_svf": 0.3191,
+   "svf_deck": 0.5722,
+   "svf_prepark": 0.8913,
+   "winter_sun_now": 2.83,
+   "winter_sun_prepark": 2.83,
+   "aperture_az_deg": 149.6,
+   "aperture_alt_deg": 68.8,
+   "directionality": 0.422,
+   "rib_height_m": 4.75,
+   "reach_m": 2.21,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -110.36,
+     9.0,
+     -301.27
+    ],
+    [
+     -112.68,
+     12.42,
+     -301.06
+    ],
+    [
+     -113.49,
+     13.75,
+     -301.68
+    ],
+    [
+     -115.65,
+     12.42,
+     -300.02
+    ],
+    [
+     -118.85,
+     9.0,
+     -298.28
+    ]
+   ],
+   "apex": [
+    -113.49,
+    13.75,
+    -301.68
+   ]
+  },
+  {
+   "s_m": 594.8,
+   "x": -111.94,
+   "z": -292.19,
+   "deficit_svf": 0.3483,
+   "svf_deck": 0.5381,
+   "svf_prepark": 0.8864,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 2.5,
+   "aperture_az_deg": 146.5,
+   "aperture_alt_deg": 67.8,
+   "directionality": 0.464,
+   "rib_height_m": 5.22,
+   "reach_m": 2.6,
+   "recaptured_winter_sun_frac": 0.321,
+   "rib": [
+    [
+     -107.69,
+     9.0,
+     -293.69
+    ],
+    [
+     -109.88,
+     12.76,
+     -293.58
+    ],
+    [
+     -110.51,
+     14.22,
+     -294.36
+    ],
+    [
+     -112.85,
+     12.76,
+     -292.54
+    ],
+    [
+     -116.18,
+     9.0,
+     -290.7
+    ]
+   ],
+   "apex": [
+    -110.51,
+    14.22,
+    -294.36
+   ]
+  },
+  {
+   "s_m": 602.84,
+   "x": -109.27,
+   "z": -284.61,
+   "deficit_svf": 0.3701,
+   "svf_deck": 0.5103,
+   "svf_prepark": 0.8804,
+   "winter_sun_now": 2.67,
+   "winter_sun_prepark": 2.67,
+   "aperture_az_deg": 144.5,
+   "aperture_alt_deg": 65.4,
+   "directionality": 0.479,
+   "rib_height_m": 5.36,
+   "reach_m": 2.72,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -105.03,
+     9.0,
+     -286.11
+    ],
+    [
+     -107.15,
+     12.86,
+     -286.02
+    ],
+    [
+     -107.69,
+     14.36,
+     -286.83
+    ],
+    [
+     -110.12,
+     12.86,
+     -284.98
+    ],
+    [
+     -113.52,
+     9.0,
+     -283.12
+    ]
+   ],
+   "apex": [
+    -107.69,
+    14.36,
+    -286.83
+   ]
+  },
+  {
+   "s_m": 610.88,
+   "x": -106.6,
+   "z": -277.03,
+   "deficit_svf": 0.3879,
+   "svf_deck": 0.4888,
+   "svf_prepark": 0.8767,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 2.5,
+   "aperture_az_deg": 142.2,
+   "aperture_alt_deg": 62.3,
+   "directionality": 0.479,
+   "rib_height_m": 5.45,
+   "reach_m": 2.78,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -102.36,
+     9.0,
+     -278.52
+    ],
+    [
+     -104.43,
+     12.92,
+     -278.43
+    ],
+    [
+     -104.9,
+     14.45,
+     -279.23
+    ],
+    [
+     -107.41,
+     12.92,
+     -277.39
+    ],
+    [
+     -110.85,
+     9.0,
+     -275.54
+    ]
+   ],
+   "apex": [
+    -104.9,
+    14.45,
+    -279.23
+   ]
+  },
+  {
+   "s_m": 618.92,
+   "x": -103.93,
+   "z": -269.45,
+   "deficit_svf": 0.396,
+   "svf_deck": 0.4801,
+   "svf_prepark": 0.8761,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 2.83,
+   "aperture_az_deg": 135.2,
+   "aperture_alt_deg": 61.9,
+   "directionality": 0.482,
+   "rib_height_m": 5.48,
+   "reach_m": 2.81,
+   "recaptured_winter_sun_frac": 0.434,
+   "rib": [
+    [
+     -99.69,
+     9.0,
+     -270.94
+    ],
+    [
+     -101.65,
+     12.95,
+     -270.77
+    ],
+    [
+     -101.95,
+     14.48,
+     -271.44
+    ],
+    [
+     -104.63,
+     12.95,
+     -269.72
+    ],
+    [
+     -108.18,
+     9.0,
+     -267.95
+    ]
+   ],
+   "apex": [
+    -101.95,
+    14.48,
+    -271.44
+   ]
+  },
+  {
+   "s_m": 626.95,
+   "x": -101.26,
+   "z": -261.87,
+   "deficit_svf": 0.3947,
+   "svf_deck": 0.4847,
+   "svf_prepark": 0.8794,
+   "winter_sun_now": 2.67,
+   "winter_sun_prepark": 3.33,
+   "aperture_az_deg": 126.3,
+   "aperture_alt_deg": 65.2,
+   "directionality": 0.487,
+   "rib_height_m": 5.46,
+   "reach_m": 2.81,
+   "recaptured_winter_sun_frac": 0.434,
+   "rib": [
+    [
+     -97.02,
+     9.0,
+     -263.36
+    ],
+    [
+     -98.87,
+     12.93,
+     -263.05
+    ],
+    [
+     -99.0,
+     14.46,
+     -263.53
+    ],
+    [
+     -101.84,
+     12.93,
+     -262.01
+    ],
+    [
+     -105.51,
+     9.0,
+     -260.37
+    ]
+   ],
+   "apex": [
+    -99.0,
+    14.46,
+    -263.53
+   ]
+  },
+  {
+   "s_m": 634.99,
+   "x": -98.6,
+   "z": -254.29,
+   "deficit_svf": 0.3304,
+   "svf_deck": 0.5608,
+   "svf_prepark": 0.8912,
+   "winter_sun_now": 3.17,
+   "winter_sun_prepark": 4.0,
+   "aperture_az_deg": 115.7,
+   "aperture_alt_deg": 67.7,
+   "directionality": 0.44,
+   "rib_height_m": 4.92,
+   "reach_m": 2.35,
+   "recaptured_winter_sun_frac": 0.453,
+   "rib": [
+    [
+     -94.35,
+     9.0,
+     -255.78
+    ],
+    [
+     -96.26,
+     12.55,
+     -255.22
+    ],
+    [
+     -96.47,
+     13.92,
+     -255.31
+    ],
+    [
+     -99.23,
+     12.55,
+     -254.17
+    ],
+    [
+     -102.84,
+     9.0,
+     -252.79
+    ]
+   ],
+   "apex": [
+    -96.47,
+    13.92,
+    -255.31
+   ]
+  },
+  {
+   "s_m": 643.03,
+   "x": -95.93,
+   "z": -246.7,
+   "deficit_svf": 0.2123,
+   "svf_deck": 0.6905,
+   "svf_prepark": 0.9028,
+   "winter_sun_now": 3.33,
+   "winter_sun_prepark": 4.5,
+   "aperture_az_deg": 108.3,
+   "aperture_alt_deg": 70.0,
+   "directionality": 0.302,
+   "rib_height_m": 3.26,
+   "reach_m": 1.14,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -91.68,
+     9.0,
+     -248.2
+    ],
+    [
+     -94.01,
+     11.35,
+     -247.37
+    ],
+    [
+     -94.84,
+     12.26,
+     -247.06
+    ],
+    [
+     -96.98,
+     11.35,
+     -246.32
+    ],
+    [
+     -100.17,
+     9.0,
+     -245.21
+    ]
+   ],
+   "apex": [
+    -94.84,
+    12.26,
+    -247.06
+   ]
+  },
+  {
+   "s_m": 651.07,
+   "x": -93.26,
+   "z": -239.12,
+   "deficit_svf": 0.1867,
+   "svf_deck": 0.7224,
+   "svf_prepark": 0.9091,
+   "winter_sun_now": 2.83,
+   "winter_sun_prepark": 4.17,
+   "aperture_az_deg": 110.0,
+   "aperture_alt_deg": 70.4,
+   "directionality": 0.258,
+   "rib_height_m": 2.94,
+   "reach_m": 0.92,
+   "recaptured_winter_sun_frac": 0.321,
+   "rib": [
+    [
+     -89.01,
+     9.0,
+     -240.62
+    ],
+    [
+     -91.43,
+     11.12,
+     -239.77
+    ],
+    [
+     -92.39,
+     11.94,
+     -239.44
+    ],
+    [
+     -94.4,
+     11.12,
+     -238.72
+    ],
+    [
+     -97.5,
+     9.0,
+     -237.63
+    ]
+   ],
+   "apex": [
+    -92.39,
+    11.94,
+    -239.44
+   ]
+  },
+  {
+   "s_m": 659.1,
+   "x": -90.59,
+   "z": -231.54,
+   "deficit_svf": 0.1636,
+   "svf_deck": 0.7497,
+   "svf_prepark": 0.9133,
+   "winter_sun_now": 2.17,
+   "winter_sun_prepark": 4.0,
+   "aperture_az_deg": 110.0,
+   "aperture_alt_deg": 69.8,
+   "directionality": 0.213,
+   "rib_height_m": 2.67,
+   "reach_m": 0.74,
+   "recaptured_winter_sun_frac": 0.283,
+   "rib": [
+    [
+     -86.34,
+     9.0,
+     -233.03
+    ],
+    [
+     -88.83,
+     10.92,
+     -232.16
+    ],
+    [
+     -89.89,
+     11.67,
+     -231.79
+    ],
+    [
+     -91.8,
+     10.92,
+     -231.12
+    ],
+    [
+     -94.83,
+     9.0,
+     -230.05
+    ]
+   ],
+   "apex": [
+    -89.89,
+    11.67,
+    -231.79
+   ]
+  },
+  {
+   "s_m": 667.14,
+   "x": -87.92,
+   "z": -223.96,
+   "deficit_svf": 0.1378,
+   "svf_deck": 0.7782,
+   "svf_prepark": 0.916,
+   "winter_sun_now": 2.33,
+   "winter_sun_prepark": 4.17,
+   "aperture_az_deg": 119.2,
+   "aperture_alt_deg": 69.6,
+   "directionality": 0.151,
+   "rib_height_m": 2.44,
+   "reach_m": 0.58,
+   "recaptured_winter_sun_frac": 0.302,
+   "rib": [
+    [
+     -83.68,
+     9.0,
+     -225.45
+    ],
+    [
+     -86.23,
+     10.76,
+     -224.59
+    ],
+    [
+     -87.41,
+     11.44,
+     -224.24
+    ],
+    [
+     -89.2,
+     10.76,
+     -223.55
+    ],
+    [
+     -92.17,
+     9.0,
+     -222.46
+    ]
+   ],
+   "apex": [
+    -87.41,
+    11.44,
+    -224.24
+   ]
+  },
+  {
+   "s_m": 675.18,
+   "x": -85.25,
+   "z": -216.38,
+   "deficit_svf": 0.1161,
+   "svf_deck": 0.8022,
+   "svf_prepark": 0.9183,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 4.33,
+   "aperture_az_deg": 131.5,
+   "aperture_alt_deg": 69.1,
+   "directionality": 0.141,
+   "rib_height_m": 2.24,
+   "reach_m": 0.48,
+   "recaptured_winter_sun_frac": 0.321,
+   "rib": [
+    [
+     -81.01,
+     9.0,
+     -217.87
+    ],
+    [
+     -83.62,
+     10.62,
+     -217.03
+    ],
+    [
+     -84.89,
+     11.24,
+     -216.7
+    ],
+    [
+     -86.59,
+     10.62,
+     -215.98
+    ],
+    [
+     -89.5,
+     9.0,
+     -214.88
+    ]
+   ],
+   "apex": [
+    -84.89,
+    11.24,
+    -216.7
+   ]
+  },
+  {
+   "s_m": 683.22,
+   "x": -82.58,
+   "z": -208.79,
+   "deficit_svf": 0.0993,
+   "svf_deck": 0.8194,
+   "svf_prepark": 0.9187,
+   "winter_sun_now": 3.33,
+   "winter_sun_prepark": 5.5,
+   "aperture_az_deg": 164.7,
+   "aperture_alt_deg": 66.3,
+   "directionality": 0.189,
+   "rib_height_m": 2.09,
+   "reach_m": 0.44,
+   "recaptured_winter_sun_frac": 0.509,
+   "rib": [
+    [
+     -78.34,
+     9.0,
+     -210.29
+    ],
+    [
+     -81.05,
+     10.51,
+     -209.49
+    ],
+    [
+     -82.47,
+     11.09,
+     -209.22
+    ],
+    [
+     -84.02,
+     10.51,
+     -208.44
+    ],
+    [
+     -86.83,
+     9.0,
+     -207.3
+    ]
+   ],
+   "apex": [
+    -82.47,
+    11.09,
+    -209.22
+   ]
+  },
+  {
+   "s_m": 691.26,
+   "x": -79.91,
+   "z": -201.21,
+   "deficit_svf": 0.0863,
+   "svf_deck": 0.8353,
+   "svf_prepark": 0.9216,
+   "winter_sun_now": 4.17,
+   "winter_sun_prepark": 6.5,
+   "aperture_az_deg": 144.7,
+   "aperture_alt_deg": 69.0,
+   "directionality": 0.16,
+   "rib_height_m": 1.98,
+   "reach_m": 0.37,
+   "recaptured_winter_sun_frac": 0.491,
+   "rib": [
+    [
+     -75.67,
+     9.0,
+     -202.71
+    ],
+    [
+     -78.34,
+     10.42,
+     -201.85
+    ],
+    [
+     -79.7,
+     10.98,
+     -201.51
+    ],
+    [
+     -81.31,
+     10.42,
+     -200.81
+    ],
+    [
+     -84.16,
+     9.0,
+     -199.72
+    ]
+   ],
+   "apex": [
+    -79.7,
+    10.98,
+    -201.51
+   ]
+  },
+  {
+   "s_m": 699.29,
+   "x": -77.25,
+   "z": -193.63,
+   "deficit_svf": 0.08,
+   "svf_deck": 0.845,
+   "svf_prepark": 0.925,
+   "winter_sun_now": 3.83,
+   "winter_sun_prepark": 6.0,
+   "aperture_az_deg": 146.9,
+   "aperture_alt_deg": 69.7,
+   "directionality": 0.174,
+   "rib_height_m": 1.92,
+   "reach_m": 0.35,
+   "recaptured_winter_sun_frac": 0.434,
+   "rib": [
+    [
+     -73.0,
+     9.0,
+     -195.12
+    ],
+    [
+     -75.68,
+     10.38,
+     -194.27
+    ],
+    [
+     -77.06,
+     10.92,
+     -193.92
+    ],
+    [
+     -78.66,
+     10.38,
+     -193.22
+    ],
+    [
+     -81.49,
+     9.0,
+     -192.14
+    ]
+   ],
+   "apex": [
+    -77.06,
+    10.92,
+    -193.92
+   ]
+  },
+  {
+   "s_m": 707.33,
+   "x": -74.58,
+   "z": -186.05,
+   "deficit_svf": 0.0858,
+   "svf_deck": 0.8446,
+   "svf_prepark": 0.9304,
+   "winter_sun_now": 3.33,
+   "winter_sun_prepark": 5.5,
+   "aperture_az_deg": 146.3,
+   "aperture_alt_deg": 71.8,
+   "directionality": 0.201,
+   "rib_height_m": 1.97,
+   "reach_m": 0.38,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -70.33,
+     9.0,
+     -187.54
+    ],
+    [
+     -73.01,
+     10.42,
+     -186.7
+    ],
+    [
+     -74.36,
+     10.97,
+     -186.37
+    ],
+    [
+     -75.98,
+     10.42,
+     -185.65
+    ],
+    [
+     -78.82,
+     9.0,
+     -184.55
+    ]
+   ],
+   "apex": [
+    -74.36,
+    10.97,
+    -186.37
+   ]
+  },
+  {
+   "s_m": 715.37,
+   "x": -71.91,
+   "z": -178.47,
+   "deficit_svf": 0.1221,
+   "svf_deck": 0.8114,
+   "svf_prepark": 0.9335,
+   "winter_sun_now": 3.17,
+   "winter_sun_prepark": 5.5,
+   "aperture_az_deg": 157.8,
+   "aperture_alt_deg": 71.3,
+   "directionality": 0.23,
+   "rib_height_m": 2.3,
+   "reach_m": 0.56,
+   "recaptured_winter_sun_frac": 0.396,
+   "rib": [
+    [
+     -67.66,
+     9.0,
+     -179.96
+    ],
+    [
+     -70.34,
+     10.66,
+     -179.2
+    ],
+    [
+     -71.69,
+     11.3,
+     -178.99
+    ],
+    [
+     -73.31,
+     10.66,
+     -178.15
+    ],
+    [
+     -76.15,
+     9.0,
+     -176.97
+    ]
+   ],
+   "apex": [
+    -71.69,
+    11.3,
+    -178.99
+   ]
+  },
+  {
+   "s_m": 723.41,
+   "x": -69.24,
+   "z": -170.88,
+   "deficit_svf": 0.2338,
+   "svf_deck": 0.702,
+   "svf_prepark": 0.9358,
+   "winter_sun_now": 3.5,
+   "winter_sun_prepark": 5.83,
+   "aperture_az_deg": 180.0,
+   "aperture_alt_deg": 68.2,
+   "directionality": 0.312,
+   "rib_height_m": 3.44,
+   "reach_m": 1.25,
+   "recaptured_winter_sun_frac": 0.453,
+   "rib": [
+    [
+     -65.0,
+     9.0,
+     -172.38
+    ],
+    [
+     -67.75,
+     11.48,
+     -171.91
+    ],
+    [
+     -69.24,
+     12.44,
+     -172.14
+    ],
+    [
+     -70.72,
+     11.48,
+     -170.86
+    ],
+    [
+     -73.48,
+     9.0,
+     -169.38
+    ]
+   ],
+   "apex": [
+    -69.24,
+    12.44,
+    -172.14
+   ]
+  },
+  {
+   "s_m": 731.45,
+   "x": -66.55,
+   "z": -163.31,
+   "deficit_svf": 0.4818,
+   "svf_deck": 0.4551,
+   "svf_prepark": 0.9369,
+   "winter_sun_now": 4.17,
+   "winter_sun_prepark": 6.5,
+   "aperture_az_deg": 198.4,
+   "aperture_alt_deg": 68.4,
+   "directionality": 0.573,
+   "rib_height_m": 5.59,
+   "reach_m": 3.11,
+   "recaptured_winter_sun_frac": 0.547,
+   "rib": [
+    [
+     -62.31,
+     9.0,
+     -164.83
+    ],
+    [
+     -65.46,
+     13.02,
+     -165.02
+    ],
+    [
+     -67.53,
+     14.59,
+     -166.26
+    ],
+    [
+     -68.42,
+     13.02,
+     -163.96
+    ],
+    [
+     -70.79,
+     9.0,
+     -161.79
+    ]
+   ],
+   "apex": [
+    -67.53,
+    14.59,
+    -166.26
+   ]
+  },
+  {
+   "s_m": 739.48,
+   "x": -63.82,
+   "z": -155.75,
+   "deficit_svf": 0.3786,
+   "svf_deck": 0.5555,
+   "svf_prepark": 0.9341,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 7.33,
+   "aperture_az_deg": 88.1,
+   "aperture_alt_deg": 56.5,
+   "directionality": 0.181,
+   "rib_height_m": 5.17,
+   "reach_m": 1.92,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -59.59,
+     9.0,
+     -157.28
+    ],
+    [
+     -61.57,
+     12.72,
+     -156.26
+    ],
+    [
+     -61.9,
+     14.17,
+     -155.69
+    ],
+    [
+     -64.53,
+     12.72,
+     -155.19
+    ],
+    [
+     -68.05,
+     9.0,
+     -154.22
+    ]
+   ],
+   "apex": [
+    -61.9,
+    14.17,
+    -155.69
+   ]
+  },
+  {
+   "s_m": 747.52,
+   "x": -61.09,
+   "z": -148.19,
+   "deficit_svf": 0.2776,
+   "svf_deck": 0.6534,
+   "svf_prepark": 0.931,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 7.0,
+   "aperture_az_deg": 154.5,
+   "aperture_alt_deg": 48.8,
+   "directionality": 0.166,
+   "rib_height_m": 4.02,
+   "reach_m": 1.34,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -56.85,
+     9.0,
+     -149.72
+    ],
+    [
+     -59.37,
+     11.89,
+     -149.21
+    ],
+    [
+     -60.51,
+     13.02,
+     -149.4
+    ],
+    [
+     -62.34,
+     11.89,
+     -148.14
+    ],
+    [
+     -65.32,
+     9.0,
+     -146.66
+    ]
+   ],
+   "apex": [
+    -60.51,
+    13.02,
+    -149.4
+   ]
+  },
+  {
+   "s_m": 755.56,
+   "x": -58.36,
+   "z": -140.63,
+   "deficit_svf": 0.2494,
+   "svf_deck": 0.6786,
+   "svf_prepark": 0.928,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 6.5,
+   "aperture_az_deg": 170.1,
+   "aperture_alt_deg": 55.7,
+   "directionality": 0.24,
+   "rib_height_m": 3.66,
+   "reach_m": 1.27,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     -54.12,
+     9.0,
+     -142.16
+    ],
+    [
+     -56.79,
+     11.63,
+     -141.67
+    ],
+    [
+     -58.14,
+     12.66,
+     -141.89
+    ],
+    [
+     -59.75,
+     11.63,
+     -140.6
+    ],
+    [
+     -62.59,
+     9.0,
+     -139.1
+    ]
+   ],
+   "apex": [
+    -58.14,
+    12.66,
+    -141.89
+   ]
+  },
+  {
+   "s_m": 763.6,
+   "x": -55.62,
+   "z": -133.07,
+   "deficit_svf": 0.259,
+   "svf_deck": 0.6651,
+   "svf_prepark": 0.9241,
+   "winter_sun_now": 1.17,
+   "winter_sun_prepark": 6.5,
+   "aperture_az_deg": 165.3,
+   "aperture_alt_deg": 59.1,
+   "directionality": 0.24,
+   "rib_height_m": 3.79,
+   "reach_m": 1.34,
+   "recaptured_winter_sun_frac": 0.283,
+   "rib": [
+    [
+     -51.39,
+     9.0,
+     -134.6
+    ],
+    [
+     -54.01,
+     11.73,
+     -134.13
+    ],
+    [
+     -55.28,
+     12.79,
+     -134.37
+    ],
+    [
+     -56.97,
+     11.73,
+     -133.06
+    ],
+    [
+     -59.86,
+     9.0,
+     -131.54
+    ]
+   ],
+   "apex": [
+    -55.28,
+    12.79,
+    -134.37
+   ]
+  },
+  {
+   "s_m": 771.63,
+   "x": -52.89,
+   "z": -125.51,
+   "deficit_svf": 0.2994,
+   "svf_deck": 0.6224,
+   "svf_prepark": 0.9218,
+   "winter_sun_now": 2.0,
+   "winter_sun_prepark": 6.5,
+   "aperture_az_deg": 165.9,
+   "aperture_alt_deg": 61.4,
+   "directionality": 0.304,
+   "rib_height_m": 4.35,
+   "reach_m": 1.75,
+   "recaptured_winter_sun_frac": 0.302,
+   "rib": [
+    [
+     -48.66,
+     9.0,
+     -127.04
+    ],
+    [
+     -51.24,
+     12.13,
+     -126.73
+    ],
+    [
+     -52.47,
+     13.35,
+     -127.21
+    ],
+    [
+     -54.2,
+     12.13,
+     -125.66
+    ],
+    [
+     -57.13,
+     9.0,
+     -123.98
+    ]
+   ],
+   "apex": [
+    -52.47,
+    13.35,
+    -127.21
+   ]
+  },
+  {
+   "s_m": 779.67,
+   "x": -50.16,
+   "z": -117.95,
+   "deficit_svf": 0.4002,
+   "svf_deck": 0.5225,
+   "svf_prepark": 0.9227,
+   "winter_sun_now": 2.17,
+   "winter_sun_prepark": 6.33,
+   "aperture_az_deg": 172.6,
+   "aperture_alt_deg": 63.3,
+   "directionality": 0.4,
+   "rib_height_m": 5.31,
+   "reach_m": 2.5,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -45.93,
+     9.0,
+     -119.48
+    ],
+    [
+     -48.55,
+     12.82,
+     -119.48
+    ],
+    [
+     -49.84,
+     14.31,
+     -120.43
+    ],
+    [
+     -51.52,
+     12.82,
+     -118.41
+    ],
+    [
+     -54.39,
+     9.0,
+     -116.42
+    ]
+   ],
+   "apex": [
+    -49.84,
+    14.31,
+    -120.43
+   ]
+  },
+  {
+   "s_m": 787.71,
+   "x": -47.43,
+   "z": -110.39,
+   "deficit_svf": 0.6029,
+   "svf_deck": 0.3273,
+   "svf_prepark": 0.9302,
+   "winter_sun_now": 2.33,
+   "winter_sun_prepark": 6.33,
+   "aperture_az_deg": 187.0,
+   "aperture_alt_deg": 63.3,
+   "directionality": 0.721,
+   "rib_height_m": 6.13,
+   "reach_m": 3.91,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -43.2,
+     9.0,
+     -111.92
+    ],
+    [
+     -46.14,
+     13.41,
+     -112.48
+    ],
+    [
+     -47.91,
+     15.13,
+     -114.27
+    ],
+    [
+     -49.1,
+     13.41,
+     -111.41
+    ],
+    [
+     -51.66,
+     9.0,
+     -108.86
+    ]
+   ],
+   "apex": [
+    -47.91,
+    15.13,
+    -114.27
+   ]
+  },
+  {
+   "s_m": 795.75,
+   "x": -44.7,
+   "z": -102.83,
+   "deficit_svf": 0.2641,
+   "svf_deck": 0.6583,
+   "svf_prepark": 0.9224,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 6.33,
+   "aperture_az_deg": 97.6,
+   "aperture_alt_deg": 71.3,
+   "directionality": 0.207,
+   "rib_height_m": 3.87,
+   "reach_m": 1.33,
+   "recaptured_winter_sun_frac": 0.038,
+   "rib": [
+    [
+     -40.47,
+     9.0,
+     -104.36
+    ],
+    [
+     -42.69,
+     11.78,
+     -103.44
+    ],
+    [
+     -43.38,
+     12.87,
+     -103.01
+    ],
+    [
+     -45.65,
+     11.78,
+     -102.37
+    ],
+    [
+     -48.93,
+     9.0,
+     -101.3
+    ]
+   ],
+   "apex": [
+    -43.38,
+    12.87,
+    -103.01
+   ]
+  },
+  {
+   "s_m": 803.79,
+   "x": -41.97,
+   "z": -95.27,
+   "deficit_svf": 0.1463,
+   "svf_deck": 0.6507,
+   "svf_prepark": 0.797,
+   "winter_sun_now": 1.0,
+   "winter_sun_prepark": 6.33,
+   "aperture_az_deg": 185.7,
+   "aperture_alt_deg": 61.4,
+   "directionality": 0.249,
+   "rib_height_m": 2.69,
+   "reach_m": 0.78,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     -37.74,
+     9.0,
+     -96.8
+    ],
+    [
+     -40.52,
+     10.94,
+     -96.12
+    ],
+    [
+     -42.05,
+     11.69,
+     -96.05
+    ],
+    [
+     -43.48,
+     10.94,
+     -95.05
+    ],
+    [
+     -46.2,
+     9.0,
+     -93.74
+    ]
+   ],
+   "apex": [
+    -42.05,
+    11.69,
+    -96.05
+   ]
+  },
+  {
+   "s_m": 811.82,
+   "x": -39.24,
+   "z": -87.71,
+   "deficit_svf": 0.0182,
+   "svf_deck": 0.5896,
+   "svf_prepark": 0.6078,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 111.9,
+   "aperture_alt_deg": 65.5,
+   "directionality": 0.395,
+   "rib_height_m": 1.4,
+   "reach_m": 0.12,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -35.01,
+     9.0,
+     -89.24
+    ],
+    [
+     -37.71,
+     10.01,
+     -88.27
+    ],
+    [
+     -39.13,
+     10.4,
+     -87.76
+    ],
+    [
+     -40.67,
+     10.01,
+     -87.2
+    ],
+    [
+     -43.47,
+     9.0,
+     -86.18
+    ]
+   ],
+   "apex": [
+    -39.13,
+    10.4,
+    -87.76
+   ]
+  },
+  {
+   "s_m": 819.86,
+   "x": -36.51,
+   "z": -80.15,
+   "deficit_svf": 0.0024,
+   "svf_deck": 0.3959,
+   "svf_prepark": 0.3983,
+   "winter_sun_now": 3.33,
+   "winter_sun_prepark": 3.33,
+   "aperture_az_deg": 164.9,
+   "aperture_alt_deg": 67.9,
+   "directionality": 0.618,
+   "rib_height_m": 1.23,
+   "reach_m": 0.02,
+   "recaptured_winter_sun_frac": 0.509,
+   "rib": [
+    [
+     -32.27,
+     9.0,
+     -81.68
+    ],
+    [
+     -35.02,
+     9.89,
+     -80.7
+    ],
+    [
+     -36.5,
+     10.23,
+     -80.18
+    ],
+    [
+     -37.99,
+     9.89,
+     -79.63
+    ],
+    [
+     -40.74,
+     9.0,
+     -78.63
+    ]
+   ],
+   "apex": [
+    -36.5,
+    10.23,
+    -80.18
+   ]
+  },
+  {
+   "s_m": 827.9,
+   "x": -33.78,
+   "z": -72.59,
+   "deficit_svf": 0.0218,
+   "svf_deck": 0.4135,
+   "svf_prepark": 0.4353,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 138.0,
+   "aperture_alt_deg": 50.3,
+   "directionality": 0.513,
+   "rib_height_m": 1.48,
+   "reach_m": 0.19,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     -29.54,
+     9.0,
+     -74.12
+    ],
+    [
+     -32.24,
+     10.07,
+     -73.19
+    ],
+    [
+     -33.65,
+     10.48,
+     -72.74
+    ],
+    [
+     -35.21,
+     10.07,
+     -72.12
+    ],
+    [
+     -38.01,
+     9.0,
+     -71.07
+    ]
+   ],
+   "apex": [
+    -33.65,
+    10.48,
+    -72.74
+   ]
+  },
+  {
+   "s_m": 835.94,
+   "x": -31.04,
+   "z": -65.03,
+   "deficit_svf": 0.2551,
+   "svf_deck": 0.2832,
+   "svf_prepark": 0.5383,
+   "winter_sun_now": 0.5,
+   "winter_sun_prepark": 1.17,
+   "aperture_az_deg": 256.2,
+   "aperture_alt_deg": 48.8,
+   "directionality": 0.335,
+   "rib_height_m": 4.92,
+   "reach_m": 2.13,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -26.81,
+     9.0,
+     -66.56
+    ],
+    [
+     -30.39,
+     12.55,
+     -65.77
+    ],
+    [
+     -33.11,
+     13.92,
+     -65.54
+    ],
+    [
+     -33.35,
+     12.55,
+     -64.7
+    ],
+    [
+     -35.28,
+     9.0,
+     -63.51
+    ]
+   ],
+   "apex": [
+    -33.11,
+    13.92,
+    -65.54
+   ]
+  },
+  {
+   "s_m": 843.98,
+   "x": -28.31,
+   "z": -57.48,
+   "deficit_svf": 0.3212,
+   "svf_deck": 0.397,
+   "svf_prepark": 0.7182,
+   "winter_sun_now": 0.83,
+   "winter_sun_prepark": 1.5,
+   "aperture_az_deg": 216.9,
+   "aperture_alt_deg": 49.6,
+   "directionality": 0.14,
+   "rib_height_m": 5.45,
+   "reach_m": 1.96,
+   "recaptured_winter_sun_frac": 0.491,
+   "rib": [
+    [
+     -24.08,
+     9.0,
+     -59.0
+    ],
+    [
+     -27.3,
+     12.93,
+     -58.64
+    ],
+    [
+     -29.49,
+     14.45,
+     -59.04
+    ],
+    [
+     -30.27,
+     12.93,
+     -57.57
+    ],
+    [
+     -32.55,
+     9.0,
+     -55.95
+    ]
+   ],
+   "apex": [
+    -29.49,
+    14.45,
+    -59.04
+   ]
+  },
+  {
+   "s_m": 852.01,
+   "x": -25.58,
+   "z": -49.92,
+   "deficit_svf": 0.3931,
+   "svf_deck": 0.4858,
+   "svf_prepark": 0.8789,
+   "winter_sun_now": 1.33,
+   "winter_sun_prepark": 1.83,
+   "aperture_az_deg": 174.9,
+   "aperture_alt_deg": 56.8,
+   "directionality": 0.256,
+   "rib_height_m": 5.46,
+   "reach_m": 2.25,
+   "recaptured_winter_sun_frac": 0.547,
+   "rib": [
+    [
+     -21.35,
+     9.0,
+     -51.44
+    ],
+    [
+     -24.02,
+     12.93,
+     -51.35
+    ],
+    [
+     -25.38,
+     14.46,
+     -52.15
+    ],
+    [
+     -26.98,
+     12.93,
+     -50.28
+    ],
+    [
+     -29.81,
+     9.0,
+     -48.39
+    ]
+   ],
+   "apex": [
+    -25.38,
+    14.46,
+    -52.15
+   ]
+  },
+  {
+   "s_m": 860.05,
+   "x": -22.85,
+   "z": -42.36,
+   "deficit_svf": 0.4312,
+   "svf_deck": 0.4833,
+   "svf_prepark": 0.9145,
+   "winter_sun_now": 2.33,
+   "winter_sun_prepark": 3.5,
+   "aperture_az_deg": 180.1,
+   "aperture_alt_deg": 56.1,
+   "directionality": 0.228,
+   "rib_height_m": 5.47,
+   "reach_m": 2.18,
+   "recaptured_winter_sun_frac": 0.528,
+   "rib": [
+    [
+     -18.62,
+     9.0,
+     -43.88
+    ],
+    [
+     -21.37,
+     12.94,
+     -43.76
+    ],
+    [
+     -22.86,
+     14.47,
+     -44.54
+    ],
+    [
+     -24.33,
+     12.94,
+     -42.69
+    ],
+    [
+     -27.08,
+     9.0,
+     -40.83
+    ]
+   ],
+   "apex": [
+    -22.86,
+    14.47,
+    -44.54
+   ]
+  },
+  {
+   "s_m": 868.09,
+   "x": -20.12,
+   "z": -34.8,
+   "deficit_svf": 0.3052,
+   "svf_deck": 0.6036,
+   "svf_prepark": 0.9088,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 6.83,
+   "aperture_az_deg": 131.4,
+   "aperture_alt_deg": 65.3,
+   "directionality": 0.233,
+   "rib_height_m": 4.48,
+   "reach_m": 1.69,
+   "recaptured_winter_sun_frac": 0.321,
+   "rib": [
+    [
+     -15.89,
+     9.0,
+     -36.33
+    ],
+    [
+     -18.13,
+     12.23,
+     -35.78
+    ],
+    [
+     -18.85,
+     13.48,
+     -35.91
+    ],
+    [
+     -21.1,
+     12.23,
+     -34.71
+    ],
+    [
+     -24.35,
+     9.0,
+     -33.27
+    ]
+   ],
+   "apex": [
+    -18.85,
+    13.48,
+    -35.91
+   ]
+  },
+  {
+   "s_m": 876.13,
+   "x": -17.39,
+   "z": -27.24,
+   "deficit_svf": 0.2373,
+   "svf_deck": 0.6255,
+   "svf_prepark": 0.8628,
+   "winter_sun_now": 3.0,
+   "winter_sun_prepark": 7.17,
+   "aperture_az_deg": 149.4,
+   "aperture_alt_deg": 69.4,
+   "directionality": 0.24,
+   "rib_height_m": 3.69,
+   "reach_m": 1.29,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     -13.16,
+     9.0,
+     -28.77
+    ],
+    [
+     -15.65,
+     11.66,
+     -28.22
+    ],
+    [
+     -16.73,
+     12.69,
+     -28.35
+    ],
+    [
+     -18.61,
+     11.66,
+     -27.15
+    ],
+    [
+     -21.62,
+     9.0,
+     -25.71
+    ]
+   ],
+   "apex": [
+    -16.73,
+    12.69,
+    -28.35
+   ]
+  },
+  {
+   "s_m": 884.16,
+   "x": -14.66,
+   "z": -19.68,
+   "deficit_svf": 0.1911,
+   "svf_deck": 0.5864,
+   "svf_prepark": 0.7775,
+   "winter_sun_now": 3.5,
+   "winter_sun_prepark": 7.5,
+   "aperture_az_deg": 180.3,
+   "aperture_alt_deg": 65.8,
+   "directionality": 0.264,
+   "rib_height_m": 3.3,
+   "reach_m": 1.11,
+   "recaptured_winter_sun_frac": 0.396,
+   "rib": [
+    [
+     -10.43,
+     9.0,
+     -21.21
+    ],
+    [
+     -13.18,
+     11.37,
+     -20.66
+    ],
+    [
+     -14.66,
+     12.3,
+     -20.79
+    ],
+    [
+     -16.14,
+     11.37,
+     -19.59
+    ],
+    [
+     -18.89,
+     9.0,
+     -18.15
+    ]
+   ],
+   "apex": [
+    -14.66,
+    12.3,
+    -20.79
+   ]
+  },
+  {
+   "s_m": 892.2,
+   "x": -11.93,
+   "z": -12.12,
+   "deficit_svf": 0.1709,
+   "svf_deck": 0.4464,
+   "svf_prepark": 0.6173,
+   "winter_sun_now": 1.83,
+   "winter_sun_prepark": 5.33,
+   "aperture_az_deg": 175.5,
+   "aperture_alt_deg": 58.4,
+   "directionality": 0.33,
+   "rib_height_m": 3.36,
+   "reach_m": 1.23,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     -7.69,
+     9.0,
+     -13.65
+    ],
+    [
+     -10.41,
+     11.42,
+     -13.14
+    ],
+    [
+     -11.83,
+     12.36,
+     -13.34
+    ],
+    [
+     -13.37,
+     11.42,
+     -12.07
+    ],
+    [
+     -16.16,
+     9.0,
+     -10.59
+    ]
+   ],
+   "apex": [
+    -11.83,
+    12.36,
+    -13.34
+   ]
+  },
+  {
+   "s_m": 900.24,
+   "x": -9.2,
+   "z": -4.56,
+   "deficit_svf": 0.1665,
+   "svf_deck": 0.408,
+   "svf_prepark": 0.5745,
+   "winter_sun_now": 1.83,
+   "winter_sun_prepark": 4.0,
+   "aperture_az_deg": 167.6,
+   "aperture_alt_deg": 60.1,
+   "directionality": 0.37,
+   "rib_height_m": 3.38,
+   "reach_m": 1.29,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     -4.96,
+     9.0,
+     -6.09
+    ],
+    [
+     -7.6,
+     11.43,
+     -5.6
+    ],
+    [
+     -8.92,
+     12.38,
+     -5.82
+    ],
+    [
+     -10.57,
+     11.43,
+     -4.53
+    ],
+    [
+     -13.43,
+     9.0,
+     -3.03
+    ]
+   ],
+   "apex": [
+    -8.92,
+    12.38,
+    -5.82
+   ]
+  },
+  {
+   "s_m": 908.28,
+   "x": -6.46,
+   "z": 3.0,
+   "deficit_svf": 0.1932,
+   "svf_deck": 0.3705,
+   "svf_prepark": 0.5637,
+   "winter_sun_now": 2.17,
+   "winter_sun_prepark": 3.0,
+   "aperture_az_deg": 170.7,
+   "aperture_alt_deg": 61.0,
+   "directionality": 0.399,
+   "rib_height_m": 3.82,
+   "reach_m": 1.59,
+   "recaptured_winter_sun_frac": 0.377,
+   "rib": [
+    [
+     -2.23,
+     9.0,
+     1.47
+    ],
+    [
+     -4.88,
+     11.75,
+     1.84
+    ],
+    [
+     -6.21,
+     12.82,
+     1.43
+    ],
+    [
+     -7.84,
+     11.75,
+     2.91
+    ],
+    [
+     -10.7,
+     9.0,
+     4.53
+    ]
+   ],
+   "apex": [
+    -6.21,
+    12.82,
+    1.43
+   ]
+  },
+  {
+   "s_m": 916.32,
+   "x": -3.73,
+   "z": 10.56,
+   "deficit_svf": 0.2252,
+   "svf_deck": 0.4015,
+   "svf_prepark": 0.6267,
+   "winter_sun_now": 2.5,
+   "winter_sun_prepark": 4.83,
+   "aperture_az_deg": 192.6,
+   "aperture_alt_deg": 59.3,
+   "directionality": 0.279,
+   "rib_height_m": 4.17,
+   "reach_m": 1.6,
+   "recaptured_winter_sun_frac": 0.434,
+   "rib": [
+    [
+     0.5,
+     9.0,
+     9.03
+    ],
+    [
+     -2.39,
+     12.0,
+     9.4
+    ],
+    [
+     -4.08,
+     13.17,
+     9.0
+    ],
+    [
+     -5.35,
+     12.0,
+     10.47
+    ],
+    [
+     -7.97,
+     9.0,
+     12.09
+    ]
+   ],
+   "apex": [
+    -4.08,
+    13.17,
+    9.0
+   ]
+  },
+  {
+   "s_m": 924.35,
+   "x": -1.0,
+   "z": 18.12,
+   "deficit_svf": 0.2264,
+   "svf_deck": 0.4062,
+   "svf_prepark": 0.6326,
+   "winter_sun_now": 2.83,
+   "winter_sun_prepark": 6.0,
+   "aperture_az_deg": 207.7,
+   "aperture_alt_deg": 57.2,
+   "directionality": 0.333,
+   "rib_height_m": 4.17,
+   "reach_m": 1.7,
+   "recaptured_winter_sun_frac": 0.34,
+   "rib": [
+    [
+     3.23,
+     9.0,
+     16.59
+    ],
+    [
+     0.16,
+     12.0,
+     16.98
+    ],
+    [
+     -1.79,
+     13.17,
+     16.62
+    ],
+    [
+     -2.8,
+     12.0,
+     18.06
+    ],
+    [
+     -5.23,
+     9.0,
+     19.65
+    ]
+   ],
+   "apex": [
+    -1.79,
+    13.17,
+    16.62
+   ]
+  },
+  {
+   "s_m": 932.39,
+   "x": 1.73,
+   "z": 25.68,
+   "deficit_svf": 0.2048,
+   "svf_deck": 0.296,
+   "svf_prepark": 0.5008,
+   "winter_sun_now": 2.17,
+   "winter_sun_prepark": 5.83,
+   "aperture_az_deg": 153.6,
+   "aperture_alt_deg": 53.0,
+   "directionality": 0.409,
+   "rib_height_m": 4.16,
+   "reach_m": 1.82,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     5.96,
+     9.0,
+     24.15
+    ],
+    [
+     3.53,
+     11.99,
+     24.49
+    ],
+    [
+     2.54,
+     13.16,
+     24.05
+    ],
+    [
+     0.57,
+     11.99,
+     25.56
+    ],
+    [
+     -2.5,
+     9.0,
+     27.21
+    ]
+   ],
+   "apex": [
+    2.54,
+    13.16,
+    24.05
+   ]
+  },
+  {
+   "s_m": 940.43,
+   "x": 4.46,
+   "z": 33.24,
+   "deficit_svf": 0.1702,
+   "svf_deck": 0.2903,
+   "svf_prepark": 0.4605,
+   "winter_sun_now": 1.67,
+   "winter_sun_prepark": 5.33,
+   "aperture_az_deg": 131.5,
+   "aperture_alt_deg": 48.4,
+   "directionality": 0.495,
+   "rib_height_m": 3.67,
+   "reach_m": 1.64,
+   "recaptured_winter_sun_frac": 0.189,
+   "rib": [
+    [
+     8.69,
+     9.0,
+     31.71
+    ],
+    [
+     6.43,
+     11.64,
+     32.27
+    ],
+    [
+     5.69,
+     12.67,
+     32.15
+    ],
+    [
+     3.47,
+     11.64,
+     33.34
+    ],
+    [
+     0.23,
+     9.0,
+     34.77
+    ]
+   ],
+   "apex": [
+    5.69,
+    12.67,
+    32.15
+   ]
+  },
+  {
+   "s_m": 948.47,
+   "x": 7.19,
+   "z": 40.8,
+   "deficit_svf": 0.1179,
+   "svf_deck": 0.4234,
+   "svf_prepark": 0.5413,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 3.83,
+   "aperture_az_deg": 72.1,
+   "aperture_alt_deg": 62.1,
+   "directionality": 0.423,
+   "rib_height_m": 2.72,
+   "reach_m": 0.95,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     11.4,
+     9.0,
+     39.2
+    ],
+    [
+     9.02,
+     10.96,
+     40.36
+    ],
+    [
+     8.09,
+     11.72,
+     41.09
+    ],
+    [
+     6.08,
+     10.96,
+     41.48
+    ],
+    [
+     2.98,
+     9.0,
+     42.4
+    ]
+   ],
+   "apex": [
+    8.09,
+    11.72,
+    41.09
+   ]
+  },
+  {
+   "s_m": 956.51,
+   "x": 10.16,
+   "z": 48.27,
+   "deficit_svf": 0.0984,
+   "svf_deck": 0.4927,
+   "svf_prepark": 0.5911,
+   "winter_sun_now": 0.83,
+   "winter_sun_prepark": 5.0,
+   "aperture_az_deg": 110.2,
+   "aperture_alt_deg": 62.2,
+   "directionality": 0.269,
+   "rib_height_m": 2.39,
+   "reach_m": 0.64,
+   "recaptured_winter_sun_frac": 0.113,
+   "rib": [
+    [
+     14.32,
+     9.0,
+     46.55
+    ],
+    [
+     11.86,
+     10.72,
+     47.58
+    ],
+    [
+     10.76,
+     11.39,
+     48.05
+    ],
+    [
+     8.94,
+     10.72,
+     48.78
+    ],
+    [
+     6.0,
+     9.0,
+     49.98
+    ]
+   ],
+   "apex": [
+    10.76,
+    11.39,
+    48.05
+   ]
+  },
+  {
+   "s_m": 964.54,
+   "x": 13.33,
+   "z": 55.65,
+   "deficit_svf": 0.0778,
+   "svf_deck": 0.4952,
+   "svf_prepark": 0.573,
+   "winter_sun_now": 1.67,
+   "winter_sun_prepark": 5.17,
+   "aperture_az_deg": 144.2,
+   "aperture_alt_deg": 64.5,
+   "directionality": 0.256,
+   "rib_height_m": 2.14,
+   "reach_m": 0.49,
+   "recaptured_winter_sun_frac": 0.189,
+   "rib": [
+    [
+     17.47,
+     9.0,
+     53.88
+    ],
+    [
+     14.89,
+     10.54,
+     54.87
+    ],
+    [
+     13.62,
+     11.14,
+     55.25
+    ],
+    [
+     12.0,
+     10.54,
+     56.11
+    ],
+    [
+     9.2,
+     9.0,
+     57.43
+    ]
+   ],
+   "apex": [
+    13.62,
+    11.14,
+    55.25
+   ]
+  },
+  {
+   "s_m": 972.58,
+   "x": 16.5,
+   "z": 63.04,
+   "deficit_svf": 0.0617,
+   "svf_deck": 0.4288,
+   "svf_prepark": 0.4905,
+   "winter_sun_now": 2.0,
+   "winter_sun_prepark": 5.17,
+   "aperture_az_deg": 170.4,
+   "aperture_alt_deg": 63.6,
+   "directionality": 0.38,
+   "rib_height_m": 1.99,
+   "reach_m": 0.47,
+   "recaptured_winter_sun_frac": 0.226,
+   "rib": [
+    [
+     20.64,
+     9.0,
+     61.26
+    ],
+    [
+     17.98,
+     10.44,
+     62.23
+    ],
+    [
+     16.58,
+     10.99,
+     62.57
+    ],
+    [
+     15.08,
+     10.44,
+     63.47
+    ],
+    [
+     12.36,
+     9.0,
+     64.81
+    ]
+   ],
+   "apex": [
+    16.58,
+    10.99,
+    62.57
+   ]
+  },
+  {
+   "s_m": 980.62,
+   "x": 19.67,
+   "z": 70.43,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.0564,
+   "svf_prepark": 0.0564,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 74.5,
+   "aperture_alt_deg": 23.0,
+   "directionality": 0.508,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     23.8,
+     9.0,
+     68.65
+    ],
+    [
+     21.12,
+     9.86,
+     69.8
+    ],
+    [
+     19.67,
+     10.2,
+     70.43
+    ],
+    [
+     18.22,
+     9.86,
+     71.05
+    ],
+    [
+     15.53,
+     9.0,
+     72.2
+    ]
+   ],
+   "apex": [
+    19.67,
+    10.2,
+    70.43
+   ]
+  },
+  {
+   "s_m": 988.66,
+   "x": 22.84,
+   "z": 77.81,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.0609,
+   "svf_prepark": 0.0609,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 135.3,
+   "aperture_alt_deg": 19.1,
+   "directionality": 0.546,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     26.97,
+     9.0,
+     76.04
+    ],
+    [
+     24.29,
+     9.86,
+     77.19
+    ],
+    [
+     22.84,
+     10.2,
+     77.81
+    ],
+    [
+     21.39,
+     9.86,
+     78.43
+    ],
+    [
+     18.7,
+     9.0,
+     79.59
+    ]
+   ],
+   "apex": [
+    22.84,
+    10.2,
+    77.81
+   ]
+  },
+  {
+   "s_m": 996.7,
+   "x": 26.01,
+   "z": 85.2,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.0564,
+   "svf_prepark": 0.0564,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 264.0,
+   "aperture_alt_deg": 20.7,
+   "directionality": 0.537,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     30.14,
+     9.0,
+     83.42
+    ],
+    [
+     27.46,
+     9.86,
+     84.58
+    ],
+    [
+     26.01,
+     10.2,
+     85.2
+    ],
+    [
+     24.56,
+     9.86,
+     85.82
+    ],
+    [
+     21.87,
+     9.0,
+     86.97
+    ]
+   ],
+   "apex": [
+    26.01,
+    10.2,
+    85.2
+   ]
+  },
+  {
+   "s_m": 1004.73,
+   "x": 29.18,
+   "z": 92.59,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.0479,
+   "svf_prepark": 0.0479,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 235.4,
+   "aperture_alt_deg": 24.7,
+   "directionality": 0.636,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     33.31,
+     9.0,
+     90.81
+    ],
+    [
+     30.62,
+     9.86,
+     91.96
+    ],
+    [
+     29.18,
+     10.2,
+     92.59
+    ],
+    [
+     27.73,
+     9.86,
+     93.21
+    ],
+    [
+     25.04,
+     9.0,
+     94.36
+    ]
+   ],
+   "apex": [
+    29.18,
+    10.2,
+    92.59
+   ]
+  },
+  {
+   "s_m": 1012.77,
+   "x": 32.35,
+   "z": 99.97,
+   "deficit_svf": 0.3485,
+   "svf_deck": 0.173,
+   "svf_prepark": 0.5215,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 1.83,
+   "aperture_az_deg": 20.8,
+   "aperture_alt_deg": 35.0,
+   "directionality": 0.302,
+   "rib_height_m": 6.75,
+   "reach_m": 3.07,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     36.48,
+     9.0,
+     98.2
+    ],
+    [
+     34.23,
+     13.86,
+     100.5
+    ],
+    [
+     33.44,
+     15.75,
+     102.84
+    ],
+    [
+     31.34,
+     13.86,
+     101.74
+    ],
+    [
+     28.21,
+     9.0,
+     101.75
+    ]
+   ],
+   "apex": [
+    33.44,
+    15.75,
+    102.84
+   ]
+  },
+  {
+   "s_m": 1020.81,
+   "x": 35.52,
+   "z": 107.36,
+   "deficit_svf": 0.4173,
+   "svf_deck": 0.1955,
+   "svf_prepark": 0.6128,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 2.17,
+   "aperture_az_deg": 185.2,
+   "aperture_alt_deg": 23.8,
+   "directionality": 0.145,
+   "rib_height_m": 6.68,
+   "reach_m": 2.54,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     39.65,
+     9.0,
+     105.58
+    ],
+    [
+     36.87,
+     13.81,
+     105.73
+    ],
+    [
+     35.29,
+     15.68,
+     104.83
+    ],
+    [
+     33.98,
+     13.81,
+     106.97
+    ],
+    [
+     31.38,
+     9.0,
+     109.13
+    ]
+   ],
+   "apex": [
+    35.29,
+    15.68,
+    104.83
+   ]
+  },
+  {
+   "s_m": 1028.85,
+   "x": 38.69,
+   "z": 114.75,
+   "deficit_svf": 0.4946,
+   "svf_deck": 0.1868,
+   "svf_prepark": 0.6814,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 203.2,
+   "aperture_alt_deg": 32.2,
+   "directionality": 0.301,
+   "rib_height_m": 6.72,
+   "reach_m": 3.05,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     42.82,
+     9.0,
+     112.97
+    ],
+    [
+     39.65,
+     13.84,
+     113.0
+    ],
+    [
+     37.49,
+     15.72,
+     111.94
+    ],
+    [
+     36.76,
+     13.84,
+     114.25
+    ],
+    [
+     34.55,
+     9.0,
+     116.52
+    ]
+   ],
+   "apex": [
+    37.49,
+    15.72,
+    111.94
+   ]
+  },
+  {
+   "s_m": 1036.88,
+   "x": 41.85,
+   "z": 122.13,
+   "deficit_svf": 0.5731,
+   "svf_deck": 0.1509,
+   "svf_prepark": 0.724,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 2.0,
+   "aperture_az_deg": 201.1,
+   "aperture_alt_deg": 37.0,
+   "directionality": 0.691,
+   "rib_height_m": 6.87,
+   "reach_m": 4.4,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     45.99,
+     9.0,
+     120.36
+    ],
+    [
+     42.67,
+     13.94,
+     119.87
+    ],
+    [
+     40.27,
+     15.87,
+     118.03
+    ],
+    [
+     39.77,
+     13.94,
+     121.11
+    ],
+    [
+     37.72,
+     9.0,
+     123.91
+    ]
+   ],
+   "apex": [
+    40.27,
+    15.87,
+    118.03
+   ]
+  },
+  {
+   "s_m": 1044.92,
+   "x": 45.02,
+   "z": 129.52,
+   "deficit_svf": 0.203,
+   "svf_deck": 0.5385,
+   "svf_prepark": 0.7415,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 1.67,
+   "aperture_az_deg": 57.0,
+   "aperture_alt_deg": 63.7,
+   "directionality": 0.281,
+   "rib_height_m": 3.54,
+   "reach_m": 1.27,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     49.16,
+     9.0,
+     127.74
+    ],
+    [
+     46.9,
+     11.55,
+     129.17
+    ],
+    [
+     46.09,
+     12.54,
+     130.21
+    ],
+    [
+     44.0,
+     11.55,
+     130.42
+    ],
+    [
+     40.89,
+     9.0,
+     131.29
+    ]
+   ],
+   "apex": [
+    46.09,
+    12.54,
+    130.21
+   ]
+  },
+  {
+   "s_m": 1052.96,
+   "x": 48.19,
+   "z": 136.91,
+   "deficit_svf": 0.1252,
+   "svf_deck": 0.5537,
+   "svf_prepark": 0.6789,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 1.33,
+   "aperture_az_deg": 124.7,
+   "aperture_alt_deg": 54.1,
+   "directionality": 0.136,
+   "rib_height_m": 2.62,
+   "reach_m": 0.65,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     52.33,
+     9.0,
+     135.13
+    ],
+    [
+     49.86,
+     10.89,
+     136.14
+    ],
+    [
+     48.73,
+     11.62,
+     136.53
+    ],
+    [
+     46.96,
+     10.89,
+     137.38
+    ],
+    [
+     44.06,
+     9.0,
+     138.68
+    ]
+   ],
+   "apex": [
+    48.73,
+    11.62,
+    136.53
+   ]
+  },
+  {
+   "s_m": 1061.0,
+   "x": 51.36,
+   "z": 144.29,
+   "deficit_svf": 0.0525,
+   "svf_deck": 0.3562,
+   "svf_prepark": 0.4087,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 123.0,
+   "aperture_alt_deg": 53.6,
+   "directionality": 0.599,
+   "rib_height_m": 1.92,
+   "reach_m": 0.52,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     55.5,
+     9.0,
+     142.52
+    ],
+    [
+     52.99,
+     10.38,
+     143.56
+    ],
+    [
+     51.8,
+     10.92,
+     144.01
+    ],
+    [
+     50.09,
+     10.38,
+     144.8
+    ],
+    [
+     47.23,
+     9.0,
+     146.07
+    ]
+   ],
+   "apex": [
+    51.8,
+    10.92,
+    144.01
+   ]
+  },
+  {
+   "s_m": 1069.04,
+   "x": 54.53,
+   "z": 151.68,
+   "deficit_svf": 0.0196,
+   "svf_deck": 0.3801,
+   "svf_prepark": 0.3997,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 283.9,
+   "aperture_alt_deg": 62.3,
+   "directionality": 0.608,
+   "rib_height_m": 1.46,
+   "reach_m": 0.19,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     58.67,
+     9.0,
+     149.9
+    ],
+    [
+     55.91,
+     10.05,
+     151.08
+    ],
+    [
+     54.35,
+     10.46,
+     151.72
+    ],
+    [
+     53.01,
+     10.05,
+     152.32
+    ],
+    [
+     50.4,
+     9.0,
+     153.45
+    ]
+   ],
+   "apex": [
+    54.35,
+    10.46,
+    151.72
+   ]
+  },
+  {
+   "s_m": 1077.07,
+   "x": 57.7,
+   "z": 159.07,
+   "deficit_svf": 0.0138,
+   "svf_deck": 0.402,
+   "svf_prepark": 0.4158,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 264.1,
+   "aperture_alt_deg": 61.9,
+   "directionality": 0.529,
+   "rib_height_m": 1.38,
+   "reach_m": 0.12,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     61.84,
+     9.0,
+     157.29
+    ],
+    [
+     59.1,
+     9.99,
+     158.44
+    ],
+    [
+     57.58,
+     10.38,
+     159.05
+    ],
+    [
+     56.2,
+     9.99,
+     159.68
+    ],
+    [
+     53.57,
+     9.0,
+     160.84
+    ]
+   ],
+   "apex": [
+    57.58,
+    10.38,
+    159.05
+   ]
+  },
+  {
+   "s_m": 1085.11,
+   "x": 60.87,
+   "z": 166.45,
+   "deficit_svf": 0.0023,
+   "svf_deck": 0.3162,
+   "svf_prepark": 0.3185,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 134.1,
+   "aperture_alt_deg": 35.9,
+   "directionality": 0.21,
+   "rib_height_m": 1.23,
+   "reach_m": 0.02,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     65.01,
+     9.0,
+     164.68
+    ],
+    [
+     62.32,
+     9.89,
+     165.83
+    ],
+    [
+     60.88,
+     10.23,
+     166.44
+    ],
+    [
+     59.43,
+     9.89,
+     167.07
+    ],
+    [
+     56.74,
+     9.0,
+     168.23
+    ]
+   ],
+   "apex": [
+    60.88,
+    10.23,
+    166.44
+   ]
+  },
+  {
+   "s_m": 1093.15,
+   "x": 64.04,
+   "z": 173.84,
+   "deficit_svf": 0.0062,
+   "svf_deck": 0.3097,
+   "svf_prepark": 0.3159,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 331.8,
+   "aperture_alt_deg": 57.7,
+   "directionality": 0.458,
+   "rib_height_m": 1.29,
+   "reach_m": 0.06,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     68.18,
+     9.0,
+     172.06
+    ],
+    [
+     65.48,
+     9.93,
+     173.24
+    ],
+    [
+     64.01,
+     10.29,
+     173.89
+    ],
+    [
+     62.58,
+     9.93,
+     174.48
+    ],
+    [
+     59.9,
+     9.0,
+     175.61
+    ]
+   ],
+   "apex": [
+    64.01,
+    10.29,
+    173.89
+   ]
+  },
+  {
+   "s_m": 1101.19,
+   "x": 67.21,
+   "z": 181.23,
+   "deficit_svf": 0.0064,
+   "svf_deck": 0.3864,
+   "svf_prepark": 0.3928,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 280.9,
+   "aperture_alt_deg": 56.9,
+   "directionality": 0.452,
+   "rib_height_m": 1.29,
+   "reach_m": 0.05,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     71.35,
+     9.0,
+     179.45
+    ],
+    [
+     68.64,
+     9.93,
+     180.61
+    ],
+    [
+     67.16,
+     10.29,
+     181.24
+    ],
+    [
+     65.74,
+     9.93,
+     181.85
+    ],
+    [
+     63.07,
+     9.0,
+     183.0
+    ]
+   ],
+   "apex": [
+    67.16,
+    10.29,
+    181.24
+   ]
+  },
+  {
+   "s_m": 1109.23,
+   "x": 70.38,
+   "z": 188.61,
+   "deficit_svf": 0.0065,
+   "svf_deck": 0.3684,
+   "svf_prepark": 0.3749,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 255.3,
+   "aperture_alt_deg": 59.3,
+   "directionality": 0.499,
+   "rib_height_m": 1.29,
+   "reach_m": 0.06,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     74.51,
+     9.0,
+     186.84
+    ],
+    [
+     71.8,
+     9.93,
+     187.98
+    ],
+    [
+     70.32,
+     10.29,
+     188.6
+    ],
+    [
+     68.91,
+     9.93,
+     189.23
+    ],
+    [
+     66.24,
+     9.0,
+     190.39
+    ]
+   ],
+   "apex": [
+    70.32,
+    10.29,
+    188.6
+   ]
+  },
+  {
+   "s_m": 1117.26,
+   "x": 73.55,
+   "z": 196.0,
+   "deficit_svf": 0.005,
+   "svf_deck": 0.3297,
+   "svf_prepark": 0.3347,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 55.0,
+   "aperture_alt_deg": 47.9,
+   "directionality": 0.402,
+   "rib_height_m": 1.27,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     77.68,
+     9.0,
+     194.22
+    ],
+    [
+     75.01,
+     9.91,
+     195.39
+    ],
+    [
+     73.58,
+     10.27,
+     196.02
+    ],
+    [
+     72.12,
+     9.91,
+     196.63
+    ],
+    [
+     69.41,
+     9.0,
+     197.77
+    ]
+   ],
+   "apex": [
+    73.58,
+    10.27,
+    196.02
+   ]
+  },
+  {
+   "s_m": 1125.3,
+   "x": 76.72,
+   "z": 203.39,
+   "deficit_svf": 0.0129,
+   "svf_deck": 0.4592,
+   "svf_prepark": 0.4721,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.17,
+   "aperture_az_deg": 149.6,
+   "aperture_alt_deg": 57.5,
+   "directionality": 0.241,
+   "rib_height_m": 1.36,
+   "reach_m": 0.08,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     80.85,
+     9.0,
+     201.61
+    ],
+    [
+     78.18,
+     9.98,
+     202.74
+    ],
+    [
+     76.76,
+     10.36,
+     203.31
+    ],
+    [
+     75.29,
+     9.98,
+     203.98
+    ],
+    [
+     72.58,
+     9.0,
+     205.16
+    ]
+   ],
+   "apex": [
+    76.76,
+    10.36,
+    203.31
+   ]
+  },
+  {
+   "s_m": 1133.34,
+   "x": 79.89,
+   "z": 210.77,
+   "deficit_svf": 0.0134,
+   "svf_deck": 0.4037,
+   "svf_prepark": 0.4171,
+   "winter_sun_now": 1.67,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 196.6,
+   "aperture_alt_deg": 54.7,
+   "directionality": 0.482,
+   "rib_height_m": 1.38,
+   "reach_m": 0.12,
+   "recaptured_winter_sun_frac": 0.208,
+   "rib": [
+    [
+     84.02,
+     9.0,
+     209.0
+    ],
+    [
+     81.32,
+     9.99,
+     210.11
+    ],
+    [
+     79.85,
+     10.38,
+     210.66
+    ],
+    [
+     78.43,
+     9.99,
+     211.35
+    ],
+    [
+     75.75,
+     9.0,
+     212.55
+    ]
+   ],
+   "apex": [
+    79.85,
+    10.38,
+    210.66
+   ]
+  },
+  {
+   "s_m": 1141.38,
+   "x": 83.06,
+   "z": 218.16,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.196,
+   "svf_prepark": 0.196,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 95.6,
+   "aperture_alt_deg": 37.3,
+   "directionality": 0.375,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     87.2,
+     9.0,
+     216.4
+    ],
+    [
+     84.51,
+     9.86,
+     217.54
+    ],
+    [
+     83.06,
+     10.2,
+     218.16
+    ],
+    [
+     81.61,
+     9.86,
+     218.77
+    ],
+    [
+     78.91,
+     9.0,
+     219.91
+    ]
+   ],
+   "apex": [
+    83.06,
+    10.2,
+    218.16
+   ]
+  },
+  {
+   "s_m": 1149.41,
+   "x": 86.16,
+   "z": 225.57,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.2205,
+   "svf_prepark": 0.2205,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 138.3,
+   "aperture_alt_deg": 38.1,
+   "directionality": 0.388,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     90.31,
+     9.0,
+     223.85
+    ],
+    [
+     87.61,
+     9.86,
+     224.97
+    ],
+    [
+     86.16,
+     10.2,
+     225.57
+    ],
+    [
+     84.7,
+     9.86,
+     226.18
+    ],
+    [
+     82.0,
+     9.0,
+     227.3
+    ]
+   ],
+   "apex": [
+    86.16,
+    10.2,
+    225.57
+   ]
+  },
+  {
+   "s_m": 1157.45,
+   "x": 89.21,
+   "z": 233.01,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.2142,
+   "svf_prepark": 0.2142,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 155.8,
+   "aperture_alt_deg": 41.6,
+   "directionality": 0.493,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     93.37,
+     9.0,
+     231.3
+    ],
+    [
+     90.67,
+     9.86,
+     232.41
+    ],
+    [
+     89.21,
+     10.2,
+     233.01
+    ],
+    [
+     87.75,
+     9.86,
+     233.61
+    ],
+    [
+     85.05,
+     9.0,
+     234.72
+    ]
+   ],
+   "apex": [
+    89.21,
+    10.2,
+    233.01
+   ]
+  },
+  {
+   "s_m": 1165.49,
+   "x": 92.26,
+   "z": 240.44,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1867,
+   "svf_prepark": 0.1867,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 175.0,
+   "aperture_alt_deg": 45.2,
+   "directionality": 0.699,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     96.43,
+     9.0,
+     238.74
+    ],
+    [
+     93.72,
+     9.86,
+     239.85
+    ],
+    [
+     92.26,
+     10.2,
+     240.44
+    ],
+    [
+     90.81,
+     9.86,
+     241.04
+    ],
+    [
+     88.1,
+     9.0,
+     242.15
+    ]
+   ],
+   "apex": [
+    92.26,
+    10.2,
+    240.44
+   ]
+  },
+  {
+   "s_m": 1173.53,
+   "x": 95.32,
+   "z": 247.88,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1299,
+   "svf_prepark": 0.1299,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 71.8,
+   "aperture_alt_deg": 29.9,
+   "directionality": 0.333,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     99.48,
+     9.0,
+     246.17
+    ],
+    [
+     96.77,
+     9.86,
+     247.28
+    ],
+    [
+     95.32,
+     10.2,
+     247.88
+    ],
+    [
+     93.86,
+     9.86,
+     248.48
+    ],
+    [
+     91.15,
+     9.0,
+     249.59
+    ]
+   ],
+   "apex": [
+    95.32,
+    10.2,
+    247.88
+   ]
+  },
+  {
+   "s_m": 1181.57,
+   "x": 98.37,
+   "z": 255.32,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1349,
+   "svf_prepark": 0.1349,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 130.8,
+   "aperture_alt_deg": 28.6,
+   "directionality": 0.304,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     102.53,
+     9.0,
+     253.61
+    ],
+    [
+     99.83,
+     9.86,
+     254.72
+    ],
+    [
+     98.37,
+     10.2,
+     255.32
+    ],
+    [
+     96.91,
+     9.86,
+     255.91
+    ],
+    [
+     94.21,
+     9.0,
+     257.02
+    ]
+   ],
+   "apex": [
+    98.37,
+    10.2,
+    255.32
+   ]
+  },
+  {
+   "s_m": 1189.6,
+   "x": 101.42,
+   "z": 262.75,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1268,
+   "svf_prepark": 0.1268,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 168.0,
+   "aperture_alt_deg": 30.8,
+   "directionality": 0.469,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     105.59,
+     9.0,
+     261.04
+    ],
+    [
+     102.88,
+     9.86,
+     262.15
+    ],
+    [
+     101.42,
+     10.2,
+     262.75
+    ],
+    [
+     99.97,
+     9.86,
+     263.35
+    ],
+    [
+     97.26,
+     9.0,
+     264.46
+    ]
+   ],
+   "apex": [
+    101.42,
+    10.2,
+    262.75
+   ]
+  },
+  {
+   "s_m": 1197.64,
+   "x": 104.48,
+   "z": 270.19,
+   "deficit_svf": 0.0003,
+   "svf_deck": 0.3881,
+   "svf_prepark": 0.3884,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 64.0,
+   "aperture_alt_deg": 65.4,
+   "directionality": 0.48,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     108.64,
+     9.0,
+     268.48
+    ],
+    [
+     105.94,
+     9.87,
+     269.59
+    ],
+    [
+     104.48,
+     10.2,
+     270.19
+    ],
+    [
+     103.02,
+     9.87,
+     270.78
+    ],
+    [
+     100.31,
+     9.0,
+     271.9
+    ]
+   ],
+   "apex": [
+    104.48,
+    10.2,
+    270.19
+   ]
+  },
+  {
+   "s_m": 1205.68,
+   "x": 107.53,
+   "z": 277.62,
+   "deficit_svf": 0.0008,
+   "svf_deck": 0.3622,
+   "svf_prepark": 0.363,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 97.1,
+   "aperture_alt_deg": 58.7,
+   "directionality": 0.252,
+   "rib_height_m": 1.21,
+   "reach_m": 0.01,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     111.69,
+     9.0,
+     275.91
+    ],
+    [
+     108.99,
+     9.87,
+     277.02
+    ],
+    [
+     107.54,
+     10.21,
+     277.62
+    ],
+    [
+     106.08,
+     9.87,
+     278.22
+    ],
+    [
+     103.37,
+     9.0,
+     279.33
+    ]
+   ],
+   "apex": [
+    107.54,
+    10.21,
+    277.62
+   ]
+  },
+  {
+   "s_m": 1213.72,
+   "x": 110.58,
+   "z": 285.06,
+   "deficit_svf": 0.0015,
+   "svf_deck": 0.2358,
+   "svf_prepark": 0.2373,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 194.2,
+   "aperture_alt_deg": 34.0,
+   "directionality": 0.412,
+   "rib_height_m": 1.22,
+   "reach_m": 0.01,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     114.75,
+     9.0,
+     283.35
+    ],
+    [
+     112.04,
+     9.88,
+     284.45
+    ],
+    [
+     110.58,
+     10.22,
+     285.04
+    ],
+    [
+     109.13,
+     9.88,
+     285.65
+    ],
+    [
+     106.42,
+     9.0,
+     286.77
+    ]
+   ],
+   "apex": [
+    110.58,
+    10.22,
+    285.04
+   ]
+  },
+  {
+   "s_m": 1221.76,
+   "x": 113.64,
+   "z": 292.49,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.2593,
+   "svf_prepark": 0.2593,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 113.5,
+   "aperture_alt_deg": 47.2,
+   "directionality": 0.673,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     117.8,
+     9.0,
+     290.78
+    ],
+    [
+     115.09,
+     9.86,
+     291.89
+    ],
+    [
+     113.64,
+     10.2,
+     292.49
+    ],
+    [
+     112.18,
+     9.86,
+     293.09
+    ],
+    [
+     109.48,
+     9.0,
+     294.2
+    ]
+   ],
+   "apex": [
+    113.64,
+    10.2,
+    292.49
+   ]
+  },
+  {
+   "s_m": 1229.79,
+   "x": 116.69,
+   "z": 299.93,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1219,
+   "svf_prepark": 0.1219,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 276.2,
+   "aperture_alt_deg": 29.1,
+   "directionality": 0.582,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     120.85,
+     9.0,
+     298.22
+    ],
+    [
+     118.15,
+     9.86,
+     299.33
+    ],
+    [
+     116.69,
+     10.2,
+     299.93
+    ],
+    [
+     115.23,
+     9.86,
+     300.53
+    ],
+    [
+     112.53,
+     9.0,
+     301.64
+    ]
+   ],
+   "apex": [
+    116.69,
+    10.2,
+    299.93
+   ]
+  },
+  {
+   "s_m": 1237.83,
+   "x": 119.74,
+   "z": 307.36,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1105,
+   "svf_prepark": 0.1105,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 250.1,
+   "aperture_alt_deg": 32.9,
+   "directionality": 0.607,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     123.91,
+     9.0,
+     305.65
+    ],
+    [
+     121.2,
+     9.86,
+     306.76
+    ],
+    [
+     119.74,
+     10.2,
+     307.36
+    ],
+    [
+     118.29,
+     9.86,
+     307.96
+    ],
+    [
+     115.58,
+     9.0,
+     309.07
+    ]
+   ],
+   "apex": [
+    119.74,
+    10.2,
+    307.36
+   ]
+  },
+  {
+   "s_m": 1245.87,
+   "x": 122.8,
+   "z": 314.8,
+   "deficit_svf": 0.1381,
+   "svf_deck": 0.1408,
+   "svf_prepark": 0.2789,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 116.3,
+   "aperture_alt_deg": 42.6,
+   "directionality": 0.619,
+   "rib_height_m": 3.45,
+   "reach_m": 1.65,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     126.96,
+     9.0,
+     313.09
+    ],
+    [
+     124.85,
+     11.49,
+     313.91
+    ],
+    [
+     124.28,
+     12.45,
+     314.06
+    ],
+    [
+     121.93,
+     11.49,
+     315.1
+    ],
+    [
+     118.64,
+     9.0,
+     316.51
+    ]
+   ],
+   "apex": [
+    124.28,
+    12.45,
+    314.06
+   ]
+  },
+  {
+   "s_m": 1253.91,
+   "x": 125.85,
+   "z": 322.23,
+   "deficit_svf": 0.2347,
+   "svf_deck": 0.1056,
+   "svf_prepark": 0.3403,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 76.4,
+   "aperture_alt_deg": 33.3,
+   "directionality": 0.645,
+   "rib_height_m": 5.13,
+   "reach_m": 2.94,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     130.01,
+     9.0,
+     320.52
+    ],
+    [
+     128.45,
+     12.69,
+     321.91
+    ],
+    [
+     128.71,
+     14.13,
+     322.93
+    ],
+    [
+     125.54,
+     12.69,
+     323.11
+    ],
+    [
+     121.69,
+     9.0,
+     323.94
+    ]
+   ],
+   "apex": [
+    128.71,
+    14.13,
+    322.93
+   ]
+  },
+  {
+   "s_m": 1261.94,
+   "x": 128.91,
+   "z": 329.67,
+   "deficit_svf": 0.2603,
+   "svf_deck": 0.1226,
+   "svf_prepark": 0.3829,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 128.8,
+   "aperture_alt_deg": 30.1,
+   "directionality": 0.617,
+   "rib_height_m": 5.5,
+   "reach_m": 3.16,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     133.07,
+     9.0,
+     327.96
+    ],
+    [
+     131.35,
+     12.96,
+     328.28
+    ],
+    [
+     131.37,
+     14.5,
+     327.69
+    ],
+    [
+     128.43,
+     12.96,
+     329.48
+    ],
+    [
+     124.74,
+     9.0,
+     331.38
+    ]
+   ],
+   "apex": [
+    131.37,
+    14.5,
+    327.69
+   ]
+  },
+  {
+   "s_m": 1269.98,
+   "x": 131.96,
+   "z": 337.1,
+   "deficit_svf": 0.0,
+   "svf_deck": 0.1284,
+   "svf_prepark": 0.1284,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 260.2,
+   "aperture_alt_deg": 38.3,
+   "directionality": 0.802,
+   "rib_height_m": 1.2,
+   "reach_m": 0.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     136.12,
+     9.0,
+     335.39
+    ],
+    [
+     133.42,
+     9.86,
+     336.51
+    ],
+    [
+     131.96,
+     10.2,
+     337.1
+    ],
+    [
+     130.5,
+     9.86,
+     337.7
+    ],
+    [
+     127.8,
+     9.0,
+     338.81
+    ]
+   ],
+   "apex": [
+    131.96,
+    10.2,
+    337.1
+   ]
+  },
+  {
+   "s_m": 1278.02,
+   "x": 135.01,
+   "z": 344.54,
+   "deficit_svf": 0.2801,
+   "svf_deck": 0.3975,
+   "svf_prepark": 0.6776,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.67,
+   "aperture_az_deg": 87.3,
+   "aperture_alt_deg": 64.2,
+   "directionality": 0.404,
+   "rib_height_m": 4.91,
+   "reach_m": 2.27,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     139.17,
+     9.0,
+     342.83
+    ],
+    [
+     137.38,
+     12.53,
+     343.98
+    ],
+    [
+     137.28,
+     13.91,
+     344.64
+    ],
+    [
+     134.46,
+     12.53,
+     345.18
+    ],
+    [
+     130.85,
+     9.0,
+     346.25
+    ]
+   ],
+   "apex": [
+    137.28,
+    13.91,
+    344.64
+   ]
+  },
+  {
+   "s_m": 1286.06,
+   "x": 138.07,
+   "z": 351.97,
+   "deficit_svf": 0.3172,
+   "svf_deck": 0.4454,
+   "svf_prepark": 0.7626,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 1.33,
+   "aperture_az_deg": 122.3,
+   "aperture_alt_deg": 65.9,
+   "directionality": 0.368,
+   "rib_height_m": 5.21,
+   "reach_m": 2.37,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     142.23,
+     9.0,
+     350.26
+    ],
+    [
+     140.33,
+     12.75,
+     350.87
+    ],
+    [
+     140.07,
+     14.21,
+     350.71
+    ],
+    [
+     137.41,
+     12.75,
+     352.06
+    ],
+    [
+     133.9,
+     9.0,
+     353.68
+    ]
+   ],
+   "apex": [
+    140.07,
+    14.21,
+    350.71
+   ]
+  },
+  {
+   "s_m": 1294.1,
+   "x": 141.12,
+   "z": 359.41,
+   "deficit_svf": 0.7289,
+   "svf_deck": 0.0917,
+   "svf_prepark": 0.8206,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 2.67,
+   "aperture_az_deg": 358.4,
+   "aperture_alt_deg": 31.1,
+   "directionality": 0.559,
+   "rib_height_m": 7.11,
+   "reach_m": 4.14,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     145.3,
+     9.0,
+     357.74
+    ],
+    [
+     142.54,
+     14.12,
+     360.48
+    ],
+    [
+     141.0,
+     16.11,
+     363.55
+    ],
+    [
+     139.61,
+     14.12,
+     361.65
+    ],
+    [
+     136.94,
+     9.0,
+     361.08
+    ]
+   ],
+   "apex": [
+    141.0,
+    16.11,
+    363.55
+   ]
+  },
+  {
+   "s_m": 1302.13,
+   "x": 144.03,
+   "z": 366.9,
+   "deficit_svf": 0.7352,
+   "svf_deck": 0.1249,
+   "svf_prepark": 0.8601,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 4.33,
+   "aperture_az_deg": 332.3,
+   "aperture_alt_deg": 28.5,
+   "directionality": 0.255,
+   "rib_height_m": 6.98,
+   "reach_m": 3.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     148.26,
+     9.0,
+     365.38
+    ],
+    [
+     144.94,
+     14.02,
+     367.45
+    ],
+    [
+     142.61,
+     15.98,
+     369.59
+    ],
+    [
+     141.98,
+     14.02,
+     368.51
+    ],
+    [
+     139.79,
+     9.0,
+     368.41
+    ]
+   ],
+   "apex": [
+    142.61,
+    15.98,
+    369.59
+   ]
+  },
+  {
+   "s_m": 1310.17,
+   "x": 146.52,
+   "z": 374.54,
+   "deficit_svf": 0.7312,
+   "svf_deck": 0.1561,
+   "svf_prepark": 0.8873,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 4.67,
+   "aperture_az_deg": 259.9,
+   "aperture_alt_deg": 24.0,
+   "directionality": 0.139,
+   "rib_height_m": 6.84,
+   "reach_m": 2.6,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     150.8,
+     9.0,
+     373.14
+    ],
+    [
+     147.0,
+     13.93,
+     373.87
+    ],
+    [
+     143.97,
+     15.84,
+     374.08
+    ],
+    [
+     144.0,
+     13.93,
+     374.85
+    ],
+    [
+     142.25,
+     9.0,
+     375.94
+    ]
+   ],
+   "apex": [
+    143.97,
+    15.84,
+    374.08
+   ]
+  },
+  {
+   "s_m": 1318.21,
+   "x": 149.02,
+   "z": 382.18,
+   "deficit_svf": 0.6983,
+   "svf_deck": 0.2039,
+   "svf_prepark": 0.9022,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 4.83,
+   "aperture_az_deg": 155.0,
+   "aperture_alt_deg": 25.5,
+   "directionality": 0.102,
+   "rib_height_m": 6.64,
+   "reach_m": 2.39,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     153.3,
+     9.0,
+     380.78
+    ],
+    [
+     150.92,
+     13.78,
+     380.82
+    ],
+    [
+     150.03,
+     15.64,
+     380.01
+    ],
+    [
+     147.93,
+     13.78,
+     381.8
+    ],
+    [
+     144.74,
+     9.0,
+     383.58
+    ]
+   ],
+   "apex": [
+    150.03,
+    15.64,
+    380.01
+   ]
+  },
+  {
+   "s_m": 1326.25,
+   "x": 151.52,
+   "z": 389.82,
+   "deficit_svf": 0.6448,
+   "svf_deck": 0.2669,
+   "svf_prepark": 0.9117,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 5.17,
+   "aperture_az_deg": 127.8,
+   "aperture_alt_deg": 44.6,
+   "directionality": 0.374,
+   "rib_height_m": 6.38,
+   "reach_m": 3.08,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     155.8,
+     9.0,
+     388.42
+    ],
+    [
+     153.99,
+     13.59,
+     388.57
+    ],
+    [
+     153.95,
+     15.38,
+     387.93
+    ],
+    [
+     150.99,
+     13.59,
+     389.55
+    ],
+    [
+     147.24,
+     9.0,
+     391.22
+    ]
+   ],
+   "apex": [
+    153.95,
+    15.38,
+    387.93
+   ]
+  },
+  {
+   "s_m": 1334.29,
+   "x": 154.02,
+   "z": 397.46,
+   "deficit_svf": 0.6411,
+   "svf_deck": 0.277,
+   "svf_prepark": 0.9181,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 5.5,
+   "aperture_az_deg": 139.0,
+   "aperture_alt_deg": 47.7,
+   "directionality": 0.486,
+   "rib_height_m": 6.34,
+   "reach_m": 3.38,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     158.29,
+     9.0,
+     396.06
+    ],
+    [
+     156.4,
+     13.56,
+     395.95
+    ],
+    [
+     156.24,
+     15.34,
+     394.91
+    ],
+    [
+     153.41,
+     13.56,
+     396.93
+    ],
+    [
+     149.74,
+     9.0,
+     398.86
+    ]
+   ],
+   "apex": [
+    156.24,
+    15.34,
+    394.91
+   ]
+  },
+  {
+   "s_m": 1342.32,
+   "x": 156.51,
+   "z": 405.1,
+   "deficit_svf": 0.6581,
+   "svf_deck": 0.2639,
+   "svf_prepark": 0.922,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 5.5,
+   "aperture_az_deg": 146.6,
+   "aperture_alt_deg": 51.0,
+   "directionality": 0.595,
+   "rib_height_m": 6.39,
+   "reach_m": 3.74,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     160.79,
+     9.0,
+     403.7
+    ],
+    [
+     158.83,
+     13.6,
+     403.36
+    ],
+    [
+     158.57,
+     15.39,
+     401.98
+    ],
+    [
+     155.84,
+     13.6,
+     404.34
+    ],
+    [
+     152.24,
+     9.0,
+     406.5
+    ]
+   ],
+   "apex": [
+    158.57,
+    15.39,
+    401.98
+   ]
+  },
+  {
+   "s_m": 1350.36,
+   "x": 159.01,
+   "z": 412.74,
+   "deficit_svf": 0.7054,
+   "svf_deck": 0.2198,
+   "svf_prepark": 0.9252,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 5.67,
+   "aperture_az_deg": 156.6,
+   "aperture_alt_deg": 53.2,
+   "directionality": 0.729,
+   "rib_height_m": 6.58,
+   "reach_m": 4.29,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     163.29,
+     9.0,
+     411.34
+    ],
+    [
+     161.19,
+     13.74,
+     410.68
+    ],
+    [
+     160.71,
+     15.58,
+     408.8
+    ],
+    [
+     158.19,
+     13.74,
+     411.65
+    ],
+    [
+     154.73,
+     9.0,
+     414.14
+    ]
+   ],
+   "apex": [
+    160.71,
+    15.58,
+    408.8
+   ]
+  },
+  {
+   "s_m": 1358.4,
+   "x": 161.51,
+   "z": 420.38,
+   "deficit_svf": 0.7606,
+   "svf_deck": 0.1672,
+   "svf_prepark": 0.9278,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 5.83,
+   "aperture_az_deg": 107.7,
+   "aperture_alt_deg": 53.5,
+   "directionality": 0.284,
+   "rib_height_m": 6.8,
+   "reach_m": 3.04,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     165.78,
+     9.0,
+     418.98
+    ],
+    [
+     164.16,
+     13.89,
+     419.52
+    ],
+    [
+     164.4,
+     15.8,
+     419.46
+    ],
+    [
+     161.17,
+     13.89,
+     420.5
+    ],
+    [
+     157.23,
+     9.0,
+     421.78
+    ]
+   ],
+   "apex": [
+    164.4,
+    15.8,
+    419.46
+   ]
+  },
+  {
+   "s_m": 1366.44,
+   "x": 164.0,
+   "z": 428.02,
+   "deficit_svf": 0.7008,
+   "svf_deck": 0.2281,
+   "svf_prepark": 0.9289,
+   "winter_sun_now": 0.5,
+   "winter_sun_prepark": 6.33,
+   "aperture_az_deg": 173.4,
+   "aperture_alt_deg": 51.2,
+   "directionality": 0.314,
+   "rib_height_m": 6.54,
+   "reach_m": 2.99,
+   "recaptured_winter_sun_frac": 0.075,
+   "rib": [
+    [
+     168.28,
+     9.0,
+     426.62
+    ],
+    [
+     165.64,
+     13.71,
+     426.34
+    ],
+    [
+     164.35,
+     15.54,
+     425.05
+    ],
+    [
+     162.64,
+     13.71,
+     427.32
+    ],
+    [
+     159.73,
+     9.0,
+     429.42
+    ]
+   ],
+   "apex": [
+    164.35,
+    15.54,
+    425.05
+   ]
+  },
+  {
+   "s_m": 1374.47,
+   "x": 166.5,
+   "z": 435.66,
+   "deficit_svf": 0.8204,
+   "svf_deck": 0.109,
+   "svf_prepark": 0.9294,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 6.67,
+   "aperture_az_deg": 5.4,
+   "aperture_alt_deg": 30.1,
+   "directionality": 0.424,
+   "rib_height_m": 7.04,
+   "reach_m": 3.64,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     170.78,
+     9.0,
+     434.26
+    ],
+    [
+     168.14,
+     14.07,
+     436.62
+    ],
+    [
+     166.84,
+     16.04,
+     439.28
+    ],
+    [
+     165.14,
+     14.07,
+     437.6
+    ],
+    [
+     162.22,
+     9.0,
+     437.06
+    ]
+   ],
+   "apex": [
+    166.84,
+    16.04,
+    439.28
+   ]
+  },
+  {
+   "s_m": 1382.51,
+   "x": 169.0,
+   "z": 443.3,
+   "deficit_svf": 0.8148,
+   "svf_deck": 0.1128,
+   "svf_prepark": 0.9276,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 6.67,
+   "aperture_az_deg": 337.7,
+   "aperture_alt_deg": 34.4,
+   "directionality": 0.189,
+   "rib_height_m": 7.03,
+   "reach_m": 2.85,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     173.28,
+     9.0,
+     441.9
+    ],
+    [
+     170.06,
+     14.06,
+     443.86
+    ],
+    [
+     167.92,
+     16.03,
+     445.94
+    ],
+    [
+     167.07,
+     14.06,
+     444.84
+    ],
+    [
+     164.72,
+     9.0,
+     444.7
+    ]
+   ],
+   "apex": [
+    167.92,
+    16.03,
+    445.94
+   ]
+  },
+  {
+   "s_m": 1390.55,
+   "x": 171.5,
+   "z": 450.94,
+   "deficit_svf": 0.8121,
+   "svf_deck": 0.1139,
+   "svf_prepark": 0.926,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 6.67,
+   "aperture_az_deg": 230.5,
+   "aperture_alt_deg": 22.4,
+   "directionality": 0.144,
+   "rib_height_m": 7.02,
+   "reach_m": 2.7,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     175.77,
+     9.0,
+     449.54
+    ],
+    [
+     172.16,
+     14.06,
+     449.76
+    ],
+    [
+     169.42,
+     16.02,
+     449.22
+    ],
+    [
+     169.17,
+     14.06,
+     450.74
+    ],
+    [
+     167.22,
+     9.0,
+     452.34
+    ]
+   ],
+   "apex": [
+    169.42,
+    16.02,
+    449.22
+   ]
+  },
+  {
+   "s_m": 1398.59,
+   "x": 173.99,
+   "z": 458.58,
+   "deficit_svf": 0.811,
+   "svf_deck": 0.1122,
+   "svf_prepark": 0.9232,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 6.67,
+   "aperture_az_deg": 202.8,
+   "aperture_alt_deg": 20.3,
+   "directionality": 0.412,
+   "rib_height_m": 7.03,
+   "reach_m": 3.59,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     178.27,
+     9.0,
+     457.18
+    ],
+    [
+     174.93,
+     14.06,
+     456.77
+    ],
+    [
+     172.6,
+     16.03,
+     455.27
+    ],
+    [
+     171.94,
+     14.06,
+     457.74
+    ],
+    [
+     169.72,
+     9.0,
+     459.98
+    ]
+   ],
+   "apex": [
+    172.6,
+    16.03,
+    455.27
+   ]
+  },
+  {
+   "s_m": 1406.63,
+   "x": 176.49,
+   "z": 466.22,
+   "deficit_svf": 0.8539,
+   "svf_deck": 0.0648,
+   "svf_prepark": 0.9187,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 6.83,
+   "aperture_az_deg": 64.0,
+   "aperture_alt_deg": 20.0,
+   "directionality": 0.183,
+   "rib_height_m": 7.23,
+   "reach_m": 2.93,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     180.77,
+     9.0,
+     464.82
+    ],
+    [
+     179.04,
+     14.2,
+     466.24
+    ],
+    [
+     179.12,
+     16.23,
+     467.5
+    ],
+    [
+     176.04,
+     14.2,
+     467.22
+    ],
+    [
+     172.21,
+     9.0,
+     467.62
+    ]
+   ],
+   "apex": [
+    179.12,
+    16.23,
+    467.5
+   ]
+  },
+  {
+   "s_m": 1414.66,
+   "x": 178.99,
+   "z": 473.86,
+   "deficit_svf": 0.7537,
+   "svf_deck": 0.1579,
+   "svf_prepark": 0.9116,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 7.0,
+   "aperture_az_deg": 351.4,
+   "aperture_alt_deg": 36.8,
+   "directionality": 0.366,
+   "rib_height_m": 6.84,
+   "reach_m": 3.33,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     183.26,
+     9.0,
+     472.46
+    ],
+    [
+     180.29,
+     13.92,
+     474.69
+    ],
+    [
+     178.49,
+     15.84,
+     477.15
+    ],
+    [
+     177.29,
+     13.92,
+     475.66
+    ],
+    [
+     174.71,
+     9.0,
+     475.26
+    ]
+   ],
+   "apex": [
+    178.49,
+    15.84,
+    477.15
+   ]
+  },
+  {
+   "s_m": 1422.7,
+   "x": 181.48,
+   "z": 481.5,
+   "deficit_svf": 0.7538,
+   "svf_deck": 0.1507,
+   "svf_prepark": 0.9045,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 7.0,
+   "aperture_az_deg": 316.0,
+   "aperture_alt_deg": 33.7,
+   "directionality": 0.181,
+   "rib_height_m": 6.87,
+   "reach_m": 2.74,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     185.76,
+     9.0,
+     480.1
+    ],
+    [
+     182.22,
+     13.94,
+     481.8
+    ],
+    [
+     179.58,
+     15.87,
+     483.47
+    ],
+    [
+     179.22,
+     13.94,
+     482.78
+    ],
+    [
+     177.21,
+     9.0,
+     482.9
+    ]
+   ],
+   "apex": [
+    179.58,
+    15.87,
+    483.47
+   ]
+  },
+  {
+   "s_m": 1430.74,
+   "x": 183.98,
+   "z": 489.14,
+   "deficit_svf": 0.7861,
+   "svf_deck": 0.1063,
+   "svf_prepark": 0.8924,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 7.33,
+   "aperture_az_deg": 215.5,
+   "aperture_alt_deg": 22.1,
+   "directionality": 0.391,
+   "rib_height_m": 7.05,
+   "reach_m": 3.54,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     188.26,
+     9.0,
+     487.74
+    ],
+    [
+     184.66,
+     14.08,
+     487.5
+    ],
+    [
+     181.93,
+     16.05,
+     486.26
+    ],
+    [
+     181.66,
+     14.08,
+     488.48
+    ],
+    [
+     179.7,
+     9.0,
+     490.54
+    ]
+   ],
+   "apex": [
+    181.93,
+    16.05,
+    486.26
+   ]
+  },
+  {
+   "s_m": 1438.78,
+   "x": 186.48,
+   "z": 496.78,
+   "deficit_svf": 0.6091,
+   "svf_deck": 0.2612,
+   "svf_prepark": 0.8703,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 7.17,
+   "aperture_az_deg": 81.8,
+   "aperture_alt_deg": 45.8,
+   "directionality": 0.224,
+   "rib_height_m": 6.4,
+   "reach_m": 2.65,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     190.76,
+     9.0,
+     495.38
+    ],
+    [
+     189.02,
+     13.61,
+     496.44
+    ],
+    [
+     189.1,
+     15.4,
+     497.16
+    ],
+    [
+     186.03,
+     13.61,
+     497.42
+    ],
+    [
+     182.2,
+     9.0,
+     498.18
+    ]
+   ],
+   "apex": [
+    189.1,
+    15.4,
+    497.16
+   ]
+  },
+  {
+   "s_m": 1446.82,
+   "x": 188.98,
+   "z": 504.42,
+   "deficit_svf": 0.4867,
+   "svf_deck": 0.3074,
+   "svf_prepark": 0.7941,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 7.0,
+   "aperture_az_deg": 163.4,
+   "aperture_alt_deg": 44.3,
+   "directionality": 0.116,
+   "rib_height_m": 6.21,
+   "reach_m": 2.24,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     193.25,
+     9.0,
+     503.02
+    ],
+    [
+     190.73,
+     13.47,
+     503.07
+    ],
+    [
+     189.62,
+     15.21,
+     502.27
+    ],
+    [
+     187.74,
+     13.47,
+     504.05
+    ],
+    [
+     184.7,
+     9.0,
+     505.82
+    ]
+   ],
+   "apex": [
+    189.62,
+    15.21,
+    502.27
+   ]
+  },
+  {
+   "s_m": 1454.85,
+   "x": 191.47,
+   "z": 512.06,
+   "deficit_svf": 0.0976,
+   "svf_deck": 0.1712,
+   "svf_prepark": 0.2688,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 253.2,
+   "aperture_alt_deg": 24.6,
+   "directionality": 0.105,
+   "rib_height_m": 2.76,
+   "reach_m": 0.69,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     195.75,
+     9.0,
+     510.66
+    ],
+    [
+     192.71,
+     10.98,
+     511.49
+    ],
+    [
+     190.82,
+     11.76,
+     511.86
+    ],
+    [
+     189.71,
+     10.98,
+     512.47
+    ],
+    [
+     187.2,
+     9.0,
+     513.46
+    ]
+   ],
+   "apex": [
+    190.82,
+    11.76,
+    511.86
+   ]
+  },
+  {
+   "s_m": 1462.89,
+   "x": 193.97,
+   "z": 519.7,
+   "deficit_svf": 0.1583,
+   "svf_deck": 0.2125,
+   "svf_prepark": 0.3708,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 196.8,
+   "aperture_alt_deg": 32.1,
+   "directionality": 0.263,
+   "rib_height_m": 3.65,
+   "reach_m": 1.3,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     198.45,
+     9.0,
+     520.15
+    ],
+    [
+     195.39,
+     11.62,
+     519.36
+    ],
+    [
+     193.59,
+     12.65,
+     518.46
+    ],
+    [
+     192.25,
+     11.62,
+     519.05
+    ],
+    [
+     189.49,
+     9.0,
+     519.25
+    ]
+   ],
+   "apex": [
+    193.59,
+    12.65,
+    518.46
+   ]
+  },
+  {
+   "s_m": 1470.93,
+   "x": 190.01,
+   "z": 526.7,
+   "deficit_svf": 0.2772,
+   "svf_deck": 0.2594,
+   "svf_prepark": 0.5366,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 1.67,
+   "aperture_az_deg": 237.4,
+   "aperture_alt_deg": 41.9,
+   "directionality": 0.385,
+   "rib_height_m": 5.33,
+   "reach_m": 2.48,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     193.93,
+     9.0,
+     528.91
+    ],
+    [
+     190.55,
+     12.84,
+     526.94
+    ],
+    [
+     187.92,
+     14.33,
+     525.36
+    ],
+    [
+     187.8,
+     12.84,
+     525.39
+    ],
+    [
+     186.09,
+     9.0,
+     524.48
+    ]
+   ],
+   "apex": [
+    187.92,
+    14.33,
+    525.36
+   ]
+  },
+  {
+   "s_m": 1478.97,
+   "x": 186.05,
+   "z": 533.69,
+   "deficit_svf": 0.371,
+   "svf_deck": 0.3379,
+   "svf_prepark": 0.7089,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 2.83,
+   "aperture_az_deg": 185.9,
+   "aperture_alt_deg": 42.3,
+   "directionality": 0.33,
+   "rib_height_m": 6.08,
+   "reach_m": 2.78,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     189.97,
+     9.0,
+     535.91
+    ],
+    [
+     187.31,
+     13.38,
+     533.36
+    ],
+    [
+     185.77,
+     15.08,
+     530.93
+    ],
+    [
+     184.57,
+     13.38,
+     531.81
+    ],
+    [
+     182.14,
+     9.0,
+     531.48
+    ]
+   ],
+   "apex": [
+    185.77,
+    15.08,
+    530.93
+   ]
+  },
+  {
+   "s_m": 1487.0,
+   "x": 182.09,
+   "z": 540.69,
+   "deficit_svf": 0.3863,
+   "svf_deck": 0.3305,
+   "svf_prepark": 0.7168,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 4.17,
+   "aperture_az_deg": 176.7,
+   "aperture_alt_deg": 45.3,
+   "directionality": 0.402,
+   "rib_height_m": 6.11,
+   "reach_m": 3.0,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     186.01,
+     9.0,
+     542.9
+    ],
+    [
+     183.53,
+     13.4,
+     540.26
+    ],
+    [
+     182.27,
+     15.11,
+     537.69
+    ],
+    [
+     180.79,
+     13.4,
+     538.71
+    ],
+    [
+     178.18,
+     9.0,
+     538.47
+    ]
+   ],
+   "apex": [
+    182.27,
+    15.11,
+    537.69
+   ]
+  },
+  {
+   "s_m": 1495.04,
+   "x": 178.14,
+   "z": 547.68,
+   "deficit_svf": 0.3586,
+   "svf_deck": 0.3064,
+   "svf_prepark": 0.665,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 5.33,
+   "aperture_az_deg": 168.6,
+   "aperture_alt_deg": 47.5,
+   "directionality": 0.493,
+   "rib_height_m": 6.21,
+   "reach_m": 3.32,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     182.05,
+     9.0,
+     549.9
+    ],
+    [
+     179.77,
+     13.47,
+     547.16
+    ],
+    [
+     178.79,
+     15.21,
+     544.43
+    ],
+    [
+     177.03,
+     13.47,
+     545.6
+    ],
+    [
+     174.22,
+     9.0,
+     545.47
+    ]
+   ],
+   "apex": [
+    178.79,
+    15.21,
+    544.43
+   ]
+  },
+  {
+   "s_m": 1503.08,
+   "x": 174.18,
+   "z": 554.68,
+   "deficit_svf": 0.0078,
+   "svf_deck": 0.0481,
+   "svf_prepark": 0.0559,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 327.5,
+   "aperture_alt_deg": 26.0,
+   "directionality": 0.793,
+   "rib_height_m": 1.34,
+   "reach_m": 0.11,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     178.09,
+     9.0,
+     556.89
+    ],
+    [
+     175.52,
+     9.96,
+     555.49
+    ],
+    [
+     174.12,
+     10.34,
+     554.77
+    ],
+    [
+     172.78,
+     9.96,
+     553.94
+    ],
+    [
+     170.26,
+     9.0,
+     552.46
+    ]
+   ],
+   "apex": [
+    174.12,
+    10.34,
+    554.77
+   ]
+  },
+  {
+   "s_m": 1511.12,
+   "x": 170.22,
+   "z": 561.67,
+   "deficit_svf": 0.0062,
+   "svf_deck": 0.0552,
+   "svf_prepark": 0.0614,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 330.9,
+   "aperture_alt_deg": 24.1,
+   "directionality": 0.456,
+   "rib_height_m": 1.31,
+   "reach_m": 0.07,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     174.13,
+     9.0,
+     563.89
+    ],
+    [
+     171.58,
+     9.94,
+     562.47
+    ],
+    [
+     170.18,
+     10.31,
+     561.73
+    ],
+    [
+     168.83,
+     9.94,
+     560.92
+    ],
+    [
+     166.3,
+     9.0,
+     559.46
+    ]
+   ],
+   "apex": [
+    170.18,
+    10.31,
+    561.73
+   ]
+  },
+  {
+   "s_m": 1519.16,
+   "x": 166.26,
+   "z": 568.67,
+   "deficit_svf": 0.0046,
+   "svf_deck": 0.0611,
+   "svf_prepark": 0.0657,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 325.3,
+   "aperture_alt_deg": 22.8,
+   "directionality": 0.275,
+   "rib_height_m": 1.28,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     170.18,
+     9.0,
+     570.89
+    ],
+    [
+     167.62,
+     9.92,
+     569.46
+    ],
+    [
+     166.24,
+     10.28,
+     568.7
+    ],
+    [
+     164.88,
+     9.92,
+     567.91
+    ],
+    [
+     162.34,
+     9.0,
+     566.45
+    ]
+   ],
+   "apex": [
+    166.24,
+    10.28,
+    568.7
+   ]
+  },
+  {
+   "s_m": 1527.19,
+   "x": 162.3,
+   "z": 575.66,
+   "deficit_svf": 0.0049,
+   "svf_deck": 0.0641,
+   "svf_prepark": 0.069,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 299.2,
+   "aperture_alt_deg": 21.5,
+   "directionality": 0.154,
+   "rib_height_m": 1.28,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     166.22,
+     9.0,
+     577.88
+    ],
+    [
+     163.66,
+     9.92,
+     576.45
+    ],
+    [
+     162.27,
+     10.28,
+     575.68
+    ],
+    [
+     160.92,
+     9.92,
+     574.9
+    ],
+    [
+     158.38,
+     9.0,
+     573.45
+    ]
+   ],
+   "apex": [
+    162.27,
+    10.28,
+    575.68
+   ]
+  },
+  {
+   "s_m": 1535.23,
+   "x": 158.34,
+   "z": 582.66,
+   "deficit_svf": 0.0048,
+   "svf_deck": 0.0663,
+   "svf_prepark": 0.0711,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 243.3,
+   "aperture_alt_deg": 18.3,
+   "directionality": 0.15,
+   "rib_height_m": 1.28,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     162.26,
+     9.0,
+     584.88
+    ],
+    [
+     159.7,
+     9.92,
+     583.43
+    ],
+    [
+     158.31,
+     10.28,
+     582.64
+    ],
+    [
+     156.96,
+     9.92,
+     581.88
+    ],
+    [
+     154.43,
+     9.0,
+     580.44
+    ]
+   ],
+   "apex": [
+    158.31,
+    10.28,
+    582.64
+   ]
+  },
+  {
+   "s_m": 1543.27,
+   "x": 154.38,
+   "z": 589.66,
+   "deficit_svf": 0.0042,
+   "svf_deck": 0.0677,
+   "svf_prepark": 0.0719,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 196.1,
+   "aperture_alt_deg": 17.0,
+   "directionality": 0.304,
+   "rib_height_m": 1.27,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     158.3,
+     9.0,
+     591.87
+    ],
+    [
+     155.75,
+     9.92,
+     590.42
+    ],
+    [
+     154.37,
+     10.27,
+     589.62
+    ],
+    [
+     153.01,
+     9.92,
+     588.86
+    ],
+    [
+     150.47,
+     9.0,
+     587.44
+    ]
+   ],
+   "apex": [
+    154.37,
+    10.27,
+    589.62
+   ]
+  },
+  {
+   "s_m": 1551.31,
+   "x": 150.43,
+   "z": 596.65,
+   "deficit_svf": 0.0035,
+   "svf_deck": 0.0678,
+   "svf_prepark": 0.0713,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 185.1,
+   "aperture_alt_deg": 20.1,
+   "directionality": 0.506,
+   "rib_height_m": 1.26,
+   "reach_m": 0.04,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     154.34,
+     9.0,
+     598.87
+    ],
+    [
+     151.79,
+     9.91,
+     597.41
+    ],
+    [
+     150.42,
+     10.26,
+     596.61
+    ],
+    [
+     149.05,
+     9.91,
+     595.86
+    ],
+    [
+     146.51,
+     9.0,
+     594.43
+    ]
+   ],
+   "apex": [
+    150.42,
+    10.26,
+    596.61
+   ]
+  },
+  {
+   "s_m": 1559.35,
+   "x": 146.47,
+   "z": 603.65,
+   "deficit_svf": 0.3403,
+   "svf_deck": 0.18,
+   "svf_prepark": 0.5203,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 36.9,
+   "aperture_alt_deg": 10.9,
+   "directionality": 0.262,
+   "rib_height_m": 6.59,
+   "reach_m": 2.86,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     150.38,
+     9.0,
+     605.86
+    ],
+    [
+     148.52,
+     13.75,
+     605.34
+    ],
+    [
+     148.18,
+     15.59,
+     605.93
+    ],
+    [
+     145.78,
+     13.75,
+     603.79
+    ],
+    [
+     142.55,
+     9.0,
+     601.43
+    ]
+   ],
+   "apex": [
+    148.18,
+    15.59,
+    605.93
+   ]
+  },
+  {
+   "s_m": 1567.38,
+   "x": 142.51,
+   "z": 610.64,
+   "deficit_svf": 0.3549,
+   "svf_deck": 0.2023,
+   "svf_prepark": 0.5572,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 36.9,
+   "aperture_alt_deg": 21.6,
+   "directionality": 0.175,
+   "rib_height_m": 6.65,
+   "reach_m": 2.62,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     146.42,
+     9.0,
+     612.86
+    ],
+    [
+     144.51,
+     13.79,
+     612.26
+    ],
+    [
+     144.08,
+     15.65,
+     612.74
+    ],
+    [
+     141.77,
+     13.79,
+     610.7
+    ],
+    [
+     138.59,
+     9.0,
+     608.43
+    ]
+   ],
+   "apex": [
+    144.08,
+    15.65,
+    612.74
+   ]
+  },
+  {
+   "s_m": 1575.42,
+   "x": 138.55,
+   "z": 617.64,
+   "deficit_svf": 0.3772,
+   "svf_deck": 0.2221,
+   "svf_prepark": 0.5993,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 31.8,
+   "aperture_alt_deg": 52.6,
+   "directionality": 0.107,
+   "rib_height_m": 6.57,
+   "reach_m": 2.37,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     142.47,
+     9.0,
+     619.85
+    ],
+    [
+     140.42,
+     13.73,
+     619.22
+    ],
+    [
+     139.8,
+     15.57,
+     619.65
+    ],
+    [
+     137.68,
+     13.73,
+     617.67
+    ],
+    [
+     134.63,
+     9.0,
+     615.42
+    ]
+   ],
+   "apex": [
+    139.8,
+    15.57,
+    619.65
+   ]
+  },
+  {
+   "s_m": 1583.46,
+   "x": 134.59,
+   "z": 624.63,
+   "deficit_svf": 0.4056,
+   "svf_deck": 0.2438,
+   "svf_prepark": 0.6494,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 1.8,
+   "aperture_alt_deg": 82.2,
+   "directionality": 0.062,
+   "rib_height_m": 6.48,
+   "reach_m": 2.2,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     138.51,
+     9.0,
+     626.85
+    ],
+    [
+     135.99,
+     13.66,
+     626.29
+    ],
+    [
+     134.66,
+     15.48,
+     626.83
+    ],
+    [
+     133.25,
+     13.66,
+     624.74
+    ],
+    [
+     130.67,
+     9.0,
+     622.42
+    ]
+   ],
+   "apex": [
+    134.66,
+    15.48,
+    626.83
+   ]
+  },
+  {
+   "s_m": 1591.5,
+   "x": 130.63,
+   "z": 631.63,
+   "deficit_svf": 0.4339,
+   "svf_deck": 0.272,
+   "svf_prepark": 0.7059,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 313.7,
+   "aperture_alt_deg": 80.8,
+   "directionality": 0.103,
+   "rib_height_m": 6.36,
+   "reach_m": 2.27,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     134.55,
+     9.0,
+     633.84
+    ],
+    [
+     131.35,
+     13.58,
+     633.03
+    ],
+    [
+     128.99,
+     15.36,
+     633.19
+    ],
+    [
+     128.61,
+     13.58,
+     631.48
+    ],
+    [
+     126.72,
+     9.0,
+     629.41
+    ]
+   ],
+   "apex": [
+    128.99,
+    15.36,
+    633.19
+   ]
+  },
+  {
+   "s_m": 1599.53,
+   "x": 126.67,
+   "z": 638.62,
+   "deficit_svf": 0.4335,
+   "svf_deck": 0.3284,
+   "svf_prepark": 0.7619,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 0.0,
+   "aperture_az_deg": 296.0,
+   "aperture_alt_deg": 80.1,
+   "directionality": 0.158,
+   "rib_height_m": 6.12,
+   "reach_m": 2.32,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     130.59,
+     9.0,
+     640.84
+    ],
+    [
+     127.21,
+     13.41,
+     639.81
+    ],
+    [
+     124.59,
+     15.12,
+     639.64
+    ],
+    [
+     124.47,
+     13.41,
+     638.25
+    ],
+    [
+     122.76,
+     9.0,
+     636.41
+    ]
+   ],
+   "apex": [
+    124.59,
+    15.12,
+    639.64
+   ]
+  },
+  {
+   "s_m": 1607.57,
+   "x": 122.72,
+   "z": 645.62,
+   "deficit_svf": 0.3631,
+   "svf_deck": 0.4472,
+   "svf_prepark": 0.8103,
+   "winter_sun_now": 0.33,
+   "winter_sun_prepark": 0.5,
+   "aperture_az_deg": 302.7,
+   "aperture_alt_deg": 83.2,
+   "directionality": 0.242,
+   "rib_height_m": 5.62,
+   "reach_m": 2.3,
+   "recaptured_winter_sun_frac": 0.075,
+   "rib": [
+    [
+     126.63,
+     9.0,
+     647.84
+    ],
+    [
+     123.31,
+     13.05,
+     646.89
+    ],
+    [
+     120.78,
+     14.62,
+     646.86
+    ],
+    [
+     120.57,
+     13.05,
+     645.34
+    ],
+    [
+     118.8,
+     9.0,
+     643.4
+    ]
+   ],
+   "apex": [
+    120.78,
+    14.62,
+    646.86
+   ]
+  },
+  {
+   "s_m": 1615.61,
+   "x": 118.76,
+   "z": 652.62,
+   "deficit_svf": 0.3645,
+   "svf_deck": 0.4774,
+   "svf_prepark": 0.8419,
+   "winter_sun_now": 0.67,
+   "winter_sun_prepark": 1.17,
+   "aperture_az_deg": 291.0,
+   "aperture_alt_deg": 80.8,
+   "directionality": 0.239,
+   "rib_height_m": 5.49,
+   "reach_m": 2.22,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     122.67,
+     9.0,
+     654.83
+    ],
+    [
+     119.3,
+     12.96,
+     653.71
+    ],
+    [
+     116.68,
+     14.49,
+     653.41
+    ],
+    [
+     116.56,
+     12.96,
+     652.16
+    ],
+    [
+     114.84,
+     9.0,
+     650.4
+    ]
+   ],
+   "apex": [
+    116.68,
+    14.49,
+    653.41
+   ]
+  },
+  {
+   "s_m": 1623.65,
+   "x": 114.8,
+   "z": 659.61,
+   "deficit_svf": 0.3792,
+   "svf_deck": 0.4859,
+   "svf_prepark": 0.8651,
+   "winter_sun_now": 0.83,
+   "winter_sun_prepark": 1.83,
+   "aperture_az_deg": 293.4,
+   "aperture_alt_deg": 82.0,
+   "directionality": 0.307,
+   "rib_height_m": 5.46,
+   "reach_m": 2.37,
+   "recaptured_winter_sun_frac": 0.132,
+   "rib": [
+    [
+     118.71,
+     9.0,
+     661.83
+    ],
+    [
+     115.3,
+     12.93,
+     660.76
+    ],
+    [
+     112.62,
+     14.46,
+     660.55
+    ],
+    [
+     112.56,
+     12.93,
+     659.21
+    ],
+    [
+     110.88,
+     9.0,
+     657.39
+    ]
+   ],
+   "apex": [
+    112.62,
+    14.46,
+    660.55
+   ]
+  },
+  {
+   "s_m": 1631.69,
+   "x": 110.84,
+   "z": 666.61,
+   "deficit_svf": 0.3965,
+   "svf_deck": 0.4884,
+   "svf_prepark": 0.8849,
+   "winter_sun_now": 0.83,
+   "winter_sun_prepark": 2.33,
+   "aperture_az_deg": 295.3,
+   "aperture_alt_deg": 82.4,
+   "directionality": 0.354,
+   "rib_height_m": 5.45,
+   "reach_m": 2.48,
+   "recaptured_winter_sun_frac": 0.113,
+   "rib": [
+    [
+     114.76,
+     9.0,
+     668.82
+    ],
+    [
+     111.31,
+     12.92,
+     667.81
+    ],
+    [
+     108.6,
+     14.45,
+     667.66
+    ],
+    [
+     108.57,
+     12.92,
+     666.25
+    ],
+    [
+     106.92,
+     9.0,
+     664.39
+    ]
+   ],
+   "apex": [
+    108.6,
+    14.45,
+    667.66
+   ]
+  },
+  {
+   "s_m": 1639.72,
+   "x": 106.88,
+   "z": 673.6,
+   "deficit_svf": 0.3895,
+   "svf_deck": 0.5134,
+   "svf_prepark": 0.9029,
+   "winter_sun_now": 0.83,
+   "winter_sun_prepark": 2.67,
+   "aperture_az_deg": 301.1,
+   "aperture_alt_deg": 83.9,
+   "directionality": 0.335,
+   "rib_height_m": 5.34,
+   "reach_m": 2.37,
+   "recaptured_winter_sun_frac": 0.075,
+   "rib": [
+    [
+     110.8,
+     9.0,
+     675.82
+    ],
+    [
+     107.44,
+     12.85,
+     674.87
+    ],
+    [
+     104.85,
+     14.34,
+     674.83
+    ],
+    [
+     104.7,
+     12.85,
+     673.32
+    ],
+    [
+     102.96,
+     9.0,
+     671.39
+    ]
+   ],
+   "apex": [
+    104.85,
+    14.34,
+    674.83
+   ]
+  },
+  {
+   "s_m": 1647.76,
+   "x": 102.92,
+   "z": 680.6,
+   "deficit_svf": 0.3921,
+   "svf_deck": 0.5241,
+   "svf_prepark": 0.9162,
+   "winter_sun_now": 0.5,
+   "winter_sun_prepark": 3.33,
+   "aperture_az_deg": 305.3,
+   "aperture_alt_deg": 85.4,
+   "directionality": 0.364,
+   "rib_height_m": 5.3,
+   "reach_m": 2.41,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     106.84,
+     9.0,
+     682.81
+    ],
+    [
+     103.51,
+     12.82,
+     681.93
+    ],
+    [
+     100.95,
+     14.3,
+     681.99
+    ],
+    [
+     100.76,
+     12.82,
+     680.38
+    ],
+    [
+     99.01,
+     9.0,
+     678.38
+    ]
+   ],
+   "apex": [
+    100.95,
+    14.3,
+    681.99
+   ]
+  },
+  {
+   "s_m": 1655.8,
+   "x": 98.96,
+   "z": 687.59,
+   "deficit_svf": 0.395,
+   "svf_deck": 0.5322,
+   "svf_prepark": 0.9272,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 3.83,
+   "aperture_az_deg": 304.2,
+   "aperture_alt_deg": 86.6,
+   "directionality": 0.382,
+   "rib_height_m": 5.26,
+   "reach_m": 2.44,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     102.88,
+     9.0,
+     689.81
+    ],
+    [
+     99.53,
+     12.79,
+     688.92
+    ],
+    [
+     96.95,
+     14.26,
+     688.96
+    ],
+    [
+     96.79,
+     12.79,
+     687.36
+    ],
+    [
+     95.05,
+     9.0,
+     685.38
+    ]
+   ],
+   "apex": [
+    96.95,
+    14.26,
+    688.96
+   ]
+  },
+  {
+   "s_m": 1663.84,
+   "x": 95.01,
+   "z": 694.59,
+   "deficit_svf": 0.3898,
+   "svf_deck": 0.5481,
+   "svf_prepark": 0.9379,
+   "winter_sun_now": 0.0,
+   "winter_sun_prepark": 4.0,
+   "aperture_az_deg": 303.8,
+   "aperture_alt_deg": 87.0,
+   "directionality": 0.378,
+   "rib_height_m": 5.2,
+   "reach_m": 2.39,
+   "recaptured_winter_sun_frac": 0.0,
+   "rib": [
+    [
+     98.92,
+     9.0,
+     696.8
+    ],
+    [
+     95.58,
+     12.74,
+     695.89
+    ],
+    [
+     93.02,
+     14.2,
+     695.92
+    ],
+    [
+     92.84,
+     12.74,
+     694.34
+    ],
+    [
+     91.09,
+     9.0,
+     692.37
+    ]
+   ],
+   "apex": [
+    93.02,
+    14.2,
+    695.92
+   ]
+  },
+  {
+   "s_m": 1671.88,
+   "x": 91.05,
+   "z": 701.58,
+   "deficit_svf": 0.3812,
+   "svf_deck": 0.5638,
+   "svf_prepark": 0.945,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 4.33,
+   "aperture_az_deg": 299.4,
+   "aperture_alt_deg": 87.0,
+   "directionality": 0.375,
+   "rib_height_m": 5.13,
+   "reach_m": 2.34,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     94.96,
+     9.0,
+     703.8
+    ],
+    [
+     91.6,
+     12.7,
+     702.82
+    ],
+    [
+     89.01,
+     14.13,
+     702.73
+    ],
+    [
+     88.86,
+     12.7,
+     701.27
+    ],
+    [
+     87.13,
+     9.0,
+     699.37
+    ]
+   ],
+   "apex": [
+    89.01,
+    14.13,
+    702.73
+   ]
+  },
+  {
+   "s_m": 1679.91,
+   "x": 87.09,
+   "z": 708.58,
+   "deficit_svf": 0.3703,
+   "svf_deck": 0.5822,
+   "svf_prepark": 0.9525,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 4.5,
+   "aperture_az_deg": 297.4,
+   "aperture_alt_deg": 87.0,
+   "directionality": 0.363,
+   "rib_height_m": 5.05,
+   "reach_m": 2.27,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     91.0,
+     9.0,
+     710.8
+    ],
+    [
+     87.65,
+     12.64,
+     709.77
+    ],
+    [
+     85.07,
+     14.05,
+     709.62
+    ],
+    [
+     84.91,
+     12.64,
+     708.22
+    ],
+    [
+     83.17,
+     9.0,
+     706.36
+    ]
+   ],
+   "apex": [
+    85.07,
+    14.05,
+    709.62
+   ]
+  },
+  {
+   "s_m": 1687.95,
+   "x": 83.13,
+   "z": 715.57,
+   "deficit_svf": 0.3593,
+   "svf_deck": 0.5993,
+   "svf_prepark": 0.9586,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 4.83,
+   "aperture_az_deg": 294.4,
+   "aperture_alt_deg": 87.4,
+   "directionality": 0.357,
+   "rib_height_m": 4.98,
+   "reach_m": 2.21,
+   "recaptured_winter_sun_frac": 0.038,
+   "rib": [
+    [
+     87.05,
+     9.0,
+     717.79
+    ],
+    [
+     83.69,
+     12.59,
+     716.72
+    ],
+    [
+     81.11,
+     13.98,
+     716.49
+    ],
+    [
+     80.95,
+     12.59,
+     715.17
+    ],
+    [
+     79.21,
+     9.0,
+     713.36
+    ]
+   ],
+   "apex": [
+    81.11,
+    13.98,
+    716.49
+   ]
+  },
+  {
+   "s_m": 1695.99,
+   "x": 79.17,
+   "z": 722.57,
+   "deficit_svf": 0.348,
+   "svf_deck": 0.6149,
+   "svf_prepark": 0.9629,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 5.17,
+   "aperture_az_deg": 293.8,
+   "aperture_alt_deg": 87.7,
+   "directionality": 0.363,
+   "rib_height_m": 4.9,
+   "reach_m": 2.17,
+   "recaptured_winter_sun_frac": 0.038,
+   "rib": [
+    [
+     83.09,
+     9.0,
+     724.79
+    ],
+    [
+     79.75,
+     12.53,
+     723.7
+    ],
+    [
+     77.18,
+     13.9,
+     723.45
+    ],
+    [
+     77.0,
+     12.53,
+     722.15
+    ],
+    [
+     75.25,
+     9.0,
+     720.35
+    ]
+   ],
+   "apex": [
+    77.18,
+    13.9,
+    723.45
+   ]
+  },
+  {
+   "s_m": 1704.03,
+   "x": 75.21,
+   "z": 729.57,
+   "deficit_svf": 0.3346,
+   "svf_deck": 0.6325,
+   "svf_prepark": 0.9671,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 5.33,
+   "aperture_az_deg": 292.1,
+   "aperture_alt_deg": 88.4,
+   "directionality": 0.362,
+   "rib_height_m": 4.68,
+   "reach_m": 2.05,
+   "recaptured_winter_sun_frac": 0.038,
+   "rib": [
+    [
+     79.13,
+     9.0,
+     731.78
+    ],
+    [
+     75.82,
+     12.37,
+     730.65
+    ],
+    [
+     73.32,
+     13.68,
+     730.33
+    ],
+    [
+     73.08,
+     12.37,
+     729.1
+    ],
+    [
+     71.3,
+     9.0,
+     727.35
+    ]
+   ],
+   "apex": [
+    73.32,
+    13.68,
+    730.33
+   ]
+  },
+  {
+   "s_m": 1712.06,
+   "x": 71.25,
+   "z": 736.56,
+   "deficit_svf": 0.3204,
+   "svf_deck": 0.6499,
+   "svf_prepark": 0.9703,
+   "winter_sun_now": 0.33,
+   "winter_sun_prepark": 5.67,
+   "aperture_az_deg": 290.6,
+   "aperture_alt_deg": 88.4,
+   "directionality": 0.355,
+   "rib_height_m": 4.47,
+   "reach_m": 1.91,
+   "recaptured_winter_sun_frac": 0.038,
+   "rib": [
+    [
+     75.17,
+     9.0,
+     738.78
+    ],
+    [
+     71.91,
+     12.22,
+     737.61
+    ],
+    [
+     69.47,
+     13.47,
+     737.23
+    ],
+    [
+     69.17,
+     12.22,
+     736.05
+    ],
+    [
+     67.34,
+     9.0,
+     734.34
+    ]
+   ],
+   "apex": [
+    69.47,
+    13.47,
+    737.23
+   ]
+  },
+  {
+   "s_m": 1720.1,
+   "x": 67.3,
+   "z": 743.56,
+   "deficit_svf": 0.3067,
+   "svf_deck": 0.6664,
+   "svf_prepark": 0.9731,
+   "winter_sun_now": 0.17,
+   "winter_sun_prepark": 5.67,
+   "aperture_az_deg": 288.0,
+   "aperture_alt_deg": 88.3,
+   "directionality": 0.347,
+   "rib_height_m": 4.27,
+   "reach_m": 1.78,
+   "recaptured_winter_sun_frac": 0.019,
+   "rib": [
+    [
+     71.21,
+     9.0,
+     745.77
+    ],
+    [
+     67.99,
+     12.07,
+     744.55
+    ],
+    [
+     65.6,
+     13.27,
+     744.11
+    ],
+    [
+     65.25,
+     12.07,
+     743.0
+    ],
+    [
+     63.38,
+     9.0,
+     741.34
+    ]
+   ],
+   "apex": [
+    65.6,
+    13.27,
+    744.11
+   ]
+  },
+  {
+   "s_m": 1728.14,
+   "x": 63.34,
+   "z": 750.55,
+   "deficit_svf": 0.2928,
+   "svf_deck": 0.6833,
+   "svf_prepark": 0.9761,
+   "winter_sun_now": 0.5,
+   "winter_sun_prepark": 6.0,
+   "aperture_az_deg": 286.4,
+   "aperture_alt_deg": 89.0,
+   "directionality": 0.327,
+   "rib_height_m": 4.07,
+   "reach_m": 1.63,
+   "recaptured_winter_sun_frac": 0.075,
+   "rib": [
+    [
+     67.25,
+     9.0,
+     752.77
+    ],
+    [
+     64.08,
+     11.93,
+     751.51
+    ],
+    [
+     61.77,
+     13.07,
+     751.01
+    ],
+    [
+     61.34,
+     11.93,
+     749.96
+    ],
+    [
+     59.42,
+     9.0,
+     748.34
+    ]
+   ],
+   "apex": [
+    61.77,
+    13.07,
+    751.01
+   ]
+  },
+  {
+   "s_m": 1736.18,
+   "x": 59.38,
+   "z": 757.55,
+   "deficit_svf": 0.2759,
+   "svf_deck": 0.7026,
+   "svf_prepark": 0.9785,
+   "winter_sun_now": 0.67,
+   "winter_sun_prepark": 6.33,
+   "aperture_az_deg": 284.8,
+   "aperture_alt_deg": 89.1,
+   "directionality": 0.318,
+   "rib_height_m": 3.84,
+   "reach_m": 1.49,
+   "recaptured_winter_sun_frac": 0.075,
+   "rib": [
+    [
+     63.29,
+     9.0,
+     759.76
+    ],
+    [
+     60.17,
+     11.76,
+     758.48
+    ],
+    [
+     57.94,
+     12.84,
+     757.93
+    ],
+    [
+     57.43,
+     11.76,
+     756.92
+    ],
+    [
+     55.46,
+     9.0,
+     755.33
+    ]
+   ],
+   "apex": [
+    57.94,
+    12.84,
+    757.93
+   ]
+  },
+  {
+   "s_m": 1744.22,
+   "x": 55.42,
+   "z": 764.54,
+   "deficit_svf": 0.2629,
+   "svf_deck": 0.7177,
+   "svf_prepark": 0.9806,
+   "winter_sun_now": 0.67,
+   "winter_sun_prepark": 6.5,
+   "aperture_az_deg": 282.2,
+   "aperture_alt_deg": 89.1,
+   "directionality": 0.303,
+   "rib_height_m": 3.67,
+   "reach_m": 1.37,
+   "recaptured_winter_sun_frac": 0.113,
+   "rib": [
+    [
+     59.34,
+     9.0,
+     766.76
+    ],
+    [
+     56.26,
+     11.64,
+     765.43
+    ],
+    [
+     54.08,
+     12.67,
+     764.83
+    ],
+    [
+     53.51,
+     11.64,
+     763.88
+    ],
+    [
+     51.5,
+     9.0,
+     762.33
+    ]
+   ],
+   "apex": [
+    54.08,
+    12.67,
+    764.83
+   ]
+  },
+  {
+   "s_m": 1752.25,
+   "x": 51.46,
+   "z": 771.54,
+   "deficit_svf": 0.2481,
+   "svf_deck": 0.7345,
+   "svf_prepark": 0.9826,
+   "winter_sun_now": 1.17,
+   "winter_sun_prepark": 7.0,
+   "aperture_az_deg": 280.4,
+   "aperture_alt_deg": 89.4,
+   "directionality": 0.286,
+   "rib_height_m": 3.48,
+   "reach_m": 1.24,
+   "recaptured_winter_sun_frac": 0.151,
+   "rib": [
+    [
+     55.38,
+     9.0,
+     773.75
+    ],
+    [
+     52.34,
+     11.5,
+     772.4
+    ],
+    [
+     50.24,
+     12.48,
+     771.76
+    ],
+    [
+     49.6,
+     11.5,
+     770.85
+    ],
+    [
+     47.54,
+     9.0,
+     769.32
+    ]
+   ],
+   "apex": [
+    50.24,
+    12.48,
+    771.76
+   ]
+  },
+  {
+   "s_m": 1760.29,
+   "x": 47.5,
+   "z": 778.53,
+   "deficit_svf": 0.236,
+   "svf_deck": 0.7484,
+   "svf_prepark": 0.9844,
+   "winter_sun_now": 1.67,
+   "winter_sun_prepark": 7.33,
+   "aperture_az_deg": 278.3,
+   "aperture_alt_deg": 89.4,
+   "directionality": 0.274,
+   "rib_height_m": 3.33,
+   "reach_m": 1.14,
+   "recaptured_winter_sun_frac": 0.226,
+   "rib": [
+    [
+     51.42,
+     9.0,
+     780.75
+    ],
+    [
+     48.42,
+     11.4,
+     779.38
+    ],
+    [
+     46.37,
+     12.33,
+     778.7
+    ],
+    [
+     45.68,
+     11.4,
+     777.82
+    ],
+    [
+     43.59,
+     9.0,
+     776.32
+    ]
+   ],
+   "apex": [
+    46.37,
+    12.33,
+    778.7
+   ]
+  },
+  {
+   "s_m": 1768.33,
+   "x": 43.54,
+   "z": 785.53,
+   "deficit_svf": 0.2242,
+   "svf_deck": 0.763,
+   "svf_prepark": 0.9872,
+   "winter_sun_now": 2.0,
+   "winter_sun_prepark": 7.33,
+   "aperture_az_deg": 276.5,
+   "aperture_alt_deg": 89.5,
+   "directionality": 0.266,
+   "rib_height_m": 3.22,
+   "reach_m": 1.08,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     47.46,
+     9.0,
+     787.75
+    ],
+    [
+     44.49,
+     11.32,
+     786.35
+    ],
+    [
+     42.48,
+     12.22,
+     785.65
+    ],
+    [
+     41.75,
+     11.32,
+     784.8
+    ],
+    [
+     39.63,
+     9.0,
+     783.31
+    ]
+   ],
+   "apex": [
+    42.48,
+    12.22,
+    785.65
+   ]
+  },
+  {
+   "s_m": 1776.37,
+   "x": 39.59,
+   "z": 792.53,
+   "deficit_svf": 0.2137,
+   "svf_deck": 0.7761,
+   "svf_prepark": 0.9898,
+   "winter_sun_now": 2.17,
+   "winter_sun_prepark": 7.5,
+   "aperture_az_deg": 273.9,
+   "aperture_alt_deg": 89.4,
+   "directionality": 0.255,
+   "rib_height_m": 3.12,
+   "reach_m": 1.01,
+   "recaptured_winter_sun_frac": 0.245,
+   "rib": [
+    [
+     43.5,
+     9.0,
+     794.74
+    ],
+    [
+     40.55,
+     11.25,
+     793.33
+    ],
+    [
+     38.58,
+     12.12,
+     792.59
+    ],
+    [
+     37.81,
+     11.25,
+     791.78
+    ],
+    [
+     35.67,
+     9.0,
+     790.31
+    ]
+   ],
+   "apex": [
+    38.58,
+    12.12,
+    792.59
+   ]
+  },
+  {
+   "s_m": 1784.41,
+   "x": 35.63,
+   "z": 799.52,
+   "deficit_svf": 0.2004,
+   "svf_deck": 0.7906,
+   "svf_prepark": 0.991,
+   "winter_sun_now": 2.33,
+   "winter_sun_prepark": 7.5,
+   "aperture_az_deg": 269.9,
+   "aperture_alt_deg": 89.3,
+   "directionality": 0.247,
+   "rib_height_m": 3.0,
+   "reach_m": 0.94,
+   "recaptured_winter_sun_frac": 0.302,
+   "rib": [
+    [
+     39.54,
+     9.0,
+     801.74
+    ],
+    [
+     36.62,
+     11.16,
+     800.3
+    ],
+    [
+     34.69,
+     12.0,
+     799.52
+    ],
+    [
+     33.88,
+     11.16,
+     798.74
+    ],
+    [
+     31.71,
+     9.0,
+     797.3
+    ]
+   ],
+   "apex": [
+    34.69,
+    12.0,
+    799.52
+   ]
+  },
+  {
+   "s_m": 1792.44,
+   "x": 31.67,
+   "z": 806.52,
+   "deficit_svf": 0.19,
+   "svf_deck": 0.8015,
+   "svf_prepark": 0.9915,
+   "winter_sun_now": 2.67,
+   "winter_sun_prepark": 7.67,
+   "aperture_az_deg": 268.1,
+   "aperture_alt_deg": 89.4,
+   "directionality": 0.239,
+   "rib_height_m": 2.91,
+   "reach_m": 0.89,
+   "recaptured_winter_sun_frac": 0.302,
+   "rib": [
+    [
+     35.58,
+     9.0,
+     808.73
+    ],
+    [
+     32.69,
+     11.1,
+     807.28
+    ],
+    [
+     30.78,
+     11.91,
+     806.49
+    ],
+    [
+     29.94,
+     11.1,
+     805.73
+    ],
+    [
+     27.75,
+     9.0,
+     804.3
+    ]
+   ],
+   "apex": [
+    30.78,
+    11.91,
+    806.49
+   ]
+  },
+  {
+   "s_m": 1800.48,
+   "x": 27.71,
+   "z": 813.51,
+   "deficit_svf": 0.1782,
+   "svf_deck": 0.8143,
+   "svf_prepark": 0.9925,
+   "winter_sun_now": 2.83,
+   "winter_sun_prepark": 7.67,
+   "aperture_az_deg": 264.5,
+   "aperture_alt_deg": 89.3,
+   "directionality": 0.221,
+   "rib_height_m": 2.8,
+   "reach_m": 0.81,
+   "recaptured_winter_sun_frac": 0.321,
+   "rib": [
+    [
+     31.63,
+     9.0,
+     815.73
+    ],
+    [
+     28.76,
+     11.02,
+     814.26
+    ],
+    [
+     26.9,
+     11.8,
+     813.43
+    ],
+    [
+     26.02,
+     11.02,
+     812.7
+    ],
+    [
+     23.79,
+     9.0,
+     811.3
+    ]
+   ],
+   "apex": [
+    26.9,
+    11.8,
+    813.43
+   ]
+  },
+  {
+   "s_m": 1808.52,
+   "x": 23.75,
+   "z": 820.51,
+   "deficit_svf": 0.1671,
+   "svf_deck": 0.8258,
+   "svf_prepark": 0.9929,
+   "winter_sun_now": 2.83,
+   "winter_sun_prepark": 7.67,
+   "aperture_az_deg": 261.2,
+   "aperture_alt_deg": 88.9,
+   "directionality": 0.214,
+   "rib_height_m": 2.7,
+   "reach_m": 0.76,
+   "recaptured_winter_sun_frac": 0.321,
+   "rib": [
+    [
+     27.67,
+     9.0,
+     822.72
+    ],
+    [
+     24.82,
+     10.95,
+     821.24
+    ],
+    [
+     23.0,
+     11.7,
+     820.39
+    ],
+    [
+     22.08,
+     10.95,
+     819.69
+    ],
+    [
+     19.83,
+     9.0,
+     818.29
+    ]
+   ],
+   "apex": [
+    23.0,
+    11.7,
+    820.39
+   ]
+  },
+  {
+   "s_m": 1816.56,
+   "x": 19.79,
+   "z": 827.5,
+   "deficit_svf": 0.1581,
+   "svf_deck": 0.8353,
+   "svf_prepark": 0.9934,
+   "winter_sun_now": 3.17,
+   "winter_sun_prepark": 7.83,
+   "aperture_az_deg": 259.9,
+   "aperture_alt_deg": 88.9,
+   "directionality": 0.209,
+   "rib_height_m": 2.62,
+   "reach_m": 0.71,
+   "recaptured_winter_sun_frac": 0.358,
+   "rib": [
+    [
+     23.71,
+     9.0,
+     829.72
+    ],
+    [
+     20.88,
+     10.89,
+     828.23
+    ],
+    [
+     19.09,
+     11.62,
+     827.38
+    ],
+    [
+     18.14,
+     10.89,
+     826.68
+    ],
+    [
+     15.88,
+     9.0,
+     825.29
+    ]
+   ],
+   "apex": [
+    19.09,
+    11.62,
+    827.38
+   ]
+  },
+  {
+   "s_m": 1824.6,
+   "x": 15.83,
+   "z": 834.5,
+   "deficit_svf": 0.148,
+   "svf_deck": 0.8463,
+   "svf_prepark": 0.9943,
+   "winter_sun_now": 3.33,
+   "winter_sun_prepark": 7.83,
+   "aperture_az_deg": 257.6,
+   "aperture_alt_deg": 88.9,
+   "directionality": 0.204,
+   "rib_height_m": 2.53,
+   "reach_m": 0.66,
+   "recaptured_winter_sun_frac": 0.415,
+   "rib": [
+    [
+     19.75,
+     9.0,
+     836.71
+    ],
+    [
+     16.95,
+     10.82,
+     835.22
+    ],
+    [
+     15.19,
+     11.53,
+     834.36
+    ],
+    [
+     14.2,
+     10.82,
+     833.67
+    ],
+    [
+     11.92,
+     9.0,
+     832.28
+    ]
+   ],
+   "apex": [
+    15.19,
+    11.53,
+    834.36
+   ]
+  },
+  {
+   "s_m": 1832.63,
+   "x": 11.88,
+   "z": 841.49,
+   "deficit_svf": 0.1416,
+   "svf_deck": 0.8531,
+   "svf_prepark": 0.9947,
+   "winter_sun_now": 3.83,
+   "winter_sun_prepark": 8.67,
+   "aperture_az_deg": 255.3,
+   "aperture_alt_deg": 88.6,
+   "directionality": 0.201,
+   "rib_height_m": 2.47,
+   "reach_m": 0.63,
+   "recaptured_winter_sun_frac": 0.453,
+   "rib": [
+    [
+     15.79,
+     9.0,
+     843.71
+    ],
+    [
+     13.0,
+     10.78,
+     842.21
+    ],
+    [
+     11.26,
+     11.47,
+     841.33
+    ],
+    [
+     10.26,
+     10.78,
+     840.65
+    ],
+    [
+     7.96,
+     9.0,
+     839.28
+    ]
+   ],
+   "apex": [
+    11.26,
+    11.47,
+    841.33
+   ]
+  },
+  {
+   "s_m": 1840.67,
+   "x": 7.92,
+   "z": 848.49,
+   "deficit_svf": 0.133,
+   "svf_deck": 0.862,
+   "svf_prepark": 0.995,
+   "winter_sun_now": 4.17,
+   "winter_sun_prepark": 8.83,
+   "aperture_az_deg": 251.7,
+   "aperture_alt_deg": 88.1,
+   "directionality": 0.193,
+   "rib_height_m": 2.4,
+   "reach_m": 0.59,
+   "recaptured_winter_sun_frac": 0.472,
+   "rib": [
+    [
+     11.83,
+     9.0,
+     850.71
+    ],
+    [
+     9.06,
+     10.73,
+     849.19
+    ],
+    [
+     7.36,
+     11.4,
+     848.3
+    ],
+    [
+     6.32,
+     10.73,
+     847.64
+    ],
+    [
+     4.0,
+     9.0,
+     846.27
+    ]
+   ],
+   "apex": [
+    7.36,
+    11.4,
+    848.3
+   ]
+  },
+  {
+   "s_m": 1848.71,
+   "x": 3.96,
+   "z": 855.48,
+   "deficit_svf": 0.124,
+   "svf_deck": 0.8715,
+   "svf_prepark": 0.9955,
+   "winter_sun_now": 4.33,
+   "winter_sun_prepark": 8.83,
+   "aperture_az_deg": 247.8,
+   "aperture_alt_deg": 87.7,
+   "directionality": 0.185,
+   "rib_height_m": 2.32,
+   "reach_m": 0.54,
+   "recaptured_winter_sun_frac": 0.491,
+   "rib": [
+    [
+     7.87,
+     9.0,
+     857.7
+    ],
+    [
+     5.13,
+     10.67,
+     856.18
+    ],
+    [
+     3.46,
+     11.32,
+     855.28
+    ],
+    [
+     2.39,
+     10.67,
+     854.63
+    ],
+    [
+     0.04,
+     9.0,
+     853.27
+    ]
+   ],
+   "apex": [
+    3.46,
+    11.32,
+    855.28
+   ]
+  },
+  {
+   "s_m": 1856.75,
+   "x": 0.0,
+   "z": 862.48,
+   "deficit_svf": 0.1132,
+   "svf_deck": 0.8826,
+   "svf_prepark": 0.9958,
+   "winter_sun_now": 4.17,
+   "winter_sun_prepark": 8.83,
+   "aperture_az_deg": 242.2,
+   "aperture_alt_deg": 87.3,
+   "directionality": 0.175,
+   "rib_height_m": 2.22,
+   "reach_m": 0.49,
+   "recaptured_winter_sun_frac": 0.491,
+   "rib": [
+    [
+     3.92,
+     9.0,
+     864.7
+    ],
+    [
+     1.2,
+     10.6,
+     863.16
+    ],
+    [
+     -0.43,
+     11.22,
+     862.25
+    ],
+    [
+     -1.54,
+     10.6,
+     861.61
+    ],
+    [
+     -3.92,
+     9.0,
+     860.26
+    ]
+   ],
+   "apex": [
+    -0.43,
+    11.22,
+    862.25
+   ]
+  }
+ ]
+}

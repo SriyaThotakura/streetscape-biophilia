@@ -1,0 +1,156 @@
+{
+ "caveat": "street-level context exposure, not on-deck view",
+ "note": "overlay panels are excerpts of notebook-saved boards, not regenerated segmentation",
+ "points": [
+  {
+   "id": 8,
+   "s_m": 129.26,
+   "bin": 3,
+   "stretch": "Gansevoort St",
+   "frame": "frame_8.jpg",
+   "overlay": "overlay_8.jpg",
+   "overlay_source": "expanded_audit_grid.png",
+   "metrics": {
+    "gvi": 0.060599999999999994,
+    "sky": 0.2165,
+    "public_realm": 0.060626983642578125,
+    "human_presence": 0.008602142333984375,
+    "hardness": 0.30879999999999996,
+    "enclosure_clamped": 0.0286,
+    "typology": "open_plaza"
+   }
+  },
+  {
+   "id": 17,
+   "s_m": 339.9,
+   "bin": 8,
+   "stretch": "14th St",
+   "frame": "frame_17.jpg",
+   "overlay": "overlay_17.jpg",
+   "overlay_source": "expanded_audit_grid.png",
+   "metrics": {
+    "gvi": 0.0,
+    "sky": 0.0,
+    "public_realm": 0.11404037475585938,
+    "human_presence": 0.06731414794921875,
+    "hardness": 0.6724,
+    "enclosure_clamped": 1.0,
+    "typology": "canyon"
+   }
+  },
+  {
+   "id": 23,
+   "s_m": 481.7,
+   "bin": 12,
+   "stretch": "16th St",
+   "frame": "frame_23.jpg",
+   "overlay": "overlay_23.jpg",
+   "overlay_source": "expanded_audit_grid.png",
+   "metrics": {
+    "gvi": 0.4913,
+    "sky": 0.002,
+    "public_realm": 0.830834706624349,
+    "human_presence": 0.0323638916015625,
+    "hardness": 0.11789999999999999,
+    "enclosure_clamped": 1.0,
+    "typology": "canyon"
+   }
+  },
+  {
+   "id": 32,
+   "s_m": 694.64,
+   "bin": 17,
+   "stretch": "20th St",
+   "frame": "frame_32.jpg",
+   "overlay": "overlay_32.jpg",
+   "overlay_source": "expanded_audit_grid.png",
+   "metrics": {
+    "gvi": 0.009399999999999999,
+    "sky": 0.2396,
+    "public_realm": 0.009439468383789062,
+    "human_presence": 0.00579071044921875,
+    "hardness": 0.298,
+    "enclosure_clamped": 0.0248,
+    "typology": "open_plaza"
+   }
+  },
+  {
+   "id": 42,
+   "s_m": 931.32,
+   "bin": 24,
+   "stretch": "23rd St",
+   "frame": "frame_42.jpg",
+   "overlay": "overlay_42.jpg",
+   "overlay_source": "expanded_audit_grid.png",
+   "metrics": {
+    "gvi": 0.040999999999999995,
+    "sky": 0.0,
+    "public_realm": 0.042027791341145836,
+    "human_presence": 0.00832366943359375,
+    "hardness": 0.5173,
+    "enclosure_clamped": 1.0,
+    "typology": "canyon"
+   }
+  },
+  {
+   "id": 45,
+   "s_m": 1002.74,
+   "bin": 25,
+   "stretch": "23rd St",
+   "frame": "frame_45.jpg",
+   "overlay": "overlay_45.jpg",
+   "overlay_source": "digital_eye_analysis_grid.png",
+   "metrics": {
+    "gvi": 0.24079259236653647,
+    "sky": 0.05185572306315104,
+    "public_realm": 0.24079259236653647,
+    "human_presence": 0.25313568115234375,
+    "hardness": null,
+    "enclosure_clamped": null,
+    "typology": null
+   }
+  }
+ ],
+ "access": [
+  {
+   "name": "Gansevoort St",
+   "s_m": 0.0
+  },
+  {
+   "name": "14th St",
+   "s_m": 261.1
+  },
+  {
+   "name": "16th St",
+   "s_m": 424.0
+  },
+  {
+   "name": "18th St",
+   "s_m": 576.3
+  },
+  {
+   "name": "20th St",
+   "s_m": 728.7
+  },
+  {
+   "name": "23rd St",
+   "s_m": 952.1
+  },
+  {
+   "name": "26th St",
+   "s_m": 1144.6
+  },
+  {
+   "name": "28th St",
+   "s_m": 1300.0
+  },
+  {
+   "name": "30th St",
+   "s_m": 1462.9
+  },
+  {
+   "name": "34th St-Hudson Yards",
+   "s_m": 1856.7
+  }
+ ]
+}

@@ -1,0 +1,292 @@
+{
+ "_meta": {
+  "file": "houdini/sources.json",
+  "purpose": "Caption keys for the POPULATION plates — the images that describe the whole 232-rib family rather than one station. Station plates get their numbers from houdini/cameras.json; these get theirs from here. Same contract either way: the render plan holds the caption template and the key, this file holds the (file, path) that resolves it, and the number itself exists in exactly one place — the engine output.",
+  "resolved_by": "python houdini/pick_cameras.py --captions",
+  "why_this_exists": "87.5% coverage, T01 = 173 of 232, r 0.989 and the sized-tonnage pair were all transcribed into ANSWERING_LINE_RENDER_PLAN.md by hand. EVERY ONE of those numbers has since changed — the 2026-08-15 footprint re-fetch moved coverage to 50.9%, T01 to 31.5%, r to 0.949 and the tonnage to 83.2 t / 188.6 t — and the render plan needed no edit, because it holds keys rather than values. That is the drift this indirection removes. Nothing here stores a value.",
+  "paths": "dotted, with integer segments indexing into lists (e.g. `types.0.count`). Resolved against the named file at emit time.",
+  "null_rule": "A key whose path does not resolve, or resolves to null, is SUPPRESSED — `--captions` prints 'DO NOT PRINT ON THIS PLATE' and the reason instead of a value. Null, never 0.",
+  "caveat_rule": "A key may name caveats by id. Every caveat listed on a key that a plate prints is emitted with that plate, exactly as the station plates emit the recapture caveats. Caveats are written once, here, and never retyped.",
+  "nonsignificance_rule": "The caveat id 'recapture_nonsignificance' is now a MISNOMER, kept only so existing references stay valid: as of 2026-08-16 both recapture comparisons ARE significant. Its text carries the current, correct pairing rule instead — field-vs-(b) and field-vs-(a) point opposite ways and neither may be quoted alone. Every key carrying the tonnage comparison carries it, because the sized-steel ratio only means anything alongside what it was traded against.",
+  "recapture_is_not_keyed_here": "Deliberate. Recapture belongs to a STATION (houdini/cameras.json -> stations[].numbers.recaptured_winter_sun_frac, which carries its own three travelling caveats) or to the portfolio-level row in Projects/README.md §5, which stays the authority for the three-canopy comparison and its instrument names. `recapture_instrument` and `sensor_apex` below are therefore defined but attached to no key here — they are reserved so that a future population key quoting recapture picks them up rather than reinventing the wording.",
+  "reduce_ops": "A key may add `reduce` with a `[*]` wildcard path to aggregate over an array: min, max, sum, mean, count, count_zero, count_nonzero, span. This is how the build-constants block gets realised extremes (e.g. the tallest rib actually generated) without anyone typing them, and without storing a derived value anywhere.",
+  "build_constants": "`python houdini/pick_cameras.py --build-constants` resolves every constant blender/BLENDER_BUILD_STEPS.md needs. That document holds key references only. Camera values come from cameras.json, population figures from the keys below, and the geometric quantities (scene extent, ortho scale, the shadow reference tower, camera A's nearest neighbour) are derived at emit time from the same data the engines read."
+ },
+ "caveats": {
+  "recapture_nonsignificance": "Both recapture comparisons ARE significant at n = 159 and they point OPPOSITE ways: field-vs-(b) +1.18 pts [+0.26, +2.30] — the shaping beats the same steel spread flat — and field-vs-(a) -1.56 pts [-3.08, -0.03] — the uniform 7 m canopy recovers more, on 2.27x the steel. NEITHER SENTENCE MAY TRAVEL WITHOUT THE OTHER. The significance arrived with the sample (n 56 -> 159 after the re-fetch), not with a better design, and does not survive a 2005 pre-park baseline.",
+  "recapture_instrument": "Name the instrument. The independent Ladybug re-measure puts the field-driven enclosed-station mean at 17.39% against the hand-rolled 18.56% (data/envelope_validation.json).",
+  "sensor_apex": "The recapture sensor is the rib apex, 1.20-7.23 m above the deck — sun reaching the structure, not sun reaching a person. Deck-level recapture is unmeasured.",
+  "tonnage_is_sized_not_assumed": "Both tonnages come from the same direct-stiffness pass, section ladder and load combinations (data/structure.json, data/structure_counterfactual.json), which is what makes the ratio like-for-like. Retired and dead: the assumed-24.0 kg/m pair (57.8/115.3 -> 2.00x) AND the pre-re-fetch sizing (63.8/188.6 -> 2.96x). The current figures are 83.2 t / 188.6 t / 2.27x.",
+  "n_types_chosen": "n_types = 10 is a CHOSEN parameter (KMeans on [height, reach], seed 42), not an optimum. The standardization curve is the honest defence: nearly flat past ten.",
+  "t01_dominance": "The dominant type covers only 31.5% of the family and 114 of 232 ribs are bespoke. Draw the array at true counts. This is a finding about the SITE, not a failure of the kit: a canyon of 2,083 buildings spanning 3.5-386 m cannot be answered with ten parts. Mean install deviation is 425.7 mm against a 200 mm threshold.",
+  "tolerance_is_geometric": "'Tolerance' here is the max nodal snap displacement when a bespoke rib is replaced by its standard type — a geometric deviation, not a fabrication tolerance in the engineering sense. Wrong word, wrong room, at a structures firm.",
+  "r_is_self_check": "The deficit-vs-rib-height correlation is the generator's own self-check that the form answers the measured field rather than the eye. It is not a performance result and must not be presented as one."
+ },
+ "keys": {
+  "ribsched_coverage_pct": {
+   "label": "standardization coverage",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.standardization_coverage_pct",
+   "format": "{:.1f}%",
+   "caveats": [
+    "n_types_chosen"
+   ]
+  },
+  "ribsched_n_ribs": {
+   "label": "ribs in the population",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.n_ribs",
+   "format": "{:d}"
+  },
+  "ribsched_n_types": {
+   "label": "standard types",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.n_types",
+   "format": "{:d}",
+   "caveats": [
+    "n_types_chosen"
+   ]
+  },
+  "ribsched_n_standardized": {
+   "label": "standardized ribs",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.n_standardized",
+   "format": "{:d}"
+  },
+  "ribsched_n_bespoke": {
+   "label": "bespoke ribs",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.n_bespoke",
+   "format": "{:d}"
+  },
+  "ribsched_t01_count": {
+   "label": "T01 count (the flat type)",
+   "file": "data/rib_schedule.json",
+   "path": "types.0.count",
+   "format": "{:d}",
+   "caveats": [
+    "t01_dominance"
+   ]
+  },
+  "ribsched_t01_share_pct": {
+   "label": "T01 share of the family",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.dominant_type_share_pct",
+   "format": "{:.1f}%",
+   "caveats": [
+    "t01_dominance"
+   ]
+  },
+  "ribsched_t01_height_m": {
+   "label": "T01 height",
+   "file": "data/rib_schedule.json",
+   "path": "types.0.height_m",
+   "format": "{:.2f} m"
+  },
+  "ribsched_t10_height_m": {
+   "label": "T10 height (family maximum)",
+   "file": "data/rib_schedule.json",
+   "path": "types.9.height_m",
+   "format": "{:.2f} m"
+  },
+  "ribsched_t10_reach_m": {
+   "label": "T10 reach (family maximum)",
+   "file": "data/rib_schedule.json",
+   "path": "types.9.reach_m",
+   "format": "{:.2f} m"
+  },
+  "ribsched_member_length_m": {
+   "label": "total member length",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.total_member_length_m",
+   "format": "{:,.1f} m"
+  },
+  "ribsched_tol_mean_mm": {
+   "label": "mean install deviation",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.mean_install_tol_mm",
+   "format": "{:.1f} mm",
+   "caveats": [
+    "tolerance_is_geometric"
+   ]
+  },
+  "ribsched_tol_max_mm": {
+   "label": "max standardized deviation",
+   "file": "data/rib_schedule.json",
+   "path": "_meta.totals.max_standardized_tol_mm",
+   "format": "{:.1f} mm",
+   "caveats": [
+    "tolerance_is_geometric"
+   ]
+  },
+  "steel_sized_field_t": {
+   "label": "sized steel, field-driven canopy",
+   "file": "data/structure.json",
+   "path": "_meta.totals.sized_steel_tonnes",
+   "format": "{:.1f} t",
+   "caveats": [
+    "tonnage_is_sized_not_assumed",
+    "recapture_nonsignificance"
+   ]
+  },
+  "steel_sized_uniform_a_t": {
+   "label": "sized steel, uniform 7 m canopy",
+   "file": "data/structure_counterfactual.json",
+   "path": "_meta.totals.sized_steel_tonnes",
+   "format": "{:.1f} t",
+   "caveats": [
+    "tonnage_is_sized_not_assumed",
+    "recapture_nonsignificance"
+   ]
+  },
+  "steel_ratio_sized": {
+   "label": "steel ratio, uniform 7 m vs field-driven",
+   "derive": {
+    "op": "ratio",
+    "numerator": "steel_sized_uniform_a_t",
+    "denominator": "steel_sized_field_t"
+   },
+   "format": "{:.2f}x",
+   "caveats": [
+    "tonnage_is_sized_not_assumed",
+    "recapture_nonsignificance"
+   ],
+   "note": "derived at emit time from the two sourced tonnages — not stored anywhere, so it cannot go stale independently of them."
+  },
+  "steel_heavy_section_field": {
+   "label": "field-driven ribs needing CHS 219x8",
+   "file": "data/structure.json",
+   "path": "_meta.totals.sections_used.CHS 219x8",
+   "format": "{:d}",
+   "caveats": [
+    "tonnage_is_sized_not_assumed"
+   ]
+  },
+  "steel_heavy_section_uniform_a": {
+   "label": "uniform 7 m ribs needing CHS 219x8",
+   "file": "data/structure_counterfactual.json",
+   "path": "_meta.totals.sections_used.CHS 219x8",
+   "format": "{:d}",
+   "caveats": [
+    "tonnage_is_sized_not_assumed"
+   ]
+  },
+  "struct_median_util_field": {
+   "label": "median utilization, field-driven",
+   "file": "data/structure.json",
+   "path": "_meta.totals.median_util_nominal",
+   "format": "{:.2f}"
+  },
+  "struct_median_util_uniform_a": {
+   "label": "median utilization, uniform 7 m",
+   "file": "data/structure_counterfactual.json",
+   "path": "_meta.totals.median_util_nominal",
+   "format": "{:.2f}"
+  },
+  "envelope_stations": {
+   "label": "deck stations",
+   "file": "data/envelope.json",
+   "path": "_meta.n_stations",
+   "format": "{:d}"
+  },
+  "envelope_corr_r": {
+   "label": "rib height vs stolen-sky deficit",
+   "file": "data/envelope.json",
+   "path": "_meta.readback.deficit_vs_ribheight_r",
+   "format": "r = {:+.3f}",
+   "caveats": [
+    "r_is_self_check"
+   ]
+  },
+  "envelope_rib_min_m": {
+   "label": "rib height, realised minimum",
+   "file": "data/envelope.json",
+   "path": "points.[*].rib_height_m",
+   "reduce": "min",
+   "format": "{:.2f} m"
+  },
+  "envelope_open_svf": {
+   "label": "openness gate (rib held flat above this)",
+   "file": "data/envelope.json",
+   "path": "_meta.params.OPEN_SVF",
+   "format": "{:.2f}"
+  },
+  "envelope_rib_max_m": {
+   "label": "rib height, realised maximum",
+   "file": "data/envelope.json",
+   "path": "points.[*].rib_height_m",
+   "reduce": "max",
+   "format": "{:.2f} m",
+   "note": "the SCALE CHECK tests against this, not RIB_MAX_H, which is a ceiling no rib reaches"
+  },
+  "envelope_reach_max_m": {
+   "label": "reach, realised maximum",
+   "file": "data/envelope.json",
+   "path": "points.[*].reach_m",
+   "reduce": "max",
+   "format": "{:.2f} m"
+  },
+  "envelope_reach_zero_count": {
+   "label": "ribs with reach exactly 0",
+   "file": "data/envelope.json",
+   "path": "points.[*].reach_m",
+   "reduce": "count_zero",
+   "format": "{:d}",
+   "note": "pure arches, no cantilever. Frame the axo to include both regimes."
+  },
+  "envelope_deficit_max": {
+   "label": "stolen sky, worst station",
+   "file": "data/envelope.json",
+   "path": "points.[*].deficit_svf",
+   "reduce": "max",
+   "format": "{:.4f}"
+  },
+  "envelope_reach_nonzero_count": {
+   "label": "ribs with a surviving aperture (reach > 0)",
+   "file": "data/envelope.json",
+   "path": "points.[*].reach_m",
+   "reduce": "count_nonzero",
+   "format": "{:d}",
+   "note": "the canopy cantilevers at these stations. Read it against envelope_reach_zero_count, which is now the small minority."
+  }
+ },
+ "plates": {
+  "E_specimen_array": {
+   "title": "IMAGE E · Stage 4 — the specimen array (population plate)",
+   "lines": [
+    "ribsched_n_ribs",
+    "ribsched_n_types",
+    "ribsched_n_standardized",
+    "ribsched_n_bespoke",
+    "ribsched_coverage_pct",
+    "ribsched_t01_count",
+    "ribsched_t01_share_pct",
+    "ribsched_t01_height_m",
+    "ribsched_t10_height_m",
+    "ribsched_t10_reach_m",
+    "ribsched_member_length_m",
+    "steel_sized_field_t",
+    "steel_sized_uniform_a_t",
+    "steel_ratio_sized",
+    "steel_heavy_section_field",
+    "steel_heavy_section_uniform_a",
+    "ribsched_tol_mean_mm",
+    "ribsched_tol_max_mm"
+   ],
+   "note": "The fabrication plate. It carries the material headline: indistinguishable-to-better recapture on 44% of the steel. It also carries the standardization limit — 114 bespoke ribs — which is the honest half of the same story."
+  },
+  "D_corridor": {
+   "title": "IMAGE D · Stage 5 — the corridor (population plate)",
+   "lines": [
+    "envelope_stations",
+    "envelope_corr_r",
+    "envelope_rib_min_m",
+    "ribsched_t10_height_m",
+    "envelope_open_svf",
+    "struct_median_util_field",
+    "struct_median_util_uniform_a"
+   ],
+   "note": "The argument image. It shows material variation along the line — ribs at the generator floor where the deck still sees sky, rising to the family maximum in the canyon. The correlation (r 0.949) is the self-check that the variation tracks the measured field."
+  }
+ }
+}

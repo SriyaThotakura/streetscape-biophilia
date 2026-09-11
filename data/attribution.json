@@ -1,0 +1,4686 @@
+{
+ "metadata": {
+  "model": "per-building attribution of viewshed + solar ray-casts",
+  "n_buildings_ranked": 273,
+  "n_deck_points": 232,
+  "n_azimuth": 180,
+  "park_year": 2005,
+  "length_m": 1856.7,
+  "era_threshold_primary": 2005,
+  "era_threshold_secondary": 2009,
+  "era_threshold_rationale": "PRIMARY is the 2005 West Chelsea rezoning, not the 2009 opening. The rezoning moved the development rights and made the tower boom legal; the opening is when the gates opened. The 2009 cut splits the cohort the rezoning created \u2014 ranks 1, 2 and 3 are 2008, 2006 and 2006 \u2014 and assigns them to the 'pre' side, understating the self-enclosure. Both cuts are reported; the 2005 one is the headline.",
+  "post_rezoning_2005_sky_share_pct": 67.9,
+  "post_rezoning_2005_winter_deckhours": 1165.9,
+  "bands": {
+   "pre_rezoning_lt2005": {
+    "n": 196,
+    "pct_of_ranked": 71.8,
+    "sky_share_pct": 28.2,
+    "over_representation": 0.39,
+    "winter_deckhours_stolen": 552.3
+   },
+   "rezoning_era_2005_2008": {
+    "n": 21,
+    "pct_of_ranked": 7.7,
+    "sky_share_pct": 24.8,
+    "over_representation": 3.23,
+    "winter_deckhours_stolen": 450.8
+   },
+   "post_opening_2009plus": {
+    "n": 53,
+    "pct_of_ranked": 19.4,
+    "sky_share_pct": 43.0,
+    "over_representation": 2.22,
+    "winter_deckhours_stolen": 715.1
+   },
+   "year_unknown": {
+    "n": 3,
+    "pct_of_ranked": 1.1,
+    "sky_share_pct": 3.8,
+    "over_representation": 3.5,
+    "winter_deckhours_stolen": 64.0
+   }
+  },
+  "cuts": {
+   "primary_2005_rezoning": {
+    "n": 74,
+    "pct_of_ranked": 27.1,
+    "sky_share_pct": 67.9,
+    "over_representation": 2.5,
+    "winter_deckhours_stolen": 1165.9
+   },
+   "secondary_2009_opening": {
+    "n": 52,
+    "pct_of_ranked": 19.0,
+    "sky_share_pct": 43.0,
+    "over_representation": 2.26,
+    "winter_deckhours_stolen": 715.1
+   }
+  }
+ },
+ "leaderboard": [
+  {
+   "id": "1088120",
+   "year": 2008,
+   "height_m": 108.5,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 7.52,
+   "svf_removed_pts": 4.34,
+   "winter_deckhours_stolen": 167.2,
+   "equinox_deckhours_stolen": 146.8,
+   "affects_s": [
+    1439.0,
+    1857.0
+   ],
+   "rank": 1
+  },
+  {
+   "id": "1080359",
+   "year": 2006,
+   "height_m": 83.2,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 5.83,
+   "svf_removed_pts": 3.36,
+   "winter_deckhours_stolen": 121.5,
+   "equinox_deckhours_stolen": 94.7,
+   "affects_s": [
+    24.0,
+    876.0
+   ],
+   "rank": 2
+  },
+  {
+   "id": "1012203",
+   "year": 2006,
+   "height_m": 79.8,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 5.75,
+   "svf_removed_pts": 3.31,
+   "winter_deckhours_stolen": 76.8,
+   "equinox_deckhours_stolen": 96.2,
+   "affects_s": [
+    0.0,
+    193.0
+   ],
+   "rank": 3
+  },
+  {
+   "id": "1089395",
+   "year": 2013,
+   "height_m": 100.3,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 5.29,
+   "svf_removed_pts": 3.05,
+   "winter_deckhours_stolen": 89.3,
+   "equinox_deckhours_stolen": 96.8,
+   "affects_s": [
+    1294.0,
+    1849.0
+   ],
+   "rank": 4
+  },
+  {
+   "id": "1089411",
+   "year": 2016,
+   "height_m": 275.5,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 4.46,
+   "svf_removed_pts": 2.57,
+   "winter_deckhours_stolen": 50.7,
+   "equinox_deckhours_stolen": 71.3,
+   "affects_s": [
+    1415.0,
+    1857.0
+   ],
+   "rank": 5
+  },
+  {
+   "id": "1012541",
+   "year": 1934,
+   "height_m": 37.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 3.9,
+   "svf_removed_pts": 2.24,
+   "winter_deckhours_stolen": 71.5,
+   "equinox_deckhours_stolen": 69.2,
+   "affects_s": [
+    0.0,
+    675.0
+   ],
+   "rank": 6
+  },
+  {
+   "id": "1080355",
+   "year": 1936,
+   "height_m": 34.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 3.79,
+   "svf_removed_pts": 2.18,
+   "winter_deckhours_stolen": 67.5,
+   "equinox_deckhours_stolen": 63.5,
+   "affects_s": [
+    241.0,
+    346.0
+   ],
+   "rank": 7
+  },
+  {
+   "id": "1012223",
+   "year": null,
+   "height_m": 62.4,
+   "era": null,
+   "era_band": "unknown",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 3.77,
+   "svf_removed_pts": 2.17,
+   "winter_deckhours_stolen": 61.2,
+   "equinox_deckhours_stolen": 67.5,
+   "affects_s": [
+    137.0,
+    619.0
+   ],
+   "rank": 8
+  },
+  {
+   "id": "1091605",
+   "year": 2020,
+   "height_m": 76.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 3.72,
+   "svf_removed_pts": 2.14,
+   "winter_deckhours_stolen": 48.3,
+   "equinox_deckhours_stolen": 60.5,
+   "affects_s": [
+    474.0,
+    940.0
+   ],
+   "rank": 9
+  },
+  {
+   "id": "1012385",
+   "year": 1927,
+   "height_m": 54.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 3.37,
+   "svf_removed_pts": 1.94,
+   "winter_deckhours_stolen": 48.3,
+   "equinox_deckhours_stolen": 56.7,
+   "affects_s": [
+    836.0,
+    1214.0
+   ],
+   "rank": 10
+  },
+  {
+   "id": "1091671",
+   "year": 2021,
+   "height_m": 194.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 3.08,
+   "svf_removed_pts": 1.78,
+   "winter_deckhours_stolen": 102.2,
+   "equinox_deckhours_stolen": 86.3,
+   "affects_s": [
+    1198.0,
+    1857.0
+   ],
+   "rank": 11
+  },
+  {
+   "id": "1090199",
+   "year": 2016,
+   "height_m": 24.4,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 3.03,
+   "svf_removed_pts": 1.75,
+   "winter_deckhours_stolen": 59.8,
+   "equinox_deckhours_stolen": 61.0,
+   "affects_s": [
+    474.0,
+    973.0
+   ],
+   "rank": 12
+  },
+  {
+   "id": "1089968",
+   "year": 2017,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 2.74,
+   "svf_removed_pts": 1.58,
+   "winter_deckhours_stolen": 73.3,
+   "equinox_deckhours_stolen": 66.7,
+   "affects_s": [
+    1278.0,
+    1366.0
+   ],
+   "rank": 13
+  },
+  {
+   "id": "1089697",
+   "year": 2015,
+   "height_m": 40.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 2.71,
+   "svf_removed_pts": 1.56,
+   "winter_deckhours_stolen": 46.3,
+   "equinox_deckhours_stolen": 52.2,
+   "affects_s": [
+    1013.0,
+    1077.0
+   ],
+   "rank": 14
+  },
+  {
+   "id": "1089295",
+   "year": 2015,
+   "height_m": 53.0,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 2.41,
+   "svf_removed_pts": 1.39,
+   "winter_deckhours_stolen": 24.8,
+   "equinox_deckhours_stolen": 32.7,
+   "affects_s": [
+    0.0,
+    265.0
+   ],
+   "rank": 15
+  },
+  {
+   "id": "1080311",
+   "year": 1958,
+   "height_m": 27.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 2.34,
+   "svf_removed_pts": 1.35,
+   "winter_deckhours_stolen": 43.5,
+   "equinox_deckhours_stolen": 53.8,
+   "affects_s": [
+    1045.0,
+    1133.0
+   ],
+   "rank": 16
+  },
+  {
+   "id": "1090205",
+   "year": 2017,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 2.3,
+   "svf_removed_pts": 1.32,
+   "winter_deckhours_stolen": 14.2,
+   "equinox_deckhours_stolen": 33.8,
+   "affects_s": [
+    1278.0,
+    1366.0
+   ],
+   "rank": 17
+  },
+  {
+   "id": "1012382",
+   "year": 1917,
+   "height_m": 38.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 2.25,
+   "svf_removed_pts": 1.3,
+   "winter_deckhours_stolen": 35.3,
+   "equinox_deckhours_stolen": 42.5,
+   "affects_s": [
+    1061.0,
+    1165.0
+   ],
+   "rank": 18
+  },
+  {
+   "id": "1088639",
+   "year": 2008,
+   "height_m": 43.5,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 2.14,
+   "svf_removed_pts": 1.23,
+   "winter_deckhours_stolen": 24.5,
+   "equinox_deckhours_stolen": 31.3,
+   "affects_s": [
+    836.0,
+    1005.0
+   ],
+   "rank": 19
+  },
+  {
+   "id": "1080321",
+   "year": 1920,
+   "height_m": 36.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 1.97,
+   "svf_removed_pts": 1.13,
+   "winter_deckhours_stolen": 24.2,
+   "equinox_deckhours_stolen": 33.3,
+   "affects_s": [
+    1198.0,
+    1246.0
+   ],
+   "rank": 20
+  },
+  {
+   "id": "1012397",
+   "year": 2006,
+   "height_m": 46.0,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 1.89,
+   "svf_removed_pts": 1.09,
+   "winter_deckhours_stolen": 17.7,
+   "equinox_deckhours_stolen": 29.0,
+   "affects_s": [
+    1230.0,
+    1286.0
+   ],
+   "rank": 21
+  },
+  {
+   "id": "1088961",
+   "year": 2018,
+   "height_m": 385.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 1.69,
+   "svf_removed_pts": 0.97,
+   "winter_deckhours_stolen": 9.2,
+   "equinox_deckhours_stolen": 49.0,
+   "affects_s": [
+    1222.0,
+    1857.0
+   ],
+   "rank": 22
+  },
+  {
+   "id": "1012335",
+   "year": 2003,
+   "height_m": 44.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 1.6,
+   "svf_removed_pts": 0.92,
+   "winter_deckhours_stolen": 17.0,
+   "equinox_deckhours_stolen": 27.2,
+   "affects_s": [
+    555.0,
+    973.0
+   ],
+   "rank": 23
+  },
+  {
+   "id": "1090204",
+   "year": 2017,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 1.57,
+   "svf_removed_pts": 0.91,
+   "winter_deckhours_stolen": 18.3,
+   "equinox_deckhours_stolen": 24.5,
+   "affects_s": [
+    1407.0,
+    1447.0
+   ],
+   "rank": 24
+  },
+  {
+   "id": "1090200",
+   "year": 2017,
+   "height_m": 44.8,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 1.49,
+   "svf_removed_pts": 0.86,
+   "winter_deckhours_stolen": 13.8,
+   "equinox_deckhours_stolen": 29.5,
+   "affects_s": [
+    603.0,
+    924.0
+   ],
+   "rank": 25
+  },
+  {
+   "id": "1087591",
+   "year": 2011,
+   "height_m": 50.9,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 1.49,
+   "svf_removed_pts": 0.86,
+   "winter_deckhours_stolen": 31.3,
+   "equinox_deckhours_stolen": 34.7,
+   "affects_s": [
+    506.0,
+    973.0
+   ],
+   "rank": 26
+  },
+  {
+   "id": "1012368",
+   "year": 1930,
+   "height_m": 16.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 1.28,
+   "svf_removed_pts": 0.74,
+   "winter_deckhours_stolen": 19.7,
+   "equinox_deckhours_stolen": 24.8,
+   "affects_s": [
+    1045.0,
+    1085.0
+   ],
+   "rank": 27
+  },
+  {
+   "id": "1012329",
+   "year": 1930,
+   "height_m": 28.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 1.07,
+   "svf_removed_pts": 0.61,
+   "winter_deckhours_stolen": 8.0,
+   "equinox_deckhours_stolen": 17.7,
+   "affects_s": [
+    844.0,
+    940.0
+   ],
+   "rank": 28
+  },
+  {
+   "id": "1090682",
+   "year": 2019,
+   "height_m": 91.7,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 1.05,
+   "svf_removed_pts": 0.61,
+   "winter_deckhours_stolen": 1.8,
+   "equinox_deckhours_stolen": 17.0,
+   "affects_s": [
+    418.0,
+    868.0
+   ],
+   "rank": 29
+  },
+  {
+   "id": "1091590",
+   "year": 2018,
+   "height_m": 316.7,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 1.04,
+   "svf_removed_pts": 0.6,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 18.5,
+   "affects_s": [
+    1616.0,
+    1857.0
+   ],
+   "rank": 30
+  },
+  {
+   "id": "1089240",
+   "year": 2011,
+   "height_m": 48.7,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 1.02,
+   "svf_removed_pts": 0.59,
+   "winter_deckhours_stolen": 35.0,
+   "equinox_deckhours_stolen": 25.2,
+   "affects_s": [
+    0.0,
+    96.0
+   ],
+   "rank": 31
+  },
+  {
+   "id": "1088519",
+   "year": 2011,
+   "height_m": 34.0,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.98,
+   "svf_removed_pts": 0.57,
+   "winter_deckhours_stolen": 22.0,
+   "equinox_deckhours_stolen": 21.7,
+   "affects_s": [
+    1246.0,
+    1286.0
+   ],
+   "rank": 32
+  },
+  {
+   "id": "1012312",
+   "year": 1930,
+   "height_m": 15.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.87,
+   "svf_removed_pts": 0.5,
+   "winter_deckhours_stolen": 18.8,
+   "equinox_deckhours_stolen": 21.2,
+   "affects_s": [
+    828.0,
+    868.0
+   ],
+   "rank": 33
+  },
+  {
+   "id": "1012311",
+   "year": 1900,
+   "height_m": 15.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.79,
+   "svf_removed_pts": 0.46,
+   "winter_deckhours_stolen": 18.5,
+   "equinox_deckhours_stolen": 15.5,
+   "affects_s": [
+    796.0,
+    828.0
+   ],
+   "rank": 34
+  },
+  {
+   "id": "1087672",
+   "year": 2005,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.79,
+   "svf_removed_pts": 0.45,
+   "winter_deckhours_stolen": 10.8,
+   "equinox_deckhours_stolen": 10.2,
+   "affects_s": [
+    948.0,
+    1037.0
+   ],
+   "rank": 35
+  },
+  {
+   "id": "1012442",
+   "year": 1900,
+   "height_m": 19.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.78,
+   "svf_removed_pts": 0.45,
+   "winter_deckhours_stolen": 18.0,
+   "equinox_deckhours_stolen": 27.2,
+   "affects_s": [
+    1439.0,
+    1471.0
+   ],
+   "rank": 36
+  },
+  {
+   "id": "1090681",
+   "year": 2020,
+   "height_m": 60.7,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.77,
+   "svf_removed_pts": 0.44,
+   "winter_deckhours_stolen": 7.7,
+   "equinox_deckhours_stolen": 8.8,
+   "affects_s": [
+    137.0,
+    635.0
+   ],
+   "rank": 37
+  },
+  {
+   "id": "1080320",
+   "year": 1920,
+   "height_m": 26.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.76,
+   "svf_removed_pts": 0.44,
+   "winter_deckhours_stolen": 10.5,
+   "equinox_deckhours_stolen": 12.7,
+   "affects_s": [
+    1198.0,
+    1246.0
+   ],
+   "rank": 38
+  },
+  {
+   "id": "1012349",
+   "year": 1914,
+   "height_m": 41.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.68,
+   "svf_removed_pts": 0.39,
+   "winter_deckhours_stolen": 6.3,
+   "equinox_deckhours_stolen": 13.2,
+   "affects_s": [
+    948.0,
+    1037.0
+   ],
+   "rank": 39
+  },
+  {
+   "id": "1012278",
+   "year": 1917,
+   "height_m": 42.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.53,
+   "svf_removed_pts": 0.31,
+   "winter_deckhours_stolen": 21.0,
+   "equinox_deckhours_stolen": 26.3,
+   "affects_s": [
+    418.0,
+    635.0
+   ],
+   "rank": 40
+  },
+  {
+   "id": "1090203",
+   "year": 2017,
+   "height_m": 51.8,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.47,
+   "svf_removed_pts": 0.27,
+   "winter_deckhours_stolen": 12.0,
+   "equinox_deckhours_stolen": 14.5,
+   "affects_s": [
+    1407.0,
+    1495.0
+   ],
+   "rank": 41
+  },
+  {
+   "id": "1078398",
+   "year": 2022,
+   "height_m": 30.5,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.47,
+   "svf_removed_pts": 0.27,
+   "winter_deckhours_stolen": 16.3,
+   "equinox_deckhours_stolen": 11.7,
+   "affects_s": [
+    474.0,
+    973.0
+   ],
+   "rank": 42
+  },
+  {
+   "id": "1088185",
+   "year": 2008,
+   "height_m": 37.3,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.44,
+   "svf_removed_pts": 0.25,
+   "winter_deckhours_stolen": 17.0,
+   "equinox_deckhours_stolen": 13.7,
+   "affects_s": [
+    474.0,
+    731.0
+   ],
+   "rank": 43
+  },
+  {
+   "id": "1080334",
+   "year": 2022,
+   "height_m": 36.3,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.26,
+   "svf_removed_pts": 0.15,
+   "winter_deckhours_stolen": 4.0,
+   "equinox_deckhours_stolen": 4.0,
+   "affects_s": [
+    1439.0,
+    1495.0
+   ],
+   "rank": 44
+  },
+  {
+   "id": "1012277",
+   "year": 1914,
+   "height_m": 52.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.2,
+   "svf_removed_pts": 0.11,
+   "winter_deckhours_stolen": 8.2,
+   "equinox_deckhours_stolen": 3.5,
+   "affects_s": [
+    241.0,
+    619.0
+   ],
+   "rank": 45
+  },
+  {
+   "id": "1090202",
+   "year": 2017,
+   "height_m": 117.3,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.19,
+   "svf_removed_pts": 0.11,
+   "winter_deckhours_stolen": 5.5,
+   "equinox_deckhours_stolen": 2.8,
+   "affects_s": [
+    1045.0,
+    1495.0
+   ],
+   "rank": 46
+  },
+  {
+   "id": "1089862",
+   "year": 2013,
+   "height_m": 112.8,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.17,
+   "svf_removed_pts": 0.1,
+   "winter_deckhours_stolen": 7.8,
+   "equinox_deckhours_stolen": 9.7,
+   "affects_s": [
+    1439.0,
+    1640.0
+   ],
+   "rank": 47
+  },
+  {
+   "id": "1012607",
+   "year": 1999,
+   "height_m": 28.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.16,
+   "svf_removed_pts": 0.09,
+   "winter_deckhours_stolen": 11.7,
+   "equinox_deckhours_stolen": 11.0,
+   "affects_s": [
+    482.0,
+    731.0
+   ],
+   "rank": 48
+  },
+  {
+   "id": "1012386",
+   "year": 1910,
+   "height_m": 41.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.16,
+   "svf_removed_pts": 0.09,
+   "winter_deckhours_stolen": 0.8,
+   "equinox_deckhours_stolen": 5.8,
+   "affects_s": [
+    1117.0,
+    1214.0
+   ],
+   "rank": 49
+  },
+  {
+   "id": "1088748",
+   "year": 2007,
+   "height_m": 39.0,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.16,
+   "svf_removed_pts": 0.09,
+   "winter_deckhours_stolen": 3.3,
+   "equinox_deckhours_stolen": 6.3,
+   "affects_s": [
+    884.0,
+    1133.0
+   ],
+   "rank": 50
+  },
+  {
+   "id": "1012347",
+   "year": 2001,
+   "height_m": 51.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.16,
+   "svf_removed_pts": 0.09,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 6.3,
+   "affects_s": [
+    948.0,
+    1077.0
+   ],
+   "rank": 51
+  },
+  {
+   "id": "1012330",
+   "year": 1900,
+   "height_m": 19.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.14,
+   "svf_removed_pts": 0.08,
+   "winter_deckhours_stolen": 10.2,
+   "equinox_deckhours_stolen": 7.7,
+   "affects_s": [
+    876.0,
+    924.0
+   ],
+   "rank": 52
+  },
+  {
+   "id": "1083568",
+   "year": 2004,
+   "height_m": 50.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.13,
+   "svf_removed_pts": 0.08,
+   "winter_deckhours_stolen": 5.3,
+   "equinox_deckhours_stolen": 0.8,
+   "affects_s": [
+    844.0,
+    1133.0
+   ],
+   "rank": 53
+  },
+  {
+   "id": "1012544",
+   "year": 1910,
+   "height_m": 17.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.12,
+   "svf_removed_pts": 0.07,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 2.8,
+   "affects_s": [
+    474.0,
+    482.0
+   ],
+   "rank": 54
+  },
+  {
+   "id": "1012336",
+   "year": 1931,
+   "height_m": 57.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.12,
+   "svf_removed_pts": 0.07,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 2.2,
+   "affects_s": [
+    844.0,
+    973.0
+   ],
+   "rank": 55
+  },
+  {
+   "id": "1012290",
+   "year": 1914,
+   "height_m": 40.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.11,
+   "svf_removed_pts": 0.06,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 1.5,
+   "affects_s": [
+    635.0,
+    731.0
+   ],
+   "rank": 56
+  },
+  {
+   "id": "1080331",
+   "year": 1913,
+   "height_m": 40.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.11,
+   "svf_removed_pts": 0.07,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 2.3,
+   "affects_s": [
+    1471.0,
+    1857.0
+   ],
+   "rank": 57
+  },
+  {
+   "id": "1090216",
+   "year": 2017,
+   "height_m": 82.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.11,
+   "svf_removed_pts": 0.06,
+   "winter_deckhours_stolen": 8.3,
+   "equinox_deckhours_stolen": 7.3,
+   "affects_s": [
+    0.0,
+    410.0
+   ],
+   "rank": 58
+  },
+  {
+   "id": "1067979",
+   "year": 1932,
+   "height_m": 62.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.11,
+   "svf_removed_pts": 0.06,
+   "winter_deckhours_stolen": 3.5,
+   "equinox_deckhours_stolen": 8.3,
+   "affects_s": [
+    579.0,
+    1061.0
+   ],
+   "rank": 59
+  },
+  {
+   "id": "1087907",
+   "year": 2007,
+   "height_m": 36.6,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.1,
+   "svf_removed_pts": 0.06,
+   "winter_deckhours_stolen": 6.3,
+   "equinox_deckhours_stolen": 5.7,
+   "affects_s": [
+    482.0,
+    659.0
+   ],
+   "rank": 60
+  },
+  {
+   "id": "1090213",
+   "year": null,
+   "height_m": 36.6,
+   "era": null,
+   "era_band": "unknown",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.08,
+   "svf_removed_pts": 0.05,
+   "winter_deckhours_stolen": 2.8,
+   "equinox_deckhours_stolen": 3.8,
+   "affects_s": [
+    1045.0,
+    1077.0
+   ],
+   "rank": 61
+  },
+  {
+   "id": "1012384",
+   "year": 1928,
+   "height_m": 48.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.08,
+   "svf_removed_pts": 0.04,
+   "winter_deckhours_stolen": 2.7,
+   "equinox_deckhours_stolen": 3.7,
+   "affects_s": [
+    852.0,
+    1214.0
+   ],
+   "rank": 62
+  },
+  {
+   "id": "1089807",
+   "year": 2022,
+   "height_m": 118.9,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.08,
+   "svf_removed_pts": 0.04,
+   "winter_deckhours_stolen": 6.3,
+   "equinox_deckhours_stolen": 2.0,
+   "affects_s": [
+    241.0,
+    884.0
+   ],
+   "rank": 63
+  },
+  {
+   "id": "1012154",
+   "year": 1930,
+   "height_m": 37.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.07,
+   "svf_removed_pts": 0.04,
+   "winter_deckhours_stolen": 5.5,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    96.0
+   ],
+   "rank": 64
+  },
+  {
+   "id": "1089836",
+   "year": 2017,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.07,
+   "svf_removed_pts": 0.04,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 1.3,
+   "affects_s": [
+    1455.0,
+    1495.0
+   ],
+   "rank": 65
+  },
+  {
+   "id": "1087496",
+   "year": 2007,
+   "height_m": 78.6,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.07,
+   "svf_removed_pts": 0.04,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1045.0,
+    1133.0
+   ],
+   "rank": 66
+  },
+  {
+   "id": "1090447",
+   "year": 2022,
+   "height_m": 43.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.06,
+   "svf_removed_pts": 0.04,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1415.0,
+    1447.0
+   ],
+   "rank": 67
+  },
+  {
+   "id": "1012545",
+   "year": 1900,
+   "height_m": 16.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.06,
+   "svf_removed_pts": 0.04,
+   "winter_deckhours_stolen": 1.3,
+   "equinox_deckhours_stolen": 4.5,
+   "affects_s": [
+    482.0,
+    514.0
+   ],
+   "rank": 68
+  },
+  {
+   "id": "1090571",
+   "year": 2019,
+   "height_m": 42.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.05,
+   "svf_removed_pts": 0.03,
+   "winter_deckhours_stolen": 3.3,
+   "equinox_deckhours_stolen": 0.5,
+   "affects_s": [
+    1045.0,
+    1133.0
+   ],
+   "rank": 69
+  },
+  {
+   "id": "1090390",
+   "year": 2018,
+   "height_m": 40.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.05,
+   "svf_removed_pts": 0.03,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1045.0,
+    1133.0
+   ],
+   "rank": 70
+  },
+  {
+   "id": "1090274",
+   "year": 2021,
+   "height_m": 308.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.05,
+   "svf_removed_pts": 0.03,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.8,
+   "affects_s": [
+    1640.0,
+    1857.0
+   ],
+   "rank": 71
+  },
+  {
+   "id": "1012299",
+   "year": 1928,
+   "height_m": 25.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.04,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 1.3,
+   "equinox_deckhours_stolen": 4.5,
+   "affects_s": [
+    796.0,
+    836.0
+   ],
+   "rank": 72
+  },
+  {
+   "id": "1012395",
+   "year": 1910,
+   "height_m": 22.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.04,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 3.2,
+   "equinox_deckhours_stolen": 2.5,
+   "affects_s": [
+    884.0,
+    1286.0
+   ],
+   "rank": 73
+  },
+  {
+   "id": "1012268",
+   "year": 1931,
+   "height_m": 90.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.04,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 3.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1117.0,
+    1857.0
+   ],
+   "rank": 74
+  },
+  {
+   "id": "1087908",
+   "year": 2007,
+   "height_m": 39.2,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.04,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 2.5,
+   "equinox_deckhours_stolen": 1.3,
+   "affects_s": [
+    482.0,
+    635.0
+   ],
+   "rank": 75
+  },
+  {
+   "id": "1012313",
+   "year": 1905,
+   "height_m": 16.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.04,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 3.3,
+   "equinox_deckhours_stolen": 2.2,
+   "affects_s": [
+    844.0,
+    900.0
+   ],
+   "rank": 76
+  },
+  {
+   "id": "1013043",
+   "year": 1931,
+   "height_m": 79.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.03,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 2.8,
+   "equinox_deckhours_stolen": 0.7,
+   "affects_s": [
+    0.0,
+    603.0
+   ],
+   "rank": 77
+  },
+  {
+   "id": "1012282",
+   "year": 2007,
+   "height_m": 43.0,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.03,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 4.8,
+   "affects_s": [
+    643.0,
+    731.0
+   ],
+   "rank": 78
+  },
+  {
+   "id": "1078399",
+   "year": 2015,
+   "height_m": 14.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.03,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 2.5,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    852.0,
+    884.0
+   ],
+   "rank": 79
+  },
+  {
+   "id": "1087746",
+   "year": 2007,
+   "height_m": 75.6,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.03,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    643.0,
+    699.0
+   ],
+   "rank": 80
+  },
+  {
+   "id": "1012322",
+   "year": 2022,
+   "height_m": 76.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.03,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    635.0,
+    973.0
+   ],
+   "rank": 81
+  },
+  {
+   "id": "1090122",
+   "year": 2022,
+   "height_m": 313.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.03,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1640.0,
+    1833.0
+   ],
+   "rank": 82
+  },
+  {
+   "id": "1078411",
+   "year": 1963,
+   "height_m": 71.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.03,
+   "svf_removed_pts": 0.02,
+   "winter_deckhours_stolen": 2.7,
+   "equinox_deckhours_stolen": 1.0,
+   "affects_s": [
+    48.0,
+    731.0
+   ],
+   "rank": 83
+  },
+  {
+   "id": "1080264",
+   "year": 1908,
+   "height_m": 27.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 4.5,
+   "equinox_deckhours_stolen": 3.8,
+   "affects_s": [
+    0.0,
+    169.0
+   ],
+   "rank": 84
+  },
+  {
+   "id": "1012227",
+   "year": 1920,
+   "height_m": 22.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 3.8,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    241.0,
+    265.0
+   ],
+   "rank": 85
+  },
+  {
+   "id": "1086105",
+   "year": 1901,
+   "height_m": 36.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 2.5,
+   "equinox_deckhours_stolen": 4.2,
+   "affects_s": [
+    0.0,
+    265.0
+   ],
+   "rank": 86
+  },
+  {
+   "id": "1012295",
+   "year": 1913,
+   "height_m": 35.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    643.0,
+    723.0
+   ],
+   "rank": 87
+  },
+  {
+   "id": "1088996",
+   "year": 1931,
+   "height_m": 23.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 1.7,
+   "equinox_deckhours_stolen": 3.7,
+   "affects_s": [
+    522.0,
+    820.0
+   ],
+   "rank": 88
+  },
+  {
+   "id": "1012375",
+   "year": 1900,
+   "height_m": 14.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.5,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    1085.0,
+    1085.0
+   ],
+   "rank": 89
+  },
+  {
+   "id": "1090448",
+   "year": 2012,
+   "height_m": 46.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 1.5,
+   "affects_s": [
+    924.0,
+    1286.0
+   ],
+   "rank": 90
+  },
+  {
+   "id": "1012275",
+   "year": 2024,
+   "height_m": 57.0,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.5,
+   "affects_s": [
+    1559.0,
+    1648.0
+   ],
+   "rank": 91
+  },
+  {
+   "id": "1087721",
+   "year": 2007,
+   "height_m": 36.6,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 2.0,
+   "affects_s": [
+    506.0,
+    715.0
+   ],
+   "rank": 92
+  },
+  {
+   "id": "1012555",
+   "year": 1908,
+   "height_m": 20.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 1.8,
+   "equinox_deckhours_stolen": 2.7,
+   "affects_s": [
+    547.0,
+    643.0
+   ],
+   "rank": 93
+  },
+  {
+   "id": "1078419",
+   "year": 1965,
+   "height_m": 67.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 4.0,
+   "equinox_deckhours_stolen": 1.0,
+   "affects_s": [
+    490.0,
+    723.0
+   ],
+   "rank": 94
+  },
+  {
+   "id": "1078445",
+   "year": 1963,
+   "height_m": 66.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.02,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 3.3,
+   "equinox_deckhours_stolen": 4.5,
+   "affects_s": [
+    490.0,
+    699.0
+   ],
+   "rank": 95
+  },
+  {
+   "id": "1087054",
+   "year": 2003,
+   "height_m": 50.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 3.8,
+   "equinox_deckhours_stolen": 4.2,
+   "affects_s": [
+    0.0,
+    169.0
+   ],
+   "rank": 96
+  },
+  {
+   "id": "1012296",
+   "year": 1910,
+   "height_m": 24.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    635.0,
+    731.0
+   ],
+   "rank": 97
+  },
+  {
+   "id": "1012280",
+   "year": 2007,
+   "height_m": 46.3,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 2.7,
+   "affects_s": [
+    547.0,
+    731.0
+   ],
+   "rank": 98
+  },
+  {
+   "id": "1012294",
+   "year": 1930,
+   "height_m": 42.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    659.0,
+    723.0
+   ],
+   "rank": 99
+  },
+  {
+   "id": "1076123",
+   "year": 1989,
+   "height_m": 30.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.3,
+   "equinox_deckhours_stolen": 1.0,
+   "affects_s": [
+    530.0,
+    691.0
+   ],
+   "rank": 100
+  },
+  {
+   "id": "1011645",
+   "year": 1964,
+   "height_m": 52.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 6.7,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    169.0
+   ],
+   "rank": 101
+  },
+  {
+   "id": "1089323",
+   "year": 2013,
+   "height_m": 45.4,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.3,
+   "affects_s": [
+    1559.0,
+    1624.0
+   ],
+   "rank": 102
+  },
+  {
+   "id": "1087613",
+   "year": 2007,
+   "height_m": 82.1,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1053.0,
+    1109.0
+   ],
+   "rank": 103
+  },
+  {
+   "id": "1087472",
+   "year": 2006,
+   "height_m": 11.9,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 3.2,
+   "equinox_deckhours_stolen": 5.0,
+   "affects_s": [
+    1053.0,
+    1085.0
+   ],
+   "rank": 104
+  },
+  {
+   "id": "1080322",
+   "year": 1920,
+   "height_m": 20.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1198.0,
+    1206.0
+   ],
+   "rank": 105
+  },
+  {
+   "id": "1090212",
+   "year": 2020,
+   "height_m": 41.8,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.8,
+   "affects_s": [
+    1045.0,
+    1053.0
+   ],
+   "rank": 106
+  },
+  {
+   "id": "1088126",
+   "year": 2009,
+   "height_m": 40.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.01,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1358.0,
+    1366.0
+   ],
+   "rank": 107
+  },
+  {
+   "id": "1089664",
+   "year": 2018,
+   "height_m": 214.0,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 1.2,
+   "affects_s": [
+    1559.0,
+    1583.0
+   ],
+   "rank": 108
+  },
+  {
+   "id": "1090201",
+   "year": 2017,
+   "height_m": 44.8,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.8,
+   "affects_s": [
+    1358.0,
+    1366.0
+   ],
+   "rank": 109
+  },
+  {
+   "id": "1012565",
+   "year": 1900,
+   "height_m": 36.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.5,
+   "equinox_deckhours_stolen": 1.3,
+   "affects_s": [
+    563.0,
+    699.0
+   ],
+   "rank": 110
+  },
+  {
+   "id": "1012331",
+   "year": 1905,
+   "height_m": 17.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.01,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 1.3,
+   "affects_s": [
+    868.0,
+    884.0
+   ],
+   "rank": 111
+  },
+  {
+   "id": "1012241",
+   "year": 1902,
+   "height_m": 24.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    88.0
+   ],
+   "rank": 112
+  },
+  {
+   "id": "1011689",
+   "year": 1912,
+   "height_m": 38.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    169.0
+   ],
+   "rank": 113
+  },
+  {
+   "id": "1076087",
+   "year": 1910,
+   "height_m": 25.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    249.0,
+    265.0
+   ],
+   "rank": 114
+  },
+  {
+   "id": "1012205",
+   "year": 1910,
+   "height_m": 11.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    64.0,
+    80.0
+   ],
+   "rank": 115
+  },
+  {
+   "id": "1013007",
+   "year": 1960,
+   "height_m": 46.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    265.0
+   ],
+   "rank": 116
+  },
+  {
+   "id": "1013011",
+   "year": 1900,
+   "height_m": 35.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    249.0,
+    249.0
+   ],
+   "rank": 117
+  },
+  {
+   "id": "1012196",
+   "year": 1910,
+   "height_m": 19.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    0.0,
+    48.0
+   ],
+   "rank": 118
+  },
+  {
+   "id": "1080357",
+   "year": 1914,
+   "height_m": 17.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    241.0,
+    249.0
+   ],
+   "rank": 119
+  },
+  {
+   "id": "1012238",
+   "year": 1903,
+   "height_m": 29.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    153.0
+   ],
+   "rank": 120
+  },
+  {
+   "id": "1090217",
+   "year": 2017,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": null,
+   "rank": 121
+  },
+  {
+   "id": "1086681",
+   "year": 1910,
+   "height_m": 17.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    16.0,
+    88.0
+   ],
+   "rank": 122
+  },
+  {
+   "id": "1012162",
+   "year": 1836,
+   "height_m": 15.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    72.0,
+    72.0
+   ],
+   "rank": 123
+  },
+  {
+   "id": "1011673",
+   "year": 1910,
+   "height_m": 18.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    80.0,
+    88.0
+   ],
+   "rank": 124
+  },
+  {
+   "id": "1012181",
+   "year": 1949,
+   "height_m": 10.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.7,
+   "equinox_deckhours_stolen": 4.2,
+   "affects_s": null,
+   "rank": 125
+  },
+  {
+   "id": "1011671",
+   "year": 1948,
+   "height_m": 20.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    88.0
+   ],
+   "rank": 126
+  },
+  {
+   "id": "1012169",
+   "year": 1910,
+   "height_m": 16.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    8.0,
+    96.0
+   ],
+   "rank": 127
+  },
+  {
+   "id": "1012158",
+   "year": 1981,
+   "height_m": 20.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    16.0
+   ],
+   "rank": 128
+  },
+  {
+   "id": "1012167",
+   "year": 1870,
+   "height_m": 16.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    16.0,
+    96.0
+   ],
+   "rank": 129
+  },
+  {
+   "id": "1080266",
+   "year": 1902,
+   "height_m": 15.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.8,
+   "equinox_deckhours_stolen": 3.3,
+   "affects_s": [
+    56.0,
+    169.0
+   ],
+   "rank": 130
+  },
+  {
+   "id": "1082469",
+   "year": 2008,
+   "height_m": 22.2,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.3,
+   "affects_s": [
+    0.0,
+    169.0
+   ],
+   "rank": 131
+  },
+  {
+   "id": "1012156",
+   "year": 1910,
+   "height_m": 22.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    96.0
+   ],
+   "rank": 132
+  },
+  {
+   "id": "1012537",
+   "year": 2017,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    8.0,
+    346.0
+   ],
+   "rank": 133
+  },
+  {
+   "id": "1011692",
+   "year": 1920,
+   "height_m": 26.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    145.0,
+    241.0
+   ],
+   "rank": 134
+  },
+  {
+   "id": "1012231",
+   "year": 1900,
+   "height_m": 27.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    80.0,
+    88.0
+   ],
+   "rank": 135
+  },
+  {
+   "id": "1011704",
+   "year": 1910,
+   "height_m": 18.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    257.0,
+    257.0
+   ],
+   "rank": 136
+  },
+  {
+   "id": "1067852",
+   "year": 1907,
+   "height_m": 28.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    153.0,
+    153.0
+   ],
+   "rank": 137
+  },
+  {
+   "id": "1012206",
+   "year": 1900,
+   "height_m": 11.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    40.0,
+    80.0
+   ],
+   "rank": 138
+  },
+  {
+   "id": "1011698",
+   "year": 1910,
+   "height_m": 25.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    265.0,
+    265.0
+   ],
+   "rank": 139
+  },
+  {
+   "id": "1012166",
+   "year": 1870,
+   "height_m": 16.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    72.0,
+    96.0
+   ],
+   "rank": 140
+  },
+  {
+   "id": "1078501",
+   "year": 1874,
+   "height_m": 16.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    868.0,
+    868.0
+   ],
+   "rank": 141
+  },
+  {
+   "id": "1012691",
+   "year": 1985,
+   "height_m": 39.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    868.0,
+    973.0
+   ],
+   "rank": 142
+  },
+  {
+   "id": "1012573",
+   "year": 1983,
+   "height_m": 25.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.5,
+   "affects_s": [
+    619.0,
+    683.0
+   ],
+   "rank": 143
+  },
+  {
+   "id": "1012660",
+   "year": 1854,
+   "height_m": 19.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    796.0,
+    884.0
+   ],
+   "rank": 144
+  },
+  {
+   "id": "1078541",
+   "year": 1963,
+   "height_m": 60.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    868.0,
+    948.0
+   ],
+   "rank": 145
+  },
+  {
+   "id": "1086503",
+   "year": 1999,
+   "height_m": 29.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    796.0,
+    884.0
+   ],
+   "rank": 146
+  },
+  {
+   "id": "1012284",
+   "year": 1931,
+   "height_m": 28.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    643.0,
+    731.0
+   ],
+   "rank": 147
+  },
+  {
+   "id": "1012256",
+   "year": 1908,
+   "height_m": 21.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    241.0,
+    707.0
+   ],
+   "rank": 148
+  },
+  {
+   "id": "1012594",
+   "year": 1857,
+   "height_m": 18.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": null,
+   "rank": 149
+  },
+  {
+   "id": "1089993",
+   "year": 1931,
+   "height_m": 19.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    707.0,
+    715.0
+   ],
+   "rank": 150
+  },
+  {
+   "id": "1012569",
+   "year": 1900,
+   "height_m": 16.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.5,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    651.0,
+    675.0
+   ],
+   "rank": 151
+  },
+  {
+   "id": "1012292",
+   "year": 1910,
+   "height_m": 26.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    707.0,
+    723.0
+   ],
+   "rank": 152
+  },
+  {
+   "id": "1012672",
+   "year": 1900,
+   "height_m": 19.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    868.0,
+    876.0
+   ],
+   "rank": 153
+  },
+  {
+   "id": "1012595",
+   "year": 1835,
+   "height_m": 19.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    723.0,
+    731.0
+   ],
+   "rank": 154
+  },
+  {
+   "id": "1013332",
+   "year": 1965,
+   "height_m": 54.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.5,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    627.0,
+    973.0
+   ],
+   "rank": 155
+  },
+  {
+   "id": "1088203",
+   "year": 2008,
+   "height_m": 40.7,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.5,
+   "affects_s": [
+    675.0,
+    731.0
+   ],
+   "rank": 156
+  },
+  {
+   "id": "1013375",
+   "year": 1900,
+   "height_m": 19.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    965.0,
+    965.0
+   ],
+   "rank": 157
+  },
+  {
+   "id": "1012568",
+   "year": 1900,
+   "height_m": 16.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.0,
+   "equinox_deckhours_stolen": 1.3,
+   "affects_s": [
+    635.0,
+    667.0
+   ],
+   "rank": 158
+  },
+  {
+   "id": "1012613",
+   "year": 1836,
+   "height_m": 18.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    796.0,
+    796.0
+   ],
+   "rank": 159
+  },
+  {
+   "id": "1012658",
+   "year": 1897,
+   "height_m": 17.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    876.0,
+    876.0
+   ],
+   "rank": 160
+  },
+  {
+   "id": "1012662",
+   "year": 1891,
+   "height_m": 14.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    490.0,
+    498.0
+   ],
+   "rank": 161
+  },
+  {
+   "id": "1012606",
+   "year": 1845,
+   "height_m": 17.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    723.0,
+    723.0
+   ],
+   "rank": 162
+  },
+  {
+   "id": "1012570",
+   "year": 1900,
+   "height_m": 16.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    667.0,
+    675.0
+   ],
+   "rank": 163
+  },
+  {
+   "id": "1088184",
+   "year": 2008,
+   "height_m": 22.6,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    707.0,
+    715.0
+   ],
+   "rank": 164
+  },
+  {
+   "id": "1090162",
+   "year": 2016,
+   "height_m": 10.0,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": null,
+   "rank": 165
+  },
+  {
+   "id": "1012637",
+   "year": 1889,
+   "height_m": 17.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    796.0,
+    804.0
+   ],
+   "rank": 166
+  },
+  {
+   "id": "1012626",
+   "year": 1930,
+   "height_m": 46.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    611.0,
+    884.0
+   ],
+   "rank": 167
+  },
+  {
+   "id": "1083575",
+   "year": 1931,
+   "height_m": 36.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.8,
+   "equinox_deckhours_stolen": 0.3,
+   "affects_s": [
+    611.0,
+    804.0
+   ],
+   "rank": 168
+  },
+  {
+   "id": "1012255",
+   "year": 1908,
+   "height_m": 24.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    563.0,
+    731.0
+   ],
+   "rank": 169
+  },
+  {
+   "id": "1012697",
+   "year": 1920,
+   "height_m": 27.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    973.0,
+    973.0
+   ],
+   "rank": 170
+  },
+  {
+   "id": "1011658",
+   "year": 1893,
+   "height_m": 23.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    72.0,
+    80.0
+   ],
+   "rank": 171
+  },
+  {
+   "id": "1011455",
+   "year": 1931,
+   "height_m": 61.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    48.0
+   ],
+   "rank": 172
+  },
+  {
+   "id": "1011657",
+   "year": 1904,
+   "height_m": 20.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    72.0,
+    88.0
+   ],
+   "rank": 173
+  },
+  {
+   "id": "1011421",
+   "year": 1900,
+   "height_m": 22.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    24.0,
+    96.0
+   ],
+   "rank": 174
+  },
+  {
+   "id": "1011370",
+   "year": 1905,
+   "height_m": 27.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    80.0,
+    96.0
+   ],
+   "rank": 175
+  },
+  {
+   "id": "1011368",
+   "year": 1890,
+   "height_m": 27.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    32.0,
+    56.0
+   ],
+   "rank": 176
+  },
+  {
+   "id": "1012059",
+   "year": 1928,
+   "height_m": 20.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    88.0,
+    96.0
+   ],
+   "rank": 177
+  },
+  {
+   "id": "1084972",
+   "year": 1886,
+   "height_m": 19.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    56.0,
+    80.0
+   ],
+   "rank": 178
+  },
+  {
+   "id": "1012144",
+   "year": 1909,
+   "height_m": 24.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    96.0
+   ],
+   "rank": 179
+  },
+  {
+   "id": "1012091",
+   "year": 1897,
+   "height_m": 28.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    0.0,
+    96.0
+   ],
+   "rank": 180
+  },
+  {
+   "id": "1011949",
+   "year": 1886,
+   "height_m": 27.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    16.0,
+    48.0
+   ],
+   "rank": 181
+  },
+  {
+   "id": "1012053",
+   "year": 1886,
+   "height_m": 17.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    40.0,
+    96.0
+   ],
+   "rank": 182
+  },
+  {
+   "id": "1012143",
+   "year": 1957,
+   "height_m": 16.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    56.0,
+    88.0
+   ],
+   "rank": 183
+  },
+  {
+   "id": "1011929",
+   "year": 1842,
+   "height_m": 11.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    72.0,
+    72.0
+   ],
+   "rank": 184
+  },
+  {
+   "id": "1012133",
+   "year": 1920,
+   "height_m": 16.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    8.0,
+    88.0
+   ],
+   "rank": 185
+  },
+  {
+   "id": "1011927",
+   "year": 1913,
+   "height_m": 11.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    64.0,
+    64.0
+   ],
+   "rank": 186
+  },
+  {
+   "id": "1083578",
+   "year": 1940,
+   "height_m": 34.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    916.0,
+    1214.0
+   ],
+   "rank": 187
+  },
+  {
+   "id": "1012366",
+   "year": 1926,
+   "height_m": 27.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1045.0,
+    1085.0
+   ],
+   "rank": 188
+  },
+  {
+   "id": "1083582",
+   "year": 1946,
+   "height_m": 32.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.7,
+   "equinox_deckhours_stolen": 1.3,
+   "affects_s": [
+    1198.0,
+    1286.0
+   ],
+   "rank": 189
+  },
+  {
+   "id": "1012398",
+   "year": 1920,
+   "height_m": 26.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1278.0,
+    1286.0
+   ],
+   "rank": 190
+  },
+  {
+   "id": "1079184",
+   "year": 1891,
+   "height_m": 31.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1278.0,
+    1857.0
+   ],
+   "rank": 191
+  },
+  {
+   "id": "1012258",
+   "year": 1908,
+   "height_m": 16.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    884.0,
+    884.0
+   ],
+   "rank": 192
+  },
+  {
+   "id": "1080275",
+   "year": null,
+   "height_m": 10.8,
+   "era": null,
+   "era_band": "unknown",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1358.0,
+    1447.0
+   ],
+   "rank": 193
+  },
+  {
+   "id": "1012378",
+   "year": 1911,
+   "height_m": 47.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1045.0,
+    1133.0
+   ],
+   "rank": 194
+  },
+  {
+   "id": "1012828",
+   "year": 1968,
+   "height_m": 32.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1206.0,
+    1214.0
+   ],
+   "rank": 195
+  },
+  {
+   "id": "1012414",
+   "year": 1930,
+   "height_m": 19.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1278.0,
+    1286.0
+   ],
+   "rank": 196
+  },
+  {
+   "id": "1012267",
+   "year": 1994,
+   "height_m": 27.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1117.0,
+    1214.0
+   ],
+   "rank": 197
+  },
+  {
+   "id": "1012827",
+   "year": 1968,
+   "height_m": 37.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1198.0,
+    1286.0
+   ],
+   "rank": 198
+  },
+  {
+   "id": "1012371",
+   "year": 1946,
+   "height_m": 23.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": null,
+   "rank": 199
+  },
+  {
+   "id": "1012389",
+   "year": 1912,
+   "height_m": 42.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1616.0,
+    1656.0
+   ],
+   "rank": 200
+  },
+  {
+   "id": "1083579",
+   "year": 1940,
+   "height_m": 35.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    924.0,
+    948.0
+   ],
+   "rank": 201
+  },
+  {
+   "id": "1012379",
+   "year": 1891,
+   "height_m": 25.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1117.0,
+    1125.0
+   ],
+   "rank": 202
+  },
+  {
+   "id": "1090389",
+   "year": 2017,
+   "height_m": 44.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    948.0,
+    965.0
+   ],
+   "rank": 203
+  },
+  {
+   "id": "1089398",
+   "year": 2011,
+   "height_m": 64.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1117.0,
+    1125.0
+   ],
+   "rank": 204
+  },
+  {
+   "id": "1012320",
+   "year": 2020,
+   "height_m": 15.2,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    868.0,
+    868.0
+   ],
+   "rank": 205
+  },
+  {
+   "id": "1012826",
+   "year": 1914,
+   "height_m": 45.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1198.0,
+    1246.0
+   ],
+   "rank": 206
+  },
+  {
+   "id": "1083580",
+   "year": 1962,
+   "height_m": 55.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1214.0,
+    1214.0
+   ],
+   "rank": 207
+  },
+  {
+   "id": "1012830",
+   "year": 1940,
+   "height_m": 20.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1278.0,
+    1366.0
+   ],
+   "rank": 208
+  },
+  {
+   "id": "1089424",
+   "year": 2018,
+   "height_m": 41.1,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1206.0,
+    1214.0
+   ],
+   "rank": 209
+  },
+  {
+   "id": "1012266",
+   "year": 1987,
+   "height_m": 23.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1045.0,
+    1133.0
+   ],
+   "rank": 210
+  },
+  {
+   "id": "1012403",
+   "year": 1900,
+   "height_m": 27.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1278.0,
+    1366.0
+   ],
+   "rank": 211
+  },
+  {
+   "id": "1087713",
+   "year": 1912,
+   "height_m": 45.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1125.0,
+    1133.0
+   ],
+   "rank": 212
+  },
+  {
+   "id": "1083581",
+   "year": 1962,
+   "height_m": 56.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.7,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    948.0,
+    1214.0
+   ],
+   "rank": 213
+  },
+  {
+   "id": "1075683",
+   "year": 1913,
+   "height_m": 38.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1198.0,
+    1624.0
+   ],
+   "rank": 214
+  },
+  {
+   "id": "1012341",
+   "year": 1900,
+   "height_m": 14.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    948.0,
+    957.0
+   ],
+   "rank": 215
+  },
+  {
+   "id": "1012811",
+   "year": 2004,
+   "height_m": 24.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1133.0,
+    1133.0
+   ],
+   "rank": 216
+  },
+  {
+   "id": "1012781",
+   "year": 1910,
+   "height_m": 18.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    667.0,
+    667.0
+   ],
+   "rank": 217
+  },
+  {
+   "id": "1076125",
+   "year": 1910,
+   "height_m": 14.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    659.0,
+    659.0
+   ],
+   "rank": 218
+  },
+  {
+   "id": "1012345",
+   "year": 2005,
+   "height_m": 40.2,
+   "era": "post",
+   "era_band": "rezoning-era",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    948.0,
+    1077.0
+   ],
+   "rank": 219
+  },
+  {
+   "id": "1077349",
+   "year": 1992,
+   "height_m": 28.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.8,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1198.0,
+    1447.0
+   ],
+   "rank": 220
+  },
+  {
+   "id": "1012831",
+   "year": 1931,
+   "height_m": 61.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1198.0,
+    1624.0
+   ],
+   "rank": 221
+  },
+  {
+   "id": "1080319",
+   "year": 1920,
+   "height_m": 12.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": null,
+   "rank": 222
+  },
+  {
+   "id": "1012413",
+   "year": 1930,
+   "height_m": 17.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    1278.0,
+    1286.0
+   ],
+   "rank": 223
+  },
+  {
+   "id": "1012412",
+   "year": 1910,
+   "height_m": 21.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    1278.0,
+    1286.0
+   ],
+   "rank": 224
+  },
+  {
+   "id": "1089412",
+   "year": 2015,
+   "height_m": 24.4,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 1.2,
+   "affects_s": [
+    1624.0,
+    1857.0
+   ],
+   "rank": 225
+  },
+  {
+   "id": "1012478",
+   "year": 2012,
+   "height_m": 18.9,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1664.0,
+    1857.0
+   ],
+   "rank": 226
+  },
+  {
+   "id": "1013088",
+   "year": 1900,
+   "height_m": 24.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    571.0,
+    579.0
+   ],
+   "rank": 227
+  },
+  {
+   "id": "1080363",
+   "year": 1915,
+   "height_m": 14.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.5,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    530.0,
+    579.0
+   ],
+   "rank": 228
+  },
+  {
+   "id": "1078420",
+   "year": 1965,
+   "height_m": 19.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    490.0,
+    498.0
+   ],
+   "rank": 229
+  },
+  {
+   "id": "1078504",
+   "year": 1920,
+   "height_m": 18.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    731.0,
+    731.0
+   ],
+   "rank": 230
+  },
+  {
+   "id": "1012530",
+   "year": 1893,
+   "height_m": 21.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    257.0,
+    257.0
+   ],
+   "rank": 231
+  },
+  {
+   "id": "1089965",
+   "year": 2018,
+   "height_m": 36.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    514.0,
+    603.0
+   ],
+   "rank": 232
+  },
+  {
+   "id": "1078439",
+   "year": 1910,
+   "height_m": 12.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    587.0,
+    587.0
+   ],
+   "rank": 233
+  },
+  {
+   "id": "1013070",
+   "year": 1910,
+   "height_m": 19.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    490.0,
+    490.0
+   ],
+   "rank": 234
+  },
+  {
+   "id": "1013196",
+   "year": 1910,
+   "height_m": 14.6,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    643.0,
+    643.0
+   ],
+   "rank": 235
+  },
+  {
+   "id": "1080454",
+   "year": 1900,
+   "height_m": 34.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    723.0,
+    731.0
+   ],
+   "rank": 236
+  },
+  {
+   "id": "1012575",
+   "year": 1910,
+   "height_m": 23.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    635.0,
+    651.0
+   ],
+   "rank": 237
+  },
+  {
+   "id": "1012542",
+   "year": 1920,
+   "height_m": 24.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    426.0,
+    426.0
+   ],
+   "rank": 238
+  },
+  {
+   "id": "1012248",
+   "year": 1910,
+   "height_m": 12.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    241.0,
+    346.0
+   ],
+   "rank": 239
+  },
+  {
+   "id": "1078418",
+   "year": 1965,
+   "height_m": 19.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    490.0,
+    498.0
+   ],
+   "rank": 240
+  },
+  {
+   "id": "1013044",
+   "year": 1969,
+   "height_m": 50.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.8,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    354.0,
+    603.0
+   ],
+   "rank": 241
+  },
+  {
+   "id": "1012548",
+   "year": 1950,
+   "height_m": 14.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 1.7,
+   "equinox_deckhours_stolen": 0.5,
+   "affects_s": [
+    514.0,
+    539.0
+   ],
+   "rank": 242
+  },
+  {
+   "id": "1088885",
+   "year": 1966,
+   "height_m": 52.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    354.0,
+    563.0
+   ],
+   "rank": 243
+  },
+  {
+   "id": "1013207",
+   "year": 1900,
+   "height_m": 12.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    651.0,
+    651.0
+   ],
+   "rank": 244
+  },
+  {
+   "id": "1012253",
+   "year": 1900,
+   "height_m": 19.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    8.0,
+    346.0
+   ],
+   "rank": 245
+  },
+  {
+   "id": "1012581",
+   "year": 1897,
+   "height_m": 18.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    715.0,
+    715.0
+   ],
+   "rank": 246
+  },
+  {
+   "id": "1013096",
+   "year": 1931,
+   "height_m": 50.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    490.0,
+    731.0
+   ],
+   "rank": 247
+  },
+  {
+   "id": "1013272",
+   "year": 1940,
+   "height_m": 20.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    796.0,
+    804.0
+   ],
+   "rank": 248
+  },
+  {
+   "id": "1012552",
+   "year": 1930,
+   "height_m": 11.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    563.0,
+    563.0
+   ],
+   "rank": 249
+  },
+  {
+   "id": "1013243",
+   "year": 1928,
+   "height_m": 55.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    514.0,
+    723.0
+   ],
+   "rank": 250
+  },
+  {
+   "id": "1795004",
+   "year": 2016,
+   "height_m": 18.6,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    474.0,
+    659.0
+   ],
+   "rank": 251
+  },
+  {
+   "id": "1795003",
+   "year": 2016,
+   "height_m": 15.8,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    330.0,
+    346.0
+   ],
+   "rank": 252
+  },
+  {
+   "id": "1012804",
+   "year": 1929,
+   "height_m": 27.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1133.0,
+    1133.0
+   ],
+   "rank": 253
+  },
+  {
+   "id": "1012308",
+   "year": 1915,
+   "height_m": 30.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    796.0,
+    884.0
+   ],
+   "rank": 254
+  },
+  {
+   "id": "1082715",
+   "year": 1934,
+   "height_m": 49.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.3,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1061.0,
+    1061.0
+   ],
+   "rank": 255
+  },
+  {
+   "id": "1012768",
+   "year": 1857,
+   "height_m": 20.7,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.5,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    530.0,
+    973.0
+   ],
+   "rank": 256
+  },
+  {
+   "id": "1012318",
+   "year": 1920,
+   "height_m": 28.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    876.0,
+    876.0
+   ],
+   "rank": 257
+  },
+  {
+   "id": "1012317",
+   "year": 2020,
+   "height_m": 33.5,
+   "era": "post",
+   "era_band": "post-opening",
+   "era_2009_secondary": "post",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    876.0,
+    884.0
+   ],
+   "rank": 258
+  },
+  {
+   "id": "1082711",
+   "year": 1934,
+   "height_m": 50.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.2,
+   "affects_s": [
+    587.0,
+    957.0
+   ],
+   "rank": 259
+  },
+  {
+   "id": "1082710",
+   "year": 1934,
+   "height_m": 49.5,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    627.0,
+    965.0
+   ],
+   "rank": 260
+  },
+  {
+   "id": "1085935",
+   "year": 1908,
+   "height_m": 23.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    707.0,
+    804.0
+   ],
+   "rank": 261
+  },
+  {
+   "id": "1012332",
+   "year": 1905,
+   "height_m": 17.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.7,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    908.0,
+    908.0
+   ],
+   "rank": 262
+  },
+  {
+   "id": "1082709",
+   "year": 1934,
+   "height_m": 49.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    948.0,
+    957.0
+   ],
+   "rank": 263
+  },
+  {
+   "id": "1012309",
+   "year": 1921,
+   "height_m": 24.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    796.0,
+    804.0
+   ],
+   "rank": 264
+  },
+  {
+   "id": "1077236",
+   "year": 1932,
+   "height_m": 63.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.2,
+   "equinox_deckhours_stolen": 0.7,
+   "affects_s": [
+    868.0,
+    1053.0
+   ],
+   "rank": 265
+  },
+  {
+   "id": "1012673",
+   "year": 1900,
+   "height_m": 19.3,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    868.0,
+    868.0
+   ],
+   "rank": 266
+  },
+  {
+   "id": "1012713",
+   "year": 1857,
+   "height_m": 22.0,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    973.0,
+    973.0
+   ],
+   "rank": 267
+  },
+  {
+   "id": "1078456",
+   "year": 1920,
+   "height_m": 20.9,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    539.0,
+    571.0
+   ],
+   "rank": 268
+  },
+  {
+   "id": "1012314",
+   "year": 1900,
+   "height_m": 16.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    884.0,
+    884.0
+   ],
+   "rank": 269
+  },
+  {
+   "id": "1012355",
+   "year": 1920,
+   "height_m": 15.8,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    603.0,
+    603.0
+   ],
+   "rank": 270
+  },
+  {
+   "id": "1078460",
+   "year": 1920,
+   "height_m": 21.4,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1045.0,
+    1053.0
+   ],
+   "rank": 271
+  },
+  {
+   "id": "1013463",
+   "year": 1848,
+   "height_m": 27.1,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1278.0,
+    1278.0
+   ],
+   "rank": 272
+  },
+  {
+   "id": "1082794",
+   "year": 1960,
+   "height_m": 59.2,
+   "era": "pre",
+   "era_band": "pre-rezoning",
+   "era_2009_secondary": "pre",
+   "sky_share_pct": 0.0,
+   "svf_removed_pts": 0.0,
+   "winter_deckhours_stolen": 0.0,
+   "equinox_deckhours_stolen": 0.0,
+   "affects_s": [
+    1198.0,
+    1286.0
+   ],
+   "rank": 273
+  }
+ ]
+}

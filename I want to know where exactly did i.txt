@@ -1,0 +1,119 @@
+I want to know where exactly did i use webGL or GLSL, cause i am not quite familiar with usecase and their stance in computational designer
+
+Good question to ask before putting it on a résumé. Let me go find every actual instance rather than tell you from memory.
+
+  Ran 6 shell commands
+
+Found something important — let me verify before it reaches your résumé.
+
+  Read 1 file, ran 8 shell commands
+
+Killed the slow scan — I have what I need. One finding changes things, so let me lead with it.
+
+⚠️ First: one thing that looks like GLSL and isn't
+
+CBX_Trench_Visual.html and accurate_terrain_v2.html in the CBX tree contain 199 occurrences of gl_FragColor / gl_Position. That looks like the largest shader work you own. It isn't yours — those files are a minified bundle (532 hits for regl, 169 for plotly). It's library code that shipped inside your HTML.
+
+Same for 13.cdw-public/js/lib/p5.js and three.min.js. Don't count any of it. If a reviewer greps your repo and finds you claimed authorship of Plotly's internals, everything else you said becomes suspect.
+
+Where you actually wrote GLSL
+
+Six places, five distinct projects, ~1,200 lines:
+
+Where: website_minimal/src/webgl/shaders/
+Project: This portfolio site
+What the shader actually does: 6 files. billow.vert/frag — card displacement (velocity curl, per-card breath, cursor
+swell) + a fragment stage where hover resolves the image (colour returns, chromatic aberration collapses).
+backdrop.vert/frag — wireframe sheet, wave computed in UV space. motes.vert/frag — particle drift integrated on the
+GPU from uTime
+Lines: 330
+────────────────────────────────────────
+Where: Projects/10.TD/accretion/shaders/
+Project: UNDERPAINTING 09
+What the shader actually does: 5 TouchDesigner-dialect files forming a feedback ring: coded_pass → StreamDiffusion →
+delta → integrate → strata / displace.vert. The field stays 32-bit float around the whole loop
+Lines: 528
+────────────────────────────────────────
+Where: Projects/10.TD/underpainting/td/glsl/
+Project: UNDERPAINTING 09
+What the shader actually does: depth_conditioning.frag, edge_conditioning.frag — ControlNet conditioning signals
+generated on the GPU
+Lines: 147
+────────────────────
+Where: Projects/5.CV_Highline/index.html
+Project: The Self-Enclosing Line 03
+What the shader actually does: The strongest one technically. A ping-pong FBO stigmergy field: two WebGLRenderTargets
+swapped each frame, a hand-rolled 3×3 gaussian kernel with decay, agents stamped additively into the buffer. This is
+GPGPU — using the GPU to simulate, not to draw
+Lines: ~50 inline
+────────────────────────────────────────
+Where: Projects/12.SyntheticTrail/titan_deep_field.src/part2_engine.js
+Project: Synthetic Trail 10
+What the shader actually does: Catalogue filtering done entirely in the vertex shader — a bitmask decode
+(mod(floor(uMethMask / pow(2,m)), 2)) for discovery method, a temperature window, distance-attenuated gl_PointSize,
+additive glow in the fragment stage
+Lines: ~60 inline
+────────────────────────────────────────
+Where: Projects/2.CBX/.../Propose_FeralGovernance/granular.html
+Project: CBX tree, research strand
+What the shader actu11 across ~10 files, and Synthetic Trail's space_resource_network.html + architectural-visualization.js.
+
+One caveat on 09: the TouchDesigner shaders are written and numerically verified, but never compiled — 10.TD/CLAUDE.md says so plainly ("the shaders cannot be compiled from here, so reading them proves nothing"). What exists instead is sim/shader_parity.py, which ports each shader's core function to NumPy line-for-line and checks it against the swept model: parity to 6.6e-07 on coded_pass, 1.8e-07 on integrate. That test caught a real blur-truncation bug that inspection had missed. Don't say "shipped a running TouchDesigner network" — but the parity method is a better story than the shipping claim would have been.
+
+What these things are, and why they're worth claiming
+
+WebGL is the browser's API to the graphics card. Three.js is a library on top of WebGL — it gives you cameras, meshes and materials so you never have to talk to the GPU directly. GLSL is the language of programs that run on the GPU, and there are two kinds: a vertex shader runs once per point and decides where it lands on screen; a fragment shader runs once per pixel and decides what colour it is. Both run on thousands of cores simultaneously, which is the whole point.
+
+The résumé distinction that matters: "used Three.js" and "wrote GLSL" are not the same claim. Most computational designers can honestly say the first. Far fewer can say the second, and it's checkable — which is exactly why it's worth saying when it's true.
+
+Where it sits in the discipline. Three reasons it's more than decoration:
+
+1. It's the only way past a scale ceiling. A JavaScript loop over agents or data points dies somewhere around 10⁴. Your High Line pheromone field and the Titan catalogue both cross that line by moving the work to the GPU. For a designer working at city scale — every tax lot, every street frame, every LiDAR return — this is the difference between a study that runs and one that doesn't.
+2. It's parametric thinking in a different execution model. A shader is a pure function evaluated in parallel across a domain. If you can think in Grasshopper, you already have the mental model; what's new is that there are no loops and no shared state. That transfer is genuinely easier coming from your background than from a general web background, and it's worth knowing that.
+3. It's what separates "designer who makes diagrams" from "designer who builds instruments." Your billow.frag decision — that hover resolves a card rather than highlighting it, so attention is the only thing producing saturation — is a design argument implemented in a fragment shader. That's the job.
+
+Where it's hiring. Design-technology groups building custom viewers (SOM, Gensler, Zaha CODE, Thornton Tomasetti's CORE), real-time/immersive studios, scientific and data visualization teams, and installation/media practices. In those postings it usually appears as "WebGL/Three.js," "shader authoring," or "real-time graphics" — and the ones that say shader specifically are filtering for exactly the smaller group.
+
+                  render targets [03], catalogue filtering executed in the vertex
+                  stage [10], GPU-side particle integration and DPR / frame-budget
+                  management. GLSL in TouchDesigner for a diffusion feedback loop,
+                  verified by line-for-line NumPy parity to 6.6e-07 where the
+                  shaders could not be compiled [09].
+
+Two words in there are doing real work. "GPGPU" signals you know the GPU is a compute device and not just a renderer — it's the term the people hiring for this use. And "verified by line-for-line NumPy parity" turns your weakest instance into your most distinctive sentence, because almost nobody tests shaders at all.
+
+If you want a single line for a tighter résumé: "Hand-written GLSL across five projects — GPU feedback simulation, vertex-stage data filterout.
+
+  Ran 1 shell command
+
+The background scan finished. The GLSL table stands complete — six locations, no seventh. But my "WebGL without custom shaders" line was undercounted. The full picture:
+
+Three.js scene work, zero custom shaders (four projects, not two):
+
+┌───────────────────────────────────────────────────┬─────────────────┬───────────────────────────────────────────┐
+│                       Where                       │     Project     │                                           │
+├───────────────────────────────────────────────────┼─────────────────┼───────────────────────────────────────────┤
+│                                                   │ Computational   │ ~10 files — shapes, splitting cubes, an   │
+│ 13.cdw-public/js/components/ + 3 pages            │ Design          │ L-shape series                            │
+│                                                   │ Workflows 11    │                                           │
+├───────────────────────────────────────────────────┼─────────────────┼───────────────────────────────────────────┤
+│                                                   │ Synthetic Trail │ space_resource_network.html,              │
+│ 12.SyntheticTrail/                                │  10             │ architectural-visualization.js,           │
+│                                                   │                 │ index.html, part1_shell / part3_ui        │
+├───────────────────────────────────────────────────┼─────────────────┼───────────────────────────────────────────┤
+│                                                   │ The             │ 384 lines — a second scene alongside the  │
+│ 5.CV_Highline/envelope.html                       │ Self-Enclosing  │ shader-driven index.html                  │
+│                                                   │ Line 03         │                                           │
+├───────────────────────────────────────────────────┼─────────────────┼───────────────────────────────────────────┤
+│ 2.CBX/.../1.SegmentationCharts/exhibit/index.html │ TRENCH 02       │ 1,147 lines — the segmentation exhibit    │
+├───────────────────────────────────────────────────┼─────────────────┼───────────────────────────────────────────┤
+│                                                   │ CBX research    │ script.js (723),                          │
+│ 2.CBX/.../Propose_FeralGovernance/                │ strand          │ feral-governance-full-prototype.jsx       │
+│                                                   │                 │ (835), index.html                         │
+└───────────────────────────────────────────────────┴─────────────────┴───────────────────────────────────────────┘
+
+All four verified at 0 occurrences of ShaderMaterial / gl_FragColor / gl_Position — genuine Three.js work, not shader work.
+
+Also confirmed correctly excluded: website_1/ and 2.CBX/.../minimal_website/ are earlier versions of this same portfolio site carrying the same billow shaders — one body of work, not three. website_minimal/scripts/*-harness.html are the dev harnesses for the current site.
+
+What this changes for the résumé: nothing in the shader claim, but it strengthens the surrounding one. Three.js/WebGL appears in four of your thirteen projects plus the portfolio site, and in 03 you built both kinds in the same project — a shader-driven GPGPU field in index.html and a conventional scene in envelope.html. That's a useful thing to be able to say out loud: you reach for hand-written GLSL when the problem needs the GPU to compute, and stay in Three.js when it only needs to draw. Knowing which is which is the actual senior signal.

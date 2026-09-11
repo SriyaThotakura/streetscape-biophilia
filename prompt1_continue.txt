@@ -1,0 +1,543 @@
+no test runner. Everything ships in [index.html](index.html) (~2800 lines, ~120KB) — HTML, CSS, and a
+n ES module `<script>` block all live in that one file.
+
+- [index.html](index.html) — the entire app (UI markup, styles, Three.js scene, agent sim, parsers, UI
+handlers)
+- [index.html](index.html) — the entire app (UI markup, styles, Three.js scene, two agent sims, parsers
+, UI handlers)
+- [cityBlock.json](cityBlock.json) — sample site-context input (custom JSON schema, not GeoJSON) used b
+md](Option2_Revised_StigmergicUrbanism.md), [Option3_Revised_ParametricEnvelope.md](Option3_Revised_Pa
+rametricEnvelope.md) — **design briefs / prompts**, not specs the current code implements verbatim. The
+ current `index.html` is closest to Option 2 (stigmergic / Physarum agents on an urban block). Treat th
+e option docs as background intent, not source of truth.
+- `ComputerVision/` — a **separate companion project**: a Jupyter notebook (`CV.ipynb`) that audits Hig
+h Line street imagery from Mapillary with segmentation/depth models, plus its image/CSV outputs. It sha
+res the High Line theme but has no code connection to `index.html`. `ExposureCartographyMaps/` is curre
+ntly empty.
+
+## Run / develop
+
+
+# then open http://localhost:8000/index.html
+```
+
+To (re)generate the High Line dataset (requires network access to NYC Open Data; no third-party package
+s):
+
+Mapbox GL is loaded from a CDN `<script>` tag and is **opt-in**: it only activates when `MAPBOX_TOKEN`
+ in [index.html](index.html) is replaced from its placeholder `'YOUR_MAPBOX_TOKEN'`. Without a token th
+e app runs fine in a non-georeferenced mode.
+
+The optional "AI Urban Consultant" panel POSTs to `LLM_ENDPOINT` (default OpenAI `chat/completions`, mo
+del `gpt-4o-mini`) using a key the user pastes into the UI at runtime — keys are not stored.
+
+
+The script in [index.html](index.html) is organized as top-level sections delimited by `// ═══` banner
+comments. The major systems and how they connect:
+
+1. **CONFIG** block (~line 330) — all tunables live as top-level `const`s: agent count, sensor geometry
+, pheromone decay, FBO resolution, building-type emission/color tables (`TYPE_EMIT`, `TYPE_COLOR`). Cha
+nging simulation behavior usually means editing constants here, not algorithms below.
+1. **CONFIG** block (~line 330) — all tunables live as top-level `const`s: agent count, sensor geometry
+, pheromone decay, FBO resolution, building-type emission/color tables (`TYPE_EMIT`, `TYPE_COLOR`), and
+ the `PED_*` pedestrian constants. Changing simulation behavior usually means editing constants here, n
+ot algorithms below.
+de consumes this normalized shape — when adding a new input source, produce this shape.
+2. **Two simulation modes** — `simMode` (~line 370) is `'physarum'` (default) or `'highline'`. The RAF
+loop dispatches to `physarumStep()` or `pedestrianStep()` accordingly, and analysis dispatches to `runA
+nalysis()` or `runHighLineAnalysis()`. Loading any non–High Line data source resets `simMode` to `'phys
+. **`SpatialHash`** + **`PheromoneField`** (~lines 675, 701) — the simulation substrate. `PheromoneFie
+. **Three.js scene + GPU trail pipeline** (~line 819 onward) — standard `WebGLRenderer` + `OrbitContro
+ls` + `RoomEnvironment` PMREM, plus a parallel **ping-pong FBO trail renderer**: `fadeMat`/`fadeQuad` f
+ades the previous frame, `stampMat`/`stampPoints` stamps current agent positions, and `pheroPlane` comp
+osites the result back into the scene. This is independent of the CPU `PheromoneField` — the FBO is pur
+s` + `RoomEnvironment` PMREM, plus a parallel **ping-pong FBO trail renderer**: `fadeMat`/`fadeQuad` f
+ades the previous frame, `stampMat`/`stampPoints` stamps current agent positions, and `pheroPlane` comp
+ove → deposit). The main RAF loop runs it `SIM_SPEED` times per frame, then updates FBO trails, line/d
+ot geometry, HUD, and the side-panel plan/timeline/histogram canvases.
+7. **Mapbox sync** — `syncCamerasFromMapbox()` (~line 911) keeps the Three.js `PerspectiveCamera` align
+ed with the Mapbox camera when `mapboxEnabled`. Skipped entirely otherwise.
+
+8. **Analysis & export** — `runAnalysis()` (~line 1979) derives metrics from the pheromone field via a
+`peakDetector` (~line 1900) and writes them into `analysisState`. `exportSVG()` / `exportPNG()` (~lines
+. **High Line pedestrian model** (~line 1334) — the `'highline'` mode reuses the same agent arrays but
+ treats agents as visitors on a **1-D corridor**: each agent has an arc-length position `agS[i]` along
+the deck centerline plus a lateral offset, spawns/despawns at weighted real access points, and slows wi
+th local segment density (`PED_CONGEST_K`), so bottlenecks emerge. `buildHighLine()` maps the raw proje
+cted meters from the fetch script into world space via `SiteParser.lastTransform`. Per-segment `pedDens
+ity`/`pedFootfall` (`PED_SEGS` bins) feed `runHighLineAnalysis()` (~line 2346) instead of the pheromone
+-field metrics.
+
+10. **Initialization / data switching** — `initSiteAndSeeds()` (~line 1519) rebuilds site, meshes, and
+agents for the active mode; the data-source buttons (~line 2647 onward) switch between grid / cityBlock
+.json / file drop / High Line (`loadHighLineFootprints()` fetches `data/highline_footprints.json` and e
+rrors with a pointer to the fetch script if missing).
+
+11. **Analysis & export** — `runAnalysis()` (~line 2191) derives metrics from the pheromone field via a
+ `peakDetector` (~line 2112) and writes them into `analysisState`. `exportSVG()` / `exportPNG()` (~line
+local meters centered at (0,0)** ([x, z], +x east, +z north), so `SiteParser.parseGeoJSON()` ingests i
+t verbatim (the `cos(lat)` correction collapses to 1). It carries an extra top-level `high_line` block
+(`centerline`, `access_points` with names/weights, `length_m`) that `buildHighLine()` consumes. If you
+change the output shape, both the parser path and `buildHighLine()` must keep working.
+
+## Conventions worth knowing
+
+- **Coordinates:** `(x, z)` is the ground plane; `y` is up. Building polygons and agent positions are a
+lways 2D `{x, z}` with height extruded separately. Don't introduce `(x, y)` ground coords — it will sil
+ently break the parser pipeline.
+
+CLAUDE.md was already present but three weeks stale, so I verified it against the current code and rewrote the out-of-date parts rather than starting fresh. What changed:
+
+Added — features that didn't exist when it was written:
+- The High Line pedestrian mode: index.html now has two simulation modes (simMode = 'physarum' | 'highline'). The new mode treats agents as visitors walking the deck as a 1-D corridor with congestion slowdown, spawning at weighted real access points, with its own analysis path (runHighLineAnalysis). This is now architecture item 2 plus a dedicated
+ine note that ComputerVision/ is a separate Mapillary/segmentation notebook project with no code link to the app, and that ExposureCartographyMaps/ is empty — so future sessions don't waste time trying to connect them.
+
+Corrected — drifted anchors: the file grew from ~2400 to ~2800 lines, shifting every line reference (e.g. physarumStep 1217→1232, runAnalysis 1979→2191, peakDetector 1900→2112, exports 1707/1801→1919/2013). All updated to current positions.
+
+Kept as-is: the run instructions, Mapbox/LLM-panel notes, the "option docs are briefs, not specs" warning, and all three conventions — I verified each still holds.
+
+✻ Churned for 2m 21s
+
+※ recap: Updated your existing CLAUDE.md to match the current code: documented the new High Line pedestrian mode, the NYC data fetch script and its data contract, and fixed all stale line references. Done; nothing left pending. (disable recaps in /config)
+
+❯ Read CLAUDE.md, index.html, ComputerVision/CV.ipynb + its outputs, and scripts/fetch_nyc_data.py. No rendering yet. Three jobs:
+ip plan: this portfolio version is High Line pedestrian mode ONLY. Tell me cleanly how to disable/remove the physarum mode and the AI-consultant LLM panel from the active build without breaking the High Line path — I want one focused thesis, not a multi-mode app.
+  Output a written bridge plan + exposure data-contract + the strip list. No code yet.
+
+I'll work through the three jobs: first inventory the CV notebook's actual outputs, then design the bridge to the pedestrian segments, then map the scope-strip. Starting by parsing the notebook (extracting sources and output 
+
+---
+1 · CV Notebook Output Inventory (what actually exists)
+
+Pipeline recap: Untitled1.ipynb generated 50 synthetic survey points → CV.ipynb downloaded the nearest Mapillary photo per point (25 m radius), ran SegFormer-B5 (Cityscapes) segmentation for scalar view ratios, then spent cells 13–49 on a single-site (P17) depth + ControlNet retrofit study. Everything below is verified from the files and executed cell outputs, not the code's intent.
+
+Machine-readable data
+
+File: SoftScan_Points.csv
+Rows / count: 50
+Fields: id, lat, lng (no header)
+───────────────────────────────
+File: highline_urban_audit.csv
+Rows / count: 40 rows (ids 8–47 minus 34)
+Fields: id, GVI, SkyFactor, PublicRealm, HumanPresence
+Coverage: The wide-coverage dataset
+Format issues: Values are 255× the true fraction (masks are 0/255 uint8 and were summed, not counted; e.g. GVI = 208.19
+   at P38 means 0.816). Later notebook cells patch this with /255 + clip, but the CSV on disk is raw. Definitions: GVI
+  = vegetation/total, SkyFactor = sky/total, PublicRealm = (sidewalk+vegetation)/total, HumanPresence = person/total
+────────────────────────────────────────
+File: HIGHLINE_MASTER_AUDIT.csv
+Rows / count: 12 rows only (every 3rd point: 8, 11, 14, … 42)
+Fields: Point, Sky_View_%, Greenery_%, Hardness_%, Enclosure_Score, Typology
+Coverage: Sparse but correct-unit dataset
+Format issues: Percentages are genuine (0–100). Hardness = building+wall. Enclosure_Score is unbounded — 
+computed but NOT saved as data
+furniture density, comfort score, PRI, heat-risk intensity — computed in-memory for the 12-point subset (or P17/14/15 only), plotted, never written to CSV. Some later "results" are hand-typed constants in plotting cells (e.g. cell 46's proposed = [14.22, 18.17, 12.45]), so treat every PNG number as presentation, not data.
+
+Presentation-only artifacts
+
+~25 PNG boards/charts, highline_interactive_map.html (folium; the only artifact that already joins metrics to coordinates), and HighLine_AI_Audit_Project.zip. None machine-readable.
+
+Validity caveats you should carry into the thesis
+
+1. Street-level, not deck-level. The Mapillary photos are shot from streets beside/under the viaduct (P17 is literally the underpass beneath the High Line). The measured "exposure" is corridor-context exposure at street level, not what a pedestrian on the deck sees. This is defensible if framed honestly; it is fabrication if labeled "on-deck view."
+2. Adjacent points share photos (5 duplicate pairs), so effective sample = 34 sites.
+3. The two CSVs disagree in units and sampling; they must never be mixed without the /255 normalization.
+
+---                                                                                                      rectangular projection, L ≈ 1,857 m):
+
+ Read CLAUDE.md, index.html, ComputerVision/CV.ipynb + its outputs, and scripts/fetch_nyc_data.py. No rendering yet. Three jobs:
+
+  Inventory exactly what the CV notebook outputs per High Line location — segmentation classes, green/sky/enclosure ratios, depth, coordinates/Mapillary IDs, file formats. Report real coverage vs. gaps; don't assume.
+  Design the bridge from CV output → the High Line centerline segments (PED_SEGS bins) so agents can sample real per-segment exposure as they move. Say what's missing to make the join real; mark gaps, never fabricate.
+  Scope-strip plan: this portfolio version is High Line pedestrian mode ONLY. Tell me cleanly how to disable/remove the physarum mode and the AI-consultant LLM panel from the active build without breaking the High Line path — I want one focused thesis, not a multi-mode app.
+  Output a written bridge plan + exposure data-contract + the strip list. No code yet.
+
+I'll work through the three jobs: first inventory the CV notebook's actual outputs, then design the bridge to the pedestrian segments, then map the scope-strip. Starting by parsing the notebook (extracting sources and output metadata without the embedded image blobs) and the CSVs.
+
+  Read 1 file, ran 2 shell commands
+
+Notebook fully inventoried. Now the actual C
+
+  Searched for 4 patterns, read 1 file, listed 1 directory, ran 1 shell command
+
+All reading done. Here is the full report — inventory, bridge plan with data contract, and the strip list.
+
+---
+1 · CV Notebook Output Inventory (what actually exists)
+
+Pipeline recap: Untitled1.ipynb generated 50.ipynb downloaded the nearest Mapillary photo per point (25 m radius), ran SegFormer-B5 (Cityscapes) segmentation for scalar view ratios, then spent cells 13–49 on a single-site (P17) depth + ControlNet retrofit study. Everything below is verified from the files and executed cell outputs, not the code's intent.
+
+Machine-readable data
+
+File: SoftScan_Points.csv
+Rows / count: 50
+Fields: id, lat, lng (no header)
+Coverage: Points 1–50, a synthetic straight line SW→NE, (40.7395, −74.0090) → (40.7493, −74.0041), uniform
+  +0.0002°lat/+0.0001°lon steps
+Format issues: This is the only geo join keyterline — it's a straight transect roughly
+  paralleling the southern portion
+────────────────────────────────────────
+File: highline_images_mapillary/*.jpg
+Rows / count: 39 files
+Fields: 1024-px Mapillary thumbs, named <point-id>.jpg
+Coverage: IDs 8–47, missing 1–7, 34, 48–50. e-identical duplicate pairs (10=11, 18=19,
+  20=21, 28=29, 30=31) where Mapillary returned the same nearest image
+Format issues: No Mapillary image ID, capture date, or compass heading was saved. Provenance and view direction are
+  unrecoverable without re-downloading
+────────────────────────────────────────
+File: highline_urban_audit.csv
+Rows / count: 40 rows (ids 8–47 minus 34)
+Fields: id, GVI, SkyFactor, PublicRealm, HumanPresence
+Coverage: The wide-coverage dataset
+Format issues: Values are 255× the true fraction (masks are 0/255 uint8 and were summed, not counted; e.g. GVI = 208.19
+   at P38 means 0.816). Later notebook cells patch this with /255 + clip, but the CSV on disk is raw. Definitions: GVI
+  = vegetation/total, SkyFactor = sky/total, PublicRealm = (sidewalk+vegetation)/total, HumanPresence = person/total
+────────────────────────────────────────
+File: HIGHLINE_MASTER_AUDIT.csv
+Rows / count: 12 rows only (every 3rd point:
+Fields: Point, Sky_View_%, Greenery_%, Hardness_%, Enclosure_Score, Typology
+Coverage: Sparse but correct-unit dataset
+Format issues: Percentages are genuine (0–100). Hardness = building+wall. Enclosure_Score is unbounded —
+(building+wall
+   px)/(sky px + 1), so zero-sky points explode (P17 = 528,816; P42 = 406,797). Typology is a threshold label: SVF < 15
+   % → "Canyon/Underpass", else "Open Plaza"
+
+What was computed but NOT saved as data
+
+- Full segmentation rasters — SegFormer ran on every image but only scalar ratios were kept. No per-class masks on disk (except baked into PNG figures).
+- Depth — MiDaS/DPT depth maps exist only for P17 (plus transient runs for P14/P15 during image generation). Never exported per-point. There is no corridor-wide depth dataset. Don't put depth in the contract.
+- Street-furniture density, comfort score, PRI, heat-risk intensity — computed in-memory for the 12-point subset (or P17/14/15 only), plotted, never written to CSV. Some later "results" are hand-typed constants in plotting cells (e.g. cell 46's proposed = [14.22, 18.17, 12.45]), so treat every PNG number as presentation, not data.
+
+Presentation-only artifacts
+
+~25 PNG boards/charts, highline_interactive_tifact that already joins metrics tocoordinates), and HighLine_AI_Audit_Project.zip. None machine-readable.
+
+Validity caveats you should carry into the thesis
+
+1. Street-level, not deck-level. The Mapillats beside/under the viaduct (P17 is literally the underpass beneath the High Line). The measured "exposure" is corridor-context exposure at street level, not what a pedestrian on the deck sees. This is defensible if framed honestly; it is fabrication if labeled "on-deck view."
+2. Adjacent points share photos (5 duplicate pairs), so effective sample = 34 sites.
+3. The two CSVs disagree in units and sampling; they must never be mixed without the /255 normalization.
+
+---
+2 · Bridge Plan: CV points → PED_SEGS bins
+
+Geometry of the join (measured, not assumed)
+
+I projected the CV transect onto the sim's actual centerline (the 10 access-point polyline from fetch_nyc_data.py, same equirectangular projection, L ≈ 1,857 m):
+
+┌──────────────────┬──────────────┬──────────┬─────────────┬──────────────────────────────┐
+│     CV point     │ Arc-length s │ Fraction │ Bin (of 48) │ Perp. offset from centerline │
+├──────────────────┼──────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ P1 (no image)    │ 0 m          │ 0.000    │ 0           │ 63 m                         │
+├──────────────────┼──────────────┼──────────────────────────┤
+│ P8 (first image) │ 129 m        │ 0.070    │ 3           │ 30 m                         │
+├──────────────────┼──────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ P17              │ 340 m        │ 0.183    │ 8           │ 8 m                          │
+├──────────────────┼──────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ P23              │ 482 m        │ 0.259    │ 12          │ 2 m                          │
+├──────────────────┼──────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ P35 (no image)   │ 766 m        │ 0.412    │ 19          │ 5 m                          │
+├──────────────────┼──────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ P42              │ 931 m        │ 0.502    │ 24          │ 8 m                          │
+├──────────────────┼──────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ P47 (last image) │ 1,050 m      │ 0.566    │ 27          │ 4 m                          │
+├──────────────────┼──────────────┼──────────┼─────────────┼──────────────────────────────┤
+│ P50 (no image)   │ 1,121 m      │ 0.604                    │
+└──────────────────┴──────────────┴──────────┴─────────────┴──────────────────────────────┘
+
+Hard fact: image-backed data covers bins 3–27 only. Bins 0–2 (Gansevoort approach) and bins 28–47 — the entire northern 44 %, including 30th St and the Hudson Yards terminus, the sim's busiest access points — have zero CV data. The master-audit metrics (hardness, enclosure, typology) cover bins 3–24 at every-third-point density.
+
+Join mechanism
+
+Do the join offline in a build script (a sibot at runtime:
+e High Line centerline segments used by index.html's pedestrian model.
+
+Southern-corridor PILOT: the CV transect only carries imagery for points 8-47,
+which lands on segment bins ~3-27 of 48. The south approach (bins 0-2) and the
+entire northern stretch (bins 28-47, 26th St through Hudson Yards) have ZERO
+CV data and are emitted as coverage:"none" with null metrics — never 0, never
+interpolated across the gap. 0.0 is a legitimate measured value (P17's sky
+view is genuinely 0), so null and 0 must stay distinct all the way through.
+
+FRAMING (locked): the Mapillary photos are shot from streets beside and under
+the viaduct (P17 is the underpass), so every metric here is STREET-LEVEL
+CONTEXT EXPOSURE, not the on-deck pedestrian view.
+
+Inputs (read-only):
+  ComputerVision/SoftScan_Points.csv          50 pts, `id,lat,lng`, no header
+  ComputerVision/highline_images_mapillary/   which points actually have imagery
+  ComputerVision/highline_urban_audit.csv     39 pts — values are 255x the true
+                                              fraction (0/255 masks were summed,
+                                              not counted) -> divide by 255
+  ComputerVision/HIGHLINE_MASTER_AUDntages -> /100
+  data/highline_footprints.json               high_line.centerline (local meters)
+
+Output:
+  data/highline_exposure.json
+
+Run:
+  python scripts/build_highline_exposure.py
+"""
+
+import csv
+import hashlib
+import json
+import math
+import os
+import sys
+IT_CSV = os.path.join(CV_DIR, "highline_urban_audit.csv")
+MASTER_CSV = os.path.join(CV_DIR, "HIGHLINE_MASTER_AUDIT.csv")
+IMAGE_DIR = os.path.join(CV_DIR, "highline_images_mapillary")
+FOOTPRINTS = os.path.join(ROOT, "data", "highline_footprints.json")
+OUT_PATH = os.path.join(ROOT, "data", "highline_exposure.json")
+
+PED_SEGS = 48                 # must match PED_SEGS in index.html
+INTERP_MAX_GAP = 2            # empty bin qualifies only if BOTH flanking
+                              # measured bins are <= this many bins away
+ENCLOSURE_CLAMP = 50.0        # notebook's own enclosure threshold
+
+# Projection constants — MUST match scripts/fetch_nyc_data.py, which produced
+# the centerline these points are joined against.
+LAT_MIN, LAT_MAX = 40.740, 40.755
+LON_MIN, LON_MAX = -74.010, -74.000
+LAT0 = (LAT_MIN + LAT_MAX) / 2.0
+LON0 = (LON_MIN + LON_MAX) / 2.0
+M_PER_DEG_LAT = 110_574.0
+M_PER_DEG_LON = 111_320.0 * math.cos
+OLOGY_SLUGS = {"Canyon/Underpass": "canyon", "Open Plaza": "open_plaza"}
+
+
+def project(lat: float, lon: float):
+    """lat/lon degrees -> local meters, same space as high_line.centerline."""
+    return ((lon - LON0) * M_PER_DEG_LON, (lat - LAT0) * M_PER_DEG_LAT)
+
+
+def polyline_with_arclen(centerline):
+    pts, s, prev = [], 0.0, None
+    for x, z in centerline:
+        if prev is not None:
+            s += math.hypot(x - prev[0], z - prev[1])
+        pts.append((x, z, s))
+        prev = (x, z)
+    return pts, s
+
+
+def nearest_arc_length(pts, x, z):
+     ax, az, as_ = pts[k]
+        bx, bz, bs_ = pts[k + 1]
+        dx, dz = bx - ax, bz - az
+        seg2 = dx * dx + dz * dz or 1e-9
+        t = ((x - ax) * dx + (z - az) * dz) / seg2
+        t = 0.0 if t < 0 else 1.0 if t > 1 else t
+        px, pz = ax + dx * t, az + dz * t
+        d2 = (x - px) ** 2 + (z - pz) ** 2
+        if d2 < best_d2:
+            best_d2, best_s = d2, as_ + t * (bs_ - as_)
+    return best_s, math.sqrt(best_d2)
+
+
+def load_inputs():
+    coords = {}
+    with open(POINTS_CSV, newline="") as f:
+        for row in csv.reader(f):
+            if len(row) >= 3:
+                coords[int(row[0])] ]))
+         pid = int(row["id"])
+            # 0/255 masks were summed, not counted -> values are 255x the
+            # true fraction. Normalize and clip to [0, 1].
+            audit[pid] = {
+                "gvi": min(max(float(row["GVI"]) / 255.0, 0.0), 1.0),
+                "sky": min(max(float(row["SkyFactor"]) / 255.0, 0.0), 1.0),
+                "public_realm": min(max(float(row["PublicRealm"]) / 255.0, 0.0), 1.0),
+                "human_presence": min(max(float(row["HumanPresence"]) / 255.0, 0.0), 1.0),
+            }
+
+    master = {}
+    with open(MASTER_CSV, newline="") as f:
+        for row in csv.DictReader(f):
+            pid = int(row["Point"])
+            raw_enc = float(row["Enclosure_Score"])
+            master[pid] = {
+                "gvi": float(row["Greenery_%"]) / 100.0,
+                "sky": float(row["Sky_View_%"]) / 100.0,
+                "hardness": float(ro
+             "enclosure_clamped": min(raw_enc, ENCLOSURE_CLAMP) / ENCLOSURE_CLAMP,
+                "typology": TYPOLOGY_SLUGS.get(row["Typology"], None),
+            }
+
+    image_ids = sorted(
+        int(f.split(".")[0]) for f in os.listdir(IMAGE_DIR) if f.endswith(".jpg")
+    )
+
+    with open(FOOTPRINTS) as f:
+        hl = json.load(f)["high_line"]
+
+    return coords, audit, master, image_ids, hl
+
+
+def find_duplicate_pairs(image_ids):
+    """Byte-identical photos (Mapillary returned the same nearest image for
+    adjacent transect points). Returns {higher_id: lower_id}."""
+    by_hash = {}
+    for pid in image_ids:
+     ids.sort()
+        for other in ids[1:]:
+            twin_of[other] = ids[0]
+    return twin_of
+
+
+def point_metrics(pid, audit, master):
+    """Merged per-point metrics. Master audit (correct units at source) wins
+    for shared fields; hardness / enclosure_clamped / typology stay null for
+    the points outside the 12-point master audit — never filled."""
+    a = audit.get(pid)
+    if a is None:
+        return None
+    m = master.get(pid, {})
+    return {
+        "gvi": m.get("gvi", a["gvi"]),
+        "sky": m.get("sky", a["sky"]),
+        "public_realm": a["public_realm"],
+        "human_presence": a["human_p
+
+
+def mean_or_none(values):
+    vals = [v for v in values if v is not None]
+    return round(sum(vals) / len(vals), 4) if vals else None
+
+
+def main() -> int:
+    coords, audit, master, image_ids, hl = load_inputs()
+    pts, L = polyline_with_arclen(hl["centerline"])
+    seg_len = L / PED_SEGS
+    twin_of = find_duplicate_pairs(image_ids)
+    kept_twin = {v: k for k, v in twin_of.items()}  # lower id -> its twin
+
+    # ── Per-point join: every image-backed point contributes to its own bin ──
+    contributions = {}   # bin -> list of metric dicts (includes twins)
+    point_records = []   # emitted records: unique photos only
+    for pid in image_ids:
+        lat, lng = coords[pid]
+     b = min(int(s / L * PED_SEGS), PED_SEGS - 1)
+        metrics = point_metrics(pid, audit, master)
+        if metrics is None:
+            print(f"[warn] point {pid} has an image but no audit row — skipped")
+            continue
+        contributions.setdefault(b, []).append(metrics)
+        if pid in twin_of:
+            continue  # byte-identical twin — represented by its kept partner
+        point_records.append({
+            "id": pid,
+            "lat": lat,
+            "lng": lng,
+            "s_m": round(s, 2),
+            "s_frac": round(s / L, 4),
+            "bin": b,
+            "offset_m": round(offset, 1),
+            "image": f"{pid}.jpg",
+            "mapillary_id": None,  # GAP: not recorded by the download notebook
+            "duplicate_of": kept_twisharing this photo
+            "metrics": metrics,
+        })
+
+    # ── Segments: measured -> mean; short gaps -> interpolated; else none ──
+    measured_bins = sorted(contributions.keys())
+    segments = []
+         seg["coverage"] = "measured"
+            seg["n_points"] = len(rows)
+            for k in NUMERIC_METRICS:
+                seg[k] = mean_or_none([r[k] for r in rows])
+            typs = {r["typology"] for r in rows if r["typology"]}
+            seg["typology"] = typs.pop() if len(typs) == 1 else None
+        else:
+            lo = max((m for m in measured_bins if m < b), default=None)
+            hi = min((m for m in measured_bins if m > b), default=None)
+            if lo is not None and hi is not None and b - lo <= INTERP_MAX_GAP and hi - b <= INTERP_MAX_
+GAP:
+                t = (b - lo) / (hi - lo)
+                seg["coverage"] = "interpolated"
+                seg["n_points"] = 0
+                for k in NUMERIC_METRICS:
+                    va = mean_or_none([r[k] for r in contributions[lo]])
+                    vb = mean_or_none([r[k] for r in contributions[hi]])
+                    # interpolate only when BOTH flanks carry the metric
+                    seg[k] = round(vs not None and vb is not None else Non
+             seg["typology"] = None
+            else:
+                seg["coverage"] = "none"
+                seg["n_points"] = 0
+                for k in NUMERIC_METRICS:
+                    seg[k] = None
+                seg["typology"] = None
+        segments.append(seg)
+
+    out = {
+        "metadata": {
+            "caveat": "street-level context exposure, not on-deck view",
+            "sources": [
+                "ComputerVision/SoftScan_Points.csv (50 survey points, straight synthetic transect)",
+                "ComputerVision/highline_urban_audit.csv (values divided by 255: 0/255 masks were summe
+d, not counted)",
+                "ComputerVision/HIGHLINE_MASTER_AUDIT.csv (percentages divided by 100; wins over audit
+for shared fields)",
+            ],
+            "model": "nvidia/segformer-b5-finetuned-cityscapes-1024-1024",
+            "imagery": "Mapillary street-level, capture metadata not retained",
+            "centerline": "high_line.centerline from data/highline_footprints.json (local meters, fetch
+_nyc_data.py projection)",
+            "ped_segs": PED_SEGS,
+            "length_m": round(L, 1),
+            "coverage_note": (
+                "Southern-corridor pilot: imagery exists for transect points 8-47 only. "
+                "Bins 0-2 and 28-47 have no CV data and are coverage:'none' with null metrics; "
+                "null means unmeasured, 0.0 is a real measured value."
+            ),
+            "enclosure_note": f"enclosure_clamped = min(raw_enclosure, {ENCLOSURE_CLAMP:.0f}) / {ENCLOS
+URE_CLAMP:.0f}; raw score is unbound
+            "duplicates_note": (
+                "Byte-identical Mapillary photos collapse to one point record (lower id kept, "
+                "duplicate_of names the twin); both transect positions still contribute to their own bi
+ns."
+            ),
+            "interpolation_note": f"empty bins flanked by measured bins <= {INTERP_MAX_GAP} away are li
+nearly interpolated along s and flag
+            "typology_values": sorted(TYPOLOGY_SLUGS.values()),
+        },
+        "points": point_records,
+        "segments": segments,
+    }
+
+    os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
+    with open(OUT_PATH, "w", encodin
+        json.dump(out, f, indent=1)
+
+    # ── Verification report ──────────────────────────────────────────────────
+    counts = {"measured": 0, "interpolated": 0, "none": 0}
+    for s in segments:
+        counts[s["coverage"]] += 1
+    print(f"[done] wrote {OUT_PATH}")
+    print(f"[coverage] measured={counts['measured']}  interpolated={counts['interpolated']}  none={coun
+ts['none']}  (of {PED_SEGS})")
+    print(f"[points] {len(point_records)} unique records, {sum(len(v) for v in contributions.values())}
+ bin contributions")
+    print(f"[duplicates] {len(twin_of)} twins collapsed: " +
+          ", ".join(f"{v}<-{k}" for k, v in sorted(twin_of.items())))
+
+    edge_bins = list(range(0, 3)) + list(range(28, PED_SEGS))
+    bad = [s["bin"] for s in segments if s["bin"] in edge_bins and
+           (s["coverage"] != "none" or any(s[k] is not None for k in NUMERIC_METRICS + ["typology"]))]
+    print(f"[check] bins 0-2 & 28-47 all none/null: {'PASS' if not bad else 'FAIL ' + str(bad)}")
+
+    zero_fill = [s["bin"] for s in segments if s["coverage"] == "none" and
+                 any(s[k] is not None for k in NUMERIC_METRICS)]
+    print(f"[check] no values on uncovered segments: {'PASS' if not zero_fill else 'FAIL ' + str(zero_f
+ill)}")
+
+    measured_span = [s["bin"] for s in segments if s["coverage"] == "measured"]
+    print(f"[span] measured bins {mied_span)}; "
+          f"interpolated bins {[s['bin'] for s in segments if s['coverage'] == 'interpolated']}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

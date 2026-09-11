@@ -1,0 +1,61 @@
+{
+ "fit": "svf_lbt = a\u00b7svf_mine + b",
+ "source": "Ladybug recompute",
+ "lbt_resolution": {
+  "sky_dirs": 168,
+  "sun_step_min": 10
+ },
+ "svf": {
+  "a": 0.9364,
+  "b": -0.1288,
+  "r": 0.871,
+  "r2": 0.758,
+  "rmse_raw": 0.2013,
+  "rmse_cal": 0.1266,
+  "mean_mine": 0.424,
+  "mean_lbt": 0.269
+ },
+ "self_enclosure_delta_scaled_by_a": 0.9364,
+ "metrics": {
+  "svf_deck": {
+   "a": 0.9364,
+   "b": -0.1288,
+   "r": 0.871,
+   "r2": 0.758,
+   "rmse_raw": 0.2013,
+   "rmse_cal": 0.1266,
+   "mean_mine": 0.424,
+   "mean_lbt": 0.269
+  },
+  "sun_winter": {
+   "a": 0.9308,
+   "b": -0.0175,
+   "r": 0.927,
+   "r2": 0.859,
+   "rmse_raw": 0.5837,
+   "rmse_cal": 0.5661,
+   "mean_mine": 1.151,
+   "mean_lbt": 1.054
+  },
+  "sun_summer": {
+   "a": 1.0232,
+   "b": -1.4067,
+   "r": 0.847,
+   "r2": 0.717,
+   "rmse_raw": 2.722,
+   "rmse_cal": 2.4041,
+   "mean_mine": 5.734,
+   "mean_lbt": 4.46
+  },
+  "sun_equinox": {
+   "a": 0.9005,
+   "b": -0.2338,
+   "r": 0.842,
+   "r2": 0.708,
+   "rmse_raw": 1.7127,
+   "rmse_cal": 1.5959,
+   "mean_mine": 3.254,
+   "mean_lbt": 2.696
+  }
+ }
+}

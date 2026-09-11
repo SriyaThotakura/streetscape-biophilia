@@ -1,0 +1,48 @@
+{
+ "mode": "local",
+ "model": "nvidia/segformer-b0-finetuned-cityscapes-1024-1024",
+ "rows": [
+  {
+   "frame": "frame_8.jpg",
+   "s_m": 129.26,
+   "meas_sky": 0.2385,
+   "project_sky": 0.2165,
+   "geom_svf_street": 0.11733899999999985
+  },
+  {
+   "frame": "frame_17.jpg",
+   "s_m": 339.9,
+   "meas_sky": 0.0,
+   "project_sky": 0.0,
+   "geom_svf_street": 0.92989875
+  },
+  {
+   "frame": "frame_23.jpg",
+   "s_m": 481.7,
+   "meas_sky": 0.0044,
+   "project_sky": 0.002,
+   "geom_svf_street": 0.7208740740740736
+  },
+  {
+   "frame": "frame_32.jpg",
+   "s_m": 694.64,
+   "meas_sky": 0.1483,
+   "project_sky": 0.2396,
+   "geom_svf_street": 0.93154525
+  },
+  {
+   "frame": "frame_42.jpg",
+   "s_m": 931.32,
+   "meas_sky": 0.0,
+   "project_sky": 0.0,
+   "geom_svf_street": 0.8960375
+  },
+  {
+   "frame": "frame_45.jpg",
+   "s_m": 1002.74,
+   "meas_sky": 0.054,
+   "project_sky": 0.05185572306315104,
+   "geom_svf_street": 0.5925360000000008
+  }
+ ]
+}

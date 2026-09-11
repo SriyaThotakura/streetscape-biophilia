@@ -1,0 +1,113 @@
+{
+ "note": "auto-geocoded via Nominatim; edit 'display' to hand-correct. BIN + lat/lng kept for verification.",
+ "labels": {
+  "1080359": {
+   "bin": "1080359",
+   "year": 2006,
+   "height_m": 83.2,
+   "lat": 40.743661,
+   "lng": -74.006541,
+   "osm_address": "458 West 17th Street",
+   "display": "458 W 17TH"
+  },
+  "1012203": {
+   "bin": "1012203",
+   "year": 2006,
+   "height_m": 79.8,
+   "lat": 40.740812,
+   "lng": -74.008183,
+   "osm_address": "848 Washington Street",
+   "display": "848 WASHINGTON"
+  },
+  "1089968": {
+   "bin": "1089968",
+   "year": 2017,
+   "height_m": 41.1,
+   "lat": 40.750909,
+   "lng": -74.003109,
+   "osm_address": "519 West 27th Street",
+   "display": "519 W 27TH"
+  },
+  "1089697": {
+   "bin": "1089697",
+   "year": 2015,
+   "height_m": 40.2,
+   "lat": 40.748522,
+   "lng": -74.00458,
+   "osm_address": "508 West 24th Street",
+   "display": "508 W 24TH"
+  },
+  "1090204": {
+   "bin": "1090204",
+   "year": 2017,
+   "height_m": 41.1,
+   "lat": 40.75184,
+   "lng": -74.00299,
+   "osm_address": "522 West 29th Street",
+   "display": "522 W 29TH"
+  },
+  "1090199": {
+   "bin": "1090199",
+   "year": 2016,
+   "height_m": 24.4,
+   "lat": 40.74622,
+   "lng": -74.005698,
+   "osm_address": "500 West 21st Street",
+   "display": "500 W 21ST"
+  },
+  "1088519": {
+   "bin": "1088519",
+   "year": 2011,
+   "height_m": 34.0,
+   "lat": 40.750461,
+   "lng": -74.003372,
+   "osm_address": "518 West 27th Street",
+   "display": "518 W 27TH"
+  },
+  "1012336": {
+   "bin": "1012336",
+   "year": 1931,
+   "height_m": 57.5,
+   "lat": 40.747931,
+   "lng": -74.005588,
+   "osm_address": "524 West 23rd Street",
+   "display": "524 W 23RD"
+  },
+  "1080314": {
+   "bin": "1080314",
+   "year": 1901,
+   "height_m": 17.4,
+   "lat": 40.749679,
+   "lng": -74.004144,
+   "osm_address": "508 West 26th Street",
+   "display": "508 W 26TH"
+  },
+  "1012224": {
+   "bin": "1012224",
+   "year": 1937,
+   "height_m": 13.8,
+   "lat": 40.741569,
+   "lng": -74.007568,
+   "osm_address": "446 West 14th Street",
+   "display": "446 W 14TH"
+  },
+  "1012330": {
+   "bin": "1012330",
+   "year": 1900,
+   "height_m": 19.8,
+   "lat": 40.747345,
+   "lng": -74.004975,
+   "osm_address": "505 West 22nd Street",
+   "display": "505 W 22ND"
+  },
+  "1012282": {
+   "bin": "1012282",
+   "year": 2007,
+   "height_m": 43.0,
+   "lat": 40.745509,
+   "lng": -74.007105,
+   "osm_address": "520 West 19th Street",
+   "display": "520 W 19TH"
+  }
+ }
+}

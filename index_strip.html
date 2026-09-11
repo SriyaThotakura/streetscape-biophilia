@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Self-Enclosing Line — a computational field study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..600&family=Newsreader:ital,opsz@0,6..72;1,6..72&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#e9e0cd; --paper2:#efe7d6; --ink:#2a2620; --ink-soft:#5a5346;
+    --green:#4b6b46; --green-d:#33502f; --sage:#93a97e;
+    --sky:#7ba0b0; --river:#5f8797;
+    --terra:#b0512c; --terra-l:#c86c44; --ochre:#b08842;
+    --canyon:#35322a; --unsurv:#c4bba6;
+    --line:#b8ad94; --hair:#cabfa6;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:17px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(255,252,240,.55), transparent 45%),
+      radial-gradient(circle at 82% 78%, rgba(150,140,110,.10), transparent 55%);
+  }
+  /* paper grain */
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:1; opacity:.045;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    mix-blend-mode:multiply;
+  }
+  .sheet{max-width:1500px; margin:0 auto; padding:44px 40px 30px; position:relative; z-index:2}
+
+  /* ---- specimen header ---- */
+  .plate-tag{
+    font-family:"Spline Sans Mono",monospace; font-size:11px; letter-spacing:.34em;
+    text-transform:uppercase; color:var(--terra); font-weight:600;
+  }
+  .head{display:flex; justify-content:space-between; align-items:flex-end; gap:40px;
+    border-bottom:1.5px solid var(--ink); padding-bottom:18px; flex-wrap:wrap}
+  h1{
+    font-family:"Fraunces",serif; font-optical-sizing:auto;
+    font-weight:600; font-size:clamp(38px,6vw,74px); line-height:.94;
+    margin:.18em 0 .12em; letter-spacing:-.015em;
+  }
+  h1 em{font-style:italic; font-weight:400; color:var(--green-d)}
+  .sub{font-family:"Newsreader",serif; font-style:italic; font-size:20px;
+    color:var(--ink-soft); max-width:46ch}
+  .specimen{font-family:"Spline Sans Mono",monospace; font-size:11px; letter-spacing:.05em;
+    color:var(--ink-soft); text-align:right; line-height:1.9; white-space:nowrap}
+  .specimen b{color:var(--ink); font-weight:600}
+
+  /* ---- stat ribbon ---- */
+  .stats{display:flex; gap:0; flex-wrap:wrap; margin:22px 0 6px;
+    border:1px solid var(--line); background:rgba(255,253,246,.4)}
+  .stat{flex:1 1 0; min-width:150px; padding:13px 18px; border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .stat .k{font-family:"Spline Sans Mono",monospace; font-size:10px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-soft)}
+  .stat .v{font-family:"Fraunces",serif; font-weight:600; font-size:33px; line-height:1.05; margin-top:3px}
+  .stat .v small{font-size:15px; font-weight:500; color:var(--ink-soft)}
+  .stat.warn .v{color:var(--terra)}
+
+  /* ---- plot ---- */
+  .plotwrap{margin-top:26px; position:relative; overflow-x:auto}
+  svg.strip{display:block; width:100%; min-width:940px; height:auto; overflow:visible}
+  .band-label{font-family:"Spline Sans Mono",monospace; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; fill:var(--ink-soft)}
+  .axtxt{font-family:"Spline Sans Mono",monospace; font-size:11px; fill:var(--ink-soft)}
+  .acc-lab{font-family:"Newsreader",serif; font-size:12.5px; fill:var(--ink); font-style:italic}
+
+  /* tooltip */
+  .tip{position:absolute; top:0; left:0; pointer-events:none; z-index:5;
+    background:var(--ink); color:var(--paper2); padding:11px 14px; min-width:210px;
+    font-family:"Spline Sans Mono",monospace; font-size:11.5px; line-height:1.7;
+    box-shadow:0 8px 26px rgba(30,26,18,.34); opacity:0; transition:opacity .12s;
+    transform:translate(-50%,14px)}
+  .tip.on{opacity:1}
+  .tip .ts{font-family:"Fraunces",serif; font-size:19px; font-weight:600; color:#fff;
+    display:block; margin-bottom:5px}
+  .tip .row{display:flex; justify-content:space-between; gap:16px}
+  .tip .row span:last-child{color:#fff; font-weight:500}
+  .tip .chip{display:inline-block; width:9px; height:9px; margin-right:6px; vertical-align:baseline}
+  .tip .choke{color:var(--terra-l); margin-top:6px; font-style:normal}
+
+  /* legend + methods */
+  .foot{display:flex; justify-content:space-between; gap:40px; margin-top:26px;
+    padding-top:16px; border-top:1px solid var(--line); flex-wrap:wrap}
+  .legend{display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center; max-width:60%}
+  .lg{font-family:"Spline Sans Mono",monospace; font-size:11px; letter-spacing:.03em;
+    color:var(--ink-soft); display:flex; align-items:center; gap:7px}
+  .sw{width:16px; height:11px; display:inline-block; border:.5px solid rgba(0,0,0,.18)}
+  .methods{font-size:13.5px; color:var(--ink-soft); max-width:42ch; line-height:1.5}
+  .methods b{color:var(--ink); font-weight:600; font-family:"Newsreader",serif}
+  .hint{font-family:"Spline Sans Mono",monospace; font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--terra); margin-top:14px}
+  @media(max-width:720px){ .specimen{text-align:left} .legend{max-width:100%} }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="plate-tag">Plate V · Cross-Bronx / High Line Portfolio · Computational Field Study</div>
+  <div class="head">
+    <div>
+      <h1>The Self-<em>Enclosing</em> Line</h1>
+      <div class="sub">A 2.5-D reconstruction of the elevated deck's visual &amp; solar field — and a test of whether the park built the walls that now enclose it.</div>
+    </div>
+    <div class="specimen" id="specimen"></div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="plotwrap">
+    <svg class="strip" id="strip" viewBox="0 0 1857 686" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="foot">
+    <div class="legend" id="legend"></div>
+    <div class="methods">
+      <b>Method.</b> Ray-cast isovist over 176 building prisms (real heights + construction year); Oke uniform-sky SVF; solar-geometry shadow accretion at lat 40.74°. The <b>self-enclosure</b> band isolates sky &amp; sun removed by the <b>6 towers built after the park's 2009 opening</b> — a conservative floor. Deck values are a geometric estimate; the CV street audit is an independent layer (they proved <em>uncorrelated</em>, r≈0 — different vantage, different occluders), not a calibration. Flat-topped prisms, clear sky, no street trees.
+      <div class="hint">◂ move across the strip to walk the line ▸</div>
+    </div>
+  </div>
+</div>
+
+<script src="data/strip_data.js"></script>
+<script>
+(function(){
+  const D = window.STRIP_DATA;
+  const P = D.points, B = D.bins, A = D.access, S = D.stats;
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.getElementById('strip');
+  const LEN = S.length_m;
+
+  // ---- geometry of the plate ----
+  const VBW=1857, GUT_L=64, GUT_R=22;
+  const PW = VBW-GUT_L-GUT_R;
+  const X = s => GUT_L + (s/LEN)*PW;
+  const TOP = 78;                          // shared top of the reference lines
+  // long-section band (mirrored): west rises, east hangs
+  const DECK=178, MPP=1.18;                // deck ground line + metres-per-px scale
+  const Yw = h => DECK - Math.max(0,h)*MPP;
+  const Ye = h => DECK + Math.max(0,h)*MPP;
+  // SVF band
+  const SVF_T=312, SVF_B=452;
+  const Yv = v => SVF_B - Math.max(0,Math.min(1,v))*(SVF_B-SVF_T);
+  // solar band
+  const SOL_T=486, SOL_B=560, HMAX=15;
+  const Yh = h => SOL_B - Math.max(0,h)/HMAX*(SOL_B-SOL_T);
+  // ribbon
+  const RIB_Y=582, RIB_H=26;
+  const AXIS_Y=RIB_Y+RIB_H;
+
+  const CHAR = {
+    open_green:{c:'#5c7a4e', label:'open · vegetation'},
+    open_sky:{c:'#7ba0b0', label:'open · bare sky'},
+    open_hard:{c:'#b08842', label:'open · hardscape'},
+    canyon:{c:'#35322a', label:'canyon (enclosed)'},
+    open_unsurveyed:{c:'#c4bba6', label:'open · no CV data'},
+  };
+
+  const el=(n,a)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  const add=(n,a)=>svg.appendChild(el(n,a));
+  const path=(d,a)=>add('path',Object.assign({d},a));
+  const line=(x1,y1,x2,y2,a)=>add('line',Object.assign({x1,y1,x2,y2},a));
+  const text=(x,y,s,cls,a)=>{const t=el('text',Object.assign({x,y,class:cls||''},a||{}));t.textContent=s;svg.appendChild(t);return t;};
+
+  // ---- defs: grain + hatch for unsurveyed ----
+  const defs=el('defs',{});
+  defs.innerHTML=`
+    <pattern id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#c4bba6"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#a89e84" stroke-width="1.4"/>
+    </pattern>
+    <linearGradient id="skyfill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6d94a3" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#9fb8a0" stop-opacity=".05"/>
+    </linearGradient>`;
+  svg.appendChild(defs);
+
+  // ---- background panels ----
+  add('rect',{x:GUT_L,y:TOP,width:PW,height:DECK-TOP,fill:'url(#skyfill)'});
+  add('rect',{x:GUT_L,y:SVF_T,width:PW,height:SVF_B-SVF_T,fill:'url(#skyfill)'});
+
+  // ==== BAND 0 : long-section (mirrored) ====
+  const massPath=(hKey,Yfn)=>{
+    let d='M'+X(P[0].s).toFixed(1)+' '+DECK;
+    P.forEach(p=>{ d+=' L'+X(p.s).toFixed(1)+' '+Yfn(p[hKey]).toFixed(1); });
+    return d+' L'+X(P[P.length-1].s).toFixed(1)+' '+DECK+' Z';
+  };
+  path(massPath('wh',Yw),{fill:'#94a97e','fill-opacity':.92,stroke:'#5c6f49','stroke-width':.5});
+  path(massPath('eh',Ye),{fill:'#899a71','fill-opacity':.92,stroke:'#586b45','stroke-width':.5});
+  const eraRuns=(yrKey,hKey,Yfn)=>{
+    let i=0; while(i<P.length){
+      if(P[i][yrKey]>2009){ let j=i; while(j<P.length&&P[j][yrKey]>2009)j++;
+        let d='M'+X(P[i].s).toFixed(1)+' '+DECK;
+        for(let k=i;k<j;k++) d+=' L'+X(P[k].s).toFixed(1)+' '+Yfn(P[k][hKey]).toFixed(1);
+        d+=' L'+X(P[j-1].s).toFixed(1)+' '+DECK+' Z';
+        path(d,{fill:'#b0512c','fill-opacity':.82}); i=j;
+      } else i++;
+    }
+  };
+  eraRuns('wyr','wh',Yw); eraRuns('eyr','eh',Ye);
+  line(GUT_L,DECK,VBW-GUT_R,DECK,{stroke:'#2a2620','stroke-width':1.2});
+  line(GUT_L,Yw(9),VBW-GUT_R,Yw(9),{stroke:'#2a2620','stroke-width':.8,'stroke-dasharray':'4 3','stroke-opacity':.55});
+  text(GUT_L+5,Yw(9)-4,'High Line deck +9 m','axtxt',{'font-style':'italic'});
+  [25,50,75].forEach(h=>{
+    text(GUT_L-8,Yw(h)+3,h,'axtxt',{'text-anchor':'end'});
+    text(GUT_L-8,Ye(h)+3,h,'axtxt',{'text-anchor':'end'});
+  });
+  text(GUT_L-8,DECK+3,'0','axtxt',{'text-anchor':'end'});
+  text(GUT_L,TOP-4,'LONG-SECTION — nearest street wall  ▲ Hudson / west   ▼ city / east   ·   metres   ·   terracotta = built after 2009','band-label');
+
+  // ---- access reference lines + labels ----
+  A.forEach(a=>{
+    line(X(a.s),TOP,X(a.s),AXIS_Y,{stroke:'#b8ad94','stroke-width':.8,'stroke-dasharray':'2 4'});
+    text(X(a.s), AXIS_Y+18, a.name, 'acc-lab', {'text-anchor': a.s<80?'start':(a.s>LEN-120?'end':'middle')});
+  });
+  // baseline + s ticks
+  line(GUT_L,SVF_B,VBW-GUT_R,SVF_B,{stroke:'#2a2620','stroke-width':1});
+  line(GUT_L,SOL_B,VBW-GUT_R,SOL_B,{stroke:'#2a2620','stroke-width':1});
+  for(let s=0;s<=LEN;s+=250){ text(X(s),AXIS_Y+34,(s|0)+' m','axtxt',{'text-anchor':'middle'});}
+  text(VBW-GUT_R,AXIS_Y+34,LEN.toFixed(0)+' m','axtxt',{'text-anchor':'end'});
+
+  // ==== BAND 1 : Sky-View-Factor + self-enclosure ====
+  // pre-park sky (green + terra) : area to prepark
+  let dDeck='M'+X(P[0].s)+' '+SVF_B, dPre='';
+  P.forEach(p=>{ dDeck+=' L'+X(p.s).toFixed(1)+' '+Yv(p.svf_deck).toFixed(1);});
+  dDeck+=' L'+X(P[P.length-1].s)+' '+SVF_B+' Z';
+  path(dDeck,{fill:'#4b6b46','fill-opacity':.82});           // sky you still get on deck
+  // terracotta cap = sky removed by post-2009 towers (between deck top and prepark)
+  let cap='M';
+  P.forEach((p,i)=>{ cap+=(i?' L':'')+X(p.s).toFixed(1)+' '+Yv(p.svf_deck).toFixed(1);});
+  for(let i=P.length-1;i>=0;i--){ cap+=' L'+X(P[i].s).toFixed(1)+' '+Yv(P[i].svf_prepark).toFixed(1);}
+  cap+=' Z';
+  path(cap,{fill:'#b0512c','fill-opacity':.66});
+  // prepark hairline
+  let pre='M'; P.forEach((p,i)=>{pre+=(i?' L':'')+X(p.s).toFixed(1)+' '+Yv(p.svf_prepark).toFixed(1);});
+  path(pre,{fill:'none',stroke:'#7a3a20','stroke-width':1,'stroke-dasharray':'3 3','stroke-opacity':.7});
+
+  // SVF y-grid
+  [0,.25,.5,.75,1].forEach(v=>{
+    line(GUT_L,Yv(v),VBW-GUT_R,Yv(v),{stroke:'#000','stroke-opacity':v?.06:0,'stroke-width':.7});
+    text(GUT_L-8,Yv(v)+3,v.toFixed(2),'axtxt',{'text-anchor':'end'});
+  });
+  text(GUT_L,SVF_T-14,'SKY-VIEW FACTOR — deck (fill) vs pre-park (dashed) · gap = sky lost to post-2009 towers','band-label');
+
+  // ==== BAND 2 : solar ====
+  const solLine=(key,col,w,dash)=>{let d='M';P.forEach((p,i)=>{d+=(i?' L':'')+X(p.s).toFixed(1)+' '+Yh(p[key]).toFixed(1);});path(d,{fill:'none',stroke:col,'stroke-width':w,'stroke-dasharray':dash||'none'});};
+  // stolen winter sun (between winter and winter_pre)
+  let ws='M';
+  P.forEach((p,i)=>{ws+=(i?' L':'')+X(p.s).toFixed(1)+' '+Yh(p.sun_w).toFixed(1);});
+  for(let i=P.length-1;i>=0;i--){ws+=' L'+X(P[i].s).toFixed(1)+' '+Yh(P[i].sun_w_pre).toFixed(1);}
+  ws+=' Z'; path(ws,{fill:'#b0512c','fill-opacity':.3});
+  solLine('sun_s','#93a97e',1.1);      // summer, faint sage
+  solLine('sun_e','#c8a24a',1.1);      // equinox, ochre
+  solLine('sun_w_pre','#7a3a20',1,'3 3');
+  solLine('sun_w','#b0512c',2);        // winter, bold terra
+  [0,5,10,15].forEach(h=>{ text(GUT_L-8,Yh(h)+3,h+'h','axtxt',{'text-anchor':'end'});});
+  text(GUT_L,SOL_T-12,'SUNLIT HOURS — winter (bold) · equinox · summer · shaded = winter sun stolen by post-2009 towers','band-label');
+
+  // ==== BAND 3 : opening character ribbon ====
+  text(GUT_L,RIB_Y-8,'OPENING CHARACTER — geometry (open / canyon) × CV surface (sky · green · hard)','band-label');
+  B.forEach(b=>{
+    const c=CHAR[b.char]||CHAR.open_unsurveyed;
+    add('rect',{x:X(b.s0),y:RIB_Y,width:Math.max(.5,X(b.s1)-X(b.s0))-.5,height:RIB_H,
+      fill:b.char==='open_unsurveyed'?'url(#hatch)':c.c});
+  });
+  add('rect',{x:GUT_L,y:RIB_Y,width:PW,height:RIB_H,fill:'none',stroke:'#2a2620','stroke-width':.8});
+
+  // ==== chokepoint ====
+  const cs=S.choke_s;
+  line(X(cs),TOP,X(cs),AXIS_Y,{stroke:'#b0512c','stroke-width':1.4,'stroke-dasharray':'5 3'});
+  text(X(cs),TOP-10,'▼ worst enclosure · s='+cs.toFixed(0)+' m','axtxt',
+    {'text-anchor':'middle',fill:'#b0512c','font-weight':600});
+
+  // ==== playhead ====
+  const ph=line(X(0),TOP,X(0),AXIS_Y,{stroke:'#2a2620','stroke-width':1,opacity:0});
+  const dot=add('circle',{r:4.5,fill:'#fff',stroke:'#2a2620','stroke-width':1.5,opacity:0,cx:X(0),cy:Yv(P[0].svf_deck)});
+
+  // ---- header specimen block + stats ----
+  document.getElementById('specimen').innerHTML =
+    `SP26 · GSAPP CDP<br>176 footprints · <b>6</b> post-2009 towers<br>`+
+    `${S.n_points} deck samples · ${LEN.toFixed(0)} m<br>lat 40.74° N`;
+  const stats=[
+    {k:'Mean sky-view (deck)',v:S.svf_deck_mean.toFixed(2),s:''},
+    {k:'Deck vs street',v:'+'+S.deck_lift,s:'SVF pts'},
+    {k:'Hudson sightline',v:S.river_pct,s:'% of walk'},
+    {k:'Sky lost to towers',v:S.sky_lost_mean,s:'% avg',warn:1},
+    {k:'Winter sun stolen',v:S.sun_stolen_winter.toFixed(1),s:'h/day',warn:1},
+  ];
+  document.getElementById('stats').innerHTML = stats.map(x=>
+    `<div class="stat ${x.warn?'warn':''}"><div class="k">${x.k}</div>`+
+    `<div class="v">${x.v}<small> ${x.s}</small></div></div>`).join('');
+
+  // ---- legend ----
+  const order=['open_green','open_sky','open_hard','canyon','open_unsurveyed'];
+  document.getElementById('legend').innerHTML =
+    `<span class="lg"><span class="sw" style="background:#4b6b46"></span>deck sky</span>`+
+    `<span class="lg"><span class="sw" style="background:#b0512c;opacity:.66"></span>sky lost (post-2009)</span>`+
+    order.map(k=>`<span class="lg"><span class="sw" style="background:${k==='open_unsurveyed'?'#c4bba6':CHAR[k].c}"></span>${CHAR[k].label}</span>`).join('');
+
+  // ---- interaction ----
+  const tip=document.getElementById('tip'), wrap=svg.parentElement;
+  function charAt(s){for(const b of B)if(s>=b.s0&&s<b.s1)return b.char;return B[B.length-1].char;}
+  function accLabel(s){let prev=A[0],next=A[A.length-1];for(let i=0;i<A.length;i++){if(A[i].s<=s)prev=A[i];if(A[i].s>=s){next=A[i];break;}}
+    return prev.name===next.name?prev.name:`${prev.name} → ${next.name}`;}
+  function nearest(s){let lo=0,hi=P.length-1;while(lo<hi){const m=(lo+hi)>>1;if(P[m].s<s)lo=m+1;else hi=m;}
+    if(lo>0&&Math.abs(P[lo-1].s-s)<Math.abs(P[lo].s-s))lo--;return P[lo];}
+
+  function move(ev){
+    const r=svg.getBoundingClientRect();
+    const cx=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left;
+    const vx=cx/r.width*VBW;
+    let s=(vx-GUT_L)/PW*LEN; s=Math.max(0,Math.min(LEN,s));
+    const p=nearest(s), px=X(p.s);
+    ph.setAttribute('x1',px);ph.setAttribute('x2',px);ph.setAttribute('opacity',1);
+    dot.setAttribute('cx',px);dot.setAttribute('cy',Yv(p.svf_deck));dot.setAttribute('opacity',1);
+    const ch=charAt(p.s), cc=(CHAR[ch]||CHAR.open_unsurveyed);
+    const near=Math.abs(p.s-cs)<40;
+    tip.innerHTML=
+      `<span class="ts">${p.s.toFixed(0)} m</span>`+
+      `<div class="row"><span>segment</span><span>${accLabel(p.s)}</span></div>`+
+      `<div class="row"><span>sky-view factor</span><span>${p.svf_deck.toFixed(2)}</span></div>`+
+      `<div class="row"><span>enclosure</span><span>${p.enc.toFixed(0)}°</span></div>`+
+      `<div class="row"><span>walls W·E (Hudson·city)</span><span>${p.wh|0}·${p.eh|0} m</span></div>`+
+      `<div class="row"><span>winter sun</span><span>${p.sun_w.toFixed(1)} h</span></div>`+
+      `<div class="row"><span>Hudson view</span><span>${p.river?'yes':'—'}</span></div>`+
+      `<div class="row"><span><span class="chip" style="background:${cc.c}"></span>opening</span><span>${cc.label.split(' · ').pop()}</span></div>`+
+      (p.occyr?`<div class="row"><span>dominant wall built</span><span>${p.occyr}${p.occyr>2009?' ⚠':''}</span></div>`:'')+
+      (near?`<div class="choke">▼ worst-enclosure chokepoint</div>`:'');
+    tip.classList.add('on');
+    let tx=cx; tip.style.left=Math.max(120,Math.min(wrap.clientWidth-120,tx))+'px';
+    tip.style.top=(TOP/686*r.height)+'px';
+  }
+  function leave(){tip.classList.remove('on');ph.setAttribute('opacity',0);dot.setAttribute('opacity',0);}
+  svg.addEventListener('mousemove',move);
+  svg.addEventListener('touchmove',move,{passive:true});
+  svg.addEventListener('mouseleave',leave);
+  svg.addEventListener('touchend',leave);
+})();
+</script>
+</body>
+</html>
