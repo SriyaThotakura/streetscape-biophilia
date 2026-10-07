@@ -52,3 +52,6 @@ chroma_db/
 models/
 weights/
 checkpoints/
+
+# local Mapbox token (copy mapbox_token.example.js)
+mapbox_token.js
